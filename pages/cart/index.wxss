@@ -1,0 +1,359 @@
+/* pages/cart/index.wxss */
+
+@import "/components/common/stepper.wxss";
+.container .good_list {
+    /* width: 100%; */
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+.good_item {
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1rpx solid #e2e2e2;
+    position: relative;
+}
+
+.good_item:last-child {
+    border-bottom: 0;
+}
+
+.good_item .check_area {
+    width: 60rpx;
+    height: 200rpx;
+    float: left;
+    margin-right:5rpx;
+}
+
+.good_item .check_area .iconfont {
+    font-size: 38rpx;
+}
+
+.good_item .img_area {
+    position: relative;
+    width: 100px;
+    float: left;
+}
+
+.good_item .img_area image {
+    width: 200rpx;
+    height: 200rpx;
+}
+
+.good_item .img_area .hot_tip {
+    height: 14px;
+    line-height: 14px;
+    font-size: 8px;
+    color: #fff;
+    width: 20px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.good_item .img_area .active_tip {
+    height: 14px;
+    line-height: 12px;
+    font-size: 8px;
+    color: #e60012;
+    padding: 0 2px;
+    border: 1rpx solid #e60012;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+.good_item .good_info {
+    padding-left: 10px;
+    float: left;
+    width: 410rpx;
+}
+
+.good_item .name {
+    color: #313131;
+    font-size: 13px;
+}
+.goods_type {
+    width: 60rpx;
+    height: 30rpx;
+    color: #fff;
+    font-size: 20rpx;
+    font-weight: 300;
+    text-align:center;
+    line-height:30rpx;
+    border-radius: 5rpx;
+    float: left;
+    margin:3rpx 10rpx 0 0;
+
+}
+.good_item .sec_name {
+    color: #aaa;
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+.good_item .price_system {
+    margin-top: 32px;
+    align-items: flex-end;
+}
+
+.good_item .price_system .price {
+    font-size: 14px;
+}
+
+.good_item .price_system .crosse_price {
+    font-size: 12px;
+    color: #aaa;
+    text-decoration: line-through;
+    margin-left: 10px;
+}
+
+.good_item .praise {
+    font-size: 11px;
+    color: #aaa;
+    margin-top: 7px;
+}
+
+.good_item .item_control {
+    position: absolute;
+    right: 24rpx;
+    bottom: 15px;
+}
+
+.buy_cart_bar_block, .buy_cart_bar_fixed {
+    height: 51px;
+}
+
+.buy_cart_bar_fixed {
+    background-color: #ffffff;
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1rpx solid #e2e2e2;
+}
+
+.buy_cart_bar_fixed .select_all_area {
+    width: 92px;
+    box-sizing: border-box;
+    padding-left: 15px;
+    font-size: 14px;
+    color: #313131;
+}
+
+.buy_cart_bar_fixed .select_all_area .iconfont {
+    font-size: 19px;
+}
+
+.buy_cart_bar_fixed .price_area {
+    height: 15px;
+    line-height: 15px;
+}
+
+.buy_cart_bar_fixed .price_area .price_title {
+    color: #313131;
+    font-size: 12px;
+}
+
+.buy_cart_bar_fixed .price_area .price_all {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.buy_cart_bar_fixed .price_area .prize_tip {
+    margin-left: 10px;
+    font-size: 10px;
+    color: #959595;
+}
+
+.buy_cart_bar_fixed .btn_buy {
+    height: 51px;
+    width: 112px;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.page_block {
+    width: 100%;
+    background: #fff;
+    padding: 50rpx 0;
+    box-sizing: border-box;
+}
+
+.page_block .b_icon {
+    text-align: center;
+}
+
+.page_block .b_word {
+    text-align: center;
+    font-size: 28rpx;
+    color: #959595;
+    margin-top: 32rpx;
+    font-weight: 300;
+}
+
+.page_block .b_btn {
+    margin: 85px auto 0;
+    width: 325px;
+    height: 50px;
+    color: #ffffff;
+    font-size: 17px;
+}
+
+
+/* 通用title */
+
+.common_content {
+    width: 750rpx;
+    box-sizing: border-box;
+    background: #fff;
+    margin-top: 30rpx;
+}
+
+.common_content .fresh_title {
+    height: 90rpx;
+    padding: 20rpx 24rpx;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ddd;
+}
+
+.fresh_title .title_left {
+    float: left;
+}
+
+.fresh_title .title_left .title_name {
+    font-size: 32rpx;
+    color: #ab2b2b;
+    margin-right: 20rpx;
+}
+
+
+/* 猜你喜欢 */
+
+.clearfloat:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0
+}
+
+.u_like_content {
+    padding-bottom: 20rpx;
+}
+
+.list_status {
+    text-align: center;
+    font-size: 24rpx;
+    color: #ddd;
+}
+
+.u_like_content .uk_goods {
+    width: 375rpx;
+    height: 494rpx;
+    padding: 20rpx 25rpx;
+    float: left;
+    box-sizing: border-box;
+    border-bottom: 1rpx solid #ddd;
+    border-right: 1rpx solid #ddd;
+}
+
+.uk_goods:nth-child(2n) {
+    border-right: 0;
+}
+
+.uk_goods .uk_goods_image {
+    position: relative;
+    width: 325rpx;
+    height: 325rpx;
+}
+
+.uk_goods .uk_goods_image .u_like_icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    width: 50rpx;
+    height: 35rpx;
+}
+
+.uk_goods_image image {
+    width: 325rpx;
+    height: 325rpx;
+}
+
+.uk_goods_info {
+    width: 325rpx;
+    margin-top: 20rpx;
+}
+
+.uk_goods_info text {
+    display: block;
+    color: #000;
+    font-size: 26rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.uk_goods_price text {
+    display: inlne-block;
+}
+
+.uk_goods_price {
+    margin-top: 5rpx;
+}
+
+.uk_goods_price .uk_selling_price {
+    color: #ab2b2b;
+    font-size: 28rpx;
+}
+
+.uk_goods_price .uk_overed_price {
+    margin-left: 10rpx;
+    color: #999;
+    font-size: 20rpx;
+}
+
+.touch-item {
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    overflow: hidden
+}
+
+.content {
+    /* width: 100%; */
+    padding: 10px;
+    line-height: 22px;
+    margin-right: 0;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    -webkit-transform: translateX(150rpx);
+    transform: translateX(150rpx);
+    margin-left: -150rpx
+}
+
+.del {
+    background-color: #ab2b2b;
+    width: 150rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    -webkit-transform: translateX(150rpx);
+    transform: translateX(150rpx);
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.touch-move-active .content, .touch-move-active .del {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}

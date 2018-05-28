@@ -1,0 +1,47 @@
+<template name="address_picker">
+    <view class='address_picker_container' catchtap='hideAddressPicker'>
+        <view class='address_picker' catchtap='onBlock'>
+            <view class='picker_title flex align-c'>
+                <view class='flex_1 cancel item' catchtap='hideAddressPicker'>
+                    <text>取消</text>
+                </view>
+                <view class='flex_1 submit item' catchtap='submitAddressPicker'>
+                    <text>确定</text>
+                </view>
+            </view>
+            <picker-view indicator-style="height: 30px;" style=" height: 200px;" value="{{selectValue}}" bindchange='onChangeAddressPicker'>
+                <picker-view-column>
+                    <view wx:for="{{addressMap}}" wx:for-item='item' wx:key='id' style="line-height: 30px;font-size: 15px;text-align: center;">{{item.name}}</view>
+                </picker-view-column>
+                <picker-view-column>
+                    <view wx:for="{{addressMap[selectValue[0]].child}}" wx:for-item='item' wx:key='id' style="line-height: 30px;font-size: 15px;text-align: center;">{{item.name}}</view>
+                </picker-view-column>
+                <picker-view-column>
+                    <view wx:for="{{addressMap[selectValue[0]].child[selectValue[1]].child}}" wx:for-item='item' wx:key='id' style="line-height: 30px;font-size: 15px;text-align: center;">{{item.name}}</view>
+                </picker-view-column>
+            </picker-view>
+        </view>
+    </view>
+</template>
+<view class="page-body">
+    <view class="page-section page-section-gap">
+        <map id="myMap" scale="12" latitude="{{latitude}}" longitude="{{longitude}}" markers="{{markers}}" bindmarkertap="makertap"
+            show-location></map>
+    </view>
+    <view class="address_location">
+        <view class="row" bindtap='showAddressPicker'>
+            <text class="title">所在区域：</text>
+            <text class="iconfont icon-rightjt" wx:if="{{!showAddress}}"></text>
+            <text wx:else class="address_font"> {{ addressMap[mapValue[0]].name }} {{ addressMap[mapValue[0]].child[mapValue[1]].name }} {{ addressMap[mapValue[0]].child[mapValue[1]].child[mapValue[2]].name}}</text>
+        </view>
+        <view class="intro">
+            <text class="title">详细地址：</text>
+            <textarea placeholder="楼道门牌号等详细地址" bindinput="keyInput" />
+        </view>
+    </view>
+    <view class="button_group">
+        <button class="btn background_color_5hao btn_position" bindtap="addressLocation">定位</button>
+        <button class="btn background_color_5hao btn_submit" bindtap="onTapSubmit">提交</button>
+    </view>
+</view>
+<template wx:if="{{showMap}}" is="address_picker" data='{{selectValue,addressMap}}' />

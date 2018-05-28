@@ -1,0 +1,38 @@
+<view class="content">
+    <input placeholder="请输入充值5号券的数量(可以提现{{can_get}})" class="quan_input" bindinput="onTextInput" />
+    <view class="methods">
+        <text class="info">提现方式:</text>
+        <radio-group class="radio-group" bindchange="radioChange">
+            <view class="weixin">
+                <text class="iconfont icon-weixin"></text>
+                <text class="type">微信</text>
+                <radio checked="true" value="1" color="#ab2b2b"></radio>
+            </view>
+            <view class="weixin">
+                <text class="iconfont icon-zhifubao"></text>
+                <text class="type">支付宝</text>
+                <radio checked="" value="2" color="#ab2b2b"></radio>
+            </view>
+            <view class="weixin">
+                <text class="iconfont icon-yhcard"></text>
+                <text class="type">银行卡</text>
+                <radio checked="" value="3" color="#ab2b2b"></radio>
+            </view>
+        </radio-group>
+    </view>
+    <input placeholder="请输入提现账户" class="quan_input" style="margin-top:30rpx;" bindinput="accountInput" />
+
+    <button class="submit_withdraw background_color_5hao" bindtap="submitDraw">确认提现</button>
+    <view class="intro">
+        <text class="title">提现说明：</text>
+        <text>1、五号券满百或100的整数倍才能提现。(首要条件)</text>
+        <text>2、提现间隔周期及手续费：</text>
+        <text>每日提现一次，提现扣除15%手续费；</text>
+        <text>每7天提现一次，提现扣除5%手续费；</text>
+        <text>每15天提现一次，提现扣除3%手续费。</text>
+        <text>首次提现计算方式：从第一天拆红包开始计算首次提现周期。提现手续费就高原则</text>
+        <text>（例：消费者第9天申请提现，提现手续费为5%）</text>
+        <text>提现金额=到账金额，提现手续费从账户余额倒扣，余额不足可显示成负数。</text>
+        <text>3、到账周期：T+2，国家法定节假日顺延。</text>
+    </view>
+</view>

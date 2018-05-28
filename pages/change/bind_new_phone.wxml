@@ -1,0 +1,8 @@
+<view class="container">
+    <input value="{{telphone}}" maxlength="11" readonly class="nickname_input" bindinput="keyname" />
+</view>
+<view class="main">
+    <navigator hover-class="none" url="/pages/change/send_new_code">
+            <button class="changeNickname background_color_5hao" bindtap="changePhone">绑定新手机号码</button>
+    </navigator>
+</view>

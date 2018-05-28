@@ -1,0 +1,53 @@
+<view class="container">
+    <view class="head clearfix">
+        <image src="{{cover}}" class="avatar"></image>
+        <view class="user_info">
+            <text class="nickname">{{nickname}}</text>
+            <text class="level">{{level}}</text>
+        </view>
+    </view>
+    <view class='personal_func_list'>
+        <navigator url="/pages/change/change_nickname" hover-class="none" class='flex align-c personal_func_item'>
+            <view class='name flex_1'>
+                <text>昵称</text>
+            </view>
+            <view class='content'>{{nickname}}</view>
+            <view class='icon-rightjt iconfont'></view>
+        </navigator>
+        <view class='flex align-c personal_func_item' bindtap="setSex">
+            <view class='name flex_1'>
+                <text>性别</text>
+            </view>
+            <view class='content' wx:if="{{gender==1}}">女</view>
+            <view class='content' wx:elif="{{gender==2}}">男</view>
+            <view class='content' wx:else>未设置</view>
+            <view class='icon-rightjt iconfont'></view>
+        </view>
+        <navigator url="/pages/change/certificate_card" hover-class="none" class='flex align-c personal_func_item'>
+            <view class='name flex_1'>
+                <text>身份证认证</text>
+            </view>
+            <view class='content' wx:if="{{certificate_card}}">已实名认证</view>
+            <view class='content' wx:else>未实名认证</view>
+            <view class='icon-rightjt iconfont'></view>
+        </navigator>
+        <navigator url="/pages/change/bind_new_phone" hover-class="none" class='flex align-c personal_func_item'>
+            <view class='name flex_1'>
+                <text>绑定手机</text>
+            </view>
+            <view class='content'>{{phone}}</view>
+            <view class='icon-rightjt iconfont'></view>
+        </navigator>
+    </view>
+</view>
+<view class="mask {{show?'show':'unshow'}}">
+    <view class="sex_content">
+        <view class="sex" data-gender='2' bindtap="selectSex">
+            <text>男</text>
+        </view>
+        <view class="sex" data-gender='1' bindtap="selectSex">
+            <text>女</text>
+        </view>
+    </view>
+
+</view>

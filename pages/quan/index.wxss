@@ -1,0 +1,74 @@
+.header {
+    width: 750rpx;
+    height: 340rpx;
+    padding: 20rpx;
+    background-color: #ab2b2b;
+    box-sizing: border-box;
+}
+
+.header .tips {
+    color: #eee;
+    font-size: 30rpx;
+    margin-top: 50rpx;
+    display: block;
+}
+.header .more{
+    color: #eee;
+    font-size: 28rpx;
+    display: block;
+    float: right;
+}
+.header .balance {
+    color: #fff;
+    margin-top: 40rpx;
+    font-size: 90rpx;
+}
+
+.personal_func_list {
+    width: 750rpx;
+    padding: 0 20rpx;
+    box-sizing: border-box;
+    background-color: #fff;
+    margin-top: 20rpx;
+    box-sizing: border-box;
+}
+
+.personal_func_list .personal_func_item {
+    border-bottom: 1rpx solid #ddd;
+    height: 90rpx;
+}
+
+.personal_func_list .personal_func_item .content {
+    font-size: 30rpx;
+    color: #a6a6a6;
+    font-weight: 300;
+    margin-right: 10rpx;
+}
+
+.personal_func_list .personal_func_item .iconfont {
+    font-size: 14px;
+    color: #313131;
+}
+
+.personal_func_list .personal_func_item:last-child {
+    border-bottom: 0;
+}
+
+.personal_func_list .personal_func_item .icon {
+    width: 60rpx;
+    text-align: left;
+    font-size: 38rpx;
+    color: #313131;
+}
+
+.personal_func_list .personal_func_item .name {
+    font-size: 30rpx;
+    color: #333;
+}
+
+.personal_func_list .personal_func_item .enter_icon {
+    width: 40px;
+    font-size: 17px;
+    color: #959595;
+    text-align: center;
+}

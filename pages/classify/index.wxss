@@ -1,0 +1,67 @@
+/* pages/classify/index.wxss */
+
+Page {
+    background-color: #ffffff!important;
+}
+
+.left_scroll {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200rpx;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 30rpx 0;
+    background-color: #f0f0f0;
+}
+
+.left_scroll scroll-view {
+    height: 100%;
+}
+
+.f_classify_item {
+    height: 100rpx;
+    box-sizing: border-box;
+    padding: 20rpx 0;
+}
+
+.f_classify_item .btn {
+    font-size: 28rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    width: 100%;
+    text-align: center;
+}
+
+.f_classify_item .btn.active {
+    border-left: 2rpx solid #ab2b2b;
+}
+
+.f_classify_item.active {
+    color: #ab2b2b;
+    background: #fff;
+}
+
+.sec_list {
+    padding-left: 200rpx;
+}
+
+.sec_list .sec_item {
+    width: 50%;
+    padding: 15px 0;
+}
+
+.sec_item .pic image {
+    width: 150rpx;
+    height: 150rpx;
+}
+
+.sec_item .name {
+    text-align: center;
+}
+
+.sec_item .name text {
+    font-size: 13px;
+    line-height: 25px;
+    color: #313131;
+}

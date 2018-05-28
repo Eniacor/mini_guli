@@ -1,0 +1,13 @@
+<!--orderDetail.wxml-->
+<import src='../../components/orderDetail/tpl.wxml' />
+<import src='../../components/order/tpl.wxml' />
+<view wx:if='{{!loadEnd}}' class='loading'></view>
+<view wx:else class='container'>
+    <template is="order_title" data="{{...info}}" />
+    <template is="good_info" data="{{...info}}" />
+    <template is='order_other_info' data="{{...info}}" />
+    <template is='order_info' data="{{...info}}" />
+    <view class='order_detail_bar'>
+        <template is='order_status_btn' data="{{...info}}" />
+    </view>
+</view>

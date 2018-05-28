@@ -1,0 +1,38 @@
+<template name='order_status_btn'>
+    <block wx:if="{{ process_status==1 }}">
+        <view class='order_footer'>
+            <view class='order_btn_common color_5hao border_color_5hao' data-index='{{index}}' catchtap='onTapPay'>去支付</view>
+            <view class='order_btn_common' data-index='{{index}}' catchtap='onTapCancelOrder'>取消订单</view>
+        </view>
+    </block>
+    <block wx:elif="{{ process_status==2 }}">
+        <view class='order_footer'>
+            <view class='order_btn_common' data-index='{{index}}' data-index='{{index}}' catchtap='onTapApplyBackMoney'>申请退款</view>
+        </view>
+    </block>
+    <block wx:elif="{{ process_status==3 }}">
+        <view class='order_footer'>
+            <view class='order_btn_common' data-index='{{index}}' catchtap='onTapExpressInfo'>物流信息</view>
+            <view class='order_btn_common' data-index='{{index}}' catchtap='onTapConfirmGet'>确认收货</view>
+        </view>
+    </block>
+    <block wx:elif="{{ process_status==7 }}">
+        <view class='order_footer'>
+            <view class='order_btn_common' data-index='{{index}}' catchtap='onTapApplyBackGoods'>申请退货</view>
+            <view wx:if='{{is_evaluate == 0}}' class='order_btn_common color_5hao border_color_5hao' data-index='{{index}}' catchtap='onTapWriteEvaluation'>撰写评价</view>
+        </view>
+    </block>
+    <block wx:elif="{{ process_status==9 }}">
+        <view class='order_footer'>
+            <view class='order_btn_common color_5hao border_color_5hao' data-index='{{index}}' catchtap='onTapGotoUpExpress'>填写退货单</view>
+        </view>
+    </block>
+    <block wx:elif="{{ process_status==11 }}">
+        <view class='order_footer'>
+            <view class='order_btn_common' data-index='{{index}}' catchtap='onTapApplyBackGoods'>申请退货</view>
+        </view>
+    </block>
+    <block wx:else>
+        <view></view>
+    </block>
+</template>

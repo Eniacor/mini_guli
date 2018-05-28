@@ -1,0 +1,53 @@
+/* about.wxss */
+
+Page {
+    background-color: #ffffff;
+}
+
+.about_us {
+    padding: 0 20px;
+}
+
+.logo {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.company-desc {
+    padding: 0 0 20px;
+    color: #313131;
+    letter-spacing: 1px;
+    font-size: 14px !important;
+    line-height: 1.5;
+    word-break: break-all;
+    text-indent: 2em;
+}
+
+.about_footer {
+    border-top: 1rpx solid #e2e2e2;
+    text-align: center;
+    padding-bottom: 32px;
+}
+
+.title {
+    padding: 4px 8px;
+    border: 1rpx solid #313131;
+    color: #313131;
+    font-size: 12px;
+    margin: 22px auto 0;
+    display: inline-block;
+}
+
+.word {
+    color: #313131;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.l_word {
+    font-size: 10px;
+    color: #313131;
+    text-align: center;
+    margin-top: 45px;
+}

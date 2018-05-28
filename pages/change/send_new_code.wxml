@@ -1,0 +1,12 @@
+<view class="container">
+    <input value="{{phone}}" maxlength="11" placeholder="请输入新手机号码" class="nickname_input" style="border-bottom:1rpx solid #e2e2e2"
+        bindinput="keyPhone" />
+    <view>
+        <input value="{{code}}" maxlength="6" placeholder="请输入验证码" class="nickname_input" style="width:60%;float: left"
+            bindinput="keyCode" />
+        <button class="getCode  color_5hao" disabled="{{flag}}" bindtap="getCode">{{btn_content}}</button>
+    </view>
+</view>
+<view class="main">
+    <button class="changeNickname background_color_5hao" bindtap="bindPhone">绑定手机</button>
+</view>

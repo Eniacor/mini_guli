@@ -1,0 +1,23 @@
+<view class="header">
+    <navigator hover-class="none" url="/pages/quan/detail">
+        <text class="more">明细</text>
+    </navigator>
+    <text class="tips">五号券余额</text>
+    <view class="balance" wx:if="{{amount}}">
+        <text>{{amount/100}}</text>
+    </view>
+</view>
+<view class='personal_func_list'>
+    <navigator url="/pages/quan/add" hover-class="none" class='flex align-c personal_func_item'>
+        <view class='name flex_1'>
+            <text>充值</text>
+        </view>
+        <view class='icon-rightjt iconfont'></view>
+    </navigator>
+    <navigator url="/pages/quan/withdraw" hover-class="none" class='flex align-c personal_func_item'>
+        <view class='name flex_1'>
+            <text>提现</text>
+        </view>
+        <view class='icon-rightjt iconfont'></view>
+    </navigator>
+</view>

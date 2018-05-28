@@ -1,0 +1,199 @@
+/* orderDetail.wxss */
+
+.container {
+    padding-bottom: 15px;
+}
+
+.order_title {
+    background-color: #ffffff;
+    padding: 10px 15px;
+}
+
+.order_title .order_title_info {
+    padding-right: 10px;
+    color: #313131;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.order_title .order_title_info .order_status {
+    font-size: 12px;
+    line-height: 1.7
+}
+
+.order_title .order_express_btn {
+    width: 85px;
+    height: 27px;
+    border: 1rpx solid #ffffff;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.goods_info_title {
+    line-height: 44px;
+    padding: 0 15px;
+    font-size: 14px;
+    color: #959595;
+}
+
+.order_goods_list {
+    background-color: #ffffff;
+    padding: 0 15px;
+}
+
+.order_goods_list .order_good_item {
+    height: 48px;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    position: relative;
+}
+
+.order_goods_list .order_good_item:last-child {
+    border-bottom: 1rpx solid #e2e2e2;
+}
+
+.order_goods_list .order_good_item .order_good_name {
+    color: #313131;
+    font-size: 13px;
+    -webkit-box-flex: 1;
+}
+
+.order_goods_list .order_good_item .order_good_num {
+    width: 113px;
+    text-align: right;
+    color: #959595;
+    font-size: 13px;
+}
+
+.order_goods_list .order_good_item .order_good_total_price {
+    font-size: 14px;
+    text-align: right;
+    width: 90px;
+}
+
+.order_other_info {
+    background-color: #ffffff;
+    padding: 0 15px;
+}
+
+.order_other_info .item {
+    border-bottom: 1rpx solid #e2e2e2;
+}
+
+.order_other_info .item:last-child {
+    border-bottom: 0;
+}
+
+.order_other_info .order_other_yf {
+    height: 50px;
+}
+
+.order_other_info .order_other_yf .order_other_yf_title,
+.order_other_info .order_other_yf .order_other_yf_content {
+    color: #313131;
+    font-size: 14px;
+}
+
+.order_other_info .order_other_yf .order_other_yf_content {
+    text-align: right;
+}
+
+.order_other_info .order_other_coupon {
+    height: 54px;
+}
+
+.order_other_info .order_other_coupon .order_other_coupon_title {
+    color: #313131;
+    font-size: 14px;
+}
+
+.order_other_info .order_other_coupon .order_other_coupon_content {
+    text-align: right;
+    color: #959595;
+    font-size: 12px;
+}
+
+.order_other_info .order_other_coupon .order_other_coupon_content.pay {
+    color: #313131;
+}
+
+.order_other_info .order_other_coupon .order_other_coupon_content.iconfont {
+    margin-left: 5px;
+}
+
+.order_other_bz .order_other_bz_title {
+    color: #313131;
+    font-size: 14px;
+    width: 50px;
+}
+
+.order_other_bz .order_other_bz_input {
+    height: 50px;
+    color: #959595;
+    font-size: 14px;
+}
+
+.order_info_title {
+    line-height: 44px;
+    padding: 0 15px;
+    font-size: 14px;
+    color: #959595;
+}
+
+.order_info_list {
+    background-color: #ffffff;
+    padding: 0 15px;
+}
+
+.order_info_list .item {
+    border-bottom: 1rpx solid #e2e2e2;
+    height: 50px;
+}
+
+.order_info_list .item:last-child {
+    border-bottom: 0;
+}
+
+.order_info_list .item .title {
+    font-size: 14px;
+    text-align: left;
+    width: 80px;
+    color: #959595;
+}
+
+.order_info_list .item .content {
+    font-size: 14px;
+    text-align: left;
+    color: #313131;
+}
+
+.order_detail_bar {
+    height: 53px;
+}
+
+.order_footer {
+    height: 53px;
+    border-top: 1rpx solid #e2e2e2;
+    padding: 0 15px;
+    text-align: right;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: end;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+.order_footer .order_btn_common {
+    height: 28px;
+    padding: 0 7px;
+    font-size: 14px;
+    line-height: 28px;
+    margin-left: 15px;
+    color: #313131;
+    border: 1rpx solid #313131;
+    border-radius:5px;
+}

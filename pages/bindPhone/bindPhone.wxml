@@ -1,0 +1,34 @@
+<!--bindPhone.wxml-->
+<view class='bind_phone'>
+    <view class='input_list'>
+        <view class='list_item flex align-c'>
+            <view class='icon'>
+                <text class='iconfont icon-phone'></text>
+            </view>
+            <view class='input flex_1'>
+                <input placeholder="请输入绑定的手机号码" value="{{phone}}" type='number' bindinput="bindPhoneInput" />
+            </view>
+        </view>
+        <view class='list_item flex align-c'>
+            <view class='icon'>
+                <text class='iconfont icon-code'></text>
+            </view>
+            <view class='input flex_1'>
+                <input placeholder="请输入验证码" value="{{code}}" type='number' bindinput="bindCodeInput" />
+            </view>
+            <view class='get_code_btn flex-center align-c' bindtap='onTapGetCode'>
+                <block wx:if="{{ time==0 }}">获取验证码</block>
+                <block wx:else>{{time}}s后可重发</block>
+            </view>
+        </view>
+        <view class='list_item flex align-c'>
+            <view class='icon'>
+                <text class='iconfont icon-recommend'></text>
+            </view>
+            <view class='input flex_1'>
+                <input placeholder="请输入推荐码" value="{{recommend}}" type='text' maxlength="6" bindinput="bindRecommendInput" />
+            </view>
+        </view>
+    </view>
+    <view class='bind_btn flex-center align-c background_color_5hao' bindtap='onTapBind'>绑定</view>
+</view>

@@ -1,0 +1,72 @@
+/* evaluationList.wxss */
+
+@import "/components/common/starList.wxss";
+.eval_list {
+    background-color: #ffffff;
+}
+
+.eval_list .eval_footer {
+    font-size: 15px;
+    color: #959595;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.eval_item {
+    padding: 0 15px;
+}
+
+.eval_item:last-child .eval_item_inner {
+    border-bottom: 0;
+}
+
+.eval_item .eval_item_inner {
+    border-bottom: 1rpx solid #e2e2e2;
+    padding: 15px 0;
+}
+
+.eval_item .good_evaluation_item_info {
+    margin-left: 18px;
+}
+
+.eval_item .user_name {
+    font-size: 14px;
+    color: #313131;
+}
+
+.eval_item .evaluation_time {
+    font-size: 12px;
+    color: #959595;
+    text-align: right;
+}
+
+.eval_item .evaluation_content {
+    font-size: 13px;
+    color: #313131;
+    margin-top: 7px;
+}
+
+.eval_item .evaluation_image {
+    margin-top: 7px;
+}
+
+.eval_item .image_item {
+    height: 120rpx;
+    margin-right: 12px;
+}
+
+.eval_item .image_item:last-child {
+    margin-right: 0;
+}
+
+.eval_item .star_outer {
+    margin-top: 7px;
+}
+
+.list_status {
+    height: 50px;
+    font-size: 14px;
+    text-align: center;
+    color: #959595;
+    line-height: 50px;
+}

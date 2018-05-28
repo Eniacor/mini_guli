@@ -1,0 +1,153 @@
+<template name="address">
+    <block wx:if="{{ ship_address_id == 0 }}">
+        <view class='order_address_bar no_address'>
+            <image class='border_img' style="height: 5px;width: 100%;" mode="aspectFill" src="../../images/static/order_address_border.png"></image>
+            <navigator url='{{"/pages/addressList/addressList?from=confirm&o_id="+id}}' class='add_address_btn'>填写收货地址</navigator>
+        </view>
+    </block>
+    <block wx:else>
+        <view class='order_address_bar'>
+            <image class='border_img' style="height: 5px;width: 100%;" mode="aspectFill" src="../../images/static/order_address_border.png"></image>
+            <navigator url='{{"/pages/addressList/addressList?from=confirm&o_id="+id}}' hover-class="none">
+                <view class='order_address_inner clearfix'>
+                    <view class="add_left">
+                        <view class='order_address_info'>
+                            <view class='order_address_name lineclamp1'>{{ship_address.consignee}}</view>
+                            <view class='order_address_phone'>{{ship_address.telphone}}</view>
+                        </view>
+                        <view class='order_address_str lineclamp1'>{{ship_address.province_str}} {{ship_address.city_str}} {{ship_address.district_str}} {{ship_address.address}}</view>
+                    </view>
+                    <view class="add_right">
+                        <navigator url='{{"/pages/addressList/addressList?from=confirm&o_id="+id}}' hover-class="none" class='icon-rightjt iconfont'></navigator>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+    </block>
+</template>
+
+<template name="good_info">
+    <view class='good_info'>
+        <view class="goods_info_title">商品信息</view>
+        <view class="order_goods_list">
+            <view class="order_good_item" wx:for="{{ goods }}" wx:for-item='d' wx:key='good_id'>
+                <view class="good_image">
+                    <image src="{{d.images}}"></image>
+                </view>
+                <view class="good_item_info">
+                    <view class="lineclamp2">
+                        <view>
+                            <text class="goods_type background_color_5hao" wx:if="{{d.good_type==1}}">自营</text>
+                            <text class="goods_type background_color_5hao" wx:if="{{d.good_type==2}}">积分</text>
+                            {{d.name}}
+                        </view>
+                    </view>
+                    <view class="price">
+                        <text class="good_price">¥{{ d.price / 100}}</text>
+                    </view>
+                </view>
+                <view class="good_item_num">
+                    <text>x{{d.count}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>
+
+<template name="order_other_info">
+    <view class='order_other_info'>
+        <view class='order_other_yf item flex align-c'>
+            <view class='order_other_yf_title flex_1'>商品合计</view>
+            <view class='order_other_yf_title flex_1'>
+                <block>
+                    <view class='order_other_yf_content'>¥{{total_price/100}}</view>
+                </block>
+            </view>
+        </view>
+        <navigator url="{{'/pages/coupon/coupon?from=confirm&o_id='+id+'&order_price='+all_price+'&coupon_id='+coupon_id}}" class='order_other_coupon item flex align-c'>
+            <view class='order_other_coupon_title flex_1'>优惠券</view>
+            <view class='order_other_coupon_content'>
+                <block wx:if="{{ coupon_id==0 }}">无可用优惠券</block>
+                <block wx:else>{{coupon_str}}</block>
+                <text wx:if="{{!coupon_str}}" class='iconfont icon-rightjt'></text>
+            </view>
+        </navigator>
+        <view class='order_other_yf item flex align-c'>
+            <view class='order_other_yf_title' style="float: left;width:13%">五号券</view>
+            <view class='order_other_yf_title' style="float: right;width:87%;line-height:65rpx">
+                <!-- 五号券-->
+                <block wx:if="{{ticket.canuse_price==0}}">
+                    <view class='order_other_yf_content disabled_color'>不可用</view>
+                </block>
+                <block wx:else>
+                    <view class="order_other_yf_content clearfix">
+                        <text class="user_info">共{{ticket.amount/100}}个,最多可用{{ticket.canuse_price/100}}个,可抵扣¥{{ticket.canuse_price/100}} {{quanChecked}}</text>
+                        <switch class="method_checked usr_switch" checked="{{quanChecked}}" color="#ab2b2b" bindchange="selectQuanChange" />
+                    </view>
+                </block>
+            </view>
+        </view>
+        <view class='order_other_yf item flex align-c'>
+            <view class='order_other_yf_title' style="float: left;width:15%">五号豆</view>
+            <view class='order_other_yf_title' style="float: right;width:85%;line-height:65rpx">
+                <!-- 五号豆-->
+                <block wx:if="{{bean.canuse_num==0}}">
+                    <view class='order_other_yf_content disabled_color'>不可用</view>
+                </block>
+                <block wx:else>
+                    <view class='order_other_yf_content'>
+                        <view class="order_other_yf_content clearfix">
+                            <text class="user_info">共{{bean.user_bean_nums}}个,最多可用{{bean.canuse_num}}个,可抵扣¥{{bean.canuse_num/10}}</text>
+                            <switch class="method_checked usr_switch" checked="{{douChecked}}" color="#ab2b2b" bindchange="selectDouChange" />
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </view>
+        <view class='order_other_yf item flex align-c'>
+            <view class='order_other_yf_title flex_1'>运费</view>
+            <view class='order_other_yf_title flex_1'>
+                <block wx:if="{{ deliver_price == 0 }}">
+                    <view class='order_other_yf_content'>免运费</view>
+                </block>
+                <block wx:else>
+                    <view class='order_other_yf_content'>{{deliver_price/100}}元</view>
+                </block>
+            </view>
+        </view>
+        <view class="order_other_bz item flex align-c">
+            <view class="order_other_bz_title">备注:</view>
+            <view class="order_other_bz_input flex_1">
+                <input type="text" placeholder="请填写备注" value="{{remark}}" bindinput='bindRemarkInput' />
+            </view>
+        </view>
+    </view>
+</template>
+<template name="pay_method">
+    <view class="good_info">
+        <view class="goods_info_title">付款方式</view>
+        <view class="pay_method">
+            <view class="pay_type">
+                <text class="iconfont icon-weixin"></text>
+                <text class="pay_name">微信</text>
+            </view>
+            <view class="checked">
+                <radio value="" color="#ab2b2b" class="method_checked" checked="checked" />
+            </view>
+        </view>
+    </view>
+
+</template>
+
+<template name='submit_bar'>
+    <view class="submit_order_bar">
+        <view class="submit_order_bar_block"></view>
+        <view class="submit_order_bar_fixed">
+            <view class="order_bar_info">
+                <view class="info_title">实付</view>
+                <view class="info_price color_5hao">￥{{price/100}}</view>
+            </view>
+            <view class="order_bar_btn background_color_5hao" catchtap='onTapSubmit'>去付款</view>
+        </view>
+    </view>
+</template>

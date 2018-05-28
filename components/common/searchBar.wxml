@@ -1,0 +1,9 @@
+<template name='searchBar'>
+    <view class="searchBar flex flex-align-center" style="background-color: #1a1a1a;height:100rpx;position:fixed; top:0; left:0; width:100%;z-index: 20;">
+        <view class="input flex_1 flex flex-align-center" style="background-color:#ffffff;height:70rpx;margin:0 20rpx;">
+            <icon type="search" size="15" color='#959595' style="margin:0 20rpx;"/>
+            <input type="text" class="flex_1" style="color:#000;font-size:28rpx;" placeholder="搜索"/>
+        </view>
+        <view class="search_btn" style="margin-right:20rpx;width:80rpx;text-align:center;font-size:32rpx;color:#ffffff;">搜索</view>
+    </view>
+</template>

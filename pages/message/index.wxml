@@ -1,0 +1,13 @@
+
+<view class="message_list">
+    <block wx:for="{{lists}}">
+        <view class="message_item" data-id="{{item.id}}" bindtap="setMessageread">
+            <view class="message_time">
+                <text>{{item.create_time}}</text>
+            </view>
+            <view class="message_content">{{item.message_info.title}}
+                <text class="noread" wx:if="{{item.is_read==0}}"></text>
+            </view>
+        </view>
+    </block>
+</view>

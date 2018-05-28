@@ -1,0 +1,51 @@
+<!--pages/search/search.wxml-->
+<view class="searchBar flex flex-align-center" style="background-color: #ffffff;height:50px;position:fixed; top:0; left:0; width:100%;z-index: 20;">
+    <view class="input flex_1 flex flex-align-center" style="background-color:#f0f0f0;height:30px;margin:0 10px;">
+        <icon type="search" size="15" color='#959595' style="margin:0 10px;" />
+        <input type="text" class="flex_1" value="{{keyword}}" style="color:#000;font-size:14px;" placeholder="搜索" bindinput='onKeywordInput' />
+    </view>
+    <view class="search_btn" style="margin-right:10px;width:40px;text-align:center;font-size:13px;color:#ab2b2b;" bindtap='onSearch'>搜索</view>
+</view>
+<view class='sort_bar flex'>
+    <view class='sort_bar_item flex_1 flex-center align-c' data-type='1' bindtap='onChangeOrder'>
+        <text class='{{order==2?"color_5hao":""}}'>销量</text>
+    </view>
+    <view class='sort_bar_item flex_1 flex-center align-c' data-type='2' bindtap='onChangeOrder'>
+        <text class='{{(order==3 || order==4)?"color_5hao":""}}'>价格</text>
+        <image wx:if='{{order==3}}' src="../../images/icon/sort_up.png"></image>
+        <image wx:elif='{{order==4}}' src="../../images/icon/sort_down.png"></image>
+        <image wx:else src="../../images/icon/sort_disable.png"></image>
+    </view>
+    <view class='sort_bar_item flex_1 flex-center align-c' data-type='3' bindtap='onChangeOrder'>
+        <text class='{{order==5?"color_5hao":""}}'>评价</text>
+    </view>
+</view>
+<view class='container'>
+    <view wx:if='{{loading}}' class='loading'></view>
+    <block wx:else>
+        <block wx:for='{{list}}' wx:for-item='d' wx:for-index='i' wx:key='id'>
+            <navigator url="{{'/pages/goodDetail/goodDetail?id='+d.id}}" hover-class="none">
+                <view class='good_item flex'>
+                    <view class='img_area'>
+                        <image src="{{d.images}}?imageView2/1/w/200/h/200/interlace/1"></image>
+                        <!-- <view wx:if="{{d.is_hot == 1}}" class='hot_tip background_color_5hao'>热销</view>
+                        <view wx:if="{{d.activity_id != 0}}" class='active_tip'>{{d.activity_name}}</view> -->
+                    </view>
+                    <view class='flex_1 good_info'>
+                        <view class='name lineclamp1'>{{d.name}}</view>
+                        <view class='sec_name lineclamp1'>{{d.sec_name}}</view>
+                        <view class='flex price_system'>
+                            <view class="price color_5hao">￥{{d.price_system.price/100}}</view>
+                            <view class="crosse_price" wx:if="{{d.price_system.is_crossed == 1}}">￥{{d.price_system.crossed_price/100}}</view>
+                        </view>
+                        <view class='praise'>好评率{{d.praise}}%</view>
+                    </view>
+                </view>
+            </navigator>
+        </block>
+        <view class="list_status" wx:if="{{noData}}">无数据</view>
+        <view class="list_status" wx:elif="{{allData}}">无更多数据</view>
+        <view class="list_status" wx:elif="{{loading}}">加载中...</view>
+        <view class="list_status" wx:else>上拉加载更多</view>
+    </block>
+</view>

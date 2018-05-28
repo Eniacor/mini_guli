@@ -1,0 +1,60 @@
+<view class='coupon_type_bar flex'>
+    <view class='item flex_1 flex-center align-c {{type=="av"?"color_5hao border_color_5hao":""}}' data-type='av' bindtap='onTapCouponTap'>未使用</view>
+    <view class='item flex_1 flex-center align-c {{type=="used"?"color_5hao border_color_5hao":""}}' data-type='used' bindtap='onTapCouponTap'>已使用</view>
+    <view class='item flex_1 flex-center align-c {{type=="expire"?"color_5hao border_color_5hao":""}}' data-type='expire' bindtap='onTapCouponTap'>已过期</view>
+</view>
+
+<view wx:if="{{ !loadEnd }}" class='loading'></view>
+<view wx:else class='coupon_list'>
+    <view class='exchange_area flex align-c'>
+        <view class='input flex_1'>
+            <input placeholder="请输入优惠券号码" value="{{code}}" bindinput="bindCodeInput" />
+        </view>
+        <view class='exchange_btn' bindtap='onTapExchange'>兑换</view>
+    </view>
+    <view wx:if="{{ list[type] && list[type].length>0 }}">
+        <view wx:for="{{list[type]}}" wx:for-item='d' wx:for-index='i' wx:key='id' class='coupon_item'>
+            <view class='coupon_item_inner flex' data-id='{{d.id}}' data-index="{{i}}" catchtap='onTapSelectCoupon'>
+                <view class='flex align-c left {{type=="av"?"background_color_5hao":""}}'>
+                    <view class='left_inner flex_1'>
+                        <view class='price'>
+                            <text class='a'>￥</text>
+                            <text wx:if='{{d.price>999900}}' class='p xs'>{{d.price/100}}</text>
+                            <text wx:elif='{{d.price>99900}}' class='p sm'>{{d.price/100}}</text>
+                            <text wx:else class='p'>{{d.price/100}}</text>
+                        </view>
+                        <view class='coupon_type'>
+                            <block wx:if="{{d.type == 1}}">立减券</block>
+                            <block wx:elif="{{d.type == 2}}">满减券</block>
+                        </view>
+                    </view>
+                </view>
+                <view class='flex_1 flex align-c' style='padding: 0 10px'>
+                    <view class='flex_1'>
+                        <view class='coupon_info'>
+                            {{d.coupon_name}}
+                            <block wx:if="{{d.type == 1}}">立减{{d.price/100}}元</block>
+                            <block wx:elif="{{d.type == 2}}">满{{d.conditions/100}}减{{d.price/100}}元</block>
+                            <block wx:if="{{from == 'confirm'}}">
+                                <block wx:if="{{type=='av'}}">
+                                    <block wx:if="{{d.id==coupon_id}}">
+                                        <radio checked="{{checked}}" style="float: right" color="#ab2b2b"></radio>
+                                    </block>
+                                    <block wx:else>
+                                        <radio checked="{{unchecked}}" style="float: right" color="#ab2b2b"></radio>
+                                    </block>
+                                </block>
+                            </block>
+                        </view>
+                        <view class='range_time'>
+                            有效期：{{d.start_time}} ~ {{d.end_time}}
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view wx:else class='list_status'>
+        无记录~~
+    </view>
+</view>

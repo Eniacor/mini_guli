@@ -1,0 +1,66 @@
+<import src="../common/stepper.wxml" />
+
+<template name="classifyDialog">
+    <view wx:if='{{showDialog}}' class='classify_dialog_container' catchtap='onClose'>
+        <view class='classify_dialog' catchtap='onBlock'>
+            <view class='classify_dialog_info'>
+                <view class='row flex'>
+                    <view class='good_pic'>
+                        <image style="width:90px;height: 90px;" src="{{key_status[attr_str].small_image}}"></image>
+                    </view>
+                    <view class='flex_1 good_info flex'>
+                        <!-- <view class='good_info_inner'>
+                            <view class='price color_5hao'>￥{{key_status[attr_str].price_system.price/100}}</view>
+                            <view class='attr_info'>
+                                <block wx:for='{{attr_arr}}' wx:for-item='d' wx:for-index='i' wx:key='*this'>
+                                    {{info.attr_info[d]}}
+                                    <block wx:if="{{ i != attr_arr.length-1 }}">
+                                        -
+                                    </block>
+                                </block>
+                                {{buyNum}} 件
+                            </view>
+                        </view> -->
+                    </view>
+                    <view class='iconfont icon-close good_close' catchtap='onClose'></view>
+                </view>
+                <block wx:for='{{info.select_params_dialog}}' wx:for-item='d' wx:for-index='i' wx:key='params_father_name'>
+                    <view class='row'>
+                        <view class='attr_name'>{{d.params_father_name}}</view>
+                        <view class='attr_list flex-wrap'>
+                            <block wx:for='{{d.params_children}}' wx:for-item='dx' wx:for-index='ix' wx:key='params_id'>
+                                <block wx:if="{{ attr_arr[i] == dx.params_id }}">
+                                    <view class='attr_item flex align-c background_color_main border_color_main active'>
+                                        {{dx.params_name}}
+                                    </view>
+                                </block>
+                                <block wx:elif="{{ !dx.active_atr.is_checked}}">
+                                    <view class='attr_item flex align-c disable'>
+                                        {{dx.params_name}}
+                                    </view>
+                                </block>
+                                <block wx:else>
+                                    <view class='attr_item flex align-c' catchtap='onClickAttr' data-index='{{i}}' data-id='{{dx.params_id}}'>
+                                        {{dx.params_name}}
+                                    </view>
+                                </block>
+                            </block>
+                        </view>
+                    </view>
+                </block>
+                <view class='row' style='height:75px;'>
+                    <view class='good_num flex align-c'>
+                        <view class='attr_name flex_1'>数量</view>
+                        <view class='num_stepper'>
+                            <template is="stepper" data='{{buyNum}}' />
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class='flex dialog_bar'>
+                <view class='add_cart flex-center align-c flex_1' catchtap='onTapAddcart'>加入购物车</view>
+                <view class='imm_buy flex-center align-c flex_1 background_color_5hao' catchtap='onTapImmBuy'>立即购买</view>
+            </view>
+        </view>
+    </view>
+</template>

@@ -1,0 +1,88 @@
+/* orderBackInfo.wxss */
+
+.order_back_info {
+    background-color: #fff;
+    padding: 0 15px;
+}
+
+.input_item {
+    height: 60px;
+    border-bottom: 1rpx solid #e2e2e2;
+    box-sizing: border-box;
+}
+
+.input_item.textarea {
+    height: 88px;
+}
+
+.input_item:last-child {
+    border-bottom: 0;
+}
+
+.input_item .icon {
+    width: 30px;
+}
+
+.input_item .icon text {
+    color: #313131;
+    font-size: 17px;
+}
+
+.input_item .input {
+    font-size: 15px;
+    color: #313131;
+}
+
+.input_item .input input {
+    font-size: 15px;
+    color: #313131;
+}
+
+.input_item .input textarea {
+    font-size: 15px;
+    color: #313131;
+    height: 88px;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.btn_sub {
+    width: 335px;
+    height: 45px;
+    margin: 50px auto 0;
+    color: #ffffff;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    font-size: 17px;
+    border-radius:10rpx;
+}
+
+.back_shop_express_info {
+    padding: 0 15px;
+    margin-top: 15px;
+    color: #959595;
+    font-size: 12px;
+}
+
+.back_shop_express_info .module_title {
+    line-height: 15px;
+}
+
+.back_shop_express_info .row {
+    margin-top: 5px;
+    position: relative;
+}
+
+.back_shop_express_info .row .content {
+    padding-left: 60px;
+    line-height: 20px;
+    word-break: break-all;
+}
+
+.back_shop_express_info .row .title {
+    line-height: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}

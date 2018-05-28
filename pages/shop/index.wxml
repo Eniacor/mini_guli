@@ -1,0 +1,79 @@
+<view class="content">
+    <view class="shop_info">
+        <view class="row">
+            <navigator url="/pages/shop/shop_address" hover-class="none">
+                <text class="title">商家定位：</text>
+                <text class="address" wx:if="{{address}}">{{address}}</text>
+                <text class="iconfont icon-rightjt "></text>
+            </navigator>
+        </view>
+        <view class="row">
+            <text class="title">商家名称：</text>
+            <input class="shop_input" value="{{name}}" placeholder="请输入商家名称" bindinput="nameInput" />
+        </view>
+        <view class="intro">
+            <text class="title">商家介绍：</text>
+            <textarea placeholder="请输入商家介绍" value="{{intro}}" bindinput="introInput" />
+        </view>
+    </view>
+    <view class="shop_license clearfix">
+        <view class="info">
+            <text class="title">营业执照和其他证件照片（如食品经验许可证）</text>
+        </view>
+        <view class="upload clearfix">
+            <view class="iconfont icon-upload" data-from="license" bindtap="uploadImg"></view>
+            <block wx:if="licensearr">
+                <block wx:for="{{licensearr}}" wx:for-item="d" wx:for-index="i">
+                    <view class="box" wx:if="{{d}}">
+                        <image src="{{d}}" mode="widthFix" class="shop_image"></image>
+                        <text class="iconfont icon-remove" data-src="{{d}}" bindtap="removeLicense"></text>
+                    </view>
+                </block>
+            </block>
+        </view>
+    </view>
+    <view class="shop_license clearfix">
+        <view class="info">
+            <text class="title">商家照片(最多9张)</text>
+        </view>
+        <view class="upload clearfix">
+            <view class="iconfont icon-upload" data-from="photo" bindtap="uploadImg"></view>
+            <block wx:if="{{photoarr}}">
+                <block wx:for="{{photoarr}}" wx:for-item="d" wx:for-index="i">
+                    <view class="box">
+                        <image src="{{d}}" mode="widthFix" class="shop_image"></image>
+                        <text class="iconfont icon-remove" data-src="{{d}}" bindtap="removeBusiness"></text>
+                    </view>
+                </block>
+            </block>
+        </view>
+    </view>
+    <view class="contact">
+        <view class="row">
+            <text class="title">联系方式</text>
+        </view>
+        <view class="row">
+            <text class="title">姓名：</text>
+            <input class="shop_input" placeholder="请输入姓名" value="{{cname}}" bindinput="cnameInput" />
+        </view>
+        <view class="row" style="border:none">
+            <text class="title">手机号码：</text>
+            <input class="shop_input" type="number" maxlength="11" value="{{phone}}" placeholder="请输入手机号码" bindinput="phoneInput" />
+        </view>
+    </view>
+    <view class="footer">
+        <block wx:if="{{sid}}">
+            <button class="btn_submit background_color_5hao" bindtap="submitShop">修改</button>
+        </block>
+        <block wx:else>
+            <button class="btn_submit background_color_5hao" bindtap="submitShop">提交</button>
+        </block>
+
+        <view class="info">
+            <text>温馨提示:</text>
+            <text>• 请不要上传非法文字或图片</text>
+            <text>• 请根据商家类型上传对应营业证书</text>
+            <text>• 商家信息需工作人员审核后才可显示</text>
+        </view>
+    </view>
+</view>

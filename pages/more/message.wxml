@@ -1,0 +1,1 @@
+<web-view src="https://5hao.sheep.squmo.com/wx.php/Index/news_list?from=xcx&token={{token}}&uid={{uid}}"></web-view>

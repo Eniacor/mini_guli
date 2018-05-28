@@ -1,0 +1,102 @@
+<template name="order_title">
+    <view class="order_title flex align-c">
+        <view class="order_title_info flex_1">
+            <view class="order_no">订单号：{{id}}</view>
+            <view class="order_status">{{status_str}}</view>
+        </view>
+        <navigator wx:if='{{process_status==3 || process_status==7 || process_status==8 || process_status==9 || process_status==10 || process_status==11 || process_status==12 || process_status==13}}'
+            class="order_express_btn flex-center align-c color_5hao border_color_5hao" url="{{'/pages/express/express?id='+id}}">物流信息</navigator>
+    </view>
+</template>
+
+<template name="good_info">
+    <view class='good_info'>
+        <view class="goods_info_title">商品信息</view>
+        <view class="order_goods_list">
+            <view wx:for="{{ goods }}" wx:for-item='d' wx:key='good_id' class='order_good_item'>
+                <view class="order_good_name lineclamp1">{{d.name}}</view>
+                <view class="order_good_num">￥{{d.price / 100}} x {{d.count}}</view>
+                <view class="order_good_total_price">￥{{d.count * d.price / 100}}</view>
+            </view>
+        </view>
+    </view>
+</template>
+
+<template name="order_other_info">
+    <view class='order_other_info'>
+        <view class='order_other_yf item flex align-c'>
+            <view class='order_other_yf_title flex_1'>运费</view>
+            <view class='order_other_yf_title flex_1'>
+                <block wx:if="{{ is_free_shipping == 0 }}">
+                    <view class='order_other_yf_content'>{{deliver_price/100}}元</view>
+                </block>
+                <block wx:else>
+                    <view class='order_other_yf_content'>免运费</view>
+                </block>
+            </view>
+        </view>
+
+        <view class='order_other_coupon item flex align-c'>
+            <view class='order_other_coupon_title flex_1'>优惠券</view>
+            <view class='order_other_coupon_content'>
+                <block wx:if="{{ coupon_id==0 }}">无可用优惠券</block>
+                <block wx:else>{{coupon_str}}</block>
+            </view>
+        </view>
+        <view class='order_other_coupon item flex align-c'>
+            <view class='order_other_coupon_title flex_1'>五号豆抵扣</view>
+            <view class='order_other_coupon_content'>
+                <block wx:if="{{ bean_num==0 }}">无折扣</block>
+                <block wx:else>{{bean_num/10}}</block>
+            </view>
+        </view>
+        <view class='order_other_coupon item flex align-c'>
+            <view class='order_other_coupon_title flex_1'>五号券抵扣</view>
+            <view class='order_other_coupon_content'>
+                <block wx:if="{{ticket_price==0 }}">无折扣</block>
+                <block wx:else>{{ticket_price/100}}</block>
+            </view>
+        </view>
+        <view class='order_other_coupon item flex align-c'>
+            <view class='order_other_coupon_title flex_1'>合计</view>
+            <view class='order_other_coupon_content color_5hao'>
+                <block>¥{{price/100}}</block>
+            </view>
+        </view>
+
+        <view class="order_other_bz item flex align-c">
+            <view class="order_other_bz_title">备注:</view>
+            <view class="order_other_bz_input flex_1 flex align-c">
+                {{remark}}
+            </view>
+        </view>
+    </view>
+</template>
+
+<template name="order_info">
+    <view class="order_info">
+        <view class="order_info_title">订单信息</view>
+        <view class="order_info_list">
+
+            <view class="item flex align-c">
+                <view class="title">订单号码</view>
+                <view class="content flex_1">{{id}}</view>
+            </view>
+
+            <view class="item flex align-c">
+                <view class="title">订单时间</view>
+                <view class="content flex_1">{{create_time}}</view>
+            </view>
+
+            <view class="item flex align-c">
+                <view class="title">配送地址</view>
+                <view class="content flex_1">{{ship_address.province_str}} {{ship_address.city_str}} {{ship_address.district_str}} {{ship_address.address}}</view>
+            </view>
+
+            <view class="item flex align-c">
+                <view class="title">用户信息</view>
+                <view class="content flex_1">{{ship_address.consignee}} {{ship_address.telphone}}</view>
+            </view>
+        </view>
+    </view>
+</template>

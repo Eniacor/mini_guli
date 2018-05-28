@@ -1,0 +1,21 @@
+.my_stepper {
+    width: 95px;
+    height: 30px;
+}
+
+.my_stepper .stepper_item {
+    height: 30px;
+    color: #313131;
+    font-size: 15px;
+}
+
+.my_stepper .stepper_sub,
+.my_stepper .stepper_add {
+    width: 30px;
+}
+
+.my_stepper .stepper_item .iconfont {
+    width: 20px;
+    height: 20px;
+    font-size: 18px;
+}

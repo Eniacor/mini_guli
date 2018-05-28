@@ -1,0 +1,108 @@
+/* collection.wxss */
+
+Page {
+    background-color: #ffffff;
+}
+
+.collection-list {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+}
+
+.good_item {
+    width: 375rpx;
+    border-bottom: 1rpx solid #e2e2e2;
+    box-sizing: border-box;
+    height: 220px;
+}
+
+.good_item.left {
+    border-right: 1px solid #e2e2e2;
+}
+
+.list_status {
+    height: 50px;
+    font-size: 14px;
+    text-align: center;
+    color: #959595;
+    line-height: 50px;
+}
+
+.collection_item .img {
+    margin: 6px auto 0;
+    border-radius: 5rem;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    text-align: center;
+    width: 105px;
+    height: 105px;
+    position: relative;
+}
+
+.collection_item .img image {
+    width: 105px;
+    height: 105px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.collection_item .img .out_tag {
+    width: 50px;
+    height: 50px;
+    border-radius: 5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    color: #ffffff;
+    font-size: 13px;
+    position: relative;
+    z-index: 2;
+}
+
+.collection_item .good_name {
+    height: 33px;
+    margin-top: 11px;
+    padding: 0 15px;
+}
+
+.collection_item .good_name .word {
+    font-size: 11px;
+    color: #313131;
+    line-height: 15px;
+    word-break: break-all;
+}
+
+.collection_item .price_sys {
+    margin-top: 7px;
+    padding: 0 15px;
+    display: -webkit-box;
+    -webkit-box-align: end;
+}
+
+.collection_item .price_sys .price {
+    font-size: 11px;
+}
+
+.collection_item .price_sys .crosse_price {
+    margin-left: 10px;
+    font-size: 9px;
+    color: #959595;
+    text-decoration: line-through;
+}
+
+.collection_item .collection_cancel {
+    margin: 7px auto 0;
+    width: 75px;
+    height: 24px;
+    border: 1rpx solid #e2e2e2;
+    border-radius: 5rem;
+    text-align: center;
+    line-height: 24px;
+    box-sizing: content-box;
+    font-size: 13px;
+    color: #313131;
+}

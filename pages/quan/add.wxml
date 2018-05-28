@@ -1,0 +1,11 @@
+<view class="content">
+    <input placeholder="请输入充值5号券的数量" class="quan_input" bindinput="onTextInput" />
+    <button class="submit_pay background_color_5hao" bindtap="submitPay">确认充值</button>
+    <view class="intro">
+        <text class="title">充值说明:</text>
+        <text>• 现仅支持微信支付充值5号券</text>
+        <text>• 1元=1五号券</text>
+        <text>• 最低充值额度为10元</text>
+        <text>• 充值后不可退款</text>
+    </view>
+</view>

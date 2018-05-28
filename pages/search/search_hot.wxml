@@ -1,0 +1,35 @@
+<view class="searchBar flex flex-align-center">
+    <view class="input flex_1 flex flex-align-center" style="background-color:#f0f0f0;height:30px;margin:0 10px;">
+        <icon type="search" size="15" color='#959595' style="margin:0 10px;" />
+        <input type="text" class="flex_1" focus="true" confirm-type="search" value="{{keyword}}" style="color:#000;font-size:14px;"
+            placeholder="{{searchhot.hotwords}}" bindinput='onKeywordInput' />
+    </view>
+    <view class="search_btn" style="margin-right:10px;width:40px;text-align:center;font-size:13px;color:#666;" bindtap='onSearch'>搜索</view>
+</view>
+<view class="search_content">
+    <view class="search_history clearfix">
+        <text class="title">历史记录</text>
+        <text class="cancel" bindtap="clearHis">清空</text>
+    </view>
+    <view class="his_list clearfix">
+        <block wx:if="{{hisGoods.length>0}}">
+            <block wx:for="{{hisGoods}}" wx:for-index="i">
+                    <text class="his" bindtap="toSearch" data-item="{{item}}">{{item}}</text>
+            </block>
+        </block>
+        <block wx:else>
+                <text class="list_none">无搜索历史</text>
+        </block>
+ 
+    </view>
+</view>
+<view class="search_content hot_search">
+    <view class="search_history clearfix">
+        <text class="title">热门搜索</text>
+    </view>
+    <view class="his_list clearfix">
+        <block wx:for="{{hotGoods}}">
+                <text class="his" bindtap="toSearch"  data-item="{{item.hotwords}}">{{item.hotwords}}</text>
+        </block>
+    </view>
+</view>

@@ -1,0 +1,22 @@
+<template name="recommendList">
+    <view class="u_like_content clearfloat">
+        <block wx:for="{{reclist}}" wx:for-item="item" wx:for-index="i" wx:key='id'>
+                <navigator url="{{'/pages/goodDetail/goodDetail?id='+item.id}}" hover-class="none">
+                <view class="uk_goods">
+                    <view class="uk_goods_image">
+                        <image src="{{item.images}}" />
+                        <!-- <image class="u_like_icon" src="/images/icon/new.png" /> -->
+                    </view>
+                    <view class="uk_goods_info">
+                        <text clas="uk_goods_name">{{item.name}}</text>
+                        <text clas="uk_goods_intr">{{item.sec_name}}</text>
+                    </view>
+                    <view class="uk_goods_price">
+                        <text class="uk_selling_price">¥{{item.activity_price/100}}</text>
+                        <text class="uk_overed_price">¥{{item.price/100}}</text>
+                    </view>
+                </view>
+            </navigator>
+        </block>
+    </view>
+</template>

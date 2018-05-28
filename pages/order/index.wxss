@@ -1,0 +1,95 @@
+/* pages/order/index.wxss */
+
+.order_item {
+    background-color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.order_item .order_title {
+    padding: 0 15px;
+    height: 41px;
+    border-bottom: 1rpx solid #e2e2e2;
+}
+
+.order_item .order_title .order_datetime {
+    color: #313131;
+    font-size: 14px;
+    padding-left: 8px;
+    position: relative;
+}
+
+.order_item .order_title .order_datetime::before {
+    width: 2px;
+    height: 10px;
+    content: ' ';
+    background-color: #313131;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -5px;
+}
+
+.order_item .order_title .order_status {
+    text-align: right;
+    font-size: 14px;
+    color: #313131;
+}
+
+.order_item .order_info {
+    padding: 15px;
+}
+
+.order_item .order_info .order_desc {
+    margin-left: 10px;
+}
+
+.order_item .order_info .order_desc .order_name {
+    height: 23px;
+}
+
+.order_item .order_info .order_desc .order_name .name_inner {
+    font-size: 14px;
+    color: #313131;
+}
+
+.order_item .order_info .order_desc .order_price {
+    font-size: 14px;
+    color: #313131;
+    text-align: right;
+    height: 40px;
+    line-height:40px;
+}
+
+.order_item .order_info .order_desc .order_time {
+    font-size: 12px;
+    color: #959595;
+}
+
+.order_item .order_footer {
+    height: 41px;
+    border-top: 1rpx solid #e2e2e2;
+    padding: 0 15px;
+    text-align: right;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: end;
+}
+
+.order_item .order_footer .order_btn_common {
+    height: 26px;
+    padding: 0 10px;
+    font-size: 14px;
+    line-height: 26px;
+    margin-left: 15px;
+    color: #313131;
+    border: 1rpx solid #313131;
+    border-radius:10rpx;
+}
+
+.list_status {
+    height: 50px;
+    font-size: 14px;
+    text-align: center;
+    color: #959595;
+    line-height: 50px;
+}

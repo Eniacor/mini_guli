@@ -1,0 +1,134 @@
+page {
+    background: #f0f0f0;
+    height: 100%;
+}
+
+.content .shop_info {
+    background: #fff;
+    padding: 0 25rpx;
+}
+
+.row {
+    width: 100%;
+    height: 90rpx;
+    line-height: 90rpx;
+    border-bottom: 1rpx solid #e0e0e0;
+}
+
+.title {
+    font-size: 28rpx;
+    color: #313131;
+    float: left;
+    width: 150rpx;
+}
+
+.shop_input {
+    width: 500rpx;
+    height: 90rpx;
+    float: left;
+}
+
+input, textarea {
+    font-size: 28rpx;
+    color: #313131;
+    float: left;
+}
+
+.row .iconfont {
+    float: right;
+}
+
+.intro {
+    background: #fff;
+    height: 230rpx;
+}
+
+.intro .title {
+    padding-top: 30rpx;
+}
+
+textarea {
+    width: 500rpx;
+    height: 150rpx;
+    padding-top: 30rpx;
+    float: left;
+}
+
+.address {
+    font-size: 28rpx;
+}
+
+.shop_license {
+    margin: 20rpx 0;
+    background: #fff;
+    padding: 25rpx;
+    min-height: 350rpx;
+}
+
+.shop_license .info {
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+
+.shop_license .info .title {
+    width: 100%;
+}
+
+.upload .iconfont {
+    font-size: 120rpx;
+    color: #ddd;
+    float: left
+}
+
+.shop_image {
+    width: 150rpx;
+    max-height: 100%;
+}
+
+.contact {
+    padding: 0 25rpx;
+    background: #fff;
+}
+
+.footer {
+    width: 100%;
+    padding: 0 25rpx;
+    box-sizing: border-box;
+}
+
+.btn_submit {
+    margin-top: 30rpx;
+    width: 700rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: center;
+    color: #fff;
+    font-size: 34rpx;
+    border-radius: 10rpx;
+}
+
+.footer .info {
+    margin: 30rpx 0;
+}
+
+.info text {
+    display: block;
+    font-size: 26rpx;
+    color: #313131;
+}
+
+.box {
+    width: 150rpx;
+    position: relative;
+    float: left;
+    margin: 10rpx;
+}
+
+.box .iconfont {
+    font-size: 40rpx;
+    color: #333;
+    position: absolute;
+    top: -20rpx;
+    right: -20rpx;
+}

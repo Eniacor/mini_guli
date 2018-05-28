@@ -1,0 +1,55 @@
+
+
+/* bindPhone.wxss */
+.input_list {
+    margin-top: 10px;
+    background-color: #ffffff;
+    padding: 0 15px;
+}
+
+.input_list .list_item {
+    border-bottom: 1rpx solid #e2e2e2;
+    height: 60px;
+}
+
+.input_list .list_item:last-child {
+    border: 0;
+}
+
+.input_list .list_item .icon {
+    width: 30px;
+}
+
+.input_list .list_item .icon .iconfont {
+    font-size: 18px;
+    color: #313131;
+}
+
+.input_list .list_item .input {
+    height: 100%;
+}
+
+.input_list .list_item .input input {
+    height: 100%;
+    color: #313131;
+    font-size: 15px;
+}
+
+.get_code_btn {
+    width: 100px;
+    height: 35px;
+    border: 1rpx solid #ab2b2b;
+    color: #ab2b2b;
+    font-size: 15px;
+    margin-left: 10px;
+    border-radius:10rpx;
+}
+
+.bind_btn {
+    width: 335px;
+    height: 45px;
+    font-size: 16px;
+    color: #ffffff;
+    margin: 30px auto 0;
+    border-radius:10rpx;
+}

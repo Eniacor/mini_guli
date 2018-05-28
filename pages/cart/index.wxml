@@ -1,0 +1,86 @@
+<!--pages/cart/index.wxml-->
+<import src='/components/common/stepper.wxml' />
+<import src='../../components/home/recommendList.wxml' />
+<view wx:if="{{!loadEnd}}" class="loading"></view>
+<view wx:else class='container'>
+    <view class="good_list" wx:if='{{list && list.length>0}}'>
+        <navigator url="{{'/pages/goodDetail/goodDetail?id='+d.id}}" class="good_item  flex touch-item {{d.isTouchMove ? 'touch-move-active' : ''}}"
+            data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{list}}" wx:for-item="d" wx:key="id"
+            hover-class="none">
+            <view class="content">
+                <view hover='true' class='check_area flex-center align-c' data-id="{{d.id}}" catchtap='onTapChecked'>
+                    <view wx:if='{{!checkStatus[d.id]}}' class='iconfont icon-unchecked' style='color:#959595;'></view>
+                    <view wx:else class='iconfont icon-checked color_5hao'></view>
+                </view>
+                <view class='img_area'>
+                    <image src="{{d.image}}?imageView2/1/w/200/h/200/interlace/1"></image>
+                    <!-- <view wx:if="{{d.activity_name != ''}}" class='active_tip'>{{d.activity_name}}</view> -->
+                </view>
+                <view class='flex_1 good_info'>
+                    <view class="name lineclamp2 clearfix">
+                        <text style="visibility: hidden;">{{d.type}}</text>
+                        <text wx:if="{{d.type==1}}" data-type="{{d.type}}" class="goods_type background_color_5hao">自营</text>
+                        <text wx:if="{{d.type==2}}" data-type="{{d.type}}" class="goods_type background_color_5hao">积分</text>
+                        {{d.name}}
+                    </view>
+                    <view class='praise'>
+                        <block wx:for="{{d.is_relation_attr}}" wx:for-item='dx' wx:for-index='ix' wx:key='attr_value'>
+                            {{dx.value}}
+                            <block wx:if="{{ ix < d.is_relation_attr.length-1 }}">
+                                -
+                            </block>
+                        </block>
+                    </view>
+                    <view class='flex price_system'>
+                        <view class="price color_5hao">￥{{d.price_system.price/100}}</view>
+                        <!-- <view class="crosse_price" wx:if="{{d.price_system.is_crossed == 1}}">￥{{d.price_system.crossed_price/100}}</view>-->
+                    </view>
+                    <view class='item_control'>
+                        <template is="stepper" data='{{buyNum:d.count,id:d.id}}' />
+                    </view>
+                </view>
+            </view>
+            <view class="del" catchtap="del" data-id="{{d.id}}" data-index="{{index}}">删除</view>
+        </navigator>
+        <view class='buy_cart_bar'>
+            <!-- <view class='buy_cart_bar_block'></view> -->
+            <view class='buy_cart_bar_fixed flex align-c'>
+                <view class='select_all_area' catchtap='onTapAll'>
+                    <text wx:if='{{!checked}}' class='iconfont icon-unchecked' style='color:#959595;'></text>
+                    <text wx:else class='iconfont icon-checked color_5hao'></text>
+                    全选
+                </view>
+                <view class='price_area flex_1'>
+                    <text class='price_title'>合计</text>
+                    <text class="price_all color_5hao">￥ {{price}}</text>
+                    <text class="prize_tip">不含运费</text>
+                </view>
+                <view class='btn_buy flex-center align-c background_color_5hao' catchtap='onTapBuy'>
+                    购买
+                </view>
+            </view>
+        </view>
+    </view>
+    <view wx:else class='page_block flex-center align-c'>
+        <view class='page_block_inner flex_1'>
+            <view class='b_icon'>
+                <image style="width:300rpx;height: 269rpx;" mode="" src="/images/static/empty.png"></image>
+            </view>
+            <view class='b_word'>您还没有选购任何商品</view>
+        </view>
+    </view>
+    <!-- 猜你喜欢-->
+    <view class="u_like common_content">
+        <view class="fresh_title clearfloat">
+            <view class="title_left">
+                <text class="title_name">猜你喜欢</text>
+            </view>
+        </view>
+        <template is="recommendList" data="{{reclist:reclist}}" />
+        <view class="list_status" wx:if="{{noData}}">无数据</view>
+        <view class="list_status" wx:elif="{{allData}}">无更多数据</view>
+        <view class="list_status" wx:elif="{{loading}}">加载中...</view>
+        <view class="list_status" wx:else>上拉加载更多</view>
+    </view>
+</view>
+<view class='tab_bar_border'></view>
