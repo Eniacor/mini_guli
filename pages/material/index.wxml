@@ -1,0 +1,98 @@
+<view class="title">
+    <view class="title_line"></view>
+    <view class="title_content">最新机经</view>
+</view>
+<view class="content">
+    <view class="content_item  content_item-right">
+        <view class="item_left item_left-img1">
+            <image src="../../images/static/ji1.png"></image>
+        </view>
+        <view class="item_middle"></view>
+        <view class="item_right">
+            <view class="right_title">Speking</view>
+            <view class="right_text">口语</view>
+        </view>
+    </view>
+    <view class="content_item">
+        <view class="item_left item_left-img2">
+             <image src="../../images/static/ji2.png"></image>
+        </view>
+        <view class="item_middle"></view>
+        <view class="item_right">
+            <view class="right_title">Writing</view>
+            <view class="right_text">写作</view>
+        </view>
+    </view>
+    <view class="content_item content_item-top content_item-right">
+        <view class="item_left item_left-img3">
+             <image src="../../images/static/ji3.png"></image>
+        </view>
+        <view class="item_middle"></view>
+        <view class="item_right">
+            <view class="right_title" style="width:145rpx;">Listening</view>
+            <view class="right_text">听力</view>
+        </view>
+    </view>
+    <view class="content_item content_item-top">
+        <view class="item_left item_left-img4">
+             <image src="../../images/static/ji4.png"></image>
+        </view>
+        <view class="item_middle"></view>
+        <view class="item_right">
+            <view class="right_title">Reading</view>
+            <view class="right_text">口语</view>
+        </view>
+    </view>
+</view>
+<view class="title">
+    <view class="title_line"></view>
+    <view class="title_content">经验分享</view>
+</view>
+<view class="list">
+    <view class="list_item">
+        <view class="item_left">
+            <image src="../../images/static/share1.png"></image>
+        </view>
+        <view class="item_right">
+            <view class="right_title">PET考试介绍</view>
+            <view class="right_content">从这里带你全面了解PET考试，不再做PET小白</view>
+        </view>
+    </view>
+    <view class="list_item">
+        <view class="item_left">
+            <image src="../../images/static/share1.png"></image>
+        </view>
+        <view class="item_right">
+            <view class="right_title">PET考试介绍</view>
+            <view class="right_content">从这里带你全面了解PET考试，不再做PET小白</view>
+        </view>
+    </view>
+    <view class="list_item">
+        <view class="item_left">
+            <image src="../../images/static/share1.png"></image>
+        </view>
+        <view class="item_right">
+            <view class="right_title">PET考试介绍</view>
+            <view class="right_content">从这里带你全面了解PET考试，不再做PET小白</view>
+        </view>
+    </view>
+    <view class="list_item">
+        <view class="item_left">
+            <image src="../../images/static/share1.png"></image>
+        </view>
+        <view class="item_right">
+            <view class="right_title">PET考试介绍</view>
+            <view class="right_content">从这里带你全面了解PET考试，不再做PET小白</view>
+        </view>
+    </view>
+    <view class="list_item">
+        <view class="item_left">
+            <image src="../../images/static/share1.png"></image>
+        </view>
+        <view class="item_right">
+            <view class="right_title">PET考试介绍</view>
+            <view class="right_content">从这里带你全面了解PET考试，不再做PET小白</view>
+        </view>
+    </view>
+</view>
+<view class="load">暂无更多</view>

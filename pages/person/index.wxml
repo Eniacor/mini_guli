@@ -1,0 +1,153 @@
+<!-- pages/mine/index.wxml -->
+<view class="container">
+    <view class="header">
+        <view class="top">
+            <view class="top_left">
+                <view class="left_title">这里是你的昵称你真有那么长</view>
+                <view class="left_fen">积分:666</view>
+                <view class="left_btn">免费会员</view>
+            </view>
+            <view class="top_middle">
+                <image src="/images/static/tou.png" />
+            </view>
+            <view class="top_right">
+                 <image src="/images/static/toul.png" />
+            </view>
+        </view>
+        <view class="des">
+            <view class="des_left">签到领积分，换购超多好礼</view>
+            <view class="des_right">
+                <image src="/images/static/qian.png" /> 签到
+            </view>
+        </view>
+    </view>
+    <view class="personal_func_list">
+        <navigator url="/pages/collection/collection" hover-class="none" class="flex align-c personal_func_item">
+            <view class="icon iconfont">
+                <image src="/images/static/user.png" />
+            </view>
+            <view class="name flex_1">
+                <text>个人信息</text>
+            </view>
+            <view class="right">
+                <image src="/images/static/cright.png" />
+            </view>
+        </navigator>
+        <navigator url="/pages/collection/collection" hover-class="none" class="flex align-c personal_func_item">
+            <view class="icon iconfont">
+                <image src="/images/static/english.png" />
+            </view>
+            <view class="name flex_1">
+                <text>生词本</text>
+            </view>
+            <view class="right">
+                <image src="/images/static/cright.png" />
+            </view>
+        </navigator>
+        <navigator url="/pages/collection/collection" hover-class="none" class="flex align-c personal_func_item">
+            <view class="icon iconfont">
+                <image src="/images/static/cang.png" />
+            </view>
+            <view class="name flex_1">
+                <text>收藏夹</text>
+            </view>
+            <view class="right">
+                <image src="/images/static/cright.png" />
+            </view>
+        </navigator>
+        <navigator url="/pages/collection/collection" hover-class="none" class="flex align-c personal_func_item">
+            <view class="icon iconfont">
+                <image src="/images/static/mind.png" />
+            </view>
+            <view class="name flex_1">
+                <text>我的回忆</text>
+            </view>
+            <view class="right">
+                <image src="/images/static/cright.png" />
+            </view>
+        </navigator>
+    </view>
+    <view class="personal_func_list">
+        <navigator url="/pages/collection/collection" hover-class="none" class="flex align-c personal_func_item">
+            <view class="icon iconfont">
+                <image src="/images/static/invation.png" />
+            </view>
+            <view class="name flex_1">
+                <text>邀请好友</text>
+            </view>
+            <view class="right">
+                <image src="/images/static/cright.png" />
+            </view>
+        </navigator>
+        <navigator url="/pages/collection/collection" hover-class="none" class="flex align-c personal_func_item">
+            <view class="icon iconfont">
+                <image src="/images/static/vip.png" />
+            </view>
+            <view class="name flex_1">
+                <text>我的会员</text>
+            </view>
+            <view class="right">
+                <image src="/images/static/cright.png" />
+            </view>
+        </navigator>
+        <navigator url="/pages/collection/collection" hover-class="none" class="flex align-c personal_func_item">
+            <view class="icon iconfont">
+                <image src="/images/static/fen.png" />
+            </view>
+            <view class="name flex_1">
+                <text>积分兑换</text>
+            </view>
+            <view class="right">
+                <image src="/images/static/cright.png" />
+            </view>
+        </navigator>
+        <navigator url="/pages/collection/collection" hover-class="none" class="flex align-c personal_func_item">
+            <view class="icon iconfont">
+                <image src="/images/static/course.png" />
+            </view>
+            <view class="name flex_1">
+                <text>课程与回忆</text>
+            </view>
+            <view class="right">
+                <image src="/images/static/cright.png" />
+            </view>
+        </navigator>
+        <navigator url="/pages/collection/collection" hover-class="none" class="flex align-c personal_func_item">
+            <view class="icon iconfont">
+                <image src="/images/static/zhou.png" />
+            </view>
+            <view class="name flex_1">
+                <text>周边产品</text>
+            </view>
+            <view class="right">
+                <image src="/images/static/cright.png" />
+            </view>
+        </navigator>
+        <navigator url="/pages/collection/collection" hover-class="none" class="flex align-c personal_func_item">
+            <view class="icon iconfont">
+                <image src="/images/static/pdf.png" />
+            </view>
+            <view class="name flex_1">
+                <text>导出PDF</text>
+            </view>
+            <view class="right">
+                <image src="/images/static/cright.png" />
+            </view>
+        </navigator>
+    </view>
+    <view class="personal_func_list">
+        <navigator url="/pages/collection/collection" hover-class="none" class="flex align-c personal_func_item">
+            <view class="icon iconfont">
+                <image src="/images/static/about.png" />
+            </view>
+            <view class="name flex_1">
+                <text>关于我们</text>
+            </view>
+            <view class="right">
+                <image src="/images/static/cright.png" />
+            </view>
+        </navigator>
+    </view>
+    <view class="tech">草帽科技提供技术支持</view>
+</view>
+<view class="tab_bar_border"></view>

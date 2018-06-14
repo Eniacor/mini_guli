@@ -1,7 +1,0 @@
-<view class="container">
-    <input value="{{nickname}}" maxlength="20" minlength="4" class="nickname_input" bindinput="keyname" />
-</view>
-<view class="main">
-    <text class="info">4-20个字符可由中英文，数字，"_"组成</text>
-    <button class="changeNickname background_color_5hao" bindtap="changeNickname">确定</button>
-</view>

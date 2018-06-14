@@ -1,50 +1,9 @@
 {
   "pages": [
-    "pages/home/index",
-    "pages/search/search",
-    "pages/search/search_hot",
-    "pages/classify/index",
-    "pages/cart/index",
-    "pages/order/index",
-    "pages/mine/index",
-    "pages/addressList/addressList",
-    "pages/address/address",
-    "pages/goodDetail/goodDetail",
-    "pages/goodList/goodList",
-    "pages/coupon/coupon",
-    "pages/orderConfirm/orderConfirm",
-    "pages/bindPhone/bindPhone",
-    "pages/about/about",
-    "pages/collection/collection",
-    "pages/orderDetail/orderDetail",
-    "pages/addEvaluation/addEvaluation",
-    "pages/express/express",
-    "pages/orderBackInfo/orderBackInfo",
-    "pages/notice/notice",
-    "pages/evaluationList/evaluationList",
-    "pages/evaluationGoods/evaluationGoods",
-    "pages/red/index",
-    "pages/sign/index",
-    "pages/member/index",
-    "pages/invite/index",
-    "pages/detail/index",
-    "pages/change/change_nickname",
-    "pages/change/certificate_card",
-    "pages/change/bind_new_phone",
-    "pages/change/send_new_code",
-    "pages/shop/index",
-    "pages/shop/make",
-    "pages/shop/ex_voucher",
-    "pages/shop/shop_address",
-    "pages/more/limit",
-    "pages/more/message",
-    "pages/dou/index",
-    "pages/quan/index",
-    "pages/quan/detail",
-    "pages/quan/add",
-    "pages/quan/withdraw",
-    "pages/message/index",
-    "pages/shop/near_business"
+    "pages/index/index",
+    "pages/material/index",
+    "pages/course/index",
+    "pages/person/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#be2e25",
@@ -60,25 +19,25 @@
     "list": [
       {
         "text": "首页",
-        "pagePath": "pages/home/index",
+        "pagePath": "pages/index/index",
         "iconPath": "images/tabBar/tab1.png",
         "selectedIconPath": "images/tabBar/tab1a.png"
       },
       {
         "text": "资料",
-        "pagePath": "pages/classify/index",
+        "pagePath": "pages/material/index",
         "iconPath": "images/tabBar/tab2.png",
         "selectedIconPath": "images/tabBar/tab2a.png"
       },
       {
         "text": "课程",
-        "pagePath": "pages/red/index",
+        "pagePath": "pages/course/index",
         "iconPath": "images/tabBar/tab3.png",
         "selectedIconPath": "images/tabBar/tab3a.png"
       },
       {
         "text": "我",
-        "pagePath": "pages/cart/index",
+        "pagePath": "pages/person/index",
         "iconPath": "images/tabBar/tab4.png",
         "selectedIconPath": "images/tabBar/tab4a.png"
       }

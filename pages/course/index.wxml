@@ -1,0 +1,48 @@
+<view class="category">
+    <view class="category_item category_item-activ">PTE课程推荐</view>
+    <view class="category_item">最新活动</view>
+    <view class="category_item">考试周边产品</view>
+    <view class="category_item">学校简介</view>
+    <view class="category_item">名师专栏</view>
+    <view class="category_item">考位信息交换</view>
+</view>
+<view class="course">
+    <view class="course_banner">
+        <image src="/images/static/course1.png" />
+    </view>
+    <view class="course_contents">
+        <view class="content">
+            <view class="content_left">
+                <image src="/images/static/course_i.png" />
+                <view class="left_biao">立减$50</view>
+            </view>
+            <view class="content_right">
+                <view class="right_title">
+                    <view class="title">PTE口语提升保过课程</view>
+                    <view class="biao">HOT</view>
+                </view>
+                <view class="right_des">
+                    <view class="des des-1">口语</view>
+                    <view class="des des-2">线上</view>
+                    <view class="des des-3">保过</view>
+                </view>
+                <view class="right_techer">
+                    <image src="/images/static/course_u.png" />
+                    <view class="name">文波老师</view>
+                </view>
+                <view class="right_address">
+                    <image src="/images/static/course_a.png" />
+                    <view class="address">墨尔本校区</view>
+                </view>
+                <view class="right_time">
+                    <image src="/images/static/course_c.png" />
+                    <view class="time">2015-05-18开课</view>
+                    <view class="detail">
+                        查看详情
+                        <text>>></text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

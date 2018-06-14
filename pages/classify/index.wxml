@@ -1,7 +1,0 @@
-<import src='../../components/classify/tpl.wxml'></import>
-<view wx:if="{{!loadEnd}}" class="loading"></view>
-<view wx:else class="container">
-    <template is='left_scroll' data="{{list,selectIndex}}" />
-    <template is='sec_list' data='{{list:list[selectIndex].child}}'></template>
-</view>
-<view class='tab_bar_border'></view>

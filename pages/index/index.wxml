@@ -1,0 +1,126 @@
+<swiper class="swiper swiper-box" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="rgb(238,238,238)" indicator-active-color="#333">
+    <block class="swiper_item" wx:for="{{imgUrls}}" wx:key="unique">
+        <swiper-item class="item">
+            <image src="{{item}}" class="slide-image" />
+        </swiper-item>
+    </block>
+</swiper>
+<view class="nav">
+    <view class="nav_item">
+        <view class="item_img">
+            <image src="../../images/static/nav1.png"></image>
+        </view>
+        <view class="item_text">
+            <text>领取资料</text>
+        </view>
+    </view>
+    <view class="nav_item">
+        <view class="item_img">
+            <image src="../../images/static/nav2.png"></image>
+        </view>
+        <view class="item_text">
+            <text>名师简介</text>
+        </view>
+    </view>
+    <view class="nav_item">
+        <view class="item_img">
+            <image src="../../images/static/nav3.png"></image>
+        </view>
+        <view class="item_text">
+            <text>分享有礼</text>
+        </view>
+    </view>
+    <view class="nav_item">
+        <view class="item_img">
+            <image src="../../images/static/nav4.png"></image>
+        </view>
+        <view class="item_text">
+            联系我们
+        </view>
+    </view>
+</view>
+<view class="content">
+    <view class="content_item">
+        <view class="item_img">
+            <image src="../../images/static/content1.png"></image>
+        </view>
+        <view class="item_line"></view>
+        <view class="item_text1">最新机经</view>
+    </view>
+    <view class="content_item">
+        <view class="item_img">
+            <image src="../../images/static/content2.png"></image>
+        </view>
+        <view class="item_line"></view>
+        <view class="item_text1">真题回忆</view>
+    </view>
+    <view class="content_item">
+        <view class="item_img">
+            <image src="../../images/static/content3.png"></image>
+        </view>
+        <view class="item_line"></view>
+        <view class="item_text1">随堂练习</view>
+    </view>
+    <view class="content_item">
+        <view class="item_img">
+            <image src="../../images/static/content4.png"></image>
+        </view>
+        <view class="item_line"></view>
+        <view class="item_text1">最新活动</view>
+    </view>
+</view>
+<view class="score">
+    <view class="score_header">
+        <view class="header_title">
+            <image src="../../images/static/score1.png"></image>
+            <text>PTE高分榜</text>
+        </view>
+        <view class="header_des">最新高分学员成绩单分享，有图有真相</view>
+    </view>
+    <view class="score_contents">
+        <view class="score_content">
+            <view class="content_left">
+                <image src="../../images/static/score2.png"></image>
+            </view>
+            <view class="content_middle">恭喜文波PTE五月第32位学员突破666分...</view>
+            <view class="content_right">31</view>
+        </view>
+        <view class="score_content">
+            <view class="content_left">
+                <image src="../../images/static/score2.png"></image>
+            </view>
+            <view class="content_middle">恭喜文波PTE五月第32位学员突破666分...</view>
+            <view class="content_right">31</view>
+        </view>
+        <view class="score_content">
+            <view class="content_left">
+                <image src="../../images/static/score2.png"></image>
+            </view>
+            <view class="content_middle">恭喜文波PTE五月第32位学员突破666分...</view>
+            <view class="content_right">31</view>
+        </view>
+        <view class="score_content">
+            <view class="content_left">
+                <image src="../../images/static/score2.png"></image>
+            </view>
+            <view class="content_middle">恭喜文波PTE五月第32位学员突破666分...</view>
+            <view class="content_right">31</view>
+        </view>
+        <view class="score_content">
+            <view class="content_left">
+                <image src="../../images/static/score2.png"></image>
+            </view>
+            <view class="content_middle">恭喜文波PTE五月第32位学员突破666分...</view>
+            <view class="content_right">31</view>
+        </view>
+        <view class="score_content">
+            <view class="content_left">
+                <image src="../../images/static/score2.png"></image>
+            </view>
+            <view class="content_middle">恭喜文波PTE五月第32位学员突破666分...</view>
+            <view class="content_right">31</view>
+        </view>
+    </view>
+    <view class="score_bottom">查看更多</view>
+</view>
+<view class="tech"> ©草帽科技提供技术支持 </view>
