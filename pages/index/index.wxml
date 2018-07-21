@@ -6,7 +6,8 @@
     </block>
 </swiper>
 <view class="nav">
-    <view class="nav_item">
+     <!-- data-url="/pages/index/material/index" -->
+    <view class="nav_item" bindtap="skipPage" data-url="/pages/test/index" data-type="0">
         <view class="item_img">
             <image src="../../images/static/nav1.png"></image>
         </view>
@@ -14,7 +15,7 @@
             <text>领取资料</text>
         </view>
     </view>
-    <view class="nav_item">
+    <view class="nav_item" bindtap="skipPage" data-url="/pages/index/teacher/index" data-type="0">
         <view class="item_img">
             <image src="../../images/static/nav2.png"></image>
         </view>
@@ -22,7 +23,7 @@
             <text>名师简介</text>
         </view>
     </view>
-    <view class="nav_item">
+    <view class="nav_item" bindtap="skipPage" data-url="/pages/index/material/index" data-type="0">
         <view class="item_img">
             <image src="../../images/static/nav3.png"></image>
         </view>
@@ -40,21 +41,21 @@
     </view>
 </view>
 <view class="content">
-    <view class="content_item">
+    <view class="content_item" bindtap="skipPage" data-url="/pages/index/jijing/index" data-type="0">
         <view class="item_img">
             <image src="../../images/static/content1.png"></image>
         </view>
         <view class="item_line"></view>
         <view class="item_text1">最新机经</view>
     </view>
-    <view class="content_item">
+    <view class="content_item" bindtap="skipPage" data-url="/pages/index/recall/index" data-type="0">
         <view class="item_img">
             <image src="../../images/static/content2.png"></image>
         </view>
         <view class="item_line"></view>
         <view class="item_text1">真题回忆</view>
     </view>
-    <view class="content_item">
+    <view class="content_item" bindtap="skipPage" data-url="/pages/index/exercise/index" data-type="0">
         <view class="item_img">
             <image src="../../images/static/content3.png"></image>
         </view>
@@ -121,6 +122,6 @@
             <view class="content_right">31</view>
         </view>
     </view>
-    <view class="score_bottom">查看更多</view>
+    <view class="score_bottom" bindtap="skipPage" data-url="/pages/index/score/index" data-type="0">查看更多</view>
 </view>
 <view class="tech"> ©草帽科技提供技术支持 </view>

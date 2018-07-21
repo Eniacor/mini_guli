@@ -3,7 +3,7 @@
     <view class="title_content">最新机经</view>
 </view>
 <view class="content">
-    <view class="content_item  content_item-right">
+    <view class="content_item  content_item-right"  bindtap="skipPage" data-url="/pages/material/speak/index" data-type="0">
         <view class="item_left item_left-img1">
             <image src="../../images/static/ji1.png"></image>
         </view>

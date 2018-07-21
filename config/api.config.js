@@ -1,7 +1,14 @@
 const xapp = require('./xapp.config.js');
 module.exports = {
-
-    XcxLogin: `${xapp.api_host}/Xcx/xcx_guest_login`,
+    XcxLogin: `${xapp.api_host}/Weixin/getOpenId`,
+    UserRegister: `${xapp.api_host}/Weixin/register`,
+   
+   
+   
+   
+   
+   
+   
     HomeBanner: `${xapp.api_host}/Home/get_banner`,
     HomeIndex: `${xapp.api_host}/Home/app_index`,
     FuncUpload: `${xapp.api_host}/Func/upload_img`,

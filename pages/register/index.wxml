@@ -1,0 +1,76 @@
+<view class="register">
+    <view class="item">
+        <view class="item_left">昵称</view>
+        <view class="item_right">
+            <input placeholder="请输入您的昵称" bindblur="getNickname" />
+        </view>
+    </view>
+    <view class="item">
+        <view class="item_left">性别</view>
+        <view class="item_right">
+            <radio-group class="radio-group" bindchange="radioSexChange">
+                <label class="radio" wx:for="{{sexs}}" wx:key="unique">
+                    <radio class="dot" value="{{item.value}}" checked="{{item.checked}}" color="#c43c33" />
+                    <text>{{item.name}}</text>
+                </label>
+            </radio-group>
+        </view>
+    </view>
+    <view class="item">
+        <view class="item_left">考试时间</view>
+        <view class="item_right">
+            <picker mode="date" value="{{date}}" start="2017-09-01" end="2020-09-01" bindchange="bindDateChange">
+                <view class="picker">{{date}}</view>
+            </picker>
+        </view>
+        <view class="item_middle">
+            <image src="/images/static/cright.png" />
+        </view>
+    </view>
+    <view class="item">
+        <view class="item_left">目标分数</view>
+        <view class="item_right">
+            <picker bindchange="bindScoreChange" value="{{index}}" range="{{score}}">
+                <view class="picker">{{score[index]}}</view>
+            </picker>
+        </view>
+        <view class="item_middle">
+            <image src="/images/static/cright.png" />
+        </view>
+    </view>
+    <view class="item">
+        <view class="item_left">考过PTE</view>
+        <view class="item_right">
+            <radio-group class="radio-group" bindchange="radioPteChange">
+                <label class="radio" wx:for="{{ptes}}" wx:key="unique">
+                    <radio class="dot" value="{{item.value}}" checked="{{item.checked}}" color="#c43c33" />
+                    <text>{{item.name}}</text>
+                </label>
+            </radio-group>
+        </view>
+    </view>
+    <view class="item">
+        <view class="item_left">邮箱</view>
+        <view class="item_right">
+            <input placeholder="请输入您的邮箱" bindblur="getEmail" />
+        </view>
+    </view>
+    <view class="item">
+        <view class="item_left">城市</view>
+        <view class="item_right">
+            <input placeholder="请输入您所在的城市" bindblur="getCity" />
+        </view>
+    </view>
+</view>
+<view class="describe">
+    <view class="item_left">
+        <radio checked="true" color="#c43c33" wx:if="{{hasRead}}" bindtap="radioIsChange" />
+        <radio  color="#c43c33"  wx:else  bindtap="radioIsChange"/>
+    </view>
+    <view class="item_right">
+        已阅读并同意
+        <text>《用户服务协议》</text>
+    </view>
+</view>
+<button open-type="getUserInfo"  class="btn" wx:if="{{hasRead}}" bindgetuserinfo="getUserInfo">提交</button>
+<button open-type="getUserInfo" class="btn_fail" wx:else bind="registerUser">提交</button>

@@ -1,0 +1,82 @@
+<view class="items">
+    <view class="item">
+        <view class="item_title">
+            <text class="title_line"></text>
+            <text class="title_txt">口语</text>
+        </view>
+        <view class="item_content">
+            <view class="content_left">
+                <image src="/images/static/index_jijings.png" />
+            </view>
+            <view class="content_middle">
+
+            </view>
+            <view class="content_right">
+                <view class="right_title backcolor_yellow">
+                    Speaking
+                </view>
+                <view class="right_des">PTE最新口语机经 大声练起来吧</view>
+            </view>
+        </view>
+    </view>
+     <view class="item">
+        <view class="item_title">
+            <text class="title_line"></text>
+            <text class="title_txt">写作</text>
+        </view>
+        <view class="item_content">
+            <view class="content_left">
+                <image src="/images/static/index_jijingw.png" />
+            </view>
+            <view class="content_middle">
+
+            </view>
+            <view class="content_right">
+                <view class="right_title backcolor_blue">
+                    Writing
+                </view>
+                <view class="right_des">PTE最新写作机经 每写一篇都是积累</view>
+            </view>
+        </view>
+    </view>
+     <view class="item">
+        <view class="item_title">
+            <text class="title_line"></text>
+            <text class="title_txt">听力</text>
+        </view>
+        <view class="item_content">
+            <view class="content_left">
+                <image src="/images/static/index_jijings.png" />
+            </view>
+            <view class="content_middle">
+
+            </view>
+            <view class="content_right">
+                <view class="right_title backcolor_green">
+                    Listening
+                </view>
+                <view class="right_des">PTE最新听力机经 多听多练才可以</view>
+            </view>
+        </view>
+    </view>
+     <view class="item">
+        <view class="item_title">
+            <text class="title_line"></text>
+            <text class="title_txt">阅读</text>
+        </view>
+        <view class="item_content">
+            <view class="content_left">
+                <image src="/images/static/index_jijingr.png" />
+            </view>
+            <view class="content_middle">
+
+            </view>
+            <view class="content_right">
+                <view class="right_title backcolor_purple">
+                    Reading
+                </view>
+                <view class="right_des">最新阅读机经词汇量是英语学习的基础</view>
+            </view>
+        </view>
+    </view>
+</view>

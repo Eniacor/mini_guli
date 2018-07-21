@@ -1,0 +1,32 @@
+.discuzz .discuzz_txt {
+  position: relative;
+  height: 400rpx;
+}
+.discuzz .discuzz_txt .txt {
+  position: absolute;
+  top: 30rpx;
+  left: 30rpx;
+  width: 660rpx;
+  height: 370rpx;
+  border-radius: 10rpx;
+  background: #fff;
+  padding-left: 30rpx;
+  padding-top: 30rpx;
+  font-size: 30rpx;
+  color: #aaa;
+  border: 1rpx solid #e0e0e0;
+}
+.discuzz .discuzz_txt .limit {
+  position: absolute;
+  bottom: 0rpx;
+  right: 60rpx;
+  font-size: 24rpx;
+  color: #aaa;
+}
+.discuzz .btn {
+  width: 690rpx;
+  margin: 0 auto;
+  margin-top: 90rpx;
+  background: #d43c33;
+  border-radius: 10rpx;
+}

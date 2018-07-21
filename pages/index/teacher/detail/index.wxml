@@ -1,0 +1,18 @@
+<view class="teachers">
+    <view class="teacher">
+        <view class="teacher_top">
+            <view class="top_left">
+                <image src="/images/static/index_teacher.png" />
+            </view>
+            <view class="top_right">
+                <view class="title">Augustine</view>
+                <view class="tags">
+                    <text class="tag backcolor_yellow">特级讲师</text>
+                    <text class="tag backcolor_blue">主攻口语</text>
+                    <text class="tag backcolor_green">墨尔本校区</text>
+                </view>
+            </view>
+        </view>
+
+    </view>
+</view>

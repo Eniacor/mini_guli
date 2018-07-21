@@ -37,9 +37,14 @@
         }
     }
     .course_contents{
+        background: #fff;
         .content{
             position: relative;
-            padding:50rpx 30rpx;
+            margin: 0 30rpx;
+            padding:50rpx 0;
+            width:690rpx;
+            height: 240rpx; 
+            border-bottom: 1rpx solid #e0e0e0;
             .content_left{
                 position: absolute;
                 width: 240rpx;
@@ -64,8 +69,10 @@
             }
             .content_right{
                 position: absolute;
-                left: 300rpx;
+                left:270rpx;
                 width: 420rpx;
+                height: 240rpx;
+                line-height: 32rpx;
                 .right_title{
                     position: relative;
                     height: 32rpx;
@@ -94,8 +101,9 @@
                     }
                 }
                 .right_des{
-                    margin-top:18rpx;
-                    margin-bottom: 18rpx;
+                    margin-top:24rpx;
+                    margin-bottom: 24rpx;
+                    line-height: 35rpx;
                    .des{
                         display: inline-block;
                         width: 66rpx;
@@ -118,49 +126,63 @@
                    }
                 }
                 .right_techer{
+                    line-height:24rpx;
                     image{
                         width:22rpx;
                         height:21rpx;
+                        vertical-align: middle;
                     }
                     .name{
-                        display: inline-block;
                         font-size: 24rpx;
                         color:#666;
                         margin-left: 12rpx;
                     }
                 }
+
                 .right_address{
-                    margin-top: 18rpx;
-                    margin-bottom: 6rpx;
+                    margin-top:24rpx;
+                    margin-bottom: 24rpx;
+                    line-height: 24rpx;
                     image{
-                        width: 22rpx;
-                        height: 21rpx;
+                        width: 18rpx;
+                        height: 22rpx;
+                        vertical-align: middle;
                     }
                     .address{
-                        display: inline-block;
                         font-size: 24rpx;
                         color:#666;
                         margin-left: 12rpx;
                     }
                 }
                 .right_time{
+                    line-height: 24rpx;
                     image{
-                        width: 22rpx;
-                        height: 21rpx;
+                        width: 20rpx;
+                        height: 20rpx;
+                        vertical-align: middle;
                     }
                     .time{
-                        display: inline-block;
                         font-size: 24rpx;
-                        color:#666;
                         margin-left: 12rpx;
+                        color: #c5483c;
                     }
                     .detail{
                         float: right;;
                         font-size: 26rpx;
-                        color:#666;
+                        color: #c5483c;
                     }
                 }
             }
         }
+        .content_more{
+            width: 750rpx;
+            height: 89rpx;
+            line-height: 90rpx;
+            text-align: center;
+            color: #999;
+            font-size: 32rpx;
+            border-top:1rpx solid#e0e0e0;
+        }
     }
+
 }

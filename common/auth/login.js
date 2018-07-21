@@ -27,7 +27,7 @@ let doLogin = (options) => {
             let { code } = res;
             let data ={code:code}
             apiXcxLogin(options.url, { code }).then(data => {
-                Session.set(data.data);
+                Session.set(data.result);
                 func_arr.forEach(d => {
                     d();
                 })

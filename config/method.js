@@ -2,6 +2,12 @@ const api = require('./api.config.js');
 const request = require('../common/request.js');
 module.exports = {
     XcxUserInfo: (data) => request(api.XcxUserInfo, data, 'POST'), 
+    UserRegister: (data) => request(api.UserRegister, data, 'POST'), 
+
+
+
+
+
     UserInfo: (data) => request(api.UserInfo, data, 'POST'),
     UserSendSMT: (data) => request(api.UserSendSMT, data, 'POST'),
     setCookie: (data) => request(api.setCookie, data, 'POST'),
@@ -75,5 +81,4 @@ module.exports = {
     uploadImg: (data) => request(api.uploadImg, data, 'POST'),//上传图片
     addEditInfo: (data) => request(api.addEditInfo, data, 'POST','application/json'),//我的商家提交修改
     getBusinessInfo: (data) => request(api.getBusinessInfo, data,'POST'),//获取我的商家信息
-
 }

@@ -1,0 +1,38 @@
+.items {
+  background: #fff;
+}
+.items .item {
+  position: relative;
+  width: 690rpx;
+  height: 108rpx;
+  line-height: 108rpx;
+  margin: 0 30rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+.items .item .item_left {
+  position: absolute;
+  top: 0;
+  left: 30rpx;
+  width: 210rpx;
+  height: 100%;
+  font-size: 30rpx;
+  color: #222;
+}
+.items .item .item_left text {
+  color: red;
+}
+.items .item .item_right {
+  position: absolute;
+  top: 0;
+  left: 240rpx;
+  width: 480rpx;
+  height: 100%;
+}
+.items .item .item_right input {
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  color: #aaa;
+}
+.items .item:last-child {
+  border-bottom: 0;
+}

@@ -1,0 +1,126 @@
+.list {
+  margin-bottom: 130rpx;
+}
+.list .list_head {
+  margin: 40rpx 30rpx;
+}
+.list .list_head .head_title {
+  height: 34rpx;
+  line-height: 34rpx;
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #222;
+}
+.list .list_head .head_start {
+  margin-top: 26rpx;
+  font-size: 24rpx;
+  color: #888;
+}
+.list .list_contents .content {
+  background: #fff;
+  margin-top: 30rpx;
+}
+.list .list_contents .content .content_head {
+  height: 110rpx;
+  line-height: 110rpx;
+  padding: 0 30rpx;
+  border-bottom: 1rpx solid #e0e0e0;
+}
+.list .list_contents .content .content_head .head_left {
+  float: left;
+  margin-top: 39rpx;
+  width: 62rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  text-align: center;
+  padding: 0 10rpx;
+  margin-right: 20rpx;
+  font-size: 26rpx;
+  border-radius: 8rpx;
+  color: #fff;
+}
+.list .list_contents .content .content_head .backcolor_yellow {
+  background: #face64;
+}
+.list .list_contents .content .content_head .head_middle {
+  float: left;
+  font-size: 32rpx;
+}
+.list .list_contents .content .content_head .head_right {
+  height: 32rpx;
+  width: 100rpx;
+}
+.list .list_contents .content .content_head .star {
+  margin-top: 36rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  float: right;
+}
+.list .list_contents .content .content_middle {
+  border-bottom: 1rpx solid #e0e0e0;
+  margin: 0 30rpx;
+  padding: 30rpx 0;
+  font-size: 28rpx;
+  color: #666;
+}
+.list .list_contents .content .content_bottom {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 24rpx;
+  padding: 0 30rpx;
+}
+.list .list_contents .content .content_bottom .bottom_left {
+  float: left;
+  width: 46rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  text-align: center;
+  border: 1rpx solid #d43c33;
+  border-radius: 4rpx;
+  color: #d43c33;
+  margin-top: 24rpx;
+  margin-right: 40rpx;
+}
+.list .list_contents .content .content_bottom .bottom_middle {
+  float: left;
+  height: 24rpx;
+  margin-top: 30rpx;
+}
+.list .list_contents .content .content_bottom .bottom_middle image {
+  float: left;
+  height: 20rpx;
+  width: 19rpx;
+  margin-right: 12rpx;
+}
+.list .list_contents .content .content_bottom .bottom_middle text {
+  float: left;
+  height: 24rpx;
+  line-height: 24rpx;
+  font-size: 24rpx;
+  color: #888;
+}
+.list .list_contents .content .content_bottom .bottom_right {
+  float: right;
+  color: #888;
+}
+.bottom {
+  position: fixed;
+  bottom: 0;
+  width: 750rpx;
+  height: 98rpx;
+  line-height: 98rpx;
+}
+.bottom .bottom_left {
+  float: left;
+  width: 375rpx;
+  text-align: center;
+  color: #d43c33;
+  background: #fff;
+}
+.bottom .bottom_right {
+  float: left;
+  background: #d43c33;
+  width: 375rpx;
+  text-align: center;
+  color: #fff;
+}

@@ -1,0 +1,77 @@
+<view class="head">
+    <image src="/images/static/index_exercisei.png" />
+</view>
+<view class="score">
+    <view class="score_contents">
+        <view class="score_content" bindtap="skipPage" data-url="/pages/index/exercise/detail/index" data-type="0">
+            <view class="content_left">
+                <image src="/images/static/index_exercise_true.png"></image>
+            </view>
+            <view class="content_middle">文波教育押题班课前测试5.12</view>
+            <view class="content_right">
+                进行中
+                <image src="/images/static/index_exercise_arrow1.png" />
+            </view>
+        </view>
+        <view class="score_content">
+            <view class="content_left">
+                <image src="/images/static/index_exercise_true.png"></image>
+            </view>
+            <view class="content_middle">文波教育押题班课前测试5.12</view>
+            <view class="content_right">
+                进行中
+                <image src="/images/static/index_exercise_arrow1.png" />
+            </view>
+        </view>
+        <view class="score_content">
+            <view class="content_left">
+                <image src="/images/static/index_exercise_true.png"></image>
+            </view>
+            <view class="content_middle">文波教育押题班课前测试5.12</view>
+            <view class="content_right">
+                进行中
+                <image src="/images/static/index_exercise_arrow1.png" />
+            </view>
+        </view>
+        <view class="score_content">
+            <view class="content_left">
+                <image src="/images/static/index_exercise_true.png"></image>
+            </view>
+            <view class="content_middle">文波教育押题班课前测试5.12</view>
+            <view class="content_right">
+                进行中
+                <image src="/images/static/index_exercise_arrow1.png" />
+            </view>
+        </view>
+        <view class="score_content">
+            <view class="content_left">
+                <image src="/images/static/index_exercise_true.png"></image>
+            </view>
+            <view class="content_middle">文波教育押题班课前测试5.12</view>
+            <view class="content_right">
+                进行中
+                <image src="/images/static/index_exercise_arrow1.png" />
+            </view>
+        </view>
+        <view class="score_content">
+            <view class="content_left">
+                <image src="/images/static/index_exercise_true.png"></image>
+            </view>
+            <view class="content_middle">文波教育押题班课前测试5.12</view>
+            <view class="content_right">
+                进行中
+                <image src="/images/static/index_exercise_arrow1.png" />
+            </view>
+        </view>
+        <view class="score_content">
+            <view class="content_left">
+                <image src="/images/static/index_exercise_true.png"></image>
+            </view>
+            <view class="content_middle">文波教育押题班课前测试5.12</view>
+            <view class="content_right">
+                进行中
+                <image src="/images/static/index_exercise_arrow1.png" />
+            </view>
+        </view>
+    </view>
+</view>

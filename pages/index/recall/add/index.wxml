@@ -1,0 +1,90 @@
+<view class="add">
+    <view class="item">
+        <view class="item_head">
+            <text class="title_line"></text>
+            <text class="title_txt">选择考场</text>
+        </view>
+        <view class="item_content">
+            <view class="content_left">日期</view>
+            <view class="content_middle">
+                <input placeholder="请选择考试日期" />
+            </view>
+            <view class="content_right">
+                <image src="/images/static/index_exercise_arrow.png" />
+            </view>
+        </view>
+        <view class="item_content">
+            <view class="content_left">国家</view>
+            <view class="content_middle">
+                <input placeholder="请选择考场所在的国家" />
+            </view>
+            <view class="content_right">
+                <image src="/images/static/index_exercise_arrow.png" />
+            </view>
+        </view>
+        <view class="item_content">
+            <view class="content_left">城市</view>
+            <view class="content_middle">
+                <input placeholder="请选择考场所在的城市" />
+            </view>
+            <view class="content_right">
+                <image src="/images/static/index_exercise_arrow.png" />
+            </view>
+        </view>
+        <view class="item_content">
+            <view class="content_left">考场</view>
+            <view class="content_middle">
+                <input placeholder="请选择考场" />
+            </view>
+            <view class="content_right">
+                <image src="/images/static/index_exercise_arrow.png" />
+            </view>
+        </view>
+    </view>
+    <view class="second">
+        <view class="second_head">
+            <text class="title_line"></text>
+            <text class="title_txt">选择题型</text>
+        </view>
+        <view class="scond_content">
+            <view class="content_left">
+                <input placeholder="请选择听/说/读/写" />
+            </view>
+            <view class="content_right">
+                <image src="/images/static/index_exercise_arrow.png" />
+            </view>
+        </view>
+        <view class="scond_content">
+            <view class="content_left">
+                <input placeholder="请选择具体的题型" />
+            </view>
+            <view class="content_right">
+                <image src="/images/static/index_exercise_arrow.png" />
+            </view>
+        </view>
+    </view>
+    <view class="third">
+        <view class="third_head">
+            <text class="title_line"></text>
+            <text class="title_txt">回忆内容</text>
+        </view>
+        <view class="third_content">
+            <view class="content_left">
+                <input placeholder="请输入回忆标题" />
+            </view>
+            <view class="content_right">0/20</view>
+        </view>
+        <view class="third_content">
+            <view class="content_left">
+                <input placeholder="请输入回忆详情" />
+            </view>
+            <view class="content_right">0/1000</view>
+        </view>
+        <view class="third_content">
+            <view class="content_left">
+                <input placeholder="回忆要点【非必填】" />
+            </view>
+            <view class="content_right">0/200</view>
+        </view>
+    </view>
+</view>

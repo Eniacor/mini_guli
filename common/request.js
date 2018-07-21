@@ -49,11 +49,11 @@ module.exports = function (url, data, method,  options = {}) {
                             } else {
                                 let route = getCurrentPages()[0].__route__;
                                 let url = '/pages/bindPhone/bindPhone?from=' + encodeURIComponent(route);
-                                if (route == 'pages/order/index') {
-                                    // wx.navigateTo({ url });
-                                } else {
-                                    wx.redirectTo({ url })
-                                }
+                                // if (route == 'pages/order/index') {
+                                //     // wx.navigateTo({ url });
+                                // } else {
+                                //     wx.redirectTo({ url })
+                                // }
                             }
                         } else {
                             // tips.showModel('系统提示', url);

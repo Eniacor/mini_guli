@@ -1,0 +1,21 @@
+<view class="head">
+    <view class="head_left">RA</view>
+    <view class="head_middle">Labor Comparative</view>
+    <view class="head_right">答题记录</view>
+</view>
+<view class="title">
+    <text class="title_left backcolor_yellow">#4</text>
+    <text class="title_middle backcolor_yellow">2018/07/21</text>
+    <i-cell title="禁用点击和手势选择星" class="star">
+        <i-rate disabled="{{true}}" value="{{4}}"></i-rate>
+    </i-cell>
+</view>
+<import src="../../../../../common/component/wxParse/wxParse.wxml"/> 
+<view class="wxParse">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>
+
+
+<view class="autio">
+    <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop></audio>
+</view>

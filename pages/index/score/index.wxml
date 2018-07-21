@@ -1,0 +1,121 @@
+<view class="score">
+    <view class="score_head">
+        <image src="/images/static/index_score_img.png" />
+    </view>
+    <view class="score_content">
+        <view class="content_title">
+            <text class="title_line"></text>
+            <text class="title_txt">五月高分榜</text>
+        </view>
+        <view class="items">
+            <view class="item">
+                <view class="item_left">
+                    <image src="" />
+                </view>
+                <view class="item_right">
+                    <view class="right_title">
+                        <text>【73】</text>
+                        恭喜文波PTE五月第73位学员通...
+                    </view>
+                    <view class="right_sub">这里有个副标题</view>
+                    <view class="tags">
+                        <text class="tag backcolor_yellow">七炸</text>
+                        <text class="tag backcolor_blue">七炸</text>
+                        <text class="tag backcolor_green">最多六个字</text>
+                    </view>
+                    <view class="time">
+                        <view class="time_left">
+                            <image src="/images/static/index_score_time.png" />
+                            <text>2015-05-08</text>
+                        </view>
+                        <view class="time_right" bindtap="skipPage" data-url="/pages/index/score/detail/index" data-type="0">
+                            <text>查看详情</text>
+                            <image src="/images/static/index_score_more.png" />
+                        </view>
+                    </view>
+                </view>
+            </view>
+           <view class="item">
+                <view class="item_left">
+                    <image src="" />
+                </view>
+                <view class="item_right">
+                    <view class="right_title">
+                        <text>【73】</text>
+                        恭喜文波PTE五月第73位学员通...
+                    </view>
+                    <view class="right_sub">这里有个副标题</view>
+                    <view class="tags">
+                        <text class="tag backcolor_yellow">七炸</text>
+                        <text class="tag backcolor_blue">七炸</text>
+                        <text class="tag backcolor_green">最多六个字</text>
+                    </view>
+                    <view class="time">
+                        <view class="time_left">
+                            <image src="/images/static/index_score_time.png" />
+                            <text>2015-05-08</text>
+                        </view>
+                        <view class="time_right">
+                            <text>查看详情</text>
+                            <image src="/images/static/index_score_more.png" />
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="item">
+                <view class="item_left">
+                    <image src="" />
+                </view>
+                <view class="item_right">
+                    <view class="right_title">
+                        <text>【73】</text>
+                        恭喜文波PTE五月第73位学员通...
+                    </view>
+                    <view class="right_sub">这里有个副标题</view>
+                    <view class="tags">
+                        <text class="tag backcolor_yellow">七炸</text>
+                        <text class="tag backcolor_blue">七炸</text>
+                        <text class="tag backcolor_green">最多六个字</text>
+                    </view>
+                    <view class="time">
+                        <view class="time_left">
+                            <image src="/images/static/index_score_time.png" />
+                            <text>2015-05-08</text>
+                        </view>
+                        <view class="time_right">
+                            <text>查看详情</text>
+                            <image src="/images/static/index_score_more.png" />
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="item">
+                <view class="item_left">
+                    <image src="" />
+                </view>
+                <view class="item_right">
+                    <view class="right_title">
+                        <text>【73】</text>
+                        恭喜文波PTE五月第73位学员通...
+                    </view>
+                    <view class="right_sub">这里有个副标题</view>
+                    <view class="tags">
+                        <text class="tag backcolor_yellow">七炸</text>
+                        <text class="tag backcolor_blue">七炸</text>
+                        <text class="tag backcolor_green">最多六个字</text>
+                    </view>
+                    <view class="time">
+                        <view class="time_left">
+                            <image src="/images/static/index_score_time.png" />
+                            <text>2015-05-08</text>
+                        </view>
+                        <view class="time_right">
+                            <text>查看详情</text>
+                            <image src="/images/static/index_score_more.png" />
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

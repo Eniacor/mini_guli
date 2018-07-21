@@ -1,9 +1,28 @@
 {
   "pages": [
+    "pages/material/speak/detail/dati/index",
     "pages/index/index",
     "pages/material/index",
+    "pages/material/speak/index",
+    "pages/material/speak/detail/index",
+   
     "pages/course/index",
-    "pages/person/index"
+    "pages/person/index",
+    "pages/index/material/index",
+    "pages/index/teacher/index",
+    "pages/index/teacher/detail/index",
+    "pages/index/teacher/counsel/index",
+    "pages/index/jijing/index",
+    "pages/index/score/index",
+    "pages/index/score/detail/index",
+    "pages/index/exercise/index",
+    "pages/index/exercise/detail/index",
+    "pages/index/exercise/detail/list/index",
+    "pages/index/recall/index",
+    "pages/index/recall/detail/index",
+    "pages/index/recall/detail/discuzz/index",
+    "pages/index/recall/add/index",
+    "pages/register/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#be2e25",

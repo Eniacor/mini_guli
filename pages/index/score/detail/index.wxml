@@ -1,0 +1,76 @@
+<view class="detail">
+    <view class="detail_head">
+        <view class="head_title">
+            <view class="title_left"></view>
+            <view class="title_middle">
+                <image src="/images/static/index_score_detailb.png" />
+                <text>五月高分榜</text>
+            </view>
+            <view class="title_right"></view>
+        </view>
+        <view class="head_des">
+            <text>【73】</text>恭喜文波PTE五月第73位学员通过四个七
+        </view>
+        <view class="head_tags">
+            <view class="tag backcolor_yellow">七炸</view>
+            <view class="tag backcolor_blue">八炸</view>
+            <view class="tag backcolor_green">最多六个字</view>
+        </view>
+        <view class="head_time">
+            <view class="time_left">
+                <image src="/images/static/index_score_detailt.png" />
+                <text>2015-05-18</text>
+            </view>
+            <view class="time_right">
+                文波教育
+            </view>
+        </view>
+    </view>
+    <view class="detail_contents">
+        <view class="content">
+            <image src="/images/static/index_score_detail1.png" />
+            <view class="content_des">
+                崭新的开始！恭喜墨尔本悉尼火把大渡口卡卡卡卡开口道看到的开看看打开看看打开看打开看打开看打开看！
+            </view>
+        </view>
+        <view class="content">
+            <image src="/images/static/index_score_detail1.png" />
+            <view class="content_des">
+                崭新的开始！恭喜墨尔本悉尼火把大渡口卡卡卡卡开口道看到的开看看打开看看打开看打开看打开看打开看！
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="recom">
+    <view class="recom_title">
+        <text class="title_line"></text>
+        <text class="title_txt">相关推荐</text>
+    </view>
+    <view class="recom_contents">
+        <view class="content">
+            <view class="content_img">
+                <image src="/images/static/index_score_detail3.png" />
+            </view>
+            <view class="content_txt">文章标题文章标题文章标题文章标题</view>
+        </view>
+          <view class="content">
+            <view class="content_img">
+                <image src="/images/static/index_score_detail3.png" />
+            </view>
+            <view class="content_txt">文章标题文章标题文章标题文章标题</view>
+        </view>
+          <view class="content">
+            <view class="content_img">
+                <image src="/images/static/index_score_detail3.png" />
+            </view>
+            <view class="content_txt">文章标题文章标题文章标题文章标题</view>
+        </view>
+          <view class="content">
+            <view class="content_img">
+                <image src="/images/static/index_score_detail3.png" />
+            </view>
+            <view class="content_txt">文章标题文章标题文章标题文章标题</view>
+        </view>
+    </view>
+</view>

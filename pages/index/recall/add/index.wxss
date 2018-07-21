@@ -1,0 +1,158 @@
+.add .item {
+  background: #fff;
+}
+.add .item .item_head {
+  position: relative;
+  width: 690rpx;
+  height: 110rpx;
+  padding: 0 30rpx;
+  border-bottom: 1rpx solid #e0e0e0;
+}
+.add .item .item_head .title_line {
+  position: absolute;
+  top: 39rpx;
+  left: 30rpx;
+  width: 10rpx;
+  height: 32rpx;
+  background: #d43c33;
+  border-radius: 8rpx;
+}
+.add .item .item_head .title_txt {
+  position: absolute;
+  top: 39rpx;
+  left: 60rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  font-size: 32rpx;
+  color: #d43c33;
+  font-weight: 600;
+}
+.add .item .item_content {
+  height: 108rpx;
+  line-height: 108rpx;
+  margin: 0 30rpx;
+  font-size: 28rpx;
+  border-bottom: 1rpx solid #e0e0e0;
+}
+.add .item .item_content .content_left {
+  float: left;
+  width: 130rpx;
+}
+.add .item .item_content .content_middle {
+  float: left;
+  width: 548rpx;
+  margin-top: 29rpx;
+}
+.add .item .item_content .content_right {
+  float: left;
+}
+.add .item .item_content .content_right image {
+  width: 12rpx;
+  height: 22rpx;
+}
+.add .item .item_content:last-child {
+  border-bottom: 0;
+}
+.add .second {
+  margin-top: 30rpx;
+  background: #fff;
+}
+.add .second .second_head {
+  position: relative;
+  width: 690rpx;
+  height: 110rpx;
+  padding: 0 30rpx;
+  border-bottom: 1rpx solid #e0e0e0;
+}
+.add .second .second_head .title_line {
+  position: absolute;
+  top: 39rpx;
+  left: 30rpx;
+  width: 10rpx;
+  height: 32rpx;
+  background: #d43c33;
+  border-radius: 8rpx;
+}
+.add .second .second_head .title_txt {
+  position: absolute;
+  top: 39rpx;
+  left: 60rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  font-size: 32rpx;
+  color: #d43c33;
+  font-weight: 600;
+}
+.add .second .scond_content {
+  height: 108rpx;
+  line-height: 108rpx;
+  margin: 0 30rpx;
+  font-size: 28rpx;
+  border-bottom: 1rpx solid #e0e0e0;
+}
+.add .second .scond_content .content_left {
+  float: left;
+  width: 678rpx;
+  margin-top: 29rpx;
+}
+.add .second .scond_content .content_right {
+  float: left;
+}
+.add .second .scond_content .content_right image {
+  width: 12rpx;
+  height: 22rpx;
+}
+.add .second .scond_content:last-child {
+  border-bottom: 0;
+}
+.add .third {
+  background: #fff;
+  margin-top: 30rpx;
+}
+.add .third .third_head {
+  position: relative;
+  width: 690rpx;
+  height: 110rpx;
+  padding: 0 30rpx;
+  border-bottom: 1rpx solid #e0e0e0;
+}
+.add .third .third_head .title_line {
+  position: absolute;
+  top: 39rpx;
+  left: 30rpx;
+  width: 10rpx;
+  height: 32rpx;
+  background: #d43c33;
+  border-radius: 8rpx;
+}
+.add .third .third_head .title_txt {
+  position: absolute;
+  top: 39rpx;
+  left: 60rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  font-size: 32rpx;
+  color: #d43c33;
+  font-weight: 600;
+}
+.add .third .third_content {
+  position: relative;
+  height: 108rpx;
+  margin: 0 30rpx;
+  font-size: 28rpx;
+  border-bottom: 1rpx solid #e0e0e0;
+  color: #aaa;
+}
+.add .third .third_content .content_left {
+  position: absolute;
+  top: 28rpx;
+  left: 0;
+  width: 690rpx;
+  height: 28rpx;
+}
+.add .third .third_content .content_right {
+  position: absolute;
+  top: 44rpx;
+  right: 0;
+  font-size: 20rpx;
+}

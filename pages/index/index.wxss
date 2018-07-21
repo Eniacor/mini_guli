@@ -172,3 +172,7 @@ image{
 /* .swiper-box .wx-swiper-dot-active::before{
     background:rgba(244,0,0,0.8);   
 } */
+
+.text_back_color{
+    background: red;
+}

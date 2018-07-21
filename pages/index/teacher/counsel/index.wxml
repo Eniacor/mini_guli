@@ -1,0 +1,61 @@
+<view class="items">
+    <view class="item">
+        <view class="item_left">
+            姓名
+            <text class="start">*</text>
+        </view>
+        <view class="item_right">
+            <input placeholder="请输入您的姓名" />
+        </view>
+    </view>
+    <view class="item">
+        <view class="item_left">
+            微信号
+            <text class="start">*</text>
+        </view>
+        <view class="item_right">
+            <input placeholder="请输入您的微信号" />
+        </view>
+    </view>
+    <view class="item">
+        <view class="item_left">
+            手机号
+            <text class="start">*</text>
+        </view>
+        <view class="item_right">
+            <input placeholder="请输入您的微信号" />
+        </view>
+    </view>
+    <view class="item">
+        <view class="item_left">
+            考过PTE
+            <text class="start">*</text>
+        </view>
+        <view class="item_right"></view>
+    </view>
+    <view class="item">
+        <view class="item_left">备注</view>
+        <view class="item_right">
+            <input placeholder="让我更了解你一点" />
+        </view>
+    </view>
+</view>
+<!-- <view class="upload">
+    <view class="upload_title">
+        上传辅助图片（非必填，最多三张）
+    </view>
+    <view class="upload_content">
+        <view class="content_img">
+            <img src="" alt="" />
+        </view>
+        <view class="content_des">点击上传</view>
+        <view class="content_limit">(最多3张)</view>
+    </view>
+</view> -->
+<view class="uploader__files">
+      <block wx:for="{{images}}" wx:key="{{item.id}}" >
+            <view class="uploader__file" bindlongpress="deleteImage" data-index="{{index}}">
+               <image mode="aspectFill" class="uploader__img" src="{{item.path}}" />
+            </view>
+      </block>
+</view>

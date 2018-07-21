@@ -28,21 +28,79 @@
                 </view>
                 <view class="right_techer">
                     <image src="/images/static/course_u.png" />
-                    <view class="name">文波老师</view>
+                    <text class="name">文波老师</text>
                 </view>
                 <view class="right_address">
                     <image src="/images/static/course_a.png" />
-                    <view class="address">墨尔本校区</view>
+                    <text class="address">墨尔本校区</text>
                 </view>
                 <view class="right_time">
                     <image src="/images/static/course_c.png" />
-                    <view class="time">2015-05-18开课</view>
-                    <view class="detail">
-                        查看详情
-                        <text>>></text>
-                    </view>
+                    <text class="time">2015-05-18开课</text>
+                    <text class="detail">查看详情</text>
                 </view>
             </view>
         </view>
+          <view class="content" >
+            <view class="content_left">
+                <image src="/images/static/course_i.png" />
+                <view class="left_biao">立减$50</view>
+            </view>
+            <view class="content_right">
+                <view class="right_title">
+                    <view class="title">PTE口语提升保过课程</view>
+                    <view class="biao">HOT</view>
+                </view>
+                <view class="right_des">
+                    <view class="des des-1">口语</view>
+                    <view class="des des-2">线上</view>
+                    <view class="des des-3">保过</view>
+                </view>
+                <view class="right_techer">
+                    <image src="/images/static/course_u.png" />
+                    <text class="name">文波老师</text>
+                </view>
+                <view class="right_address">
+                    <image src="/images/static/course_a.png" />
+                    <text class="address">墨尔本校区</text>
+                </view>
+                <view class="right_time">
+                    <image src="/images/static/course_c.png" />
+                    <text class="time">2015-05-18开课</text>
+                    <text class="detail">查看详情</text>
+                </view>
+            </view>
+        </view>
+        <view class="content"  style="border:0;">
+            <view class="content_left">
+                <image src="/images/static/course_i.png" />
+                <view class="left_biao">立减$50</view>
+            </view>
+            <view class="content_right">
+                <view class="right_title">
+                    <view class="title">PTE口语提升保过课程</view>
+                    <view class="biao">HOT</view>
+                </view>
+                <view class="right_des">
+                    <view class="des des-1">口语</view>
+                    <view class="des des-2">线上</view>
+                    <view class="des des-3">保过</view>
+                </view>
+                <view class="right_techer">
+                    <image src="/images/static/course_u.png" />
+                    <text class="name">文波老师</text>
+                </view>
+                <view class="right_address">
+                    <image src="/images/static/course_a.png" />
+                    <text class="address">墨尔本校区</text>
+                </view>
+                <view class="right_time">
+                    <image src="/images/static/course_c.png" />
+                    <text class="time">2015-05-18开课</text>
+                    <text class="detail">查看详情</text>
+                </view>
+            </view>
+        </view>
+        <view class="content_more">查看更多</view>
     </view>
 </view>

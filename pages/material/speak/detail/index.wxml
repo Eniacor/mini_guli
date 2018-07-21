@@ -1,0 +1,47 @@
+<view class="head">
+    <view class="head_left back_color">RA</view>
+    <view class="head_middle">Read Aloud</view>
+    <view class="head_right title_color">答题记录</view>
+</view>
+<view class="search">
+    <view class="search_left" >
+        <text class="text active">按更新时间</text>
+        <text class="triangle_bottom tactive"></text>
+    </view>
+    <view class="search_middle">
+        <text class="text">按更新时间</text>
+        <text class="triangle_bottom"></text>
+    </view>
+    <view class="search_right">
+        <text class="btn">搜索</text>
+        <input class="input" placeholder="#" auto-focus/>
+    </view>
+</view>
+<view class="list_contents">
+    <view class="content"  bindtap="skipPage" data-url="/pages/material/speak/detail/answer/index" data-type="0">
+        <view class="content_head">
+            <text class="head_left backcolor_yellow">#4</text>
+            <text class="head_middle">Labor Comparative</text>
+            <i-cell title="禁用点击和手势选择星" class="star">
+                <i-rate disabled="{{true}}" value="{{4}}"></i-rate>
+            </i-cell>
+        </view>
+        <view class="content_middle">
+            With an abundance of low priced With an abundance of low priced an abundance of low priced With an abundance of low priced
+                a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a
+        </view>
+        <view class="content_bottom">
+            
+            <view class="bottom_left">
+                <image src="/images/static/index_score_time.png" />
+                <text>2015-05-08</text>
+            </view>
+             <view class="bottom_right">
+                <image src="/images/static/index_score_time.png" />
+                <text>8650</text>
+            </view>
+            <view class="bottom_middle">6667人确认考过</view>
+           
+        </view>
+    </view>
+</view>

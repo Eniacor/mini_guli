@@ -1,0 +1,113 @@
+<view class="back">
+    <view class="body">
+
+        <view class="title">
+            <input class="inputs" type="number" placeholder-style="color:#ddd;font-size: 28rpx;" placeholder="输入标题(名牌都是商家爱搜的哦)" bindinput="listenerPhoneInput"
+            />
+        </view>
+        <view class="text-input">
+            <textarea class="tetxt" bindblur="bindTextAreaBlur" placeholder-style="color:#ddd;font-size: 28rpx;" maxlength="10000" placeholder="宝贝详情"
+            />
+        </view>
+        <text class="text-zy">注意：长按可以选择删除</text>
+        <view class="backgiound-auto">
+            <view class="uploader__files">
+                <block wx:for="{{imageArr}}" wx:key="{{item.id}}">
+                    <view class="uploader__file" bindlongpress="deleteImg" data-index="{{index}}">
+                        <image mode="scaleToFill" class="uploader__img" src="{{item}}" />
+                    </view>
+                </block>
+            </view>
+            <view bindtap="chooseImg">
+                <image class="img" src="../../img/shangchaun1.png"></image>
+            </view>
+        </view>
+        <view class="dw">
+            <view class="lei">
+                <image class="imgs" src="../../img/daohang.png"></image>
+                <text class="dq">宿迁市/江苏省</text>
+            </view>
+            <view class="redi">
+                <view class="border-s">
+                    <!-- <switch class="ershou-switch" type="checkbox" checked="{{switch2Checked}}" bindchange="switch2Change" /> -->
+                </view>
+                <text class="dq">发布二手</text>
+            </view>
+        </view>
+        <view class="border-z"></view>
+        <view class="price">
+            <view class="price_jg">
+                <text class="r_price_jg">价格</text>
+                <button class="show-btn" bindtap="showDialogBtn">
+                    <view class="l_price_jg">
+                        <image class="img-ys" src="../../img/you.png"></image>
+                        <text class="dq-y-j">原价¥13.00</text>
+                        <text class="dq-y">¥12.00</text>
+                    </view>
+                </button>
+            </view>
+            <view class="price_jg">
+                <text class="r_price_jg">分类</text>
+                <view class="show-btn">
+                    <view class="l_price_jg">
+                        <image class="img-y" src="../../img/you.png"></image>
+                        <!-- <text class="dq-y-j">计生用品</text> -->
+                        <text class="dq-y">计生用品</text>
+                    </view>
+                </view>
+            </view>
+
+            <view class="price_jg">
+                <text class="r_price_jg">数量</text>
+                <i-panel title="基础用法">
+                    <view class="panel-sl">
+                        <i-input-number value="{{ value1 }}" min="1" max="9999" bindchange="handleChange1" />
+                    </view>
+                </i-panel>
+            </view>
+        </view>
+        <view class="border-z"></view>
+        <view class="kb"></view>
+        <view class="wth">
+            <button class="butt-fb">发布</button>
+        </view>
+
+        <!-- 弹窗 -->
+
+        <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+        <view class="modal-dialog" wx:if="{{showModal}}">
+            <view class="modal-content">
+                <view class="modal-input">
+                    <i-panel title="基础用法">
+                        <i-input value="{{ value2 }}" type="number" title="原价" placeholder="¥0.00" />
+                    </i-panel>
+                    <i-panel title="基础用法">
+                        <i-input value="{{ value3 }}" type="number" title="现价" placeholder="¥0.00" />
+                    </i-panel>
+
+                </view>
+                <!-- <view class="modal-input">
+                    <i-panel title="基础用法">
+                        <i-input value="{{ value3 }}" type="number" title="现价" placeholder="请输入有效价格" />
+                    </i-panel>
+                </view> -->
+                <view class="modal-input">
+                    <i-panel title="基础用法">
+                        <i-input value="{{ value3 }}" type="number" title="邮费" placeholder="¥0.00" />
+                    </i-panel>
+                    <view class="postage redi">
+                        <view class="border-s">
+                            <switch class="ershou-switch" type="checkbox" checked="{{switch2Checked}}" bindchange="switch2Change" />
+                        </view>
+                        <text class="dq">包邮</text>
+                    </view>
+                </view>
+            </view>
+            <view class="modal-footer">
+                <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+                <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+            </view>
+        </view>
+    </view>
+</view>
+   

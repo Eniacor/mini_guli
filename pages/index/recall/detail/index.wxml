@@ -1,0 +1,110 @@
+<view class="detail">
+    <view class="detail_head">
+        <view class="head_left">
+            <image src="/images/static/index_recall_avart.png" />
+        </view>
+        <view class="head_right">
+            <view class="right_name">我的名字可以这么长</view>
+            <view class="right_time">考试时间：2018年05月</view>
+            <view class="right_address">考试地点：China Bejing Person Professional Centers</view>
+        </view>
+    </view>
+    <view class="detail_content">
+        <view class="content_head">
+            <text class="tag">题型</text>
+            <text class="txt">回忆标题-文波教育</text>
+        </view>
+        <view class="content_middle">
+            回忆内容回忆内容回忆内容回忆内容回忆内容回忆内容回忆内容回忆内容回忆内容
+            回忆内容回忆内容回忆内容回忆内容回忆内容回忆内容回忆内容回忆内容回忆内容
+            回忆内容回忆内容回忆内容回忆内容回忆内容回忆内容回忆内容回忆
+        </view>
+        <view class="content_bottom">饼状图（回忆重点）</view>
+    </view>
+    <view class="detail_discuzz">
+        <view class="discuzz_title">共8650条评论</view>
+        <view class="items">
+            <view class="item">
+                <view class="item_left">
+                    <image src="/images/static/index_recall_avart.png" />
+                </view>
+                <view class="item_right">
+                    <view class="right_name">我的名字可以这么长</view>
+                    <view class="right_content">
+                        评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容
+                        评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容
+                        评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容
+                    </view>
+                    <view class="right_time">
+                        <view class="time_left">05-18 17:18</view>
+                        <view class="time_right"> 
+                            <text>6968</text>
+                            <image src="/images/static/index_recall_detail2.png" />
+                        </view>
+                    </view>
+                </view>
+            </view>
+             <view class="item">
+                <view class="item_left">
+                    <image src="/images/static/index_recall_avart.png" />
+                </view>
+                <view class="item_right">
+                    <view class="right_name">我的名字可以这么长</view>
+                    <view class="right_content">
+                        评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容
+                        评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容
+                        评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容
+                    </view>
+                    <view class="right_time">
+                        <view class="time_left">05-18 17:18</view>
+                        <view class="time_right"> 
+                            <text>6968</text>
+                            <image src="/images/static/index_recall_detail2.png" />
+                        </view>
+                    </view>
+                </view>
+            </view>
+             <view class="item">
+                <view class="item_left">
+                    <image src="/images/static/index_recall_avart.png" />
+                </view>
+                <view class="item_right">
+                    <view class="right_name">我的名字可以这么长</view>
+                    <view class="right_content">
+                        评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容
+                        评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容
+                        评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容
+                    </view>
+                    <view class="right_time">
+                        <view class="time_left">05-18 17:18</view>
+                        <view class="time_right"> 
+                            <text>6968</text>
+                            <image src="/images/static/index_recall_detail2.png" />
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="bottom">
+    <view class="item">
+        <image src="/images/static/index_recall_detaila.png" />
+        <text class="txt">关注</text>
+        <text class="line"></text>
+    </view>
+     <view class="item">
+        <image src="/images/static/index_recall_details.png" />
+        <text class="txt">分享</text>
+        <text class="line"></text>
+    </view>
+     <view class="item">
+        <image src="/images/static/index_recall_detail1.png" />
+        <text class="txt">5800</text>
+        <text class="line"></text>
+    </view>
+     <view class="item">
+        <image src="/images/static/index_recall_detailm.png" />
+        <text class="txt">5000</text>
+    </view>
+</view>

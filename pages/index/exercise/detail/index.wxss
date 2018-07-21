@@ -1,0 +1,106 @@
+.head {
+  background: #fff;
+  padding: 40rpx 30rpx 30rpx 30rpx;
+}
+.head .head_title image {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 20rpx;
+  vertical-align: middle;
+}
+.head .head_title text {
+  font-size: 34rpx;
+  color: #222;
+  font-weight: 600;
+}
+.head .head_content {
+  margin-top: 30rpx;
+  background: #f6f6f6;
+  padding: 30rpx;
+  border-radius: 8rpx;
+  font-size: 24rpx;
+  color: #888;
+}
+.list {
+  margin-top: 30rpx;
+  background: #fff;
+}
+.list .list_title {
+  position: relative;
+  width: 690rpx;
+  height: 110rpx;
+  padding: 0 30rpx;
+  border-bottom: 1rpx solid #e0e0e0;
+}
+.list .list_title .title_line {
+  position: absolute;
+  top: 39rpx;
+  left: 30rpx;
+  width: 10rpx;
+  height: 32rpx;
+  background: #d43c33;
+  border-radius: 8rpx;
+}
+.list .list_title .title_txt {
+  position: absolute;
+  top: 39rpx;
+  left: 60rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  font-size: 32rpx;
+  color: #d43c33;
+  font-weight: 600;
+}
+.list .list_contents .content {
+  height: 110rpx;
+  line-height: 110rpx;
+  margin: 0 30rpx;
+  border-bottom: 1rpx solid #e0e0e0;
+}
+.list .list_contents .content .content_left {
+  float: left;
+  font-size: 30rpx;
+  color: #222;
+}
+.list .list_contents .content .content_right {
+  float: right;
+}
+.list .list_contents .content .content_right image {
+  width: 12rpx;
+  height: 22rpx;
+}
+.list .list_contents .content:last-child {
+  border-bottom: 0;
+}
+.bottom {
+  position: fixed;
+  bottom: 0;
+  width: 750rpx;
+  height: 98rpx;
+  line-height: 98rpx;
+}
+.bottom .bottom_left {
+  float: left;
+  width: 375rpx;
+  text-align: center;
+  color: #d43c33;
+  background: #fff;
+}
+.bottom .bottom_right {
+  float: left;
+  background: #d43c33;
+  width: 375rpx;
+  text-align: center;
+  color: #fff;
+}
+.left {
+  position: fixed;
+  bottom: 160rpx;
+  right: 30rpx;
+  width: 110rpx;
+  height: 110rpx;
+}
+.left image {
+  width: 110rpx;
+  height: 110rpx;
+}
