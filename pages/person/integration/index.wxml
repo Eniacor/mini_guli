@@ -1,0 +1,106 @@
+<view class="body">
+    <view class="header">
+        <view class="content">
+            <view class="tx"></view>
+            <view class="name">
+                <view class="nkname">名字可以这么长</view>
+                <view class="integrals color">38888
+                    <text class="texts">积分</text>
+                </view>
+            </view>
+            <button class="but background">我的兑换</button>
+        </view>
+    </view>
+    <view class="middle-border">
+        <view class="border background"></view>
+        <view class="school-name color">热门兑换</view>
+        <view class="icong-gd">
+            <text class="gengduo">更多</text>
+            <view class="icon"></view>
+        </view>
+    </view>
+    <view class="commodity-border">
+        <view class="commodity">
+            <view class="image-a">
+                <image class="image-as" src="#"></image>
+            </view>
+            <view class="infos">
+                <view class="info-text">帅徐林呀</view>
+                <view class="detailss">
+                    <text class="gold color">
+                        <text class="sizi">9999</text>积分</text>
+                    <view class="border-gold color">立即兑换</view>
+                </view>
+            </view>
+        </view>
+
+
+        <view class="commodity">
+            <view class="image-a">
+                <image class="image-as" src="#"></image>
+            </view>
+            <view class="infos">
+                <view class="info-text">帅徐林呀</view>
+                <view class="detailss">
+                    <text class="gold color">
+                        <text class="sizi">9999</text>积分</text>
+                    <view class="border-gold color">立即兑换</view>
+                </view>
+            </view>
+        </view>
+
+
+        <view class="commodity">
+            <view class="image-a">
+                <image class="image-as" src="#"></image>
+            </view>
+            <view class="infos">
+                <view class="info-text">帅徐林呀</view>
+                <view class="detailss">
+                    <text class="gold color">
+                        <text class="sizi">9999</text>积分</text>
+                    <view class="border-gold color">立即兑换</view>
+                </view>
+            </view>
+        </view>
+
+
+        <view class="commodity">
+            <view class="image-a">
+                <image class="image-as" src="#"></image>
+            </view>
+            <view class="infos">
+                <view class="info-text">帅徐林呀</view>
+                <view class="detailss">
+                    <text class="gold ">
+                        <text class="sizi">9999</text>积分</text>
+                    <view class="border-gold color">立即兑换</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="kb"></view>
+    <view class="middle-border">
+        <view class="border background"></view>
+        <view class="school-name color">赚取积分</view>
+    </view>
+    <view class="complete">
+        <text class="fl">每日签到+2积分</text>
+        <button class="buts">已完成</button>
+    </view>
+
+    <view class="complete">
+        <text class="fl">每日签到+2积分</text>
+        <button class="buts-s">去完成</button>
+    </view>
+
+    <view class="complete">
+        <text class="fl">每日签到+2积分</text>
+        <button class="buts-s">去完成</button>
+    </view>
+
+    <view class="ending">
+        <view class="ending-text0">·恶意灌水、发布广告将面临扣分、封号等惩罚</view>
+        <view class="ending-text1">·最终解释权归文波教育集团所有</view>
+    </view>
+</view>

@@ -1,3 +1,7 @@
+.teachers{
+    background: #fff;
+    margin-bottom:60rpx;
+}
 .teacher{
     width:690rpx;
     margin: 0 auto;
@@ -80,5 +84,99 @@
             width: 28rpx;
             height: 28rpx;
         }
+    }
+}
+
+.wxParse{
+    padding-bottom: 30rpx;
+    .wxParse-blockquote{
+        height: 30rpx;
+        padding:30rpx 30rpx;
+        .WxEmojiView-line{
+            float: left;
+            width: 12rpx;
+            height: 30rpx;
+            background: #d43c33;
+            margin-right: 20rpx;
+            border-radius: 6rpx;
+        }
+        .wxParse-inline{
+            float: left;
+            font-size: 30rpx;
+            font-weight: 600;
+            line-height: 30rpx;
+            color:#d43c33;
+        }
+
+    }
+   .wxParse-p{
+        .wxParse-inline{
+            padding:0 30rpx;
+            font-size: 26rpx;
+            line-height:44rpx;
+        }
+   }
+   .wxParse-ul{
+        .wxParse-li{
+            .wxParse-li-inner{
+                overflow: hidden;
+                padding:0 30rpx;
+                .wxParse-li-text{
+                    float: left;
+                    .wxParse-li-circle{
+                        float: left;
+                        width: 8rpx;
+                        height: 8rpx;
+                        background:#222;
+                        border-radius: 50%;
+                    }
+                }
+                .wxParse-li-text:first-child{
+                    margin-right: 20rpx;
+                    margin-top:20rpx;
+                }
+                .wxParse-li-text:nth-child(2){
+                    width: 662rpx;
+                    .wxParse-inline{
+                        .wxParse-inline{
+                            display: inline;
+                            font-size: 26rpx; 
+                            line-height: 44rpx; 
+                        }
+                    }
+                    .WxEmojiView-line{
+                        display: inline;
+                    }
+                    .wxParse-inline{
+                        display: inline;
+                        font-size: 26rpx;  
+                        line-height: 44rpx;                      
+                    }
+                }
+
+            }
+        }
+   }
+}
+
+.bottom{
+    position: fixed;
+    bottom: 0;
+    width: 750rpx;
+    height: 98rpx;
+    box-shadow:0px 1px 5px #FFFFFF, 2px 2px 5px #333333;
+    background: #fff;
+    .bottom_item{
+        float: left;
+        width: 375rpx;
+        height: 98rpx;
+        line-height: 98rpx;
+        text-align: center;
+        color: #d43c33;
+        font-size: 32rpx;
+    }
+    .bottom_item:nth-child(2){
+        background: #d43c33;
+        color:#fff;
     }
 }

@@ -1,17 +1,34 @@
 {
   "pages": [
-    "pages/material/speak/detail/dati/index",
+   
     "pages/index/index",
     "pages/material/index",
     "pages/material/speak/index",
     "pages/material/speak/detail/index",
-   
+    "pages/material/speak/detail/dati/index",
+    "pages/material/speak/detail/practice/index",
     "pages/course/index",
+
     "pages/person/index",
+    "pages/person/info/index",
+    "pages/person/info/modefied/index",
+    "pages/person/info/mobile/index",
+    "pages/person/word/index",
+    "pages/person/word/detail/index",
+    "pages/person/collect/index",
+    "pages/person/recall/index",
+    "pages/person/invitation/index",
+    "pages/person/member/index",
+    "pages/person/integration/index",
+    "pages/person/product/index",
+    "pages/person/pdf/index",
+    "pages/person/about/index",
+
     "pages/index/material/index",
     "pages/index/teacher/index",
     "pages/index/teacher/detail/index",
     "pages/index/teacher/counsel/index",
+    "pages/index/teacher/order/index",
     "pages/index/jijing/index",
     "pages/index/score/index",
     "pages/index/score/detail/index",

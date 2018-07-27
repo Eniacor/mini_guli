@@ -1,0 +1,87 @@
+.color {
+  color: #d43c33;
+}
+.background {
+  background: #d43c33;
+}
+page {
+  background: #f6f6f6;
+}
+.body {
+  overflow: hidden;
+}
+.upper-header {
+  background: #fff;
+  overflow: hidden;
+}
+.header-logo {
+  width: 314rpx;
+  height: 123rpx;
+  background: red;
+  margin: auto;
+  margin-top: 40rpx;
+  margin-bottom: 30rpx;
+}
+.introduce-name {
+  width: 690rpx;
+  height: 40rpx;
+  margin: auto;
+  text-align: center;
+  line-height: 38rpx;
+  font-size: 30rpx;
+}
+.details-content-border {
+  width: 690rpx;
+  height: 430rpx;
+  margin: auto;
+  margin-top: 30rpx;
+  border-radius: 20rpx;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+}
+.border {
+  width: 10rpx;
+  height: 30rpx;
+  border-radius: 20rpx;
+  margin-top: 40rpx;
+  margin-left: 30rpx;
+  float: left;
+}
+.format {
+  clear: both;
+}
+.school-name {
+  float: left;
+  font-size: 34rpx;
+  margin-left: 30rpx;
+  margin-top: 34rpx;
+  margin-bottom: 20rpx;
+}
+.telephone {
+  font-size: 30rpx;
+  margin-left: 30rpx;
+  line-height: 1;
+}
+.number {
+  font-size: 30rpx;
+  line-height: 1;
+  word-wrap: break-word;
+}
+.ewm {
+  width: 170rpx;
+  height: 170rpx;
+  background: red;
+  position: absolute;
+  margin-top: -296rpx;
+  margin-left: 490rpx;
+}
+.load {
+  width: 750rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  color: #5b5b5b;
+  clear: both;
+}

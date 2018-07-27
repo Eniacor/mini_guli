@@ -1,0 +1,86 @@
+<view class="border">
+    <view class="commodity">
+        <view class="images">
+            <image class="img" src="#"></image>
+        </view>
+        <view class="info-qj">
+            <view class="text-title">魔方吸蚊，物理灭蚊</view>
+            <view class="text-number">数量x10</view>
+            <view class="text-money">¥39</view>
+            <view class="text-state">未发货</view>
+        </view>
+    </view>
+
+    <view class="commodity">
+        <view class="images">
+            <image class="img" src="#"></image>
+        </view>
+        <view class="info-qj">
+            <view class="text-title">魔方吸蚊，物理灭蚊</view>
+            <view class="text-number">数量x10</view>
+            <view class="text-money">¥39</view>
+            <view class="text-state">未发货</view>
+        </view>
+    </view>
+
+    <view class="commodity">
+        <view class="images">
+            <image class="img" src="#"></image>
+        </view>
+        <view class="info-qj">
+            <view class="text-title">魔方吸蚊，物理灭蚊</view>
+            <view class="text-number">数量x10</view>
+            <view class="text-money">¥39</view>
+            <view class="text-state">未发货</view>
+        </view>
+    </view>
+
+    <view class="commodity">
+        <view class="images">
+            <image class="img" src="#"></image>
+        </view>
+        <view class="info-qj">
+            <view class="text-title">魔方吸蚊，物理灭蚊</view>
+            <view class="text-number">数量x10</view>
+            <view class="text-money">¥39</view>
+            <view class="text-state">未发货</view>
+        </view>
+    </view>
+
+    <view class="commodity">
+        <view class="images">
+            <image class="img" src="#"></image>
+        </view>
+        <view class="info-qj">
+            <view class="text-title">魔方吸蚊，物理灭蚊</view>
+            <view class="text-number">数量x10</view>
+            <view class="text-money">¥39</view>
+            <view class="text-state">未发货</view>
+        </view>
+    </view>
+
+
+    <view class="commodity">
+        <view class="images">
+            <image class="img" src="#"></image>
+        </view>
+        <view class="info-qj">
+            <view class="text-title">魔方吸蚊，物理灭蚊</view>
+            <view class="text-number">数量x10</view>
+            <view class="text-money">¥39</view>
+            <view class="text-state">未发货</view>
+        </view>
+    </view>
+
+    <view class="commodity">
+        <view class="images">
+            <image class="img" src="#"></image>
+        </view>
+        <view class="info-qj">
+            <view class="text-title">魔方吸蚊，物理灭蚊</view>
+            <view class="text-number">数量x10</view>
+            <view class="text-money">¥39</view>
+            <view class="text-state">未发货</view>
+        </view>
+    </view>
+</view>

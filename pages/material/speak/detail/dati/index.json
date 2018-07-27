@@ -1,6 +1,7 @@
 {
     "usingComponents": {
-        "i-rate": "/components/rate/index"
+        "i-rate": "/components/rate/index",
+        "i-progress": "/components/progress/index"
     },
     "navigationBarTitleText": "口语详情"
 }

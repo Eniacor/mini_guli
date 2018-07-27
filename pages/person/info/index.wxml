@@ -1,0 +1,81 @@
+<view class="register">
+    <view class="avatar">
+        <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="item">
+        <view class="item_left">手机号</view>
+        <view class="item_right" style="width:278rpx;">
+            <input placeholder="您尚未绑定手机号" bindblur="getNickname" />
+        </view>
+        <view class="item_middle"  bindtap="skipPage" data-url="/pages/person/info/mobile/index" data-type="0"  style="width:202rpx;height:58rpx;font-size:30rpx;line-height:58rpx;text-align:center;background:#d43c33;color:#fff;border-radius:30rpx;">
+            绑定手机号
+        </view>
+    </view>
+    <view class="item">
+        <view class="item_left">昵称</view>
+        <view class="item_right">
+            <input placeholder="请输入您的昵称" bindblur="getNickname" />
+        </view>
+    </view>
+    <view class="item">
+        <view class="item_left">性别</view>
+        <view class="item_right">
+            <radio-group class="radio-group" bindchange="radioSexChange">
+                <label class="radio" wx:for="{{sexs}}" wx:key="unique">
+                    <radio class="dot" value="{{item.value}}" checked="{{item.checked}}" color="#c43c33" />
+                    <text>{{item.name}}</text>
+                </label>
+            </radio-group>
+        </view>
+    </view>
+    <view class="item">
+        <view class="item_left">考试时间</view>
+        <view class="item_right">
+            <picker mode="date" value="{{date}}" start="2017-09-01" end="2020-09-01" bindchange="bindDateChange">
+                <view class="picker">{{date}}</view>
+            </picker>
+        </view>
+        <view class="item_middle">
+            <image src="/images/static/cright.png" />
+        </view>
+    </view>
+    <view class="item">
+        <view class="item_left">目标分数</view>
+        <view class="item_right">
+            <picker bindchange="bindScoreChange" value="{{index}}" range="{{score}}">
+                <view class="picker">{{score[index]}}</view>
+            </picker>
+        </view>
+        <view class="item_middle">
+            <image src="/images/static/cright.png" />
+        </view>
+    </view>
+    <view class="item">
+        <view class="item_left">考过PTE</view>
+        <view class="item_right">
+            <radio-group class="radio-group" bindchange="radioPteChange">
+                <label class="radio" wx:for="{{ptes}}" wx:key="unique">
+                    <radio class="dot" value="{{item.value}}" checked="{{item.checked}}" color="#c43c33" />
+                    <text>{{item.name}}</text>
+                </label>
+            </radio-group>
+        </view>
+    </view>
+    <view class="item">
+        <view class="item_left">邮箱</view>
+        <view class="item_right">
+            <input placeholder="请输入您的邮箱" bindblur="getEmail" />
+        </view>
+    </view>
+    <view class="item">
+        <view class="item_left">城市</view>
+        <view class="item_right">
+            <input placeholder="请输入您所在的城市" bindblur="getCity" />
+        </view>
+    </view>
+</view>
+<view class="btn_back">
+    <button bindtap="skipPage" data-url="/pages/person/info/modefied/index" data-type="0" class="btn" wx:if="{{hasRead}}" >
+        修改信息
+    </button>
+</view>

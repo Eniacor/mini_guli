@@ -22,7 +22,7 @@
         </view>
     </view>
     <view class="personal_func_list">
-        <navigator url="/pages/collection/collection" hover-class="none" class="flex align-c personal_func_item">
+        <navigator url="/pages/person/info/index" hover-class="none" class="flex align-c personal_func_item">
             <view class="icon iconfont">
                 <image src="/images/static/user.png" />
             </view>
@@ -33,7 +33,7 @@
                 <image src="/images/static/cright.png" />
             </view>
         </navigator>
-        <navigator url="/pages/collection/collection" hover-class="none" class="flex align-c personal_func_item">
+        <navigator url="/pages/person/word/index" hover-class="none" class="flex align-c personal_func_item">
             <view class="icon iconfont">
                 <image src="/images/static/english.png" />
             </view>
@@ -44,7 +44,7 @@
                 <image src="/images/static/cright.png" />
             </view>
         </navigator>
-        <navigator url="/pages/collection/collection" hover-class="none" class="flex align-c personal_func_item">
+        <navigator url="/pages/person/collect/index" hover-class="none" class="flex align-c personal_func_item">
             <view class="icon iconfont">
                 <image src="/images/static/cang.png" />
             </view>
@@ -90,7 +90,7 @@
                 <image src="/images/static/cright.png" />
             </view>
         </navigator>
-        <navigator url="/pages/collection/collection" hover-class="none" class="flex align-c personal_func_item">
+        <navigator url="/pages/person/integration/index" hover-class="none" class="flex align-c personal_func_item">
             <view class="icon iconfont">
                 <image src="/images/static/fen.png" />
             </view>
@@ -101,7 +101,7 @@
                 <image src="/images/static/cright.png" />
             </view>
         </navigator>
-        <navigator url="/pages/collection/collection" hover-class="none" class="flex align-c personal_func_item">
+        <navigator url="/pages/person/recall/index" hover-class="none" class="flex align-c personal_func_item">
             <view class="icon iconfont">
                 <image src="/images/static/course.png" />
             </view>
@@ -112,7 +112,7 @@
                 <image src="/images/static/cright.png" />
             </view>
         </navigator>
-        <navigator url="/pages/collection/collection" hover-class="none" class="flex align-c personal_func_item">
+        <navigator url="/pages/person/product/index" hover-class="none" class="flex align-c personal_func_item">
             <view class="icon iconfont">
                 <image src="/images/static/zhou.png" />
             </view>
@@ -123,7 +123,7 @@
                 <image src="/images/static/cright.png" />
             </view>
         </navigator>
-        <navigator url="/pages/collection/collection" hover-class="none" class="flex align-c personal_func_item">
+        <navigator url="/pages/person/pdf/index" hover-class="none" class="flex align-c personal_func_item">
             <view class="icon iconfont">
                 <image src="/images/static/pdf.png" />
             </view>
@@ -136,7 +136,7 @@
         </navigator>
     </view>
     <view class="personal_func_list">
-        <navigator url="/pages/collection/collection" hover-class="none" class="flex align-c personal_func_item">
+        <navigator url="/pages/person/about/index" hover-class="none" class="flex align-c personal_func_item">
             <view class="icon iconfont">
                 <image src="/images/static/about.png" />
             </view>

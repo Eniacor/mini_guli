@@ -1,4 +1,4 @@
-// pages/mine/index.js
+const app =getApp();
 const Api = require("../../config/method.js");
 const Session = require('../../common/auth/session')
 Page({
@@ -70,5 +70,6 @@ Page({
                 resolve();
             }).catch(err => reject(err));
         });
-    }
+    },
+    skipPage:app.skipPage,
 })

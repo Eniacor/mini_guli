@@ -1,7 +1,0 @@
-.star_list .iconfont {
-    color: #e2e2e2;
-}
-
-.star_list .iconfont.active {
-    color: #ab2b2b;
-}

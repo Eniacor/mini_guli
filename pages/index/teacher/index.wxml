@@ -1,5 +1,5 @@
 <view class="teachers">
-    <view class="teacher">
+    <view class="teacher" bindtap="skipPage" data-url="/pages/index/teacher/detail/index" data-type="0">
         <view class="teacher_top">
             <view class="top_left">
                 <image src="/images/static/index_teacher.png" />
@@ -13,12 +13,12 @@
                 </view>
             </view>
         </view>
-        <view class="teacher_middle" bindtap="skipPage" data-url="/pages/index/teacher/counsel/index" data-type="0">
+        <view class="teacher_middle">
             PTE首席口语满分讲师，研究PTE3年，深谙机器评分
             规则，擅长四小时解决口语疑难杂症，历史学员平均一
             小时提升12分，实战指导性强。另外文波老师自身经...
         </view>
-        <view class="teacher_bottom"  bindtap="skipPage" data-url="/pages/index/teacher/detail/index" data-type="0">
+        <view class="teacher_bottom">
             <text>免费预约</text>
             <image src="/images/static/index_teacher_more.png" />
         </view>

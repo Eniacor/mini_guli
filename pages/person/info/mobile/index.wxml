@@ -1,0 +1,26 @@
+<view class="register">
+    <view class="item">
+        <!-- <view class="item_left">考试时间</view> -->
+        <view class="item_right">
+            <picker mode="date" value="{{date}}" start="2017-09-01" end="2020-09-01" bindchange="bindDateChange">
+                <view class="picker">{{date}}</view>
+            </picker>
+        </view>
+        <view class="item_middle">
+            <image src="/images/static/cright.png" />
+        </view>
+    </view>
+    
+    <view class="item">
+        <!-- <view class="item_left">邮箱</view> -->
+        <view class="item_right">
+            <input placeholder="请输入你的手机号" bindblur="getEmail" />
+        </view>
+    </view>
+
+</view>
+<view class="btn_back">
+    <button  data-type="0" class="btn" wx:if="{{hasRead}}" >
+        提交
+    </button>
+</view>

@@ -1,0 +1,90 @@
+<view class="body">
+    <view class="upper-header">
+        <view class="header-logo"></view>
+        <view class="text-introduce">
+            <view class="introduce-name">墨尔本 悉尼 霍巴特 阿德莱德</view>
+            <view class="introduce-name">最负责、最有效、通过率最高的PTE/雅思培训学校</view>
+        </view>
+    </view>
+    <view class="details-content-border">
+        <view class="border background"></view>
+        <view class="school-name color">墨尔本校区</view>
+        <view class="format">
+            <text class="telephone">电话：</text>
+            <text class="number">18751002090</text>
+        </view>
+        <view class="format">
+            <text class="telephone">手机：</text>
+            <text class="number">18751002090</text>
+        </view>
+        <view class="format">
+            <text class="telephone">邮箱：</text>
+            <text class="number">18751002090</text>
+        </view>
+        <view class="format">
+            <text class="telephone">微信：</text>
+            <text class="number">18751002090</text>
+        </view>
+        <view class="format">
+            <text class="telephone">地址：</text>
+            <text class="number">1875002222222090</text>
+        </view>
+        <view class="ewm"></view>
+    </view>
+
+    <view class="details-content-border">
+            <view class="border background"></view>
+            <view class="school-name color">墨尔本校区</view>
+            <view class="format">
+                <text class="telephone">电话：</text>
+                <text class="number">18751002090</text>
+            </view>
+            <view class="format">
+                <text class="telephone">手机：</text>
+                <text class="number">18751002090</text>
+            </view>
+            <view class="format">
+                <text class="telephone">邮箱：</text>
+                <text class="number">18751002090</text>
+            </view>
+            <view class="format">
+                <text class="telephone">微信：</text>
+                <text class="number">18751002090</text>
+            </view>
+            <view class="format">
+                <text class="telephone">地址：</text>
+                <text class="number">1875002222222090</text>
+            </view>
+            <view class="ewm"></view>
+        </view>
+
+
+        <view class="details-content-border">
+                <view class="border background"></view>
+                <view class="school-name color">墨尔本校区</view>
+                <view class="format">
+                    <text class="telephone">电话：</text>
+                    <text class="number">18751002090</text>
+                </view>
+                <view class="format">
+                    <text class="telephone">手机：</text>
+                    <text class="number">18751002090</text>
+                </view>
+                <view class="format">
+                    <text class="telephone">邮箱：</text>
+                    <text class="number">18751002090</text>
+                </view>
+                <view class="format">
+                    <text class="telephone">微信：</text>
+                    <text class="number">18751002090</text>
+                </view>
+                <view class="format">
+                    <text class="telephone">地址：</text>
+                    <text class="number">1875002222222090</text>
+                </view>
+                <view class="ewm"></view>
+            </view>
+
+
+            <view class="load">文波陪伴，英语不难!</view>
+</view>

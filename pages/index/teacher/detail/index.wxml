@@ -15,4 +15,12 @@
         </view>
 
     </view>
+    <import src="../../../../common/component/wxParse/wxParse.wxml" />
+    <view class="wxParse">
+        <template is="wxParsec" data="{{wxParseData:article.nodes}}" />
+    </view>
+    <view  class="bottom">
+        <view class="bottom_item" bindtap="skipPage" data-url="/pages/index/teacher/counsel/index" data-type="0">免费分析成绩单</view>
+        <view class="bottom_item" bindtap="skipPage" data-url="/pages/index/teacher/order/index" data-type="0">免费预约名师咨询</view>
+    </view>
 </view>

@@ -3,8 +3,11 @@ const request = require('../common/request.js');
 module.exports = {
     XcxUserInfo: (data) => request(api.XcxUserInfo, data, 'POST'), 
     UserRegister: (data) => request(api.UserRegister, data, 'POST'), 
-
-
+    
+    ReserveConsult:(data) =>request(api.ReserveConsult,data,'POST'),
+    ReserveConsultImg:(data) =>request(api.ReserveConsultImg,data,'POST'),
+    ReserveReport:(data) =>request(api.ReserveReport,data,'POST'),
+    ReserveReportImg:(data) =>request(api.ReserveReportImg,data,'POST'),
 
 
 

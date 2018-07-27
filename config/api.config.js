@@ -2,8 +2,11 @@ const xapp = require('./xapp.config.js');
 module.exports = {
     XcxLogin: `${xapp.api_host}/Weixin/getOpenId`,
     UserRegister: `${xapp.api_host}/Weixin/register`,
-   
-   
+    
+    ReserveConsult:`${xapp.api_host}/ReserveConsulting/store`,
+    ReserveConsultImg:`${xapp.api_host}/ReserveConsulting/image`,
+    ReserveReport:`${xapp.api_host}/ReserveReport/store`,
+    ReserveReportImg:`${xapp.api_host}/ReserveReportImg/image`,
    
    
    

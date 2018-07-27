@@ -1,0 +1,42 @@
+<view class="body">
+  <view class="text-word">
+    <view class="text-word-header">landscape</view>
+    <view class="text-word-info">英['loendskeip']</view>
+    <view class="text-word-img">
+      <image class="icong" src="/images/static/p_bofang.png"></image>
+    </view>
+    <view class="text-word-info too">美['loendskeip']</view>
+    <view class="text-word-img">
+      <image class="icong" src="/images/static/p_bofang.png"></image>
+    </view>
+    <br />
+    <view class="both-explain">
+      <view class="explain">n. 风景;风景画;乡村风景画;地形</view>
+      <view class="explain">n. 风景;风景画;乡村风景画;地形</view>
+      <view class="explain">n. 风景;风景画;乡村风景画;地形</view>
+    </view>
+  </view>
+  <view class="kb"></view>
+  <view class="example-bd">
+    <view class="boder-shu"></view>
+    <view class="example-info-bt">例句</view>
+    <view class="examples">
+      <view class="example-info">
+        1.Wedasdnkasndkasndn.dasasdnaskdnask
+        <text class="text-info">jndkasndkl</text>
+        .daskndkjasndkj
+      </view>
+      <view class="example-info">我是徐林我好帅我好帅我好帅我好帅我好帅我好帅我好帅</view>
+      <view class="border-noe"></view>
+    </view>
+    <view class="examples">
+      <view class="example-info">
+        1.Wedasdnkasndkasndn.dasasdnaskdnask
+        <text class="text-info">jndkasndkl</text>
+        .daskndkjasndkj
+      </view>
+      <view class="example-info">我是徐林我好帅我好帅我好帅我好帅我好帅我好帅我好帅</view>
+      <view class="border-noe"></view>
+    </view>
+  </view>
+</view>

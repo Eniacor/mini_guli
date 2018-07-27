@@ -7,7 +7,7 @@
 </swiper>
 <view class="nav">
      <!-- data-url="/pages/index/material/index" -->
-    <view class="nav_item" bindtap="skipPage" data-url="/pages/test/index" data-type="0">
+    <view class="nav_item" bindtap="skipPage" data-url="/pages/index/material/index" data-type="0">
         <view class="item_img">
             <image src="../../images/static/nav1.png"></image>
         </view>
@@ -125,3 +125,8 @@
     <view class="score_bottom" bindtap="skipPage" data-url="/pages/index/score/index" data-type="0">查看更多</view>
 </view>
 <view class="tech"> ©草帽科技提供技术支持 </view>
+
+ <import src="../../common/component/wxParse/wxParse.wxml" />
+    <view class="wxParse">
+        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
