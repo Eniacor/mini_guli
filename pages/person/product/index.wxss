@@ -4,13 +4,13 @@
 .beader {
   width: 690rpx;
   height: 108rpx;
-  margin: auto;
+  padding: 0 30rpx;
   overflow: hidden;
+  background: #fff;
 }
 .icon {
   width: 28rpx;
   height: 34rpx;
-  background: red;
   margin-top: 37rpx;
   float: left;
 }
@@ -27,13 +27,12 @@
 .icon-a {
   width: 28rpx;
   height: 34rpx;
-  background: red;
   margin-top: 37rpx;
   float: right;
 }
 .ic2 {
-  width: 28rpx;
-  height: 34rpx;
+  width: 20rpx;
+  height: 28rpx;
 }
 .kb {
   width: 750rpx;
@@ -41,10 +40,13 @@
   background: #f6f6f6;
   margin-bottom: 30rpx;
 }
+.first {
+  background: #fff;
+  padding: 30rpx 0 10rpx 0;
+}
 .img-datu {
   width: 690rpx;
   height: 400rpx;
-  background: red;
   margin: auto;
 }
 .datu {
@@ -69,8 +71,7 @@
 }
 .details {
   width: 100%;
-  height: 46rpx;
-  margin-bottom: 40rpx;
+  overflow: hidden;
 }
 .detailss {
   width: 330rpx;
@@ -78,21 +79,28 @@
   margin-bottom: 40rpx;
 }
 .gold {
+  float: left;
   font-size: 32rpx;
-  line-height: 58rpx;
+  height: 46rpx;
+  line-height: 46rpx;
+  font-weight: 600;
 }
 .border-gold {
   float: right;
   width: 130rpx;
-  height: 46rpx;
+  height: 44rpx;
   border-radius: 46rpx;
   font-size: 26rpx;
-  line-height: 46rpx;
+  line-height: 44rpx;
   text-align: center;
   border: 1rpx solid #d43c33;
 }
 .commodity-border {
   width: 720rpx;
+  padding-right: 30rpx;
+  padding-top: 30rpx;
+  overflow: hidden;
+  background: #fff;
 }
 .commodity {
   width: 330rpx;
@@ -104,7 +112,6 @@
 .image-a {
   width: 330rpx;
   height: 246rpx;
-  background: red;
 }
 .image-as {
   width: 330rpx;

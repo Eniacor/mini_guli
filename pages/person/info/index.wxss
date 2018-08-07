@@ -58,7 +58,7 @@
 }
 .register .item .item_middle {
   float: right;
-  margin-top: 38rpx;
+  margin-top: 32rpx;
   width: 12rpx;
   height: 22rpx;
 }

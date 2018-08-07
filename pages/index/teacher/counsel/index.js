@@ -1,6 +1,6 @@
 const app = getApp();
 const tips = require('../../../../common/tips.js');
-// const md5 = require('../../common/utils/md5.js');
+
 const Api = require("../../../../config/method.js");
 Page({
     /**
@@ -159,8 +159,8 @@ Page({
                         })
                     }
                 }
-                wx.navigateBack({delta: '/pages/index/teacher/detail/index'}) //关闭
-                
+                wx.navigateBack({url: '/pages/index/teacher/detail/index'}) //关闭
+            
                 resolve();
              
             }).catch(err => reject(err));

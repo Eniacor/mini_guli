@@ -97,7 +97,6 @@
   width: 128rpx;
   height: 43rpx;
   border-radius: 10rpx;
-  background: #f4cf75;
   font-size: 30rpx;
   color: #fff;
   text-align: center;
@@ -109,6 +108,18 @@
   line-height: 1;
   margin-top: 18rpx;
   margin-left: 10rpx;
+}
+.content .content_item .item_right .backcolor1 {
+  background: #f4cf75;
+}
+.content .content_item .item_right .backcolor2 {
+  background: #85afec;
+}
+.content .content_item .item_right .backcolor3 {
+  background: #80b6ac;
+}
+.content .content_item .item_right .backcolor4 {
+  background: #a072c4;
 }
 .content .content_item-top {
   height: 215rpx;

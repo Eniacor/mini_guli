@@ -8,110 +8,31 @@
             <text class="title_txt">五月高分榜</text>
         </view>
         <view class="items">
-            <view class="item">
-                <view class="item_left">
-                    <image src="" />
-                </view>
-                <view class="item_right">
-                    <view class="right_title">
-                        <text>【73】</text>
-                        恭喜文波PTE五月第73位学员通...
+            <view wx:for="score" wx:key="unique">
+                <view class="item">
+                    <view class="item_left">
+                        <image src="{{item.img}}" />
                     </view>
-                    <view class="right_sub">这里有个副标题</view>
-                    <view class="tags">
-                        <text class="tag backcolor_yellow">七炸</text>
-                        <text class="tag backcolor_blue">七炸</text>
-                        <text class="tag backcolor_green">最多六个字</text>
-                    </view>
-                    <view class="time">
-                        <view class="time_left">
-                            <image src="/images/static/index_score_time.png" />
-                            <text>2015-05-08</text>
+                    <view class="item_right">
+                        <view class="right_title">
+                            <text>【{{item.number}}】</text>
+                            {{item.titles}}...
                         </view>
-                        <view class="time_right" bindtap="skipPage" data-url="/pages/index/score/detail/index" data-type="0">
-                            <text>查看详情</text>
-                            <image src="/images/static/index_score_more.png" />
+                        <view class="right_sub">{{item.subtitle}}</view>
+                        <view class="tags">
+                            <text class="tag backcolor_yellow">{{item.tag1}}</text>
+                            <text class="tag backcolor_blue">{{item.tag2}}</text>
+                            <text class="tag backcolor_green">{{item.tag3}}</text>
                         </view>
-                    </view>
-                </view>
-            </view>
-           <view class="item">
-                <view class="item_left">
-                    <image src="" />
-                </view>
-                <view class="item_right">
-                    <view class="right_title">
-                        <text>【73】</text>
-                        恭喜文波PTE五月第73位学员通...
-                    </view>
-                    <view class="right_sub">这里有个副标题</view>
-                    <view class="tags">
-                        <text class="tag backcolor_yellow">七炸</text>
-                        <text class="tag backcolor_blue">七炸</text>
-                        <text class="tag backcolor_green">最多六个字</text>
-                    </view>
-                    <view class="time">
-                        <view class="time_left">
-                            <image src="/images/static/index_score_time.png" />
-                            <text>2015-05-08</text>
-                        </view>
-                        <view class="time_right">
-                            <text>查看详情</text>
-                            <image src="/images/static/index_score_more.png" />
-                        </view>
-                    </view>
-                </view>
-            </view>
-            <view class="item">
-                <view class="item_left">
-                    <image src="" />
-                </view>
-                <view class="item_right">
-                    <view class="right_title">
-                        <text>【73】</text>
-                        恭喜文波PTE五月第73位学员通...
-                    </view>
-                    <view class="right_sub">这里有个副标题</view>
-                    <view class="tags">
-                        <text class="tag backcolor_yellow">七炸</text>
-                        <text class="tag backcolor_blue">七炸</text>
-                        <text class="tag backcolor_green">最多六个字</text>
-                    </view>
-                    <view class="time">
-                        <view class="time_left">
-                            <image src="/images/static/index_score_time.png" />
-                            <text>2015-05-08</text>
-                        </view>
-                        <view class="time_right">
-                            <text>查看详情</text>
-                            <image src="/images/static/index_score_more.png" />
-                        </view>
-                    </view>
-                </view>
-            </view>
-            <view class="item">
-                <view class="item_left">
-                    <image src="" />
-                </view>
-                <view class="item_right">
-                    <view class="right_title">
-                        <text>【73】</text>
-                        恭喜文波PTE五月第73位学员通...
-                    </view>
-                    <view class="right_sub">这里有个副标题</view>
-                    <view class="tags">
-                        <text class="tag backcolor_yellow">七炸</text>
-                        <text class="tag backcolor_blue">七炸</text>
-                        <text class="tag backcolor_green">最多六个字</text>
-                    </view>
-                    <view class="time">
-                        <view class="time_left">
-                            <image src="/images/static/index_score_time.png" />
-                            <text>2015-05-08</text>
-                        </view>
-                        <view class="time_right">
-                            <text>查看详情</text>
-                            <image src="/images/static/index_score_more.png" />
+                        <view class="time">
+                            <view class="time_left">
+                                <image src="/images/static/index_score_time.png" />
+                                <text>{{item.addtime}}</text>
+                            </view>
+                            <view class="time_right" bindtap="skipPage" data-url="/pages/index/score/detail/index?id={{item.id}}" data-type="0">
+                                <text>查看详情</text>
+                                <image src="/images/static/index_score_more.png" />
+                            </view>
                         </view>
                     </view>
                 </view>

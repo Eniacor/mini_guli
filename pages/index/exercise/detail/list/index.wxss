@@ -42,6 +42,15 @@
 .list .list_contents .content .content_head .backcolor_yellow {
   background: #face64;
 }
+.list .list_contents .content .content_head .backcolor_w {
+  background: #85afec;
+}
+.list .list_contents .content .content_head .backcolor_l {
+  background: #80b6ac;
+}
+.list .list_contents .content .content_head .backcolor_r {
+  background: #a072c4;
+}
 .list .list_contents .content .content_head .head_middle {
   float: left;
   font-size: 32rpx;
@@ -123,4 +132,12 @@
   width: 375rpx;
   text-align: center;
   color: #fff;
+}
+.bottom .bottom_right button {
+  background: #d43c33;
+  width: 375rpx;
+  text-align: center;
+  color: #fff;
+  height: 98rpx;
+  line-height: 98rpx;
 }

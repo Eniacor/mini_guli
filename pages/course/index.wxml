@@ -1,106 +1,100 @@
 <view class="category">
-    <view class="category_item category_item-activ">PTE课程推荐</view>
-    <view class="category_item">最新活动</view>
-    <view class="category_item">考试周边产品</view>
-    <view class="category_item">学校简介</view>
-    <view class="category_item">名师专栏</view>
-    <view class="category_item">考位信息交换</view>
+    <view class="category_item {{status==1?'category_item-activ':''}}" bindtap="handleSwitch" data-id="1">
+        PTE课程推荐
+    </view>
+    <view class="category_item {{status==2?'category_item-activ':''}}" bindtap="handleSwitch" data-id="2">
+        最新活动
+    </view>
+    <view class="category_item {{status==3?'category_item-activ':''}}" bindtap="handleSwitch" data-id="3">
+        考试周边产品
+    </view>
+    <view class="category_item {{status==4?'category_item-activ':''}}" bindtap="handleSwitch" data-id="4">
+        学校简介
+    </view>
+    <view class="category_item {{status==5?'category_item-activ':''}}" bindtap="handleSwitch" data-id="5">
+        名师专栏
+    </view>
+    <view class="category_item {{status==6?'category_item-activ':''}}" bindtap="handleSwitch" data-id="6">
+        考位信息交换
+    </view>
 </view>
 <view class="course">
     <view class="course_banner">
         <image src="/images/static/course1.png" />
     </view>
-    <view class="course_contents">
-        <view class="content">
+    <view class="course_contents" wx:if="{{course!=null}}">
+        <view class="content" wx:for="{{course}}" wx:key="unique" bindtap="skipPage" data-url="/pages/course/cdetail/index?id={{item.id}}" data-type="0">
             <view class="content_left">
                 <image src="/images/static/course_i.png" />
-                <view class="left_biao">立减$50</view>
+                <view class="left_biao">立减${{item.discount}}</view>
             </view>
             <view class="content_right">
                 <view class="right_title">
-                    <view class="title">PTE口语提升保过课程</view>
-                    <view class="biao">HOT</view>
+                    <view class="title">{{item.title}}</view>
+                    <view class="biao" wx:if="{{item.is_host==1}}">HOT</view>
                 </view>
                 <view class="right_des">
-                    <view class="des des-1">口语</view>
-                    <view class="des des-2">线上</view>
-                    <view class="des des-3">保过</view>
+                    <view class="des des-1">{{item.tag1}}</view>
+                    <view class="des des-2">{{item.tag2}}</view>
+                    <view class="des des-3">{{item.tag3}}</view>
                 </view>
                 <view class="right_techer">
                     <image src="/images/static/course_u.png" />
-                    <text class="name">文波老师</text>
+                    <text class="name">{{item.lecturer}}</text>
                 </view>
                 <view class="right_address">
                     <image src="/images/static/course_a.png" />
-                    <text class="address">墨尔本校区</text>
+                    <text class="address">{{item.campus}}</text>
                 </view>
                 <view class="right_time">
                     <image src="/images/static/course_c.png" />
-                    <text class="time">2015-05-18开课</text>
+                    <text class="time">{{item.activity_time}}开课</text>
                     <text class="detail">查看详情</text>
                 </view>
             </view>
         </view>
-          <view class="content" >
+    </view>
+    <view class="content_more" bindtap="skipPage" data-url="/pages/course/list/index" data-type="0">
+        查看更多
+    </view>
+</view>
+<view class="course">
+    <view class="course_banner">
+        <image src="/images/static/course1.png" />
+    </view>
+    <view class="course_contents" wx:if="{{activity}}">
+        <view class="content" wx:for="{{activity}}" wx:key="unique" bindtap="skipPage" data-url="/pages/course/adetail/index?id={{item.id}}" data-type="0">
             <view class="content_left">
-                <image src="/images/static/course_i.png" />
-                <view class="left_biao">立减$50</view>
+                <image src="{{item.title_img}}" />
+                <view class="left_biao">立减${{item.discount}}</view>
             </view>
             <view class="content_right">
                 <view class="right_title">
-                    <view class="title">PTE口语提升保过课程</view>
-                    <view class="biao">HOT</view>
+                    <view class="title">{{item.title}}</view>
+                    <view class="biao" wx:if="{{itme.is_hot}}">HOT</view>
                 </view>
                 <view class="right_des">
-                    <view class="des des-1">口语</view>
-                    <view class="des des-2">线上</view>
-                    <view class="des des-3">保过</view>
+                    <view class="des des-1">{{item.tag1}}</view>
+                    <view class="des des-2">{{item.tag2}}</view>
+                    <view class="des des-3">{{item.tag3}}</view>
                 </view>
                 <view class="right_techer">
-                    <image src="/images/static/course_u.png" />
-                    <text class="name">文波老师</text>
+                    <image src="" />
+                    <text class="name"></text>
                 </view>
                 <view class="right_address">
                     <image src="/images/static/course_a.png" />
-                    <text class="address">墨尔本校区</text>
+                    <text class="address">{{item.campus}}</text>
                 </view>
                 <view class="right_time">
                     <image src="/images/static/course_c.png" />
-                    <text class="time">2015-05-18开课</text>
+                    <text class="time">{{item.activity_time}}开课</text>
                     <text class="detail">查看详情</text>
                 </view>
             </view>
         </view>
-        <view class="content"  style="border:0;">
-            <view class="content_left">
-                <image src="/images/static/course_i.png" />
-                <view class="left_biao">立减$50</view>
-            </view>
-            <view class="content_right">
-                <view class="right_title">
-                    <view class="title">PTE口语提升保过课程</view>
-                    <view class="biao">HOT</view>
-                </view>
-                <view class="right_des">
-                    <view class="des des-1">口语</view>
-                    <view class="des des-2">线上</view>
-                    <view class="des des-3">保过</view>
-                </view>
-                <view class="right_techer">
-                    <image src="/images/static/course_u.png" />
-                    <text class="name">文波老师</text>
-                </view>
-                <view class="right_address">
-                    <image src="/images/static/course_a.png" />
-                    <text class="address">墨尔本校区</text>
-                </view>
-                <view class="right_time">
-                    <image src="/images/static/course_c.png" />
-                    <text class="time">2015-05-18开课</text>
-                    <text class="detail">查看详情</text>
-                </view>
-            </view>
-        </view>
-        <view class="content_more">查看更多</view>
+    </view>
+    <view class="content_more" bindtap="skipPage" data-url="/pages/course/activity/index" data-type="0">
+        查看更多
     </view>
 </view>

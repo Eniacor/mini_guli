@@ -1,5 +1,5 @@
 <view class="items">
-    <view class="item">
+    <view class="item" bindtap="skipPage" data-url="/pages/material/speak/index" data-type="0">
         <view class="item_title">
             <text class="title_line"></text>
             <text class="title_txt">口语</text>
@@ -19,7 +19,7 @@
             </view>
         </view>
     </view>
-     <view class="item">
+     <view class="item" bindtap="skipPage" data-url="/pages/material/write/index" data-type="0">
         <view class="item_title">
             <text class="title_line"></text>
             <text class="title_txt">写作</text>
@@ -39,17 +39,16 @@
             </view>
         </view>
     </view>
-     <view class="item">
+     <view class="item" bindtap="skipPage" data-url="/pages/material/listen/index" data-type="0">
         <view class="item_title">
             <text class="title_line"></text>
             <text class="title_txt">听力</text>
         </view>
         <view class="item_content">
             <view class="content_left">
-                <image src="/images/static/index_jijings.png" />
+                <image src="/images/static/index_jijingl.png" />
             </view>
             <view class="content_middle">
-
             </view>
             <view class="content_right">
                 <view class="right_title backcolor_green">
@@ -59,7 +58,7 @@
             </view>
         </view>
     </view>
-     <view class="item">
+     <view class="item" bindtap="skipPage" data-url="/pages/material/read/index" data-type="0">
         <view class="item_title">
             <text class="title_line"></text>
             <text class="title_txt">阅读</text>

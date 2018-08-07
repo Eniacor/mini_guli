@@ -1,7 +1,7 @@
 <view class="discuzz">
     <view class="discuzz_txt">
-        <textarea  class="txt" placeholder="写评论" maxlength="5"/>
+        <textarea  class="txt" placeholder="写评论" maxlength="300" bindblur="getContent"/>
         <text class="limit">0/300</text>
     </view>
-   <button type="warn" class="btn">提交</button>
+   <button type="warn" class="btn" bindtap="handleData">提交</button>
 </view>

@@ -100,5 +100,5 @@
     <view class="email_input">
         <input placeholder="请输入领取邮箱" />
     </view>
-    <view class="navigator-hover email_btn" bindtap="handleEmail">马上领取</view>
+    <view class="navigator-hover email_btn" bindtap="handleEmail" style="background:#d43c33;">马上领取</view>
 </view>

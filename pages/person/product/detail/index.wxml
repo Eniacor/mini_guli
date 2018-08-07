@@ -1,86 +1,33 @@
-<view class="border">
-    <view class="commodity">
-        <view class="images">
-            <image class="img" src="#"></image>
-        </view>
-        <view class="info-qj">
-            <view class="text-title">魔方吸蚊，物理灭蚊</view>
-            <view class="text-number">数量x10</view>
-            <view class="text-money">¥39</view>
-            <view class="text-state">未发货</view>
-        </view>
+<view class="body">
+    <view class="swp">
+        <swiper indicator-dots="true" indicator-color="#fff" indicator-active-color="red" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+            <block wx:for="{{imgUrls}}">
+                <swiper-item>
+                    <image class="image-swiper" src="{{item}}" class="slide-image"/>
+                </swiper-item>
+            </block>
+        </swiper>
     </view>
-
-    <view class="commodity">
-        <view class="images">
-            <image class="img" src="#"></image>
-        </view>
-        <view class="info-qj">
-            <view class="text-title">魔方吸蚊，物理灭蚊</view>
-            <view class="text-number">数量x10</view>
-            <view class="text-money">¥39</view>
-            <view class="text-state">未发货</view>
-        </view>
+    <view class="test">
+        <view class="text-title">{{good.title}}</view>
+        <!-- <view class="text-in">0.4mm纸一样薄 磨砂手感</view> -->
+        <text class="text-red">${{good.price}}</text>
+        <text class="text-s"></text>
     </view>
-
-    <view class="commodity">
-        <view class="images">
-            <image class="img" src="#"></image>
-        </view>
-        <view class="info-qj">
-            <view class="text-title">魔方吸蚊，物理灭蚊</view>
-            <view class="text-number">数量x10</view>
-            <view class="text-money">¥39</view>
-            <view class="text-state">未发货</view>
-        </view>
+    <view class="details">
+        <view class="details-border1"></view>
+        <view class="details-zi">商品详情</view>
+        <view class="details-border2"></view>
     </view>
-
-    <view class="commodity">
-        <view class="images">
-            <image class="img" src="#"></image>
-        </view>
-        <view class="info-qj">
-            <view class="text-title">魔方吸蚊，物理灭蚊</view>
-            <view class="text-number">数量x10</view>
-            <view class="text-money">¥39</view>
-            <view class="text-state">未发货</view>
-        </view>
+    <import src="../../../../common/component/wxParse/wxParse.wxml" />
+    <view class="wxParse">
+        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
     </view>
-
-    <view class="commodity">
-        <view class="images">
-            <image class="img" src="#"></image>
+    <view class="ending">
+        <view class="integral">
+            <text class="text-jifen">${{good.price}}</text>
+            <text class="text-jifen-zi"></text>
         </view>
-        <view class="info-qj">
-            <view class="text-title">魔方吸蚊，物理灭蚊</view>
-            <view class="text-number">数量x10</view>
-            <view class="text-money">¥39</view>
-            <view class="text-state">未发货</view>
-        </view>
-    </view>
-
-
-    <view class="commodity">
-        <view class="images">
-            <image class="img" src="#"></image>
-        </view>
-        <view class="info-qj">
-            <view class="text-title">魔方吸蚊，物理灭蚊</view>
-            <view class="text-number">数量x10</view>
-            <view class="text-money">¥39</view>
-            <view class="text-state">未发货</view>
-        </view>
-    </view>
-
-    <view class="commodity">
-        <view class="images">
-            <image class="img" src="#"></image>
-        </view>
-        <view class="info-qj">
-            <view class="text-title">魔方吸蚊，物理灭蚊</view>
-            <view class="text-number">数量x10</view>
-            <view class="text-money">¥39</view>
-            <view class="text-state">未发货</view>
-        </view>
+        <button>立即购买</button>
     </view>
 </view>

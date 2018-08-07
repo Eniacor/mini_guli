@@ -72,12 +72,20 @@
 .list .list_contents .content:last-child {
   border-bottom: 0;
 }
+.list .empty {
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #888;
+}
 .bottom {
   position: fixed;
   bottom: 0;
   width: 750rpx;
   height: 98rpx;
   line-height: 98rpx;
+  font-size: 32rpx;
 }
 .bottom .bottom_left {
   float: left;
@@ -85,6 +93,7 @@
   text-align: center;
   color: #d43c33;
   background: #fff;
+  font-size: 32rpx;
 }
 .bottom .bottom_right {
   float: left;
@@ -92,6 +101,17 @@
   width: 375rpx;
   text-align: center;
   color: #fff;
+  height: 98rpx;
+  font-size: 32rpx;
+}
+.bottom .bottom_right button {
+  background: #d43c33;
+  width: 375rpx;
+  text-align: center;
+  color: #fff;
+  height: 98rpx;
+  line-height: 98rpx;
+  font-size: 32rpx;
 }
 .left {
   position: fixed;

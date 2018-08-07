@@ -1,0 +1,41 @@
+<view class="border">
+    <view class="commodity">
+        <view class="images">
+            <image class="img" src="#"></image>
+        </view>
+        <view class="info-qj">
+            <view class="text-title">魔方吸蚊，物理灭蚊</view>
+            <view class="text-number">数量x10</view>
+            <view class="text-money">¥39</view>
+            <view class="text-state">未发货</view>
+        </view>
+    </view>
+    <view class="content">
+        <view class="content_top">
+            <view class="top_left"></view>
+            <view class="top_right">收货信息</view>
+        </view>
+        <view class="content_item">
+            <view class="item">
+                <input placeholder="请输入收货人姓名" />
+            </view>
+            <view class="item">
+                <input placeholder="请输入收货人电话" />
+            </view>
+            <view class="item">
+                <input placeholder="请输入收货人微信号" />
+            </view>
+            <view class="item">
+                <input placeholder="请输入详细收货地址" />
+            </view>
+        </view>
+    </view>
+    <view class="shuo">* 目前仅限澳洲地区购买</view>
+</view>
+<view class="ending">
+    <view class="integral">
+        <text class="text-jifen">9886</text>
+        <text class="text-jifen-zi">积分</text>
+    </view>
+    <button>立即兑换</button>
+</view>

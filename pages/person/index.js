@@ -1,6 +1,7 @@
-const app =getApp();
+const app = getApp();
 const Api = require("../../config/method.js");
 const Session = require('../../common/auth/session')
+const tips = require('../../common/tips');
 Page({
     data: {
         nickname: '',
@@ -14,14 +15,15 @@ Page({
         loadEnd: false
     },
     onLoad: function (options) {
-        // 页面初始化 options为页面跳转所带来的参数
+        this.handleData();
+        this.hasSign();
     },
     onReady: function () {
         // 页面渲染完成
     },
     onShow: function () {
-        // 页面显示
-        this.init();
+        this.handleData();
+        this.hasSign();
     },
     onHide: function () {
         // 页面隐藏
@@ -29,47 +31,62 @@ Page({
     onUnload: function () {
         // 页面关闭
     },
-    init: function () {
-        let self = this;
+    skipPage: app.skipPage,
+    handleData: function () {
+        let _this = this;
         let session = Session.get();
-        if (session && session.uid) {
-            Api.UserInfo().then(({ data }) => {
-                let phone = data.telphone.substr(0, 3) + '****' + data.telphone.substr(7, 4);
-                self.setData({
-                    uid:session.uid,
-                    nickname: data.nickname,
-                    cover: data.avatar,
-                    phone: phone,
-                    level: data.level_consume_str,
-                    bean_nums: data.bean_nums,
-                    ticket_amount: data.ticket_amount,
-                    coupon_amount: data.coupon_amount,
-                    ticket_index: data.ticket_index,
-                    type:data.type
-                })
+        Api.UserInfo({
+            openid: session.openid
+        }).then(({
+            data
+        }) => {
+            
+            console.log(data);
+            _this.setData({
+                user: data
             });
-            //订单个数
-            Api.orderTypeCount().then(({data})=>{
-                self.setData({
-                    orderData:data
-                }) 
-            })
-        } else {
-            this.getUserInfo()
-                .then(() => self.setData({ loadEnd: true }));
+            resolve();
+        }).catch(err => reject(err));
+    },
+    hasSign: function () {
+        let _this=this;
+        let session = Session.get();
+        let start = new Date(new Date(new Date().toLocaleDateString()).getTime()); 
+        let end = new Date(new Date(new Date().toLocaleDateString()).getTime() +24 * 60 * 60 * 1000 -1);
+        Api.HasSign({
+            start:Date.parse(new Date(start))/1000,
+            end:Date.parse(new Date(end))/1000,
+            uid:session.uid
+        }).then(({
+            data
+        }) => {
+            _this.setData({
+                hasSign:data.has
+            });
+            resolve();
+        }).catch(err => reject(err));
+
+    },
+    handleSign: function () {
+        let session = Session.get();
+        Api.Sign({
+            uid:session.uid,
+            type:1,
+        }).then(({
+            data
+        }) => {
+            tips.showSuccess("签到成功!");
+            _this.setData({
+                hasSign: data.has
+            });
+            resolve();
+        }).catch(err => reject(err));
+    },
+    onShareAppMessage: function () {
+        return {
+            title: '文波教育',
+            desc: '文波教育',
+            // path: '/page/?id=123' // 路径，传递参数到指定页面。
         }
-    },
-    getUserInfo: function () {
-        let self = this;
-        return new Promise((resolve, reject) => {
-            Api.XcxUserInfo().then(({ errdesc }) => {
-                self.setData({
-                    nickname: errdesc.nickname,
-                    cover: errdesc.avatar
-                })
-                resolve();
-            }).catch(err => reject(err));
-        });
-    },
-    skipPage:app.skipPage,
+    }
 })

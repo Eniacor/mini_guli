@@ -63,7 +63,7 @@
     </view>
 </view>
 <view class="btn_back">
-    <button class="btn" wx:if="{{hasRead}}"  >
+    <button class="btn" wx:if="{{hasRead}}" bindtap="getUserInfo">
         修改信息
     </button>
 </view>

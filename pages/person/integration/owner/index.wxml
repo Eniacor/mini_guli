@@ -1,0 +1,62 @@
+<view class="body">
+    <view class="commodity-border">
+        <view class="commodity" bindtap="skipPage" data-url="/pages/person/integration/owner/detail/index" data-type="0"> 
+            <view class="image-a">
+                <image class="image-as" src="#"></image>
+            </view>
+            <view class="infos">
+                <view class="info-text">帅徐林呀</view>
+                <view class="detailss">
+                    <text class="gold color">
+                        <text class="sizi">9999</text>积分</text>
+                    <view class="border-gold color">立即兑换</view>
+                </view>
+            </view>
+        </view>
+
+
+        <view class="commodity">
+            <view class="image-a">
+                <image class="image-as" src="#"></image>
+            </view>
+            <view class="infos">
+                <view class="info-text">帅徐林呀</view>
+                <view class="detailss">
+                    <text class="gold color">
+                        <text class="sizi">9999</text>积分</text>
+                    <view class="border-gold color">立即兑换</view>
+                </view>
+            </view>
+        </view>
+
+
+        <view class="commodity">
+            <view class="image-a">
+                <image class="image-as" src="#"></image>
+            </view>
+            <view class="infos">
+                <view class="info-text">帅徐林呀</view>
+                <view class="detailss">
+                    <text class="gold color">
+                        <text class="sizi">9999</text>积分</text>
+                    <view class="border-gold color">立即兑换</view>
+                </view>
+            </view>
+        </view>
+
+
+        <view class="commodity">
+            <view class="image-a">
+                <image class="image-as" src="#"></image>
+            </view>
+            <view class="infos">
+                <view class="info-text">帅徐林呀</view>
+                <view class="detailss">
+                    <text class="gold ">
+                        <text class="sizi">9999</text>积分</text>
+                    <view class="border-gold color">立即兑换</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

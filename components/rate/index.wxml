@@ -7,7 +7,7 @@
         class="i-rate-star {{ parse.getCurrent( value,index ) }}" 
         data-index="{{index}}" 
         bindtap="handleClick">
-        <i-icon type="collection_fill" size="{{size}}" color=""></i-icon>
+        <i-icon type="collection_fill" size="{{size}}" color="{{color}}"></i-icon>
     </view>
     <view class="i-rate-text" wx:if="{{ value !== 0 }}"><slot></slot></view>
 </view>

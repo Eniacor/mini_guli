@@ -1,0 +1,49 @@
+<view class="border">
+    <view class="iamges">
+        <image class="img" src="#"></image>
+    </view>
+    <view class="kb"></view>
+    <view class="bw">
+        <view class="border-shu">
+            <view class="border-bd"></view>
+            <view class="border-info">兑换码</view>
+            <view class="ic-fog">
+                <image class="ic" src="#"></image>
+            </view>
+        </view>
+        <view class="info-text">ws2173</view>
+    </view>
+
+    <view class="bw">
+        <view class="border-shu">
+            <view class="border-bd"></view>
+            <view class="border-info">名称</view>
+        </view>
+        <view class="info-text">ws2173</view>
+    </view>
+
+
+    <view class="bw">
+        <view class="border-shu">
+            <view class="border-bd"></view>
+            <view class="border-info">花费</view>
+        </view>
+        <view class="info-text">ws2173</view>
+    </view>
+
+    <view class="bw">
+        <view class="border-shu">
+            <view class="border-bd"></view>
+            <view class="border-info">状态</view>
+        </view>
+        <view class="info-text">ws2173</view>
+    </view>
+
+    <view class="bw">
+            <view class="border-shu">
+                <view class="border-bd"></view>
+                <view class="border-info">期限</view>
+            </view>
+            <view class="info-text">ws2173</view>
+        </view>
+</view>

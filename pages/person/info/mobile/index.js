@@ -1,7 +1,7 @@
 const app = getApp();
-const tips = require('../../../../../common/tips.js');
-const md5 = require('../../../../../common/utils/md5.js');
-const Api = require("../../../../../config/method.js");
+// const tips = require('../../../../../common/tips.js');
+// const md5 = require('../../../../../common/utils/md5.js');
+// const Api = require("../../../../../config/method.js");
 Page({
     /**
      * 页面的初始数据

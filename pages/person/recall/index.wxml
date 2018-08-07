@@ -1,0 +1,20 @@
+<view class="recall">
+    <view class="recall_my" wx:if="{{myMemory}}">
+        <!-- <view class="my">我关注的</view> -->
+        <view class="items">
+            <navigator class="nav" url="/pages/index/recall/detail/index?id={{item.id}}" wx:for="{{myMemory}}" wx:key="unique">
+                <view class="item">
+                    <view class="item_left">
+                        <image src="{{item.user.avatarurl}}" style="border-radius:50%;" />
+                        <text>{{item.user.nickname}}</text>
+                    </view>
+                    <view class="item_right">
+                        <image class="right_time" src="/images/static/index_score_detailt.png" />
+                        <text class="right_txt">{{item.addtime}}</text>
+                        <image class="right_arrow" src="/images/static/index_exercise_arrow.png" />
+                    </view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+</view>

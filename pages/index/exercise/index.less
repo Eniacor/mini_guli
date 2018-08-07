@@ -9,12 +9,14 @@
 .score {
     background: #fff;
     .score_contents{
+        .content_item{
+            border-bottom: 1rpx solid #e0e0e0;
+            margin:0 30rpx;
+        }
         .score_content {
             width: 690rpx;
-            margin: 0 30rpx;
             height: 112rpx;
             line-height: 112rpx;
-            border-bottom: 1rpx solid #e0e0e0;
             .content_left {
                 display: inline-block;
                 width: 32rpx;
@@ -42,8 +44,15 @@
                 }
             }
         }
-        .score_content:last-child {
+        .content_item:last-child {
             border: 0;
+        }
+        .empty{
+            height: 150rpx;
+            line-height: 150rpx;
+            text-align: center;
+            font-size:30rpx;
+            color:#888;
         }
     }
 }

@@ -9,8 +9,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.9.94",
-	"appid": "wxbf2de6f6cd6b380b",
-	"projectname": "wenbo",
+	"appid": "wx11f31e62ed087e8e",
+	"projectname": "wenbo-mini",
 	"isGameTourist": false,
 	"condition": {
 		"search": {

@@ -1,103 +1,43 @@
 <view class="body">
-    <view class="beader">
+    <view class="beader"  bindtap="skipPage" data-url="/pages/person/product/order/index" data-type="0">
         <view class="icon">
-            <image class="ic" src="#"></image>
+            <image class="ic" src="/images/static/orderi.png"></image>
         </view>
         <view class="order">我的订单</view>
         <view class="icon-a">
-            <image class="ic2" src="#"></image>
+            <image class="ic2" src="/images/static/cright.png"></image>
         </view>
-
     </view>
     <view class="kb"></view>
-
-
-
-    <view class="img-datu">
-        <image class="datu" src="#"></image>
-    </view>
-    <view class="info">
-        <view class="info-text">超薄苹果手机壳 磨砂手感</view>
-        <view class="details">
-            <text class="gold color">
-                <text class="sizi">¥</text>39</text>
-            <view class="border-gold color">查看详情</view>
+    <view class="first" wx:for="{{rgood}}" wx:key="unique">
+        <view class="img-datu">
+            <image class="datu" src="{{item.title_img1}}"></image>
+        </view>
+        <view class="info">
+            <view class="info-text" style="font-size:30rpx;">{{item.title}}</view>
+            <view class="details">
+                <text class="gold color">
+                    <text class="sizi">¥</text>{{item.price}}
+                </text>
+                <view class="border-gold color" bindtap="skipPage" data-url="/pages/person/product/detail/index?id={{item.id}}" data-type="0">查看详情</view>
+            </view>
         </view>
     </view>
-
-
-    <view class="img-datu">
-        <image class="datu" src="#"></image>
-    </view>
-    <view class="info">
-        <view class="info-text">超薄苹果手机壳 磨砂手感</view>
-        <view class="details">
-            <text class="gold color">
-                <text class="sizi">¥</text>39</text>
-            <view class="border-gold color">查看详情</view>
-        </view>
-    </view>
-
     <view class="commodity-border">
-        <view class="commodity">
+        <view class="commodity" wx:for="{{good}}" wx:key="unique">
             <view class="image-a">
-                <image class="image-as" src="#"></image>
+                <image class="image-as" src="{{item.title_img1}}"></image>
             </view>
             <view class="infos">
-                <view class="info-text">帅徐林呀</view>
+                <view class="info-text" style="font-size:30rpx;">{{item.title}}</view>
                 <view class="detailss">
                     <text class="gold color">
-                        <text class="sizi">¥</text>39</text>
-                    <view class="border-gold color">查看详情</view>
+                        <text class="sizi">¥</text>{{item.price}}
+                    </text>
+                    <view class="border-gold color" bindtap="skipPage" data-url="/pages/person/product/detail/index?id={{item.id}}" data-type="0">查看详情</view>
                 </view>
             </view>
         </view>
-
-
-        <view class="commodity">
-            <view class="image-a">
-                <image class="image-as" src="#"></image>
-            </view>
-            <view class="infos">
-                <view class="info-text">帅徐林呀</view>
-                <view class="detailss">
-                    <text class="gold color">
-                        <text class="sizi">¥</text>39</text>
-                    <view class="border-gold color">查看详情</view>
-                </view>
-            </view>
-        </view>
-
-
-        <view class="commodity">
-            <view class="image-a">
-                <image class="image-as" src="#"></image>
-            </view>
-            <view class="infos">
-                <view class="info-text">帅徐林呀</view>
-                <view class="detailss">
-                    <text class="gold color">
-                        <text class="sizi">¥</text>39</text>
-                    <view class="border-gold color">查看详情</view>
-                </view>
-            </view>
-        </view>
-
-
-        <view class="commodity">
-            <view class="image-a">
-                <image class="image-as" src="#"></image>
-            </view>
-            <view class="infos">
-                <view class="info-text">帅徐林呀</view>
-                <view class="detailss">
-                    <text class="gold color">
-                        <text class="sizi">¥</text>39</text>
-                    <view class="border-gold color">查看详情</view>
-                </view>
-            </view>
-        </view>
-
     </view>
     <view class="load">暂无更多</view>
 </view>

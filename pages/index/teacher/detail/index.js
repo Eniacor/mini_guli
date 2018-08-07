@@ -1,6 +1,7 @@
-
-const app =getApp();
+const tips = require('../../../../common/tips');
+const Api = require('../../../../config/method');
 const WxParse = require('../../../../common/component/wxParse/wxParse.js');
+const app =getApp();
 Page({
     /**
      * 页面的初始数据
@@ -11,9 +12,10 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        var that = this;
-        var article = `<blockquote>教师履历:</blockquote><p>2015年以来,文波老师,　在建筑工程市场上，一般称工程承包方提出的索赔为施工索赔，即由于业主或其他方面的原因致使承包者在项目施工中付出了额外的费用或造成了损失.</p><p>2015年以来,文波老师,　在建筑工程市场上，一般称工程承包方提出的索赔为施工索赔，即由于业主或其他方面的原因致使承包者在项目施工中付出了额外的费用或造成了损失，承包商通过合法途径和程序</p><blockquote>教师特点:</blockquote><ul><li><span style=\"font-weight: bold;\">雅思语法方面:</span>　在建筑工程市场上，一般称工程承包方提出的索赔为施工索赔，即由于业主或其他方面的原因致使承包者在项目施工中付出了额外的费用或造成了损失，承包商通过合法途径和程序<br></li></ul>`;
-        WxParse.wxParse('article', 'html', article, that, 5);
+        this.setData({
+            id:options.id
+        });
+        this.handleData();
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
@@ -61,4 +63,27 @@ Page({
     onPullDownRefresh: function () {
     },
     skipPage:app.skipPage,
+    handleData:function(){
+        let _this=this;
+        Api.FamousShow({
+            id:this.data.id
+        }).then(({ data }) => {
+            let article =data.content;
+            WxParse.wxParse('article', 'html', article, _this, 5);
+            _this.setData({
+                famous:data
+            });
+            resolve();
+        }).catch(err => reject(err));
+    },
+    timestampToTime:function (timestamp) {
+        let date = new Date(timestamp * 1000);
+        let Y = date.getFullYear() + '-';
+        let M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+        let D = date.getDate() + ' ';
+        let h = date.getHours() + ':';
+        let m = date.getMinutes() + ':';
+        let s = date.getSeconds();
+        return Y+M+D+h+m+s;
+    }
 });

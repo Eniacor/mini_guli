@@ -20,6 +20,10 @@ Component({
         name : {
             type : String,
             value : ''
+        },
+        color : {
+            type : String,
+            value : ''
         }
     },
     data : {

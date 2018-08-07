@@ -1,8 +1,14 @@
 <view class="register">
     <view class="avatar">
-        <open-data type="userAvatarUrl"></open-data>
+        <image src="{{user.avatarurl}}" style="width:140rpx;height:140rpx;border-radius:50%;"/>
     </view>
-    <view class="item">
+    <view class="item" wx:if="{{user.tel!=null}}">
+        <view class="item_left">手机号</view>
+        <view class="item_right" style="width:278rpx;">
+            <input value="{{user.tel}}"/>
+        </view>
+    </view>
+     <view class="item"  wx:if="{{user.tel==null}}">
         <view class="item_left">手机号</view>
         <view class="item_right" style="width:278rpx;">
             <input placeholder="您尚未绑定手机号" bindblur="getNickname" />
@@ -14,7 +20,7 @@
     <view class="item">
         <view class="item_left">昵称</view>
         <view class="item_right">
-            <input placeholder="请输入您的昵称" bindblur="getNickname" />
+            <input value="{{user.nickname}}" />
         </view>
     </view>
     <view class="item">
@@ -31,9 +37,7 @@
     <view class="item">
         <view class="item_left">考试时间</view>
         <view class="item_right">
-            <picker mode="date" value="{{date}}" start="2017-09-01" end="2020-09-01" bindchange="bindDateChange">
-                <view class="picker">{{date}}</view>
-            </picker>
+           <input value="{{user.exam_date}}"/>
         </view>
         <view class="item_middle">
             <image src="/images/static/cright.png" />
@@ -42,9 +46,7 @@
     <view class="item">
         <view class="item_left">目标分数</view>
         <view class="item_right">
-            <picker bindchange="bindScoreChange" value="{{index}}" range="{{score}}">
-                <view class="picker">{{score[index]}}</view>
-            </picker>
+             <input value="{{user.target_score}}"/>
         </view>
         <view class="item_middle">
             <image src="/images/static/cright.png" />
@@ -64,13 +66,13 @@
     <view class="item">
         <view class="item_left">邮箱</view>
         <view class="item_right">
-            <input placeholder="请输入您的邮箱" bindblur="getEmail" />
+            <input value="{{user.email}}" />
         </view>
     </view>
     <view class="item">
         <view class="item_left">城市</view>
         <view class="item_right">
-            <input placeholder="请输入您所在的城市" bindblur="getCity" />
+            <input value="{{user.city}}"/>
         </view>
     </view>
 </view>

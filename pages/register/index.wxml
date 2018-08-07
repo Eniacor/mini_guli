@@ -1,5 +1,14 @@
 <view class="register">
     <view class="item">
+        <view class="item_left">手机号</view>
+        <view class="item_right" style="width:278rpx;">
+            <input placeholder="您尚未绑定手机号" value="{{tel}}" />
+        </view>
+        <view class="item_middle" style="margin-top:28rpx;width:202rpx;height:58rpx;font-size:28rpx;line-height:58rpx;text-align:center;background:#d43c33;color:#fff;border-radius:30rpx;">
+            <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" style="width:202rpx;height:58rpx;font-size:28rpx;line-height:58rpx;text-align:center;background:#d43c33;color:#fff;border-radius:30rpx;">绑定手机号</button>
+        </view>
+    </view>
+    <view class="item">
         <view class="item_left">昵称</view>
         <view class="item_right">
             <input placeholder="请输入您的昵称" bindblur="getNickname" />
@@ -65,12 +74,14 @@
 <view class="describe">
     <view class="item_left">
         <radio checked="true" color="#c43c33" wx:if="{{hasRead}}" bindtap="radioIsChange" />
-        <radio  color="#c43c33"  wx:else  bindtap="radioIsChange"/>
+        <radio color="#c43c33" wx:else bindtap="radioIsChange" />
     </view>
     <view class="item_right">
         已阅读并同意
         <text>《用户服务协议》</text>
     </view>
 </view>
-<button open-type="getUserInfo"  class="btn" wx:if="{{hasRead}}" bindgetuserinfo="getUserInfo">提交</button>
+<button open-type="getUserInfo" class="btn" wx:if="{{hasRead}}" bindgetuserinfo="getUserInfo">
+    提交
+</button>
 <button open-type="getUserInfo" class="btn_fail" wx:else bind="registerUser">提交</button>

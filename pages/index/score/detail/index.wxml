@@ -4,29 +4,34 @@
             <view class="title_left"></view>
             <view class="title_middle">
                 <image src="/images/static/index_score_detailb.png" />
-                <text>五月高分榜</text>
+                <text>高分榜</text>
             </view>
             <view class="title_right"></view>
         </view>
         <view class="head_des">
-            <text>【73】</text>恭喜文波PTE五月第73位学员通过四个七
+            <text>【{{score.number}}}】</text>{{score.title}}
         </view>
         <view class="head_tags">
-            <view class="tag backcolor_yellow">七炸</view>
-            <view class="tag backcolor_blue">八炸</view>
-            <view class="tag backcolor_green">最多六个字</view>
+            <view class="tag backcolor_yellow">{{score.tag1}}</view>
+            <view class="tag backcolor_blue">{{score.tag2}}</view>
+            <view class="tag backcolor_green">{{score.tag3}}</view>
         </view>
         <view class="head_time">
             <view class="time_left">
                 <image src="/images/static/index_score_detailt.png" />
-                <text>2015-05-18</text>
+                <text>{{score.addtime}}</text>
             </view>
             <view class="time_right">
-                文波教育
+                {{score.author}}
             </view>
         </view>
     </view>
+     <import src="../../../../common/component/wxParse/wxParse.wxml" />
+    <view class="wxParse">
+        <template is="wxParsec" data="{{wxParseData:article.nodes}}" />
+    </view>
     <view class="detail_contents">
+
         <view class="content">
             <image src="/images/static/index_score_detail1.png" />
             <view class="content_des">

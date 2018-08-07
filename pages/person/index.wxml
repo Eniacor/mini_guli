@@ -3,21 +3,26 @@
     <view class="header">
         <view class="top">
             <view class="top_left">
-                <view class="left_title">这里是你的昵称你真有那么长</view>
-                <view class="left_fen">积分:666</view>
+                <view class="left_title">{{user.nickname}}</view>
+                <view class="left_fen">积分:{{user.integral}}</view>
                 <view class="left_btn">免费会员</view>
             </view>
             <view class="top_middle">
-                <image src="/images/static/tou.png" />
+                <image src="{{user.avatarurl}}" style="border-radius:50%;" />
             </view>
             <view class="top_right">
-                 <image src="/images/static/toul.png" />
+                <image src="/images/static/toul.png" />
             </view>
         </view>
         <view class="des">
             <view class="des_left">签到领积分，换购超多好礼</view>
-            <view class="des_right">
-                <image src="/images/static/qian.png" /> 签到
+            <view class="des_right" wx:if="{{hasSign==0}}" bindtap="handleSign">
+                <image src="/images/static/qian.png" />
+                签到
+            </view>
+            <view class="des_right" wx:if="{{hasSign==1}}">
+                <image src="/images/static/qian.png" />
+                已签到
             </view>
         </view>
     </view>
@@ -55,7 +60,7 @@
                 <image src="/images/static/cright.png" />
             </view>
         </navigator>
-        <navigator url="/pages/collection/collection" hover-class="none" class="flex align-c personal_func_item">
+        <navigator url="/pages/person/recall/index" hover-class="none" class="flex align-c personal_func_item">
             <view class="icon iconfont">
                 <image src="/images/static/mind.png" />
             </view>
@@ -68,18 +73,20 @@
         </navigator>
     </view>
     <view class="personal_func_list">
-        <navigator url="/pages/collection/collection" hover-class="none" class="flex align-c personal_func_item">
-            <view class="icon iconfont">
-                <image src="/images/static/invation.png" />
-            </view>
-            <view class="name flex_1">
-                <text>邀请好友</text>
-            </view>
-            <view class="right">
-                <image src="/images/static/cright.png" />
-            </view>
-        </navigator>
-        <navigator url="/pages/collection/collection" hover-class="none" class="flex align-c personal_func_item">
+        <button class="btn" open-type="share"  style="padding:0;border-radius:0;background:#fff;border-bottom:1rpx solid #e0e0e0;text-align:left;">
+            <navigator url="/pages/collection/collection" hover-class="none" class="flex align-c personal_func_item">
+                <view class="icon iconfont">
+                    <image src="/images/static/invation.png" />
+                </view>
+                <view class="name flex_1">
+                    <text>邀请好友</text>
+                </view>
+                <view class="right">
+                    <image src="/images/static/cright.png" />
+                </view>
+            </navigator>
+        </button>
+        <navigator url="/pages/person/member/index" hover-class="none" class="flex align-c personal_func_item">
             <view class="icon iconfont">
                 <image src="/images/static/vip.png" />
             </view>
@@ -101,7 +108,7 @@
                 <image src="/images/static/cright.png" />
             </view>
         </navigator>
-        <navigator url="/pages/person/recall/index" hover-class="none" class="flex align-c personal_func_item">
+        <!-- <navigator url="/pages/person/recall/index" hover-class="none" class="flex align-c personal_func_item">
             <view class="icon iconfont">
                 <image src="/images/static/course.png" />
             </view>
@@ -111,7 +118,7 @@
             <view class="right">
                 <image src="/images/static/cright.png" />
             </view>
-        </navigator>
+        </navigator> -->
         <navigator url="/pages/person/product/index" hover-class="none" class="flex align-c personal_func_item">
             <view class="icon iconfont">
                 <image src="/images/static/zhou.png" />

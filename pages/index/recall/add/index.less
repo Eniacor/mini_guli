@@ -40,7 +40,7 @@
             .content_middle{
                 float: left;
                 width: 548rpx;
-                margin-top:29rpx;
+                margin-top:29rpx; 
             }
             .content_right{
                 float: left;
@@ -109,6 +109,7 @@
     .third{
         background:#fff;
         margin-top:30rpx;
+        margin-bottom: 60rpx;
         .third_head{
             position: relative;
             width: 690rpx;
@@ -147,15 +148,48 @@
                 position: absolute;
                 top:28rpx;
                 left: 0;
-                width: 690rpx;
+                width: 650rpx;
                 height: 28rpx;
+                text-emphasis: none;   
+                .txt{
+                    width: 690rpx;
+                    height: 230rpx;
+                    padding-top:40rpx;
+                }
             }
             .content_right{
                 position: absolute;
-                top:44rpx;
                 right: 0;
                 font-size: 20rpx;
             }
         }
+        .third_content:last-child{
+            border: 1rpx solid #fff;
+        }
     }
+    .btn{
+        width:690rpx ;
+        height: 90rpx;
+        line-height: 90rpx;
+        text-align: center;
+        background: #c3c3c3;
+        color:#fff;
+        margin: 0 auto;
+        border-radius: 12rpx;
+        font-size: 32rpx;
+        margin-bottom:218rpx;
+    }
+    z-index: 10;
+}
+.sbtn{
+    position: fixed;
+    bottom: 0;
+    width:750rpx ;
+    height: 98rpx;
+    line-height:98rpx;
+    text-align: center;
+    background: #d43c33;
+    color:#fff;
+    font-size: 32rpx;
+    z-index: 100;
 }

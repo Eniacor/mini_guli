@@ -6,8 +6,10 @@
         </view>
         <view class="item_content">
             <view class="content_left">日期</view>
-            <view class="content_middle">
-                <input placeholder="请选择考试日期" />
+            <view class="content_middle" style="margin-top:0;">
+                <picker mode="date" value="{{date}}" start="2018-01-01" end="2028-09-01" bindchange="bindDateChange">
+                    <view class="picker" style="color:#888;">{{date}}</view>
+                </picker>
             </view>
             <view class="content_right">
                 <image src="/images/static/index_exercise_arrow.png" />
@@ -15,8 +17,10 @@
         </view>
         <view class="item_content">
             <view class="content_left">国家</view>
-            <view class="content_middle">
-                <input placeholder="请选择考场所在的国家" />
+            <view class="content_middle" style="margin-top:0;">
+                <picker bindchange="bindStateChange" value="{{sindex}}" range="{{state}}" range-key="name">
+                    <view class="picker" style="color:#888;">{{state[sindex].name}}</view>
+                </picker>
             </view>
             <view class="content_right">
                 <image src="/images/static/index_exercise_arrow.png" />
@@ -24,8 +28,10 @@
         </view>
         <view class="item_content">
             <view class="content_left">城市</view>
-            <view class="content_middle">
-                <input placeholder="请选择考场所在的城市" />
+            <view class="content_middle" style="margin-top:0;">
+                <picker bindchange="bindCityChange" value="{{yindex}}" range="{{city}}" range-key="name" disabled="{{sindex==0}}">
+                    <view class="picker" style="color:#888;">{{city[yindex].name}}</view>
+                </picker>
             </view>
             <view class="content_right">
                 <image src="/images/static/index_exercise_arrow.png" />
@@ -33,8 +39,10 @@
         </view>
         <view class="item_content">
             <view class="content_left">考场</view>
-            <view class="content_middle">
-                <input placeholder="请选择考场" />
+            <view class="content_middle" style="margin-top:0;">
+                <picker bindchange="bindChangChange" value="{{dindex}}" range="{{chang}}" range-key="name" disabled="{{yindex==0}}">
+                    <view class="picker" style="color:#888;">{{chang[dindex].name}}</view>
+                </picker>
             </view>
             <view class="content_right">
                 <image src="/images/static/index_exercise_arrow.png" />
@@ -47,16 +55,20 @@
             <text class="title_txt">选择题型</text>
         </view>
         <view class="scond_content">
-            <view class="content_left">
-                <input placeholder="请选择听/说/读/写" />
+            <view class="content_left" style="margin-top:0;">
+                <picker bindchange="bindParentChange" value="{{pindex}}" range="{{parent}}" range-key="name">
+                    <view class="picker" style="color:#888;">{{parent[pindex].name}}</view>
+                </picker>
             </view>
             <view class="content_right">
                 <image src="/images/static/index_exercise_arrow.png" />
             </view>
         </view>
         <view class="scond_content">
-            <view class="content_left">
-                <input placeholder="请选择具体的题型" />
+            <view class="content_left" style="margin-top:0;">
+                <picker bindchange="bindChildrenChange" bindcancel="bindChildrenCancel" value="{{cindex}}" range="{{children}}" range-key="name" disabled="{{pindex==0}}">
+                    <view class="picker" style="color:#888;">{{children[cindex].name}}</view>
+                </picker>
             </view>
             <view class="content_right">
                 <image src="/images/static/index_exercise_arrow.png" />
@@ -70,21 +82,41 @@
         </view>
         <view class="third_content">
             <view class="content_left">
-                <input placeholder="请输入回忆标题" />
+                <input placeholder="请输入回忆标题" bindblur="getTitle" />
             </view>
-            <view class="content_right">0/20</view>
+            <view class="content_right" style="top:44rpx;">0/20</view>
+        </view>
+        <view class="third_content" style="height:300rpx;padding:0;">
+            <view class="content_left" style="height:300rpx;top:0;">
+                <textarea class="txt" placeholder="请输入回忆详情" focus="{{focus}}" bindblur="getContent"  maxlength="1000"/>
+            </view>
+            <view class="content_right" style="bottom:30rpx;">0/1000</view>
         </view>
         <view class="third_content">
             <view class="content_left">
-                <input placeholder="请输入回忆详情" />
+                <input placeholder="回忆要点【非必填】" bindblur="getImport1" />
             </view>
-            <view class="content_right">0/1000</view>
+            <view class="content_right" style="top:44rpx;">0/200</view>
         </view>
-        <view class="third_content">
+        <view class="third_content" wx:if="{{import2}}">
             <view class="content_left">
-                <input placeholder="回忆要点【非必填】" />
+                <input placeholder="回忆要点【非必填】" bindblur="getImport2" />
             </view>
-            <view class="content_right">0/200</view>
+            <view class="content_right"  style="top:44rpx;">0/200</view>
+        </view>
+        <view class="third_content" wx:if="{{import3}}">
+            <view class="content_left">
+                <input placeholder="回忆要点【非必填】" bindblur="getImport3" />
+            </view>
+            <view class="content_right"  style="top:44rpx;">0/200</view>
+        </view>
+        <view class="third_content" wx:if="{{import4}}">
+            <view class="content_left">
+                <input placeholder="回忆要点【非必填】" bindblur="getImport4" />
+            </view>
+            <view class="content_right"  style="top:44rpx;">0/200</view>
         </view>
     </view>
+    <view class="btn" bindtap="handleMore">添加更多回忆</view>
 </view>
+<view class="sbtn" bindtap="handleData">提交</view>

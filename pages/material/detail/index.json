@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "i-rate": "/components/rate/index",
+        "i-progress": "/components/progress/index",
+        "i-modal": "/components/modal/index"
+    },
+    "navigationBarTitleText": "高分详情"
+}

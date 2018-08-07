@@ -2,6 +2,7 @@ const app = getApp();
 const tips = require('../../common/tips.js');
 const md5 = require('../../common/utils/md5.js');
 const Api = require("../../config/method.js");
+const Session = require('../../common/auth/session')
 Page({
     /**
      * 页面的初始数据
@@ -43,8 +44,7 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {
-    },
+    onLoad: function (options) {},
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
@@ -181,61 +181,58 @@ Page({
     },
 
     getUserInfo: function (e) {
-        if(e.detail.errMsg=="getUserInfo:ok"){
-            let nickname=this.isEmptyValue(this.data.nickname,'用户昵称不能为空！',null);
-            let date=this.isEmptyValue(this.data.date,'请选择您的考试时间!','请选择您的考试时间');
-            let score=this.isEmptyValue(this.data.score[this.data.index],'请输入您的目标分数！','请输入您的目标分数');
-            let email=this.isEmptyValue(this.data.email,'请输入您的邮箱！',null);
-            let city=this.isEmptyValue(this.data.city,'请输入您所在的城市！',null);
-            if(nickname&&date&&score&&email&&city){
-                let data={
-                    openid:"llll",
-                    tel:18360172423,
-                    tel_prefix:+86,
-                    tel_nation:'国家',
-                    nickname:this.data.nickname,
-                    sex:this.data.sex,
-                    exam_date:Math.round(new Date(this.data.date).getTime()/1000),
-                    target_score:this.data.score[this.data.index],
-                    has_experience:this.data.has_experience,
-                    email:this.data.email,    
-                    city:this.data.city,
-                }
-                console.log(data);
+        let session = Session.get();
+        console.log(e);
+        if (e.detail.errMsg == "getUserInfo:ok") {
+            let nickname = this.isEmptyValue(this.data.nickname, '用户昵称不能为空！', null);
+            let date = this.isEmptyValue(this.data.date, '请选择您的考试时间!', '请选择您的考试时间');
+            let score = this.isEmptyValue(this.data.score[this.data.index], '请输入您的目标分数！', '请输入您的目标分数');
+            let email = this.isEmptyValue(this.data.email, '请输入您的邮箱！', null);
+            let city = this.isEmptyValue(this.data.city, '请输入您所在的城市！', null);
+            if (nickname && date && score && email && city) {
                 Api.UserRegister({
-                    openid:"o4ZdV4w9oS81VCxosjBJo8P08S0c",
-                    tel:18360172423,
-                    tel_prefix:+86,
-                    tel_nation:'国家',
-                    nickname:this.data.nickname,
-                    sex:this.data.sex,
-                    exam_date:Math.round(new Date(this.data.date).getTime()/1000),
-                    target_score:this.data.score[this.data.index],
-                    has_experience:this.data.has_experience,
-                    email:this.data.email,    
-                    city:this.data.city,
-                }).then(({ data }) => {
-                    
-                    // self.setData({
-                    //     list: data
-                    // })
-                    // self.makeData();
+                    openid:session.openid,
+                    tel:this.data.tel,
+                    tel_prefix:this.data.tel_prefix,
+                    tel_nation:e.detail.userInfo.country,
+                    nickname: this.data.nickname,
+                    avatarurl:e.detail.avatarUrl,
+                    sex: this.data.sex,
+                    exam_date: Math.round(new Date(this.data.date).getTime() / 1000),
+                    target_score: this.data.score[this.data.index],
+                    has_experience: this.data.has_experience,
+                    email: this.data.email,
+                    city: this.data.city,
+                }).then(({data}) => {
                     resolve();
                 }).catch(err => reject(err));
-    
-                
             }
         }
     },
-    isEmptyValue:function(value,errMsg,verified){
-        if(value==verified){
-            tips.showWarning('错误',errMsg);
+    getPhoneNumber: function (e) {
+        let session = Session.get();
+        var _this = this;
+        if (e.detail.errMsg == "getPhoneNumber:ok") {
+            Api.BindPhone({
+                session_key:session.session_key,
+                encryptedData: e.detail.encryptedData,
+                iv: e.detail.iv,
+            }).then((data) => {
+                console.log(data);
+                _this.setData({
+                    tel:data.result.purePhoneNumber,
+                    tel_prefix:data.result.countryCode,
+                });
+                resolve();
+            }).catch(err => reject(err));
+        }
+    },
+    isEmptyValue: function (value, errMsg, verified) {
+        if (value == verified) {
+            tips.showWarning('错误', errMsg);
             return false;
-        }else{
+        } else {
             return true;
         }
     },
-    getPhoneNumber:function(e){
-        console.log(e.detail);
-    }
 });

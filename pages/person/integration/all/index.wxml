@@ -1,0 +1,82 @@
+<view class="body">
+    <view class="header">
+        <view class="content">
+            <view class="tx"></view>
+            <view class="name">
+                <view class="nkname">名字可以这么长</view>
+                <view class="integrals color">38888
+                    <text class="texts">积分</text>
+                </view>
+            </view>
+            <button class="but background">我的兑换</button>
+        </view>
+    </view>
+    <view class="middle-border">
+        <view class="border background"></view>
+        <view class="school-name color">全部兑换</view>
+        <!-- <view class="icong-gd">
+            <text class="gengduo">更多</text>
+            <view class="icon"></view>
+        </view> -->
+    </view>
+    <view class="commodity-border">
+        <view class="commodity">
+            <view class="image-a">
+                <image class="image-as" src="#"></image>
+            </view>
+            <view class="infos">
+                <view class="info-text">帅徐林呀</view>
+                <view class="detailss">
+                    <text class="gold color">
+                        <text class="sizi">9999</text>积分</text>
+                    <view class="border-gold color">立即兑换</view>
+                </view>
+            </view>
+        </view>
+
+
+        <view class="commodity">
+            <view class="image-a">
+                <image class="image-as" src="#"></image>
+            </view>
+            <view class="infos">
+                <view class="info-text">帅徐林呀</view>
+                <view class="detailss">
+                    <text class="gold color">
+                        <text class="sizi">9999</text>积分</text>
+                    <view class="border-gold color">立即兑换</view>
+                </view>
+            </view>
+        </view>
+
+
+        <view class="commodity">
+            <view class="image-a">
+                <image class="image-as" src="#"></image>
+            </view>
+            <view class="infos">
+                <view class="info-text">帅徐林呀</view>
+                <view class="detailss">
+                    <text class="gold color">
+                        <text class="sizi">9999</text>积分</text>
+                    <view class="border-gold color">立即兑换</view>
+                </view>
+            </view>
+        </view>
+
+
+        <view class="commodity">
+            <view class="image-a">
+                <image class="image-as" src="#"></image>
+            </view>
+            <view class="infos">
+                <view class="info-text">帅徐林呀</view>
+                <view class="detailss">
+                    <text class="gold ">
+                        <text class="sizi">9999</text>积分</text>
+                    <view class="border-gold color">立即兑换</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

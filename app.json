@@ -1,13 +1,25 @@
 {
   "pages": [
-   
+ 
     "pages/index/index",
     "pages/material/index",
+    
     "pages/material/speak/index",
-    "pages/material/speak/detail/index",
-    "pages/material/speak/detail/dati/index",
-    "pages/material/speak/detail/practice/index",
+    "pages/material/write/index",
+    "pages/material/listen/index",
+    "pages/material/read/index",
+    "pages/material/list/index",
+    "pages/material/list/dati/index",
+    "pages/material/list/practice/index",
+    "pages/material/list/discuz/index",
+    "pages/material/detail/index",
+    "pages/material/catalog/index",
+
     "pages/course/index",
+    "pages/course/activity/index",
+    "pages/course/list/index",
+    "pages/course/cdetail/index",
+    "pages/course/adetail/index",
 
     "pages/person/index",
     "pages/person/info/index",
@@ -17,10 +29,24 @@
     "pages/person/word/detail/index",
     "pages/person/collect/index",
     "pages/person/recall/index",
+    
     "pages/person/invitation/index",
+    
     "pages/person/member/index",
+    "pages/person/member/cheng/index",
+
     "pages/person/integration/index",
+    "pages/person/integration/detail/index",
+    "pages/person/integration/all/index",
+    "pages/person/integration/owner/index",
+    "pages/person/integration/owner/detail/index",
+
     "pages/person/product/index",
+    "pages/person/product/detail/index",
+    "pages/person/product/order/index",
+    "pages/person/product/order/detail/index",
+    "pages/person/product/buy/index",
+    
     "pages/person/pdf/index",
     "pages/person/about/index",
 
@@ -35,11 +61,16 @@
     "pages/index/exercise/index",
     "pages/index/exercise/detail/index",
     "pages/index/exercise/detail/list/index",
+
     "pages/index/recall/index",
+
     "pages/index/recall/detail/index",
+
     "pages/index/recall/detail/discuzz/index",
+    
     "pages/index/recall/add/index",
     "pages/register/index"
+    
   ],
   "window": {
     "navigationBarBackgroundColor": "#be2e25",

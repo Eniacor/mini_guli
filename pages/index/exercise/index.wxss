@@ -9,12 +9,14 @@
 .score {
   background: #fff;
 }
+.score .score_contents .content_item {
+  border-bottom: 1rpx solid #e0e0e0;
+  margin: 0 30rpx;
+}
 .score .score_contents .score_content {
   width: 690rpx;
-  margin: 0 30rpx;
   height: 112rpx;
   line-height: 112rpx;
-  border-bottom: 1rpx solid #e0e0e0;
 }
 .score .score_contents .score_content .content_left {
   display: inline-block;
@@ -42,6 +44,13 @@
   height: 22rpx;
   margin-left: 15rpx;
 }
-.score .score_contents .score_content:last-child {
+.score .score_contents .content_item:last-child {
   border: 0;
+}
+.score .score_contents .empty {
+  height: 150rpx;
+  line-height: 150rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #888;
 }

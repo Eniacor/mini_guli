@@ -1,6 +1,6 @@
 
 const app =getApp()
-const WxParse = require('../../common/component/wxParse/wxParse.js');
+// const WxParse = require('../../common/component/wxParse/wxParse.js');
 
 Page({
     /**

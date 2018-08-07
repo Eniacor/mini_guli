@@ -1,4 +1,6 @@
-
+const tips = require('../../../common/tips');
+const Api = require('../../../config/method');
+const WxParse = require('../../../common/component/wxParse/wxParse');
 const app =getApp();
 Page({
     /**
@@ -10,6 +12,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        this.handleData();
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
@@ -57,4 +60,23 @@ Page({
     onPullDownRefresh: function () {
     },
     skipPage:app.skipPage,
+    handleData:function(){
+        let _this=this;
+        Api.FamousIndex({}).then(({ data }) => {
+            _this.setData({
+                famous:data
+            });
+            resolve();
+        }).catch(err => reject(err));
+    },
+    timestampToTime:function (timestamp) {
+        let date = new Date(timestamp * 1000);
+        let Y = date.getFullYear() + '-';
+        let M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+        let D = date.getDate() + ' ';
+        let h = date.getHours() + ':';
+        let m = date.getMinutes() + ':';
+        let s = date.getSeconds();
+        return Y+M+D+h+m+s;
+    }
 });

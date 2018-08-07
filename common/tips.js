@@ -47,7 +47,6 @@ var showConfirm = (title, content, callback) => {
         }
     });
 }
-
 var showAction = (title, content, callback) => {
     wx.hideToast();
     wx.showModal({

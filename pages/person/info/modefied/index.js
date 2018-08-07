@@ -2,6 +2,7 @@ const app = getApp();
 const tips = require('../../../../common/tips.js');
 const md5 = require('../../../../common/utils/md5.js');
 const Api = require("../../../../config/method.js");
+const Session = require('../../../../common/auth/session')
 Page({
     /**
      * 页面的初始数据
@@ -53,31 +54,6 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-        // let appKey = '3dab2396ab7ca4f9';
-        // let key = 'FSugZEbevvhW9cJux2qoD5ME8VFF7Bai';
-        // let salt = (new Date).getTime();
-        // let query = 'good';
-        // let from = '';
-        // let to = 'en';
-        // let str1 = appKey + query + salt + key;
-        // let sign = md5.hexMD5(str1);
-        // wx.request({
-        //     url: 'https://openapi.youdao.com/api', //仅为示例，并非真实的接口地址
-        //     data: {
-        //         q: query,
-        //         appKey: appKey,
-        //         salt: salt,
-        //         from: from,
-        //         to: to,
-        //         sign: sign
-        //     },
-        //     header: {
-        //         'content-type': 'application/json' // 默认值
-        //     },
-        //     success: function (res) {
-        //         console.log(res.data)
-        //     }
-        // })
     },
     /**
      * 生命周期函数--监听页面隐藏
@@ -181,51 +157,27 @@ Page({
     },
 
     getUserInfo: function (e) {
-        if(e.detail.errMsg=="getUserInfo:ok"){
-            let nickname=this.isEmptyValue(this.data.nickname,'用户昵称不能为空！',null);
-            let date=this.isEmptyValue(this.data.date,'请选择您的考试时间!','请选择您的考试时间');
-            let score=this.isEmptyValue(this.data.score[this.data.index],'请输入您的目标分数！','请输入您的目标分数');
-            let email=this.isEmptyValue(this.data.email,'请输入您的邮箱！',null);
-            let city=this.isEmptyValue(this.data.city,'请输入您所在的城市！',null);
-            if(nickname&&date&&score&&email&&city){
-                let data={
-                    openid:"llll",
-                    tel:18360172423,
-                    tel_prefix:+86,
-                    tel_nation:'国家',
-                    nickname:this.data.nickname,
-                    sex:this.data.sex,
-                    exam_date:Math.round(new Date(this.data.date).getTime()/1000),
-                    target_score:this.data.score[this.data.index],
-                    has_experience:this.data.has_experience,
-                    email:this.data.email,    
-                    city:this.data.city,
-                }
-                console.log(data);
-                Api.UserRegister({
-                    openid:"o4ZdV4w9oS81VCxosjBJo8P08S0c",
-                    tel:18360172423,
-                    tel_prefix:+86,
-                    tel_nation:'国家',
-                    nickname:this.data.nickname,
-                    sex:this.data.sex,
-                    exam_date:Math.round(new Date(this.data.date).getTime()/1000),
-                    target_score:this.data.score[this.data.index],
-                    has_experience:this.data.has_experience,
-                    email:this.data.email,    
-                    city:this.data.city,
-                }).then(({ data }) => {
-                    
-                    // self.setData({
-                    //     list: data
-                    // })
-                    // self.makeData();
-                    resolve();
-                }).catch(err => reject(err));
-    
-                
+        let session = Session.get();
+        let nickname = this.isEmptyValue(this.data.nickname, '用户昵称不能为空！', null);
+        let date = this.isEmptyValue(this.data.date, '请选择您的考试时间!', '请选择您的考试时间');
+        let score = this.isEmptyValue(this.data.score[this.data.index], '请输入您的目标分数！', '请输入您的目标分数');
+        let email = this.isEmptyValue(this.data.email, '请输入您的邮箱！', null);
+        let city = this.isEmptyValue(this.data.city, '请输入您所在的城市！', null);
+        if (nickname && date && score && email && city) {
+            Api.Modified({
+                openid:session.openid,
+                nickname: this.data.nickname,
+                avatarurl:e.detail.avatarUrl,
+                sex: this.data.sex,
+                exam_date: Math.round(new Date(this.data.date).getTime() / 1000),
+                target_score: this.data.score[this.data.index],
+                has_experience: this.data.has_experience,
+                email: this.data.email,
+                city: this.data.city,
+            }).then(({data}) => {
+                resolve();
+            }).catch(err => reject(err));
             }
-        }
     },
     isEmptyValue:function(value,errMsg,verified){
         if(value==verified){

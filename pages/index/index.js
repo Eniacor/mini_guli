@@ -1,7 +1,7 @@
-
-const app =getApp()
-const WxParse = require('../../common/component/wxParse/wxParse.js');
-
+const tips = require('../../common/tips');
+const Api = require('../../config/method');
+const Session = require('../../common/auth/session')
+const app =getApp();
 Page({
     /**
      * 页面的初始数据
@@ -21,24 +21,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-    
-        var that = this;
-        var article = `<p>Do you <span style=\"background-color: rgb(194, 79, 74);\">lovSince</span> I go to <span style=\"text-decoration-line: underline;\">school</span>, I learn so many words.&nbsp;</p><p><br></p>
-        <p>Do you <span style=\"background-color: rgb(194, 79, 74);\">lovSince</span> I go to <span style=\"text-decoration-line: underline;\">school</span>, I learn so many words.&nbsp;</p><p><br></p>`;
-        WxParse.wxParse('article', 'html', article, that, 5);
-
-        let newArticle=this.data.article;
-        for(let i=0,j=newArticle.nodes.length;i<j;i++){
-            for(let m=0,n=newArticle.nodes[i].nodes.length;m<n;m++){
-                if(newArticle.nodes[i].nodes[m].node=='text'){
-                    newArticle.nodes[i].nodes[m].texta=newArticle.nodes[i].nodes[m].text.trim().split(/\s+/);
-                }
-            }
-        }
-
-        this.setData({
-            article:newArticle,
-        });
+        this.handleData();
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
@@ -111,5 +94,17 @@ Page({
         let index=e.target.dataset.index;
         console.log(word);
         console.log(index);
+    },
+    handleData:function(){
+        let _this=this;
+        Api.HighScoreIndex({}).then(({ data }) => {
+            for(let i=0;i<data.length;i++){
+                data[i]["title"]=data[i]["title"].slice(0,19)+'...';
+            }
+            _this.setData({
+                score:data
+            });
+            resolve();
+        }).catch(err => reject(err));
     }
 });

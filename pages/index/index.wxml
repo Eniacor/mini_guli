@@ -6,7 +6,7 @@
     </block>
 </swiper>
 <view class="nav">
-     <!-- data-url="/pages/index/material/index" -->
+    <!-- data-url="/pages/index/material/index" -->
     <view class="nav_item" bindtap="skipPage" data-url="/pages/index/material/index" data-type="0">
         <view class="item_img">
             <image src="../../images/static/nav1.png"></image>
@@ -35,9 +35,7 @@
         <view class="item_img">
             <image src="../../images/static/nav4.png"></image>
         </view>
-        <view class="item_text">
-            联系我们
-        </view>
+        <view class="item_text">联系我们</view>
     </view>
 </view>
 <view class="content">
@@ -79,54 +77,22 @@
         <view class="header_des">最新高分学员成绩单分享，有图有真相</view>
     </view>
     <view class="score_contents">
-        <view class="score_content">
-            <view class="content_left">
-                <image src="../../images/static/score2.png"></image>
+        <view wx:for="{{score}}" wx:key="unique" >
+            <view class="score_content" bindtap="skipPage" data-url="/pages/index/score/detail/index?id={{item.id}}" data-type="0">
+                <view class="content_left">
+                    <image src="/images/static/score2.png"></image>
+                </view>
+                <view class="content_middle">{{item.title}}</view>
+                <view class="content_right">{{item.number}}</view>
             </view>
-            <view class="content_middle">恭喜文波PTE五月第32位学员突破666分...</view>
-            <view class="content_right">31</view>
-        </view>
-        <view class="score_content">
-            <view class="content_left">
-                <image src="../../images/static/score2.png"></image>
-            </view>
-            <view class="content_middle">恭喜文波PTE五月第32位学员突破666分...</view>
-            <view class="content_right">31</view>
-        </view>
-        <view class="score_content">
-            <view class="content_left">
-                <image src="../../images/static/score2.png"></image>
-            </view>
-            <view class="content_middle">恭喜文波PTE五月第32位学员突破666分...</view>
-            <view class="content_right">31</view>
-        </view>
-        <view class="score_content">
-            <view class="content_left">
-                <image src="../../images/static/score2.png"></image>
-            </view>
-            <view class="content_middle">恭喜文波PTE五月第32位学员突破666分...</view>
-            <view class="content_right">31</view>
-        </view>
-        <view class="score_content">
-            <view class="content_left">
-                <image src="../../images/static/score2.png"></image>
-            </view>
-            <view class="content_middle">恭喜文波PTE五月第32位学员突破666分...</view>
-            <view class="content_right">31</view>
-        </view>
-        <view class="score_content">
-            <view class="content_left">
-                <image src="../../images/static/score2.png"></image>
-            </view>
-            <view class="content_middle">恭喜文波PTE五月第32位学员突破666分...</view>
-            <view class="content_right">31</view>
         </view>
     </view>
-    <view class="score_bottom" bindtap="skipPage" data-url="/pages/index/score/index" data-type="0">查看更多</view>
+    <view class="score_bottom" bindtap="skipPage" data-url="/pages/index/score/index" data-type="0">
+        查看更多
+    </view>
 </view>
-<view class="tech"> ©草帽科技提供技术支持 </view>
-
- <import src="../../common/component/wxParse/wxParse.wxml" />
-    <view class="wxParse">
-        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
-    </view>
+<view class="tech">©草帽科技提供技术支持</view>
+<import src="../../common/component/wxParse/wxParse.wxml" />
+<view class="wxParse">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+</view>

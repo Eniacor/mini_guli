@@ -1,0 +1,54 @@
+<view class="speak">
+    <view class="header">
+        <view class="header_left">
+            <image  src="/images/static/index_jijingsr.png" />
+        </view>
+        <view  class="header_middle"></view>
+        <view class="header_right">
+            <view class="right_title right_title-backcolor">Reading</view>
+            <view class="right_sub">PTE最新阅读机经 词汇量是英语学习的基础～</view>
+        </view>
+    </view>
+    <view class="content">
+        <view class="content_item"  bindtap="skipPage" data-url="/pages/material/list/index?id=20" data-type="0">
+            <view class="item_title" style="width:82rpx;">
+               SA_R
+            </view>
+            <view class="item_sub">
+               MC, Single answer
+            </view>
+        </view>
+         <view class="content_item" bindtap="skipPage" data-url="/pages/material/list/index?id=21" data-type="0">
+            <view class="item_title" style="width:82rpx;">
+                MA_R
+            </view>
+            <view class="item_sub">
+                MC, Multiple answer
+            </view>
+        </view>
+         <view class="content_item" bindtap="skipPage" data-url="/pages/material/list/index?id=22" data-type="0">
+            <view class="item_title">
+                RP
+            </view>
+            <view class="item_sub">
+               Re-order paragraphs
+            </view>
+        </view>
+         <view class="content_item" bindtap="skipPage" data-url="/pages/material/list/index?id=23" data-type="0">
+            <view class="item_title" style="width:82rpx;">
+               FIB_R
+            </view>
+            <view class="item_sub">
+                Fill in the blanks
+            </view>
+        </view>
+         <view class="content_item" bindtap="skipPage" data-url="/pages/material/list/index?id=24" data-type="0">
+            <view class="item_title" style="width:102rpx;">
+                FIB_RW
+            </view>
+            <view class="item_sub">
+                Fill in the blanks
+            </view>
+        </view>
+    </view>
+</view>
