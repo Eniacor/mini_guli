@@ -33,11 +33,22 @@ Page({
             if (data) {
                 for (let i = 0; i < data.length; i++) {
                     data[i].activity_time = _this.timestampToTime(data[i].activity_time).slice(0, 10);
+                    if(_this.strLength(data[i].title)>12){
+                        data[i].title=data[i].title.slice(0,12)+'...';
+                    }
                 }
             }
             data = _this.data.list.concat(data);
             _this.setData({
                 list: data
+            });
+            resolve();
+        }).catch(err => reject(err));
+        Api.Banner({
+            type:3,
+        }).then(({ data }) => {
+            _this.setData({
+                imgUrls:data
             });
             resolve();
         }).catch(err => reject(err));
@@ -52,5 +63,19 @@ Page({
         let m = date.getMinutes() + ':';
         let s = date.getSeconds();
         return Y + M + D + h + m + s;
+    },
+    strLength:function(str){
+        var len = 0;
+        for (var i=0; i<str.length; i++) { 
+         var c = str.charCodeAt(i); 
+        //单字节加1 
+         if ((c >= 0x0001 && c <= 0x007e) || (0xff60<=c && c<=0xff9f)) { 
+           len++; 
+         } 
+         else { 
+          len+=2; 
+         } 
+        } 
+        return len;
     }
 })

@@ -4,5 +4,5 @@
         "i-progress": "/components/progress/index",
         "i-modal": "/components/modal/index"
     },
-    "navigationBarTitleText": "口语详情"
+    "navigationBarTitleText": "题目详情"
 }

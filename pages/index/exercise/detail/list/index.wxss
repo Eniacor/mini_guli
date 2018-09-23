@@ -29,7 +29,6 @@
 .list .list_contents .content .content_head .head_left {
   float: left;
   margin-top: 39rpx;
-  width: 62rpx;
   height: 32rpx;
   line-height: 32rpx;
   text-align: center;

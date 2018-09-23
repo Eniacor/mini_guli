@@ -29,23 +29,23 @@
         <view class="content">
             <view class="content_des" style="margin-top:40rpx;">{{score.part_one}}</view>
             <view class="video_con" wx:if="{{score.video_url}}">
-                <video id="myVideo" src="{{score.video_url}}" controls objectFit="cover" poster="{{score.video_poster}}"></video>
+                <video id="myVideo" src="{{score.video_url}}" controls objectFit="cover" poster="{{score.video_img}}"></video>
             </view>
             <view class="content_des">{{score.part_two}}</view>
-            <view class="audio">
+            <view class="audio" wx:if="{{score.audio_url!=''}}">
                 <view class="audio_left" bindtap="playAudio" wx:if="{{isPlay==0}}">
-                    <image style="margin:0;" src="" />
+                    <image style="margin:0;" src="/images/static/lbo.png" />
                 </view>
                 <view class="audio_left" bindtap="pauseAudio" wx:else>
-                    <image src="" style="background:red;margin:0;" />
+                    <image src="/images/static/lzan.png" style="margin:0;" />
                 </view>
                 <view class="audio_right">
                     <view class="right_top">
-                        <i-progress percent="{{(currentS/totalS*100)}}" status="{{ status }}" hideInfo="true" strokeWidth="5"></i-progress>
+                        <i-progress percent="{{(currentS/totalS*100)}}" status="{{ status }}" color="{{currentS>0.01?'#d43c33':'transparent'}}" hideInfo="true" strokeWidth="5"></i-progress>
                     </view>
                     <view class="right_bottom">
                         <view class="bottom_left">{{currentTime}}</view>
-                        <view class="bottom_right">{{totalTime}}</view>
+                        <view class="bottom_right">{{score.audio_time}}</view>
                     </view>
                 </view>
             </view>
@@ -59,29 +59,30 @@
         <text class="title_txt">相关推荐</text>
     </view>
     <view class="recom_contents">
-        <view class="content">
+        <view class="content" bindtap="skipPage" data-url="/pages/person/product/detail/index?id={{rgood[0].id}}">
             <view class="content_img">
-                <image src="/images/static/index_score_detail3.png" />
+                <image src="{{rgood[0].title_img1}}" />
             </view>
-            <view class="content_txt">文章标题文章标题文章标题文章标题</view>
+            <view class="content_txt">{{rgood[0].title}}</view>
         </view>
-        <view class="content">
+            <view class="content" bindtap="skipPage" data-url="/pages/person/product/detail/index?id={{rgood[1].id}}">
             <view class="content_img">
-                <image src="/images/static/index_score_detail3.png" />
+                <image src="{{rgood[1].title_img1}}" />
             </view>
-            <view class="content_txt">文章标题文章标题文章标题文章标题</view>
+            <view class="content_txt">{{rgood[1].title}}</view>
         </view>
-        <view class="content">
+            <view class="content" bindtap="skipPage" data-url="/pages/person/product/detail/index?id={{rgood[2].id}}">
             <view class="content_img">
-                <image src="/images/static/index_score_detail3.png" />
+                <image src="{{rgood[2].title_img1}}" />
             </view>
-            <view class="content_txt">文章标题文章标题文章标题文章标题</view>
-        </view>
-        <view class="content">
-            <view class="content_img">
-                <image src="/images/static/index_score_detail3.png" />
-            </view>
-            <view class="content_txt">文章标题文章标题文章标题文章标题</view>
+            <view class="content_txt">{{rgood[2].title}}</view>
         </view>
     </view>
+</view>
+
+<view class="left" bindtap="handleCollect" data-id="{{id}}" wx:if="{{iscang==0}}">
+    <image src="/images/static/index_exercise_cang.png" />
+</view>
+<view class="left" bindtap="handleCollect" data-id="{{id}}"  wx:if="{{iscang==1}}">
+    <image src="/images/static/lcanga.png" />
 </view>

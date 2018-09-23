@@ -154,11 +154,19 @@
   width: 650rpx;
   height: 28rpx;
   text-emphasis: none;
+  color: #222;
 }
 .add .third .third_content .content_left .txt {
   width: 690rpx;
   height: 230rpx;
   padding-top: 40rpx;
+  color: #222;
+}
+.add .third .third_content .content_left input {
+  color: #222;
+}
+.add .third .third_content .content_left textarea {
+  color: #222;
 }
 .add .third .third_content .content_right {
   position: absolute;

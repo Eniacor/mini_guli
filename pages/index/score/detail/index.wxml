@@ -3,13 +3,13 @@
         <view class="head_title">
             <view class="title_left"></view>
             <view class="title_middle">
-                <image src="/images/static/index_score_detailb.png" />
-                <text>高分榜</text>
+                 <image src="/images/static/index_score_detailb.png" />
+                <text>{{month}}月高分榜</text>
             </view>
             <view class="title_right"></view>
         </view>
         <view class="head_des">
-            <text>【{{score.number}}}】</text>{{score.title}}
+            <text>【{{score.number}}】</text>{{score.title}}
         </view>
         <view class="head_tags">
             <view class="tag backcolor_yellow">{{score.tag1}}</view>
@@ -30,21 +30,6 @@
     <view class="wxParse">
         <template is="wxParsec" data="{{wxParseData:article.nodes}}" />
     </view>
-    <view class="detail_contents">
-
-        <view class="content">
-            <image src="/images/static/index_score_detail1.png" />
-            <view class="content_des">
-                崭新的开始！恭喜墨尔本悉尼火把大渡口卡卡卡卡开口道看到的开看看打开看看打开看打开看打开看打开看！
-            </view>
-        </view>
-        <view class="content">
-            <image src="/images/static/index_score_detail1.png" />
-            <view class="content_des">
-                崭新的开始！恭喜墨尔本悉尼火把大渡口卡卡卡卡开口道看到的开看看打开看看打开看打开看打开看打开看！
-            </view>
-        </view>
-    </view>
 </view>
 
 <view class="recom">
@@ -53,29 +38,25 @@
         <text class="title_txt">相关推荐</text>
     </view>
     <view class="recom_contents">
-        <view class="content">
-            <view class="content_img">
-                <image src="/images/static/index_score_detail3.png" />
+         <view class="recom_contents">
+            <view class="content" bindtap="skipPage" data-url="/pages/person/product/detail/index?id={{rgood[0].id}}">
+                <view class="content_img">
+                    <image src="{{rgood[0].title_img1}}" />
+                </view>
+                <view class="content_txt">{{rgood[0].title}}</view>
             </view>
-            <view class="content_txt">文章标题文章标题文章标题文章标题</view>
-        </view>
-          <view class="content">
-            <view class="content_img">
-                <image src="/images/static/index_score_detail3.png" />
+             <view class="content" bindtap="skipPage" data-url="/pages/person/product/detail/index?id={{rgood[1].id}}">
+                <view class="content_img">
+                    <image src="{{rgood[1].title_img1}}" />
+                </view>
+                <view class="content_txt">{{rgood[1].title}}</view>
             </view>
-            <view class="content_txt">文章标题文章标题文章标题文章标题</view>
-        </view>
-          <view class="content">
-            <view class="content_img">
-                <image src="/images/static/index_score_detail3.png" />
+             <view class="content" bindtap="skipPage" data-url="/pages/person/product/detail/index?id={{rgood[2].id}}">
+                <view class="content_img">
+                    <image src="{{rgood[2].title_img1}}" />
+                </view>
+                <view class="content_txt">{{rgood[2].title}}</view>
             </view>
-            <view class="content_txt">文章标题文章标题文章标题文章标题</view>
-        </view>
-          <view class="content">
-            <view class="content_img">
-                <image src="/images/static/index_score_detail3.png" />
-            </view>
-            <view class="content_txt">文章标题文章标题文章标题文章标题</view>
         </view>
     </view>
 </view>

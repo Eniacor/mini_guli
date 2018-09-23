@@ -54,6 +54,12 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function () {
+        return {
+            title: '文波教育',
+            desc: '文波教育',   
+            imageUrl: "/images/static/p4c.png",
+            path: '/pages/index/index'
+        }
     },
     /**
      * 页面上拉触底事件的处理函数
@@ -73,6 +79,7 @@ Page({
         }).then(({ data }) => {
             let time=_this.timestampToTime(data.examtime);
             data.examtime=time.slice(0,10);
+            data.content.title=data.content.title.slice(0,18);
             if(data.discuz){
                 for(let i=0;i<data.discuz.length;i++){
                     let time=_this.timestampToTime(data.discuz[i].addtime);
@@ -84,6 +91,8 @@ Page({
             });
             resolve();
         }).catch(err => reject(err));
+        _this.Iscang();
+        _this.Islike();
     },
     timestampToTime:function (timestamp) {
         let date = new Date(timestamp * 1000);
@@ -102,11 +111,38 @@ Page({
             openid:session.openid,
             mid:this.data.id
         }).then(( data ) => {
-            _this.handleData();
+           
             tips.showSuccess(data.errdesc);
+            _this.handleData();
             resolve();
         }).catch(err => reject(err));
        
+    },
+    Iscang:function() {
+        let _this=this;
+        let session=Session.get();
+        Api.MHCollect({
+            uid:session.uid,
+            mid:this.data.id
+        }).then(( data ) => {
+            _this.setData({
+                iscang:data.errdesc,
+            });
+            resolve();
+        }).catch(err => reject(err));
+    },
+    Islike:function() {
+        let _this=this;
+        let session=Session.get();
+        Api.MHLike({
+            uid:session.uid,
+            mid:this.data.id
+        }).then(( data ) => {
+            _this.setData({
+                islike:data.errdesc,
+            });
+            resolve();
+        }).catch(err => reject(err));
     },
     handleLike:function () {
         let _this=this;
@@ -115,16 +151,16 @@ Page({
             openid:session.openid,
             mid:this.data.id
         }).then(( data ) => {
-            _this.handleData();
             tips.showSuccess(data.errdesc);
+            _this.handleData();
             resolve();
         }).catch(err => reject(err));
     },
-    handleCLike:function (event) {
+    handleCLike:function (e) {
         let _this=this;
         let session=Session.get();
-      
-        let id=e.target.dataset.id;
+        console.log(e);
+        let id=e.currentTarget.dataset.id;
         Api.MemoryDLike({
             openid:session.openid,
             mid:id

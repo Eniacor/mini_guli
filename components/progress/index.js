@@ -18,6 +18,10 @@ Component({
         hideInfo: {
             type: Boolean,
             value: false
-        }
+        },
+        color: {
+            type: String,
+            value: '#d43c33'
+        },
     }
 });

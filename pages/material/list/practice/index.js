@@ -2,6 +2,7 @@ const tips = require('../../../../common/tips');
 const Api = require('../../../../config/method');
 const Session = require('../../../../common/auth/session')
 const WxParse = require('../../../../common/component/wxParse/wxParse.js');
+const api = require('../../../../config/api.config');
 const innerAudioContext = wx.createInnerAudioContext();
 const recorderManager = wx.getRecorderManager()
 const app = getApp();
@@ -13,6 +14,7 @@ Page({
         currentTime: '00:00',
         totalTime:'00:59',
         currentS: 0,
+
         totalS: 0,
         isPlay: 0,
         data:null,
@@ -28,6 +30,13 @@ Page({
             id: options.id,
         })
         this.handleData();
+        recorderManager.onStop((res) => {
+            const { tempFilePath, duration} = res;
+            this.setData({
+                tempFilePath:tempFilePath,
+                duration:duration,
+            });
+        });
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
@@ -39,18 +48,53 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        let _this=this;
+        let func_arr = [];
+        Session.clear();
+        wx.login({
+            success: function (res) {
+                let { code } = res;
+                let data ={code:code}
+                wx.request({
+                    url: api.XcxLogin,
+                    header: {
+                        'content-type': 'application/x-www-form-urlencoded'
+                    },
+                    data: data,
+                    method: 'POST',
+                    success: function (response) {
+                        let body = response.data
+                        Session.set(body.result);
+                        func_arr.forEach(d => {
+                            d();
+                        })
+                        func_arr = [];
+                    },
+                    fail: function (err) {
+                        tips.showModel('网络异常', err.errMsg || err)
+                    }
+                });
+            },
+            fail: function (error) {
+                // fail
+                console.error(error);
+                options.fail(new Error('获取微信用户信息失败，请检查网络状态'));
+            }
+        })
     },
     /**
      * 生命周期函数--监听页面隐藏
      */
     onHide: function () {
         innerAudioContext.stop();
+        recorderManager.stop();
     },
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function () {},
+    onUnload: function () {
+        recorderManager.stop();
+    },
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
@@ -82,6 +126,7 @@ Page({
     secondToDate: function (s) {
         let minute = parseInt(s / 60) > 0 ? parseInt(s / 60) > 9 ? parseInt(s / 60) : '0' + parseInt(s / 60) : '00';
         let second = Math.floor(s % 60) > 9 ? Math.floor(s % 60) : '0' + Math.floor(s % 60);
+        console.log('wo zhi xing');
         return minute + ':' + second;
     },
     playAudio: function () {
@@ -106,6 +151,22 @@ Page({
         }) => {
             let article = data.content;
             data['addtime'] = that.timestampToTime(data['addtime']).slice(0, 10);
+            data['snum']=0
+            let num=parseInt(data['confirm_num']);
+            if(num<10){
+                data['snum']=0
+            }else if(10<num<100){
+                data['snum']=1
+            }else if(100<num<200){
+                data['snum']=2
+            }else if(200<num<400){
+                data['snum']=3
+            }else if(400<num<600){
+                data['snum']=4
+            }else{
+                data['snum']=5
+            }
+
             data['mydiscuz']=null;
             let arr=[];
             if (data.discuz!=null) {
@@ -179,12 +240,14 @@ Page({
     handleNext: function () {
         let that = this;
         Api.QuestionPrev({
-            id: this.data.data.id
-        }).then(({data}) => {
-            if(data.errno){
+            id: this.data.data.id,
+            qid:that.data.data.question_type_id
+        }).then((data) => {
+            if(data.errno==0){
                 that.setData({
-                    id: data.id,
+                    id: data.errdesc,
                 });
+                that.handleData();
             }else{
                 tips.showSuccess("已经无法切换啦!");
             }
@@ -195,12 +258,14 @@ Page({
     handlePrev: function () {
         let that = this;
         Api.QuestionNext({
-            id: this.data.data.id
-        }).then(({data}) => {
-            if(data.errno){
+            id: this.data.data.id,
+            qid:that.data.data.question_type_id
+        }).then((data) => {
+            if(data.errno==0){
                 that.setData({
-                    id: data.id,
+                    id: data.errdesc,
                 });
+                that.handleData();
             }else{
                 tips.showSuccess("已经无法切换啦!");
             }
@@ -222,7 +287,7 @@ Page({
     },
     handlePlay: function (e) {
         const options = {
-            duration: 10000, //指定录音的时长，单位 ms
+            duration: 600000, //指定录音的时长，单位 ms
             sampleRate: 16000, //采样率
             numberOfChannels: 1, //录音通道数
             encodeBitRate: 96000, //编码码率
@@ -246,31 +311,28 @@ Page({
         let _this = this;
         let session = Session.get();
         recorderManager.stop();
-        recorderManager.onStop((res) => {
-            const { tempFilePath, duration} = res;
-            if (tempFilePath) {
-                wx.uploadFile({
-                    url: 'https://a.squmo.com/wenbo/Question/exerciseStore', //仅为示例，非真实的接口地址
-                    filePath: tempFilePath,
-                    name: 'recording',
-                    formData: {
-                        'openid': session.openid,
-                        'qid': _this.data.id,
-                        'time': duration,
-                    },
-                    success: function (res) {
-                        tips.showSuccess("练习完成!");
-                    },
-                    fail: function (res) {
-                        tips.showModel('网络异常', "图片上传失败!");
-                    }
-                })
-            }
-            _this.setData({
-                status: 1,
+        if (_this.data.tempFilePath) {
+            wx.uploadFile({
+                url: 'https://a.squmo.com/wenbo/Question/exerciseStore', //仅为示例，非真实的接口地址
+                filePath: _this.data.tempFilePath,
+                name: 'recording',
+                formData: {
+                    'openid': session.openid,
+                    'qid': _this.data.id,
+                    'time':_this.data.duration,
+                },
+                success: function (res) {
+                    tips.showSuccess("练习完成!");
+                    _this.setData({
+                        status: 1,
+                    })
+                    _this.handleData();
+                },
+                fail: function (res) {
+                    tips.showModel('网络异常', "图片上传失败!");
+                }
             })
-            _this.handleData();
-        })
+        }
     },
     handleChange ({ detail }) {
         this.setData({

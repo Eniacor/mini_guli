@@ -18,7 +18,7 @@
         </i-tabs>
     </view>
     <view class="items" wx:if="{{current=='tab1'}}">
-        <view class="item">
+        <view class="item" bindtap="skipPage" data-url="/pages/person/collect/speak/index" data-type="0">
             <view class="item_title">
                 <text class="title_line"></text>
                 <text class="title_txt">口语</text>
@@ -34,7 +34,7 @@
                 </view>
             </view>
         </view>
-        <view class="item">
+        <view class="item" bindtap="skipPage" data-url="/pages/person/collect/write/index" data-type="0">
             <view class="item_title">
                 <text class="title_line"></text>
                 <text class="title_txt">写作</text>
@@ -50,7 +50,7 @@
                 </view>
             </view>
         </view>
-        <view class="item">
+        <view class="item" bindtap="skipPage" data-url="/pages/person/collect/listen/index" data-type="0">
             <view class="item_title">
                 <text class="title_line"></text>
                 <text class="title_txt">听力</text>
@@ -66,7 +66,7 @@
                 </view>
             </view>
         </view>
-        <view class="item">
+        <view class="item" bindtap="skipPage" data-url="/pages/person/collect/read/index" data-type="0">
             <view class="item_title">
                 <text class="title_line"></text>
                 <text class="title_txt">阅读</text>
@@ -84,77 +84,136 @@
         </view>
     </view>
     <view class="score" wx:if="{{current=='tab2'}}">
-        <view class="score_contents">
-            <view class="score_content" bindtap="skipPage" data-url="/pages/index/exercise/detail/index" data-type="0">
-                <view class="content_left">
-                    <image src="/images/static/index_exercise_true.png"></image>
+       <view class="score">
+            <view class="score_contents">
+                <view class="content_item" wx:for="{{practice}}" wx:if="{{practice}}" wx:key="unique" > 
+                    <view class="score_content" wx:if="{{item.status=='进行中'}}" bindtap="skipPage" data-url="/pages/index/exercise/detail/index?id={{item.id}}" data-type="1">
+                        <view class="content_left">
+                            <image src="/images/static/index_exercise_true.png"></image>
+                        </view>
+                        <view class="content_middle">{{item.title}}</view>
+                        <view class="content_right">
+                            {{item.status}}
+                            <image src="/images/static/index_exercise_arrow1.png" />
+                        </view>
+                    </view>
+                    <view class="score_content" wx:if="{{item.status=='未开始'}}" bindtap="skipPage" data-url="/pages/index/exercise/detail/index?id={{item.id}}" data-type="1">
+                        <view class="content_left">
+                            <image src="/images/static/index_exercise_false.png"></image>
+                        </view>
+                        <view class="content_middle">{{item.title}}</view>
+                        <view class="content_right">
+                            {{item.status}}
+                            <image src="/images/static/index_exercise_arrow1.png" />
+                        </view>
+                    </view>
+                    <view class="score_content" wx:if="{{item.status=='已结束'}}" bindtap="skipPage" data-url="/pages/index/exercise/detail/index?id={{item.id}}" data-type="1">
+                        <view class="content_left">
+                            <image src="/images/static/index_exercise_false.png"></image>
+                        </view>
+                        <view class="content_middle" style="color:#888;">{{item.title}}</view>
+                        <view class="content_right"  style="color:#888;">
+                            {{item.status}}
+                            <image src="/images/static/index_exercise_arrow1.png" />
+                        </view>
+                    </view>
                 </view>
-                <view class="content_middle">文波教育押题班课前测试5.12</view>
-                <view class="content_right">
-                    进行中
-                    <image src="/images/static/index_exercise_arrow1.png" />
-                </view>
-            </view>
-            <view class="score_content">
-                <view class="content_left">
-                    <image src="/images/static/index_exercise_true.png"></image>
-                </view>
-                <view class="content_middle">文波教育押题班课前测试5.12</view>
-                <view class="content_right">
-                    进行中
-                    <image src="/images/static/index_exercise_arrow1.png" />
-                </view>
-            </view>
-            <view class="score_content">
-                <view class="content_left">
-                    <image src="/images/static/index_exercise_true.png"></image>
-                </view>
-                <view class="content_middle">文波教育押题班课前测试5.12</view>
-                <view class="content_right">
-                    进行中
-                    <image src="/images/static/index_exercise_arrow1.png" />
-                </view>
-            </view>
-            <view class="score_content">
-                <view class="content_left">
-                    <image src="/images/static/index_exercise_true.png"></image>
-                </view>
-                <view class="content_middle">文波教育押题班课前测试5.12</view>
-                <view class="content_right">
-                    进行中
-                    <image src="/images/static/index_exercise_arrow1.png" />
-                </view>
-            </view>
-            <view class="score_content">
-                <view class="content_left">
-                    <image src="/images/static/index_exercise_true.png"></image>
-                </view>
-                <view class="content_middle">文波教育押题班课前测试5.12</view>
-                <view class="content_right">
-                    进行中
-                    <image src="/images/static/index_exercise_arrow1.png" />
-                </view>
-            </view>
-            <view class="score_content">
-                <view class="content_left">
-                    <image src="/images/static/index_exercise_true.png"></image>
-                </view>
-                <view class="content_middle">文波教育押题班课前测试5.12</view>
-                <view class="content_right">
-                    进行中
-                    <image src="/images/static/index_exercise_arrow1.png" />
-                </view>
-            </view>
-            <view class="score_content">
-                <view class="content_left">
-                    <image src="/images/static/index_exercise_true.png"></image>
-                </view>
-                <view class="content_middle">文波教育押题班课前测试5.12</view>
-                <view class="content_right">
-                    进行中
-                    <image src="/images/static/index_exercise_arrow1.png" />
+                <view wx:if="{{practice==null}}" class="empty">
+                    暂无更多
                 </view>
             </view>
         </view>
+    </view>
+    <view class="score3" wx:if="{{current=='tab3'}}">
+        <view class="course3">
+            <view class="course_contents3">
+                <view class="content3" wx:for="{{list}}" wx:key="unique">
+                    <view class="content_left3">
+                        <image src="{{item.title_img}}" />
+                        <!-- <view class="left_biao3">立减${{item.discount}}</view> -->
+                    </view>
+                    <view class="content_right3">
+                        <view class="right_title3">
+                            <view class="title3">{{item.title}}</view>
+                            <view class="biao3" wx:if="{{item.is_hot==1}}">HOT</view>
+                        </view>
+                        <view class="right_des3">
+                            <view class="des des-1">{{item.tag1}}</view>
+                            <view class="des des-2">{{item.tag2}}</view>
+                            <view class="des des-3">{{item.tag3}}</view>
+                        </view>
+                        <view class="right_techer3">
+                            <image src="" />
+                            <text class="name3"></text>
+                        </view>
+                        <view class="right_address3">
+                            <image src="/images/static/course_a.png" />
+                            <text class="address3">{{item.campus}}</text>
+                        </view>
+                        <view class="right_time3">
+                            <image src="/images/static/course_c.png" />
+                            <text class="time3">{{item.activity_time}}开课</text>
+                            <text class="detail3" bindtap="skipPage" data-url="/pages/course/adetail/index?id={{item.id}}" data-type="0">查看详情</text>
+                        </view>
+                    </view>
+                </view>
+                  <view class="content3" wx:for="{{list1}}" wx:key="unique">
+                    <view class="content_left3">
+                        <image src="{{item.title_img}}" />
+                        <!-- <view class="left_biao3">立减${{item.discount}}</view> -->
+                    </view>
+                    <view class="content_right3">
+                        <view class="right_title3">
+                            <view class="title3">{{item.title}}</view>
+                            <view class="biao3" wx:if="{{item.is_hot==1}}">HOT</view>
+                        </view>
+                        <view class="right_des3">
+                            <view class="des des-1">{{item.tag1}}</view>
+                            <view class="des des-2">{{item.tag2}}</view>
+                            <view class="des des-3">{{item.tag3}}</view>
+                        </view>
+                        <view class="right_techer3">
+                            <image src="" />
+                            <text class="name3"></text>
+                        </view>
+                        <view class="right_address3">
+                            <image src="/images/static/course_a.png" />
+                            <text class="address3">{{item.campus}}</text>
+                        </view>
+                        <view class="right_time3">
+                            <image src="/images/static/course_c.png" />
+                            <text class="time3">{{item.activity_time}}开课</text>
+                            <text class="detail3" bindtap="skipPage" data-url="/pages/course/cdetail/index?id={{item.id}}" data-type="1">查看详情</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="score4" wx:if="{{current=='tab4'}}">
+        <view class="score_content4">
+            <view class="items4">
+                <view class="item4" wx:for="{{score}}" wx:key="unique">
+                    <view class="item_left4">
+                        <image src="{{item.title_img}}" />
+                    </view>
+                    <view class="item_right4">
+                        <view class="right_title4">
+                            {{item.title}}
+                        </view>
+                        <view class="time4">
+                            <view class="time_left4">
+                                <image src="/images/static/index_score_time.png" />
+                                <text>{{item.addtime}}</text>
+                            </view>
+                            <view class="time_right4" bindtap="skipPage" data-url="/pages/material/detail/index?id={{item.id}}" data-type="1">
+                                <text>查看详情</text>
+                                <image src="/images/static/index_score_more.png" />
+                            </view>
+                        </view>
+                    </view>
+                </view>
+        </view>
+    </view>
     </view>
 </view>

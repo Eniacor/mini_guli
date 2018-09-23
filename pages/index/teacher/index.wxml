@@ -6,7 +6,7 @@
                     <image src="{{item.avatarurl}}" />
                 </view>
                 <view class="top_right">
-                    <view class="title"></view>
+                    <view class="title">{{item.realname}}</view>
                     <view class="tags">
                         <text class="tag backcolor_yellow">{{item.tag1}}</text>
                         <text class="tag backcolor_blue">{{item.tag2}}</text>

@@ -63,18 +63,23 @@ Page({
             content: e.detail.value
         });
     },
-    handleData: function (e) {
+    handleData: function () {
         let session=Session.get();
+        let _this=this;
+        if(!this.data.content){
+            tips.showSuccess("内容不能为空!");
+            return;
+        }
         Api.MemoryDiscuz({
             openid: session.openid,
             mid: this.data.id,
             content: this.data.content,
         }).then((data) => {
             tips.showSuccess("添加成功!");
+            setTimeout(()=>{
+                wx.redirectTo({url: '/pages/index/recall/detail/index?id='+_this.data.id});
+            },1000);
             resolve();
         }).catch(err => reject(err));
-        setTimeout(()=>{
-            wx.navigateTo({url: '/pages/index/recall/detail/index?id='+this.data.id});
-        },1000);
     }
 });

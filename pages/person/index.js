@@ -12,7 +12,8 @@ Page({
         coupon_amount: '',
         ticket_index: '',
         ticket_amount: '',
-        loadEnd: false
+        loadEnd: false,
+        hasSign:0,
     },
     onLoad: function (options) {
         this.handleData();
@@ -40,8 +41,11 @@ Page({
         }).then(({
             data
         }) => {
-            
-            console.log(data);
+            if(data.vip_deadline*1000>=(new Date()).valueOf()){
+                data.vipstatus=1;
+            }else{
+                data.vipstatus=0;
+            }
             _this.setData({
                 user: data
             });
@@ -51,42 +55,39 @@ Page({
     hasSign: function () {
         let _this=this;
         let session = Session.get();
-        let start = new Date(new Date(new Date().toLocaleDateString()).getTime()); 
-        let end = new Date(new Date(new Date().toLocaleDateString()).getTime() +24 * 60 * 60 * 1000 -1);
         Api.HasSign({
-            start:Date.parse(new Date(start))/1000,
-            end:Date.parse(new Date(end))/1000,
+            type:1,
             uid:session.uid
-        }).then(({
+        }).then((
             data
-        }) => {
+        ) => {
             _this.setData({
-                hasSign:data.has
+                hasSign:data.errdesc
             });
             resolve();
         }).catch(err => reject(err));
-
     },
     handleSign: function () {
+        let _this=this;
         let session = Session.get();
         Api.Sign({
             uid:session.uid,
             type:1,
-        }).then(({
+        }).then((
             data
-        }) => {
-            tips.showSuccess("签到成功!");
-            _this.setData({
-                hasSign: data.has
-            });
+        ) => {
+            tips.showSuccess(data.errdesc);
+            _this.hasSign();
+            _this.handleData();
             resolve();
         }).catch(err => reject(err));
     },
     onShareAppMessage: function () {
         return {
             title: '文波教育',
-            desc: '文波教育',
-            // path: '/page/?id=123' // 路径，传递参数到指定页面。
+            desc: '文波教育',   
+            imageUrl: "/images/static/p4c.png",
+            path: '/pages/index/index'
         }
     }
 })

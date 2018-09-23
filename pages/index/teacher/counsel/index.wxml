@@ -60,5 +60,6 @@
             <view class="txt">(最多3张)</view>
         </view>
     </view>
+    <view class="tips">长按删除图片</view>
 </view>
 <button class="btn" bindtap="sendUserInfo">提交</button>

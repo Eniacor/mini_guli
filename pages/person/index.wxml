@@ -5,7 +5,12 @@
             <view class="top_left">
                 <view class="left_title">{{user.nickname}}</view>
                 <view class="left_fen">积分:{{user.integral}}</view>
-                <view class="left_btn">免费会员</view>
+                <navigator url="/pages/person/member/index" hover-class="none" wx:if="{{user.vipstatus==1}}">
+                    <view class="left_btn">付费会员</view>
+                </navigator>
+                <navigator url="/pages/person/member/index" hover-class="none" wx:if="{{user.vipstatus==0}}">
+                    <view class="left_btn">开通会员</view>
+                </navigator>
             </view>
             <view class="top_middle">
                 <image src="{{user.avatarurl}}" style="border-radius:50%;" />

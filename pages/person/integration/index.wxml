@@ -32,7 +32,8 @@
                 <view class="info-text" style="font-size:30rpx;line-height:30rpx;padding-top:20rpx;">{{item.title}}</view>
                 <view class="detailss" style="margin-top:10rpx;height:46rpx;" >
                     <text class="gold color">
-                        <text class="sizi">{{item.integral}}</text>积分</text>
+                        <text class="sizi">{{item.integral}}</text>积分
+                    </text>
                     <view class="border-gold color" bindtap="skipPage" data-url="/pages/person/integration/detail/index?id={{item.id}}" data-type="0">立即兑换</view>
                 </view>
             </view>
@@ -45,7 +46,7 @@
     </view>
     <view class="complete">
         <text class="fl">每日签到+2积分</text>
-        <button class="buts">已完成</button>
+        <button class="buts-s">已完成</button>
     </view>
 
     <view class="complete">

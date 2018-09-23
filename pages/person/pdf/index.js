@@ -1,9 +1,13 @@
+const Api = require("../../../config/method.js");
+const Session = require('../../../common/auth/session')
+const tips = require('../../../common/tips');
 const app = getApp()
 Page({
     /**
      * 页面的初始数据
      */
     data: {
+        count:0,
         options: {
             5: true,
             6: true,
@@ -31,12 +35,25 @@ Page({
         listen: true,
         read: true,
         checked: true,
+        member:null,
+        email:null,
     },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        let session=Session.get();
+        let _this=this;
+        Api.VipHasMember({
+            uid:session.uid
+        }).then((
+            data
+        ) => {
+            _this.setData({
+                member: data.errdesc
+            });
+            resolve();
+        }).catch(err => reject(err));
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
@@ -53,7 +70,9 @@ Page({
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function () {},
+    onUnload: function () {
+
+    },
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
@@ -251,13 +270,71 @@ Page({
 
     },
     handleEmail:function(e){
+        let session=Session.get();
         let data=[];
+        let count=this.data.count;
+        count++;
+        this.setData({
+            count:count
+        });
         for(let i in this.data.options){
             if(this.data.options[i]){
                 data.push(i);
             }
         };
-       data=JSON.stringify(data); 
-        
+        data=JSON.stringify(data); 
+        let mailReg = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
+        if(this.data.email){
+            if(!mailReg.test(this.data.email)){
+                tips.showWarning('错误提示', "邮箱格式不正确!");   
+                return;
+            }
+        }else{
+            tips.showWarning('错误提示', "邮箱不能为空!");   
+            return;
+        }
+        if(this.data.member=="不是会员"){
+            tips.showSuccess(this.data.member);
+            setTimeout(() => {
+                wx.navigateTo({
+                    url: '/pages/person/member/index'
+                });
+            }, 1000);
+        }else if(this.data.member=="会员过期"){
+            tips.showSuccess(this.data.member);
+            setTimeout(() => {
+                wx.navigateTo({
+                    url: '/pages/person/member/index'
+                });
+            }, 1000);
+        }else{
+            if(this.data.count==1){
+                Api.VipExport({
+                    uid:session.uid,
+                    email:this.data.email,
+                    content:data
+                }).then((
+                    data
+                ) => {
+                    if(!data.errno){
+                        tips.showSuccess("请邮箱登录查收!");
+                        setTimeout(()=>{
+                            wx.switchTab({url: '/pages/person/index'});
+                        },1000);
+                    }else{
+                        tips.showSuccess(data.errno);
+                    }
+                    resolve();
+                }).catch(err => reject(err));
+            }
+        }
+    },
+    handleMess:function(e){
+        if(!e.detail.value){
+            tips.showSuccess("请输入邮箱!");
+        }
+        this.setData({
+            email:e.detail.value
+        });
     }
 });

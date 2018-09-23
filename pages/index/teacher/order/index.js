@@ -131,12 +131,12 @@ Page({
         let wechat = this.isEmptyValue(this.data.wechat, '请输入您的微信号!','');
         let mobile = this.isEmptyValue(this.data.mobile, '请输入您的手机号！','');
         if (name && wechat && mobile) {
-            Api.ReserveConsult({
+            Api.ReserveReport({
                 uid: 1,
                 tid: 1,
-                name: name,
-                wechat: wechat,
-                tel: mobile,
+                name:this.data.name,
+                wechat: this.data.wechat,
+                tel: this.data.mobile,
                 test: this.data.has_experience,
                 remark: this.data.remark
             }).then((data) => {
@@ -144,7 +144,7 @@ Page({
                     for (let i = 0; i < this.data.imageArr.length; i++) {
                         console.log(this.data.imageArr[i]);
                         wx.uploadFile({
-                            url: 'https://a.squmo.com/wenbo/ReserveConsulting/image', //仅为示例，非真实的接口地址
+                            url: 'https://a.squmo.com/wenbo/ReserveReport/image', //仅为示例，非真实的接口地址
                             filePath:this.data.imageArr[i],
                             name: 'img',
                             formData: {
@@ -154,6 +154,7 @@ Page({
                                 //do something
                             },
                             fail:function(res){
+                                console.log(res);
                                 tips.showModel('网络异常', "图片上传失败!");
                             }
                         })
@@ -183,7 +184,7 @@ Page({
             success: function (res) {
                 // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
                 for (var i = 0; i < res.tempFilePaths.length; i++) {
-                    if (that.data.imageArr.length < 9) {
+                    if (that.data.imageArr.length < 3) {
                         that.data.imageArr.push(res.tempFilePaths[i]);
                     }
                 }

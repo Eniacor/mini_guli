@@ -1,5 +1,5 @@
 <view class="head">
-    <image src="/images/static/index_exercisei.png" />
+    <image src="{{imgUrls[0].banner_img}}" />
 </view>
 <view class="score">
     <view class="score_contents">

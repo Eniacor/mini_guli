@@ -163,6 +163,38 @@ Page({
     handleData:function(){
         let session=Session.get();
         let time = new Date(this.data.date).getTime();
+        if(this.data.date=='请选择考试日期'){
+            tips.showSuccess("请选择日期!");
+            return;
+        }
+        if(this.data.sindex==0){
+            tips.showSuccess("请选择国家!");
+            return;
+        }
+        if(this.data.yindex==0){
+            tips.showSuccess("请选择城市!");
+            return;
+        }
+        if(this.data.dindex==0){
+            tips.showSuccess("请选择考场!");
+            return;
+        }
+        if(this.data.pindex==0){
+            tips.showSuccess("请选择题型!");
+            return;
+        }
+        if(this.data.cindex==0){
+            tips.showSuccess("请选择题型!");
+            return;
+        }
+        if(this.data.title==''){
+            tips.showSuccess("请选输入标题!");
+            return;
+        }
+        if(this.data.content==''){
+            tips.showSuccess("请输入内容!");
+            return;
+        }
         Api.Memory({
             "openid":session.openid,
             "time":time/1000,

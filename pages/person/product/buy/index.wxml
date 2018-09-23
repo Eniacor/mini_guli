@@ -1,13 +1,13 @@
 <view class="border">
     <view class="commodity">
         <view class="images">
-            <image class="img" src="#"></image>
+            <image class="img" src="{{good.title_img1}}"></image>
         </view>
         <view class="info-qj">
-            <view class="text-title">魔方吸蚊，物理灭蚊</view>
-            <view class="text-number">数量x10</view>
-            <view class="text-money">¥39</view>
-            <view class="text-state">未发货</view>
+            <view class="text-title">{{good.title}}</view>
+            <view class="text-number">数量x1</view>
+            <view class="text-money">¥{{good.price}}</view>
+            <view class="text-state"></view>
         </view>
     </view>
     <view class="content">
@@ -17,16 +17,16 @@
         </view>
         <view class="content_item">
             <view class="item">
-                <input placeholder="请输入收货人姓名" />
+                <input placeholder="请输入收货人姓名" bindblur="handleName"/>
             </view>
             <view class="item">
-                <input placeholder="请输入收货人电话" />
+                <input placeholder="请输入收货人电话" bindblur="handleMobile"/>
             </view>
             <view class="item">
-                <input placeholder="请输入收货人微信号" />
+                <input placeholder="请输入收货人微信号" bindblur="handleWchat"/>
             </view>
             <view class="item">
-                <input placeholder="请输入详细收货地址" />
+                <input placeholder="请输入详细收货地址" bindblur="handleAddress"/>
             </view>
         </view>
     </view>
@@ -34,8 +34,8 @@
 </view>
 <view class="ending">
     <view class="integral">
-        <text class="text-jifen">9886</text>
-        <text class="text-jifen-zi">积分</text>
+        <text class="text-jifen">¥{{good.price}}</text>
+        <text class="text-jifen-zi"></text>
     </view>
-    <button>立即兑换</button>
+    <view class="btn" bindtap="handleBuy">立即付款</view>
 </view>

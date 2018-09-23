@@ -1,12 +1,13 @@
 <view class="body">
     <view class="swp">
-        <swiper indicator-dots="true" indicator-color="#fff" indicator-active-color="red" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <!-- <swiper indicator-dots="true" indicator-color="#fff" indicator-active-color="red" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
             <block wx:for="{{imgUrls}}" wx:key="unique">
                 <swiper-item>
                     <image class="image-swiper" src="{{good.title_img2}}" class="slide-image"/>
                 </swiper-item>
             </block>
-        </swiper>
+        </swiper> -->
+        <image class="image-swiper" src="{{good.title_img1}}" class="slide-image"/>
     </view>
     <view class="test">
         <view class="text-title">{{good.title}}</view>
@@ -21,13 +22,13 @@
     </view>
     <import src="../../../../common/component/wxParse/wxParse.wxml" />
     <view class="wxParse">
-        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+        <template is="wxParse" data="{{wxParseData:article.images}}" />
     </view>
     <view class="ending">
         <view class="integral">
             <text class="text-jifen">{{good.integral}}</text>
             <text class="text-jifen-zi">积分</text>
         </view>
-        <button>立即兑换</button>
+        <view class="btn" bindtap="handleOrder">立即兑换</view>
     </view>
 </view>

@@ -30,10 +30,14 @@
   line-height: 108rpx;
   color: #aaaa;
 }
+.register .item .item_right .right_txt {
+  font-size: 30rpx;
+  color: #222;
+}
 .register .item .item_right input {
   margin-top: 36rpx;
   font-size: 30rpx;
-  color: #aaaa;
+  color: #222;
   height: 30rpx;
   line-height: 30rpx;
 }

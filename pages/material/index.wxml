@@ -33,7 +33,7 @@
             <view class="right_text">听力</view>
         </view>
     </view>
-    <view class="content_item content_item-top"  bindtap="skipPage" data-url="/pages/material/speak/index" data-type="0">
+    <view class="content_item content_item-top"  bindtap="skipPage" data-url="/pages/material/read/index" data-type="0">
         <view class="item_left item_left-img4">
              <image src="../../images/static/ji4.png"></image>
         </view>

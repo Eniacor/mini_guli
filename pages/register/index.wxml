@@ -2,11 +2,12 @@
     <view class="item">
         <view class="item_left">手机号</view>
         <view class="item_right" style="width:278rpx;">
-            <input placeholder="您尚未绑定手机号" value="{{tel}}" />
+            <!-- <text class="right_txt">{{tel}}</text> -->
+            <input placeholder="您输入您的手机号" bindblur="handleMobile" />
         </view>
-        <view class="item_middle" style="margin-top:28rpx;width:202rpx;height:58rpx;font-size:28rpx;line-height:58rpx;text-align:center;background:#d43c33;color:#fff;border-radius:30rpx;">
+        <!-- <view class="item_middle" style="margin-top:28rpx;width:202rpx;height:58rpx;font-size:28rpx;line-height:58rpx;text-align:center;background:#d43c33;color:#fff;border-radius:30rpx;">
             <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" style="width:202rpx;height:58rpx;font-size:28rpx;line-height:58rpx;text-align:center;background:#d43c33;color:#fff;border-radius:30rpx;">绑定手机号</button>
-        </view>
+        </view> -->
     </view>
     <view class="item">
         <view class="item_left">昵称</view>
@@ -28,7 +29,7 @@
     <view class="item">
         <view class="item_left">考试时间</view>
         <view class="item_right">
-            <picker mode="date" value="{{date}}" start="2017-09-01" end="2020-09-01" bindchange="bindDateChange">
+            <picker mode="date" value="{{date}}" bindchange="bindDateChange">
                 <view class="picker">{{date}}</view>
             </picker>
         </view>
@@ -38,7 +39,7 @@
     </view>
     <view class="item">
         <view class="item_left">目标分数</view>
-        <view class="item_right">
+        <view class="item_right" style="width:460rpx">
             <picker bindchange="bindScoreChange" value="{{index}}" range="{{score}}">
                 <view class="picker">{{score[index]}}</view>
             </picker>

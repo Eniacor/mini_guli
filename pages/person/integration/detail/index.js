@@ -82,4 +82,21 @@ Page({
             resolve();
         }).catch(err => reject(err));
     },
+    handleOrder:function(){
+        let session=Session.get();
+        Api.IntegralOrder({
+            uid:session.uid,
+            pid:this.data.id
+        }).then((
+            data
+        ) => {
+            tips.showSuccess(data.errdesc);
+            setTimeout(() => {
+                wx.navigateTo({
+                    url: '/pages/person/integration/index'
+                });
+            }, 1000);
+            resolve();
+        }).catch(err => reject(err));
+    }
 });

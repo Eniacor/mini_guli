@@ -5,5 +5,5 @@
         "i-tabs": "/components/tabs/index",
         "i-tab": "/components/tab/index"
     },
-    "navigationBarTitleText": "口语详情"
+    "navigationBarTitleText": "题目练习"
 }

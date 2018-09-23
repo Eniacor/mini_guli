@@ -4,7 +4,7 @@
         <icon wx:else type="circle" bindtap="handleImg" />
     </view>
     <view class="top_middle">全选</view>
-    <view class="top_right">开通会员</view>
+    <view class="top_right"  bindtap="skipPage" data-url="/pages/person/member/index" data-type="0">开通会员</view>
 </view>
 <view class="items">
     <view class="item">
@@ -98,7 +98,7 @@
 </view>
 <view class="email">
     <view class="email_input">
-        <input placeholder="请输入领取邮箱" />
+        <input placeholder="请输入领取邮箱" bindinput="handleMess"/>
     </view>
-    <view class="navigator-hover email_btn" bindtap="handleEmail" style="background:#d43c33;">马上领取</view>
+    <view class="email_btn" bindtap="handleEmail" style="background:#d43c33;">立即导出</view>
 </view>

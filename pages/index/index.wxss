@@ -33,6 +33,15 @@ image{
     line-height: 1;
     margin-top: 20rpx;
 }
+.contact{
+    font-size: 24rpx;
+    color: #222;
+    display:static;
+    margin:0;
+    padding:0;
+    line-height:1;
+    background: #fff;
+}
 .content{
     height: 450rpx;
     width: 720rpx;
@@ -47,6 +56,10 @@ image{
     border-radius: 10rpx;
     margin:15rpx;
     background: #fff;
+    border-bottom: 1rpx solid #e0e0e0;
+}
+.content_item:last-child{
+    border: 0;
 }
 .content_item .item_img{
     display: inline-block;
@@ -109,8 +122,8 @@ image{
     line-height: 112rpx;
     border-bottom: 1rpx solid #e0e0e0;
 }
-.score_content:last-child{ 
-    border:0;
+.score_content:last-child{
+    border: 0;
 }
 .score_content .content_left{
    display: inline-block;
@@ -127,12 +140,15 @@ image{
    color:#222;
 }
 .content_right{
-    font-family: 'jianxin';
+    font-family: 'mini';
     display: inline-block;
     margin-left: 20rpx;
-    font-size: 46rpx;
-    color:#de7672;
+    font-size: 44rpx;
+    color:#dd4048;
     vertical-align: middle;
+    float:right;
+    font-weight: bold;
+    
  }
  .score_bottom{
     width:750rpx;
@@ -176,3 +192,4 @@ image{
 .text_back_color{
     background: red;
 }
+

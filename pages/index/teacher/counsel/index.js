@@ -38,31 +38,6 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-        // let appKey = '3dab2396ab7ca4f9';
-        // let key = 'FSugZEbevvhW9cJux2qoD5ME8VFF7Bai';
-        // let salt = (new Date).getTime();
-        // let query = 'good';
-        // let from = '';
-        // let to = 'en';
-        // let str1 = appKey + query + salt + key;
-        // let sign = md5.hexMD5(str1);
-        // wx.request({
-        //     url: 'https://openapi.youdao.com/api', //仅为示例，并非真实的接口地址
-        //     data: {
-        //         q: query,
-        //         appKey: appKey,
-        //         salt: salt,
-        //         from: from,
-        //         to: to,
-        //         sign: sign
-        //     },
-        //     header: {
-        //         'content-type': 'application/json' // 默认值
-        //     },
-        //     success: function (res) {
-        //         console.log(res.data)
-        //     }
-        // })
     },
     /**
      * 生命周期函数--监听页面隐藏
@@ -134,9 +109,9 @@ Page({
             Api.ReserveConsult({
                 uid: 1,
                 tid: 1,
-                name: name,
-                wechat: wechat,
-                tel: mobile,
+                name: this.data.name,
+                wechat: this.data.wechat,
+                tel: this.data.mobile,
                 test: this.data.has_experience,
                 remark: this.data.remark
             }).then((data) => {
@@ -151,7 +126,7 @@ Page({
                                 'id': data.id
                             },
                             success: function (res) {
-                                //do something
+        
                             },
                             fail:function(res){
                                 tips.showModel('网络异常', "图片上传失败!");
@@ -160,9 +135,8 @@ Page({
                     }
                 }
                 wx.navigateBack({url: '/pages/index/teacher/detail/index'}) //关闭
-            
                 resolve();
-             
+
             }).catch(err => reject(err));
         }
     },
@@ -183,7 +157,7 @@ Page({
             success: function (res) {
                 // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
                 for (var i = 0; i < res.tempFilePaths.length; i++) {
-                    if (that.data.imageArr.length < 9) {
+                    if (that.data.imageArr.length < 3) {
                         that.data.imageArr.push(res.tempFilePaths[i]);
                     }
                 }

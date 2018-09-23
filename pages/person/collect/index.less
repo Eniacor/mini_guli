@@ -127,48 +127,283 @@
             }
         }
     }
+}
+.score {
+    background: #fff;
+    .score_contents{
+        .content_item{
+            border-bottom: 1rpx solid #e0e0e0;
+            margin:0 30rpx;
+        }
+        .score_content {
+            width: 690rpx;
+            height: 112rpx;
+            line-height: 112rpx;
+            .content_left {
+                display: inline-block;
+                width: 32rpx;
+                height: 32rpx;
+                margin-right: 20rpx;
+                image {
+                    width:100%;
+                    height:100%;
+                    vertical-align: middle;
+                }
+            }
+            .content_middle {
+                display: inline-block;
+                font-size: 30rpx;
+                color: #222;
+            }
+            .content_right {
+                float: right;
+                font-size: 30rpx;
+                color: #d43c33;
+                image{
+                    width:12rpx;
+                    height: 22rpx;
+                    margin-left: 15rpx;
+                }
+            }
+        }
+        .content_item:last-child {
+            border: 0;
+        }
+        .empty{
+            height: 150rpx;
+            line-height: 150rpx;
+            text-align: center;
+            font-size:30rpx;
+            color:#888;
+        }
+    }
+}
 
-    .score {
-        background: #fff;
-        .score_contents{
-            .score_content {
-                width: 690rpx;
+
+
+.score3{
+    .course3{
+        width: 750rpx;
+        height: auto;
+        background: #f6f6f6;
+        .course_contents3{
+            background: #fff;
+            .content3{
+                position: relative;
                 margin: 0 30rpx;
-                height: 112rpx;
-                line-height: 112rpx;
+                padding:50rpx 0;
+                width:690rpx;
+                height: 240rpx; 
                 border-bottom: 1rpx solid #e0e0e0;
-                .content_left {
-                    display: inline-block;
-                    width: 32rpx;
-                    height: 32rpx;
-                    margin-right: 20rpx;
-                    image {
-                        width:100%;
-                        height:100%;
-                        vertical-align: middle;
+                .content_left3{
+                    position: absolute;
+                    width: 240rpx;
+                    height: 240rpx;
+                    image{
+                        width: 100%;
+                        height: 100%;
+                    } 
+                    .left_biao3{
+                        position: absolute;
+                        left:0;
+                        bottom:0;
+                        width: 240rpx;
+                        height: 50rpx;
+                        line-height: 50rpx;
+                        text-align: center;
+                        font-size: 28rpx;
+                        font-weight: bold;
+                        color:#fff;
+                        background: #c5483c;
                     }
                 }
-                .content_middle {
-                    display: inline-block;
-                    font-size: 30rpx;
-                    color: #222;
-                }
-                .content_right {
-                    float: right;
-                    font-size: 30rpx;
-                    color: #d43c33;
-                    image{
-                        width:12rpx;
-                        height: 22rpx;
-                        margin-left: 15rpx;
+                .content_right3{
+                    position: absolute;
+                    left:270rpx;
+                    width: 420rpx;
+                    height: 240rpx;
+                    line-height: 32rpx;
+                    .right_title3{
+                        position: relative;
+                        height: 32rpx;
+                        .title3{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            font-size: 32rpx;
+                            color: #222;
+                            font-weight: bold;
+                            line-height: 1;
+                        }
+                        .biao3{
+                            position: absolute;
+                            top: 0;
+                            right:0;
+                            width: 64rpx;
+                            height: 32rpx;
+                            line-height:32rpx;
+                            font-size: 22rpx;
+                            text-align: center;
+                            border-radius: 10rpx;
+                            color: #fff;
+                            background: #c5483c;
+                            font-weight: bold;
+                        }
+                    }
+                    .right_des3{
+                        margin-top:24rpx;
+                        margin-bottom: 24rpx;
+                        line-height: 35rpx;
+                    .des{
+                            display: inline-block;
+                            padding:10rpx;
+                            height: 35rpx;
+                            border-radius: 10rpx;
+                            line-height: 35rpx;
+                            text-align: center;
+                            color: #fff;
+                            margin-right: 20rpx;
+                            font-size: 24rpx;
+                    }
+                    .des-1{
+                        background: #f4cf75;
+                    }
+                    .des-2{
+                        background: #85afec;
+                    }
+                    .des-3{
+                        background: #80b6ac;
+                    }
+                    }
+                    .right_techer3{
+                        line-height:24rpx;
+                        image{
+                            width:22rpx;
+                            height:21rpx;
+                            vertical-align: middle;
+                        }
+                        .name3{
+                            font-size: 24rpx;
+                            color:#666;
+                            margin-left: 12rpx;
+                        }
+                    }
+
+                    .right_address3{
+                        margin-top:24rpx;
+                        margin-bottom: 24rpx;
+                        line-height: 24rpx;
+                        image{
+                            width: 18rpx;
+                            height: 22rpx;
+                            vertical-align: middle;
+                        }
+                        .address3{
+                            font-size: 24rpx;
+                            color:#666;
+                            margin-left: 12rpx;
+                        }
+                    }
+                    .right_time3{
+                        line-height: 24rpx;
+                        image{
+                            width: 20rpx;
+                            height: 20rpx;
+                            vertical-align: middle;
+                        }
+                        .time3{
+                            font-size: 24rpx;
+                            margin-left: 12rpx;
+                            color: #c5483c;
+                        }
+                        .detail3{
+                            float: right;;
+                            font-size: 26rpx;
+                            color: #c5483c;
+                        }
                     }
                 }
             }
-            .score_content:last-child {
-                border: 0;
+            .content3:last-child{
+                border:1rpx solid #fff;
             }
         }
     }
-     
-    
+}
+.score4{
+    background: #fff;
+    .score_content4{
+        .items4{
+            .item4{
+                margin:0 30rpx;
+                padding:40rpx 0;
+                height: 120rpx;
+                border-bottom: 1rpx solid #e0e0e0;
+                .item_left4{
+                    float: left;
+                    width: 160rpx;
+                    height: 120rpx;
+                    image{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .item_right4{
+                    float: left;
+                    width: 510rpx;
+                    margin-left: 20rpx;
+                    position: relative;
+                    .right_title4{
+                        height: 30rpx;
+                        width: 520rpx;
+                        line-height: 30rpx;
+                        font-size: 30rpx;
+                    }
+                    .time4{
+                        overflow: hidden;
+                        margin-top:50rpx;
+                        .time_left4{
+                            float: left;
+                            height: 22rpx;
+                            margin-top:19rpx;
+                            image{
+                                float: left;
+                                height: 20rpx;
+                                width: 19rpx;
+                                margin-right: 12rpx;
+                            }
+                            text{
+                                float: left;
+                                height: 22rpx;
+                                line-height: 22rpx;
+                                font-size: 22rpx;
+                                color:#d43c33;
+                            }
+                        }
+                        .time_right4{
+                            float: right;
+                            height: 26rpx;
+                            line-height: 26rpx;
+                            margin-top:12rpx;
+                            text{
+                                height: 26rpx;
+                                line-height: 26rpx;
+                                font-size: 26rpx;
+                                color:#d43c33;
+                                margin-right: 12rpx;
+                            }
+                            image{
+                                width: 20rpx;
+                                height: 18rpx;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .item4:last-child{
+                border-bottom: 0;
+            }
+        }
+    }
 }

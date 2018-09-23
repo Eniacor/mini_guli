@@ -2,6 +2,7 @@ const tips = require('../../../../common/tips');
 const Api = require('../../../../config/method');
 const Session = require('../../../../common/auth/session')
 const recorderManager = wx.getRecorderManager()
+const innerAudioContext = wx.createInnerAudioContext()
 const app = getApp();
 Page({
     /**
@@ -10,7 +11,10 @@ Page({
     data: {
         status: 1,
         sound: null,
-        type: 1
+        type: 1,
+        temp:'',
+        text:'',
+        cstatus:1,
     },
     /**
      * 生命周期函数--监听页面加载
@@ -23,12 +27,13 @@ Page({
             back:options.back
         })
         // this.handleData();
+      
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-
+    
     },
     /**
      * 生命周期函数--监听页面显示
@@ -40,11 +45,14 @@ Page({
      * 生命周期函数--监听页面隐藏
      */
     onHide: function () {
+        recorderManager.stop();
     },
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function () {},
+    onUnload: function () {
+        recorderManager.stop();
+    },
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
@@ -63,6 +71,10 @@ Page({
     onReachBottom: function () {},
     skipPage: app.skipPage,
     handleData: function () {
+        if(this.data.text==''&&this.data.temp==''){
+            tips.showModel('错误提示', "内容不能为空!");
+            return;
+        }
         if (this.data.type == 1) {
             let _this = this;
             let session = Session.get();
@@ -75,11 +87,12 @@ Page({
                         'openid': session.openid,
                         'qid': _this.data.id,
                         'time': _this.data.time,
+                        'content':_this.data.text
                     },
                     success: function (res) {
                         tips.showSuccess("评论成功!");
                         setTimeout(() => {
-                            wx.navigateTo({
+                            wx.redirectTo({
                                 url: '/pages/material/list/dati/index?id=' + _this.data.back
                             });
                         }, 1000);
@@ -92,15 +105,15 @@ Page({
                 Api.QuestionDiscuz({
                     openid: session.openid,
                     qid: _this.data.id,
-                    time: 0
+                    time: 0,
+                    content:_this.data.text
                 }).then((data) => {
                     tips.showSuccess("评论成功!");
                     setTimeout(() => {
-                        wx.navigateTo({
+                        wx.redirectTo({
                             url: '/pages/material/list/dati/index?id=' + _this.data.back
                         });
                     }, 1000);
-
                 }).catch(err => reject(err));
             }
         } else if (this.data.type == 2) {
@@ -115,11 +128,12 @@ Page({
                         'openid': session.openid,
                         'qid': _this.data.id,
                         'time': _this.data.time,
+                        'content':_this.data.text
                     },
                     success: function (res) {
                         tips.showSuccess("点评成功!");
                         setTimeout(() => {
-                            wx.navigateTo({
+                            wx.redirectTo({
                                 url: '/pages/material/list/dati/index?id=' + _this.data.back
                             });
                         }, 1000);
@@ -132,11 +146,12 @@ Page({
                 Api.QuestionRemark({
                     openid: session.openid,
                     qid: _this.data.id,
-                    time: 0
+                    time: 0,
+                    'content':_this.data.text
                 }).then((data) => {
                     tips.showSuccess("评论成功!");
                     setTimeout(() => {
-                        wx.navigateTo({
+                        wx.redirectTo({
                             url: '/pages/material/list/dati/index?id=' + _this.data.back
                         });
                     }, 1000);
@@ -155,11 +170,12 @@ Page({
                         'openid': session.openid,
                         'qid': _this.data.id,
                         'time': _this.data.time,
+                        'content':_this.data.text,
                     },
                     success: function (res) {
                         tips.showSuccess("评论成功!");
                         setTimeout(() => {
-                            wx.navigateTo({
+                            wx.redirectTo({
                                 url: '/pages/material/list/practice/index?id=' + _this.data.back
                             });
                         }, 1000);
@@ -172,17 +188,31 @@ Page({
                 Api.QuestionExerciseRemark({
                     openid: session.openid,
                     qid: _this.data.id,
-                    time: 0
+                    time: 0,
+                    content:_this.data.text
                 }).then((data) => {
                     tips.showSuccess("评论成功!");
                     setTimeout(() => {
-                        wx.navigateTo({
+                        wx.redirectTo({
                             url: '/pages/material/list/practice/index?id=' + _this.data.back
                         });
                     }, 1000);
                 }).catch(err => reject(err));
             }
         }
+    },
+    handleP: function (e) {
+        innerAudioContext.src = this.data.temp;
+        innerAudioContext.play();
+        this.setData({
+            cstatus:2
+        });
+    },
+    handleS:function(){
+        innerAudioContext.pause();
+        this.setData({
+            cstatus:1
+        });
     },
     timestampToTime: function (timestamp) {
         let date = new Date(timestamp * 1000);
@@ -208,7 +238,7 @@ Page({
     },
     handleStart: function () {
         const options = {
-            duration: 10000, //指定录音的时长，单位 ms
+            duration: 180000, //指定录音的时长，单位 ms
             sampleRate: 16000, //采样率
             numberOfChannels: 1, //录音通道数
             encodeBitRate: 96000, //编码码率

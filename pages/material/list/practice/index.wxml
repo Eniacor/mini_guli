@@ -10,8 +10,17 @@
     <view class="title">
         <text class="title_left backcolor_yellow">#{{data.id}}</text>
         <text class="title_middle backcolor_yellow">{{data.addtime}}</text>
-        <i-cell title="禁用点击和手势选择星" class="star">
-            <i-rate disabled="{{true}}" value="{{4}}"></i-rate>
+        <i-cell  class="star" wx:if="{{data.question_type_id==5||data.question_type_id==6||data.question_type_id==7||data.question_type_id==8||data.question_type_id==9}}">
+            <i-rate disabled="{{true}}" value="{{data.sum}}"  color="color1"></i-rate>
+        </i-cell>
+        <i-cell title="禁用点击和手势选择星" class="star" wx:if="{{data.question_type_id==10||data.question_type_id==11||data.question_type_id==12||data.question_type_id==13||data.question_type_id==14||data.question_type_id==15||data.question_type_id==16||data.question_type_id==17}}">
+            <i-rate disabled="{{true}}" value="{{data.snum}}" color="color3"></i-rate>
+        </i-cell>
+        <i-cell title="禁用点击和手势选择星" class="star" wx:if="{{data.question_type_id==18||data.question_type_id==19}}">
+            <i-rate disabled="{{true}}" value="{{data.snum}}" color="color2"></i-rate>
+        </i-cell>
+        <i-cell title="禁用点击和手势选择星" class="star" wx:if="{{data.question_type_id==20||data.question_type_id==21||data.question_type_id==22||data.question_type_id==23||data.question_type_id==24}}">
+            <i-rate disabled="{{true}}" value="{{data.snum}}" color="color4"></i-rate>
         </i-cell>
     </view>
     <import src="../../../../common/component/wxParse/wxParse.wxml" />
@@ -20,10 +29,10 @@
     </view>
     <view class="audio">
         <view class="audio_left" bindtap="playAudio" wx:if="{{isPlay==0}}">
-            <image src="" />
+            <image src="/images/static/lbo.png" />
         </view>
         <view class="audio_left" bindtap="pauseAudio" wx:else>
-            <image src="" style="background:red;" />
+            <image src="/images/static/lzan.png" />
         </view>
         <view class="audio_right">
             <view class="right_top">
@@ -31,16 +40,15 @@
             </view>
             <view class="right_bottom">
                 <view class="bottom_left">{{currentTime}}</view>
-                <view class="bottom_right">{{totalTime}}</view>
+                <view class="bottom_right">{{data.second}}</view>
             </view>
         </view>
     </view>
-    <view class="start">
-        <image class="img1" src="" />
+    <!-- <view class="start">
+        <image class="img1" src="/images/static/pbof.png" />
         <text>暂未开始</text>
-        <image class="img2" src="" />
-    </view>
-    <view class="tab">
+    </view> -->
+    <view class="tab" style="border-top:1rpx solid #e0e0e0;margin-top:20rpx;">
         <i-tabs current="{{ current }}" bindchange="handleChange" color="#d43c33">
             <i-tab key="tab1" title="优秀练习"></i-tab>
             <i-tab key="tab2" title="我的练习"></i-tab>
@@ -58,11 +66,11 @@
                     <view class="right_content">
                         <view wx:if="{{item.recording_seconds>0}}">
                             <view class="content_audio" wx:if="{{cstatus==item.id}}" bindtap="handleS">
-                                <image src="" style="background: #d43c33;" />
+                                <image src="/images/static/lbo1.png" />
                                 <text>{{item.recording_seconds}}"</text>
                             </view>
                             <view class="content_audio" wx:else data-id="{{item.id}}" data-id="{{item.id}}" data-url="{{item.recording_url}}" bindtap="handleP">
-                                <image src="" style="background:#222;" />
+                                <image src="/images/static/lbo1.png"/>
                                 <text>{{item.recording_seconds}}"</text>
                             </view>
                         </view>
@@ -77,30 +85,33 @@
                                     <view class="cright_content">
                                         <view wx:if="{{itemc.recording_seconds>0}}">
                                             <view class="content_audio" wx:if="{{cstatus==item.id+'.'+itemc.id}}" bindtap="handleS">
-                                                <image src="" style="background: #d43c33;" />
+                                                <image src="/images/static/lbo1.png" />
                                                 <text>{{itemc.recording_seconds}}"</text>
                                             </view>
                                             <view class="content_audio" wx:else data-id="{{item.id+'.'+itemc.id}}" data-url="{{itemc.recording_url}}" bindtap="handleP">
-                                                <image src="" style="background:#222;" />
+                                                <image src="/images/static/lbo1.png" />
                                                 <text>{{itemc.recording_seconds}}"</text>
                                             </view>
                                         </view>
                                         {{itemc.content}}
                                     </view>
                                 </view>
-                                <view class="citem_middle"></view>
+                                <view class="citem_middle">
+                                    <image class="img" src="/images/static/lming.png" />
+                                </view>
                             </view>
                         </view>
                     </view>
                     <view class="right_time">
+
                         <view class="time_left">{{item.addtime}}</view>
                         <view class="time_right" data-id="{{item.id}}" bindtap="discuzLike">
                             <text>{{item.like_num}}</text>
                             <image src="/images/static/index_recall_detail2.png" />
                         </view>
-                        <view class="time_right" data-id="{{item.id}}" bindtap="skipPage" style="margin-right:60rpx;" bindtap="skipPage" data-url="/pages/material/list/discuz/index?id={{item.id}}&type=3&back={{data.id}}" data-type="0">
+                        <view class="time_right" wx:if="{{identity==2}}"  data-id="{{item.id}}" bindtap="skipPage" style="margin-right:60rpx;" bindtap="skipPage" data-url="/pages/material/list/discuz/index?id={{item.id}}&type=3&back={{data.id}}" data-type="0">
                             <text>点评</text>
-                            <image src="/images/static/index_recall_detail2.png" />
+                            <image src="/images/static/lping.png" />
                         </view>
                     </view>
                 </view>
@@ -118,13 +129,13 @@
                 <view class="item_right">
                     <view class="right_name">{{item.nickname}}</view>
                     <view class="right_content">
-                        <view wx:if="{{item.recording_seconds}}">
+                        <view wx:if="{{item.recording_seconds>0}}">
                             <view class="content_audio" wx:if="{{cstatus==item.id}}" bindtap="handleS">
-                                <image src="" style="background: #d43c33;" />
+                                <image src="/images/static/lbo1.png" />
                                 <text>{{item.recording_seconds}}"</text>
                             </view>
                             <view class="content_audio" wx:else data-id="{{item.id}}" data-id="{{item.id}}" data-url="{{item.recording_url}}" bindtap="handleP">
-                                <image src="" style="background:#222;" />
+                                <image src="/images/static/lbo1.png" />
                                 <text>{{item.recording_seconds}}"</text>
                             </view>
                         </view>
@@ -139,11 +150,11 @@
                                     <view class="cright_content">
                                         <view wx:if="{{itemc.recording_seconds>0}}">
                                             <view class="content_audio" wx:if="{{cstatus==item.id+'.'+itemc.id}}" bindtap="handleS">
-                                                <image src="" style="background: #d43c33;" />
+                                                <image src="/images/static/lbo1.png"  />
                                                 <text>{{itemc.recording_seconds}}"</text>
                                             </view>
                                             <view class="content_audio" wx:else data-id="{{item.id+'.'+itemc.id}}" data-url="{{itemc.recording_url}}" bindtap="handleP">
-                                                <image src="" style="background:#222;" />
+                                                <image src="/images/static/lbo1.png"  />
                                                 <text>{{itemc.recording_seconds}}"</text>
                                             </view>
                                         </view>

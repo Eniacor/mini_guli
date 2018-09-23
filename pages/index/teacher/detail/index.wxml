@@ -1,8 +1,8 @@
-<view class="teachers" style="margin-bottom:98rpx;">
-    <view class="teacher" >
+<view class="teachers" >
+    <view class="teacher" style="margin-bottom:98rpx;">
         <view class="teacher_top">
             <view class="top_left">
-                <image src="/images/static/index_teacher.png" />
+                <image src="{{famous.avatarurl}}" />
             </view>
             <view class="top_right">
                 <view class="title">{{famous.realname}}
@@ -14,14 +14,13 @@
                 </view>
             </view>
         </view>
-
     </view>
     <import src="../../../../common/component/wxParse/wxParse.wxml" />
     <view class="wxParse">
         <template is="wxParsec" data="{{wxParseData:article.nodes}}" />
     </view>
     <view  class="bottom">
-        <view class="bottom_item" bindtap="skipPage" data-url="/pages/index/teacher/counsel/index" data-type="0">免费分析成绩单</view>
-        <view class="bottom_item" bindtap="skipPage" data-url="/pages/index/teacher/order/index" data-type="0">免费预约名师咨询</view>
+        <view class="bottom_item" bindtap="skipPage" data-url="/pages/index/teacher/order/index" data-type="0">免费分析成绩单</view>
+        <view class="bottom_item" bindtap="skipPage" data-url="/pages/index/teacher/counsel/index" data-type="0">免费预约名师咨询</view>
     </view>
 </view>

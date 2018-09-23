@@ -2,31 +2,31 @@
     <view class="category_item {{status==1?'category_item-activ':''}}" bindtap="handleSwitch" data-id="1">
         PTE课程推荐
     </view>
-    <view class="category_item {{status==2?'category_item-activ':''}}" bindtap="handleSwitch" data-id="2">
+    <view class="category_item {{status==2?'category_item-activ':''}}" bindtap="handleSwitch" data-id="2" bindtap="skipPage" data-url="/pages/course/activity/index" data-type="0">
         最新活动
     </view>
-    <view class="category_item {{status==3?'category_item-activ':''}}" bindtap="handleSwitch" data-id="3">
+    <view class="category_item {{status==3?'category_item-activ':''}}" bindtap="handleSwitch" data-id="3" bindtap="skipPage" data-url="/pages/person/product/index" data-type="0">
         考试周边产品
     </view>
-    <view class="category_item {{status==4?'category_item-activ':''}}" bindtap="handleSwitch" data-id="4">
+    <view class="category_item {{status==4?'category_item-activ':''}}" bindtap="handleSwitch" data-id="4" bindtap="skipPage" data-url="/pages/person/about/index" data-type="0">
         学校简介
     </view>
-    <view class="category_item {{status==5?'category_item-activ':''}}" bindtap="handleSwitch" data-id="5">
+    <view class="category_item {{status==5?'category_item-activ':''}}" bindtap="handleSwitch" data-id="5" bindtap="skipPage" data-url="/pages/index/teacher/index" data-type="0">
         名师专栏
     </view>
-    <view class="category_item {{status==6?'category_item-activ':''}}" bindtap="handleSwitch" data-id="6">
+    <view class="category_item {{status==6?'category_item-activ':''}}" bindtap="handleSwitch" data-id="6" bindtap="skipPage" data-url="/" data-type="0">
         考位信息交换
     </view>
 </view>
 <view class="course">
     <view class="course_banner">
-        <image src="/images/static/course1.png" />
+        <image src="{{imgUrl2[0].banner_img}}" />
     </view>
     <view class="course_contents" wx:if="{{course!=null}}">
         <view class="content" wx:for="{{course}}" wx:key="unique" bindtap="skipPage" data-url="/pages/course/cdetail/index?id={{item.id}}" data-type="0">
             <view class="content_left">
-                <image src="/images/static/course_i.png" />
-                <view class="left_biao">立减${{item.discount}}</view>
+                <image src="{{item.title_img}}" />
+                <!-- <view class="left_biao">立减${{item.discount}}</view> -->
             </view>
             <view class="content_right">
                 <view class="right_title">
@@ -60,13 +60,13 @@
 </view>
 <view class="course">
     <view class="course_banner">
-        <image src="/images/static/course1.png" />
+        <image src="{{imgUrl1[0].banner_img}}" />
     </view>
     <view class="course_contents" wx:if="{{activity}}">
         <view class="content" wx:for="{{activity}}" wx:key="unique" bindtap="skipPage" data-url="/pages/course/adetail/index?id={{item.id}}" data-type="0">
             <view class="content_left">
                 <image src="{{item.title_img}}" />
-                <view class="left_biao">立减${{item.discount}}</view>
+                <!-- <view class="left_biao">立减${{item.discount}}</view> -->
             </view>
             <view class="content_right">
                 <view class="right_title">

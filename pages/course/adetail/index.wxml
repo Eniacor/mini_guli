@@ -18,7 +18,7 @@
                 <text>{{famous.campus}}</text>
             </view>
             <view class="bao_right">
-                <image class="icon" src="/images/static/course_c.png" />
+                <image class="icon" src="/images/static/lri.png" />
                 <text>{{famous.activity_time}}</text>
             </view>
         </view>
@@ -33,33 +33,38 @@
             <text class="title_txt">相关推荐</text>
         </view>
         <view class="recom_contents">
-            <view class="content">
+            <view class="content" bindtap="skipPage" data-url="/pages/person/product/detail/index?id={{rgood[0].id}}">
                 <view class="content_img">
-                    <image src="/images/static/index_score_detail3.png" />
+                    <image src="{{rgood[0].title_img1}}" />
                 </view>
-                <view class="content_txt">文章标题文章标题文章标题文章标题</view>
+                <view class="content_txt">{{rgood[0].title}}</view>
             </view>
-            <view class="content">
+             <view class="content" bindtap="skipPage" data-url="/pages/person/product/detail/index?id={{rgood[1].id}}">
                 <view class="content_img">
-                    <image src="/images/static/index_score_detail3.png" />
+                    <image src="{{rgood[1].title_img1}}" />
                 </view>
-                <view class="content_txt">文章标题文章标题文章标题文章标题</view>
+                <view class="content_txt">{{rgood[1].title}}</view>
             </view>
-            <view class="content">
+             <view class="content" bindtap="skipPage" data-url="/pages/person/product/detail/index?id={{rgood[2].id}}">
                 <view class="content_img">
-                    <image src="/images/static/index_score_detail3.png" />
+                    <image src="{{rgood[2].title_img1}}" />
                 </view>
-                <view class="content_txt">文章标题文章标题文章标题文章标题</view>
+                <view class="content_txt">{{rgood[2].title}}</view>
             </view>
         </view>
     </view>
 </view>
 <view class="bottom">
-    <view class="bottom_left" bindtap="skipPage" data-url="/pages/index/exercise/index" data-type="0" >马上预约</view>
+     <view class="bottom_left" data-type="0" >
+        <button class="yao" open-type="share"> 邀请好友</button>
+    </view>
     <view class="bottom_right">
-        <button open-type="share">邀请好友</button>
+        <button class="ma" open-type="contact">马上报名</button>
     </view>
 </view>
-<view class="left" bindtap="handleCollect" data-id="{{id}}">
+<view class="left" bindtap="handleCollect" data-id="{{id}}" wx:if="{{iscang==0}}">
     <image src="/images/static/index_exercise_cang.png" />
+</view>
+<view class="left" bindtap="handleCollect" data-id="{{id}}"  wx:if="{{iscang==1}}">
+    <image src="/images/static/lcanga.png" />
 </view>

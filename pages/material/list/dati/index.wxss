@@ -1,6 +1,8 @@
 .dati {
   background: #fff;
-  margin-bottom: 98rpx;
+}
+.top {
+  background: #f6f6f6;
 }
 .head {
   padding: 0 30rpx;
@@ -78,6 +80,10 @@
   color: #222;
   line-height: 45rpx;
 }
+.aback {
+  padding: 30rpx 0;
+  background: #fff;
+}
 .audio {
   width: 690rpx;
   height: 100rpx;
@@ -96,7 +102,6 @@
 .audio .audio_left image {
   width: 60rpx;
   height: 60rpx;
-  background: #222;
 }
 .audio .audio_right {
   width: 540rpx;
@@ -121,6 +126,7 @@
   padding: 30rpx 50rpx;
   font-size: 28rpx;
   height: 66rpx;
+  padding-top: 0;
 }
 .cang .cang_left {
   float: left;
@@ -146,9 +152,8 @@
   margin-top: 20rpx;
   margin-left: 15px;
   margin-right: 12rpx;
-  width: 32rpx;
+  width: 30rpx;
   height: 28rpx;
-  background: #d43c33;
 }
 .cang .cang_right text {
   float: left;
@@ -190,6 +195,7 @@
 }
 .discuz .items {
   background: #f6f6f6;
+  padding-bottom: 128rpx;
 }
 .discuz .items .item {
   background: #fff;
@@ -235,8 +241,8 @@
   float: left;
   margin-top: 17rpx;
   margin-left: 30rpx;
-  width: 30rpx;
-  height: 30rpx;
+  width: 24rpx;
+  height: 32rpx;
 }
 .discuz .items .item .item_right .right_content .content_audio text {
   float: right;
@@ -291,9 +297,8 @@
   float: left;
   margin-top: 17rpx;
   margin-left: 30rpx;
-  width: 30rpx;
-  height: 30rpx;
-  background: #d43c33;
+  width: 24rpx;
+  height: 32rpx;
 }
 .discuz .items .item .item_right .right_content .citems .citem .citem_right .cright_content .content_audio text {
   float: right;
@@ -307,9 +312,12 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 100rpx;
-  height: 100rpx;
-  background: #d43c33;
+  width: 124rpx;
+  height: 124rpx;
+}
+.discuz .items .item .item_right .right_content .citems .citem .citem_middle .citem_mimg {
+  width: 124rpx;
+  height: 124rpx;
 }
 .discuz .items .item .item_right .right_content .citems .item:first-child {
   margin-top: 0;
@@ -421,4 +429,70 @@
 .modle .item_explain {
   font-size: 30rpx;
   margin-left: 40rpx;
+}
+.jian {
+  background: #f6f6f6;
+  height: 40rpx;
+}
+.wxParse {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.wxParse .wxParse-blockquote {
+  height: 30rpx;
+  padding: 30rpx 30rpx;
+}
+.wxParse .wxParse-blockquote .WxEmojiView-line {
+  float: left;
+  width: 12rpx;
+  height: 30rpx;
+  background: #d43c33;
+  margin-right: 20rpx;
+  border-radius: 6rpx;
+}
+.wxParse .wxParse-blockquote .wxParse-inline {
+  float: left;
+  font-size: 30rpx;
+  font-weight: 600;
+  line-height: 30rpx;
+  color: #d43c33;
+}
+.wxParse .wxParse-p .wxParse-inline {
+  padding: 0 30rpx;
+  font-size: 26rpx;
+  line-height: 44rpx;
+}
+.wxParse .wxParse-ul .wxParse-li .wxParse-li-inner {
+  overflow: hidden;
+  padding: 0 30rpx;
+}
+.wxParse .wxParse-ul .wxParse-li .wxParse-li-inner .wxParse-li-text {
+  float: left;
+}
+.wxParse .wxParse-ul .wxParse-li .wxParse-li-inner .wxParse-li-text .wxParse-li-circle {
+  float: left;
+  width: 8rpx;
+  height: 8rpx;
+  background: #222;
+  border-radius: 50%;
+}
+.wxParse .wxParse-ul .wxParse-li .wxParse-li-inner .wxParse-li-text:first-child {
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+}
+.wxParse .wxParse-ul .wxParse-li .wxParse-li-inner .wxParse-li-text:nth-child(2) {
+  width: 662rpx;
+}
+.wxParse .wxParse-ul .wxParse-li .wxParse-li-inner .wxParse-li-text:nth-child(2) .wxParse-inline .wxParse-inline {
+  display: inline;
+  font-size: 26rpx;
+  line-height: 44rpx;
+}
+.wxParse .wxParse-ul .wxParse-li .wxParse-li-inner .wxParse-li-text:nth-child(2) .WxEmojiView-line {
+  display: inline;
+}
+.wxParse .wxParse-ul .wxParse-li .wxParse-li-inner .wxParse-li-text:nth-child(2) .wxParse-inline {
+  display: inline;
+  font-size: 26rpx;
+  line-height: 44rpx;
 }

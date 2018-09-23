@@ -44,6 +44,7 @@ module.exports = {
     ReserveReportImg:(data) =>request(api.ReserveReportImg,data,'POST'),
     //高分榜
     HighScoreIndex:(data) =>request(api.HighScoreIndex,data,'GET'),
+    HighScoreIndexh:(data) =>request(api.HighScoreIndexh,data,'GET'),
     HighScoreShow:(data) =>request(api.HighScoreShow,data,'POST'),
     //练习
     PracticeList:(data)=>request(api.PracticeList,data,'GET'),
@@ -55,14 +56,14 @@ module.exports = {
     Article:(data)=>request(api.Article,data,'GET'),
     ArticleShow:(data)=>request(api.ArticleShow,data,'GET'),
     ArticleCollect:(data)=>request(api.ArticleCollect,data,'POST'),
-    ArticleMyCollect:(data)=>request(api.ArticleMyCollect,data,'GET'),
+    ArticleMyCollect:(data)=>request(api.ArticleMyCollect,data,'POST'),
     //活动
     Course:(data)=>request(api.Course,data,'GET'),
     CourseShow:(data)=>request(api.CourseShow,data,'GET'),
     ActivityShow:(data)=>request(api.ActivityShow,data,'GET'),
     Activity:(data)=>request(api.Activity,data,'GET'),
     //用户中心
-    HasSign:(data)=>request(api.HasSign,data,'GET'),
+    HasSign:(data)=>request(api.HasSign,data,'POST'),
     Sign:(data)=>request(api.Sign,data,'POST'),
     Modified:(data)=>request(api.Modified,data,'POST'),
     //商品
@@ -77,4 +78,35 @@ module.exports = {
     ActivityMyCollect:(data)=>request(api.ActivityMyCollect,data,'GET'),
     CourseCollect:(data)=>request(api.CourseCollect,data,'POST'),
     CourseMyCollect:(data)=>request(api.CourseMyCollect,data,'GET'),
+    //积分
+    IntegralOrder:(data)=>request(api.IntegralOrder,data,'POST'),
+    IntegralOwner:(data)=>request(api.IntegralOwner,data,'GET'),
+    IntegralOshow:(data)=>request(api.IntegralOshow,data,'GET'),
+    GoodsOrder:(data)=>request(api.GoodsOrder,data,'GET'),
+    GoodsOrders:(data)=>request(api.GoodsOrders,data,'GET'),
+    //vip
+    VipMember:(data)=>request(api.VipMember,data,'GET'),
+    VipExport:(data)=>request(api.VipExport,data,'POST'),
+    VipExchange:(data)=>request(api.VipExchange,data,'POST'),
+    VipHasMember:(data)=>request(api.VipHasMember,data,'POST'),
+    Banner:(data)=>request(api.Banner,data,'POST'),
+    Fbanner:(data)=>request(api.Fbanner,data,'GET'),
+    Apply:(data)=>request(api.Apply,data,'POST'),
+
+    PHCollect:(data)=>request(api.PHCollect,data,'POST'),
+    MHCollect:(data)=>request(api.MHCollect,data,'POST'),
+    MHLike:(data)=>request(api.MHLike,data,'POST'),
+    MSearch:(data)=>request(api.MSearch,data,'GET'),
+    QHCollect:(data)=>request(api.QHCollect,data,'POST'),
+    QSearch:(data)=>request(api.QSearch,data,'POST'),
+    MQCollect:(data) =>request(api.MQCollect,data,'POST'),
+    HCArticle:(data) =>request(api.HCArticle,data,'POST'),
+    
+    HACollect:(data) =>request(api.HACollect,data,'POST'),
+    HCCollect:(data) =>request(api.HCCollect,data,'POST'),
+    VipText:(data) =>request(api.VipText,data,'POST'),
+    
+    NewWordD:(data) =>request(api.NewWordD,data,'POST'),
+    NewWordP:(data) =>request(api.NewWordP,data,'GET'),
+    NewWordN:(data) =>request(api.NewWordN,data,'GET'),
 }

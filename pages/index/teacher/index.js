@@ -63,6 +63,9 @@ Page({
     handleData:function(){
         let _this=this;
         Api.FamousIndex({}).then(({ data }) => {
+            for(let i=0;i<data.length;i++){
+                data[i]['desc']=data[i]['desc'].slice(0,66);
+            }
             _this.setData({
                 famous:data
             });

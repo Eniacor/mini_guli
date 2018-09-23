@@ -31,24 +31,17 @@
             <text class="title_text">开通会员:</text>
         </view>
         <view class="contents">
-            <view class="content {{status==1?'active':''}}"  bindtap="handleSwitch" data-status="1">
-                <text class="content_dot">一个月</text>
-                <text class="content_text">99元</text>
-            </view>
-            <view class="content {{status==2?'active':''}}" bindtap="handleSwitch" data-status="2">
-                <text class="content_dot">三个月</text>
-                <text class="content_text">199元</text>
-            </view>
-            <view class="content {{status==3?'active':''}}" bindtap="handleSwitch" data-status="3">
-                <text class="content_dot">六个月</text>
-                <text class="content_text">299元</text>
-                <image class="content_img" src="/images/static/recommend.png" />
+            <view class="content {{status==index?'active':''}}" wx:for="{{member}}" wx:key="unique"  bindtap="handleSwitch" data-status="{{index}}" data-pid="{{item.id}}">
+                <text class="content_dot">{{item.key}}个月</text>
+                <text class="content_text">{{item.value}}元</text>
+                <image class="content_img" wx:if="{{index==2}}" src="/images/static/recommend.png" />
             </view>
         </view>
     </view>
-    <view class="btn">立即开通</view>
+    <view class="btn" bindtap="handleBuy" wx:if="{{user.vipstatus==0}}">立即开通</view>
+    <view class="btn" bindtap="handleBuy" wx:if="{{user.vipstatus==1}}">续费会员</view>
     <view class="bottom">
-        <button class="btnl" type="" loading="{{loading}}" disabled="{{disabled}}" bindtap="onTap">
+        <button class="btnl"  open-type="contact">
             联系客服
         </button>
          <button class="btnd" type="" loading="{{loading}}" disabled="{{disabled}}" bindtap="onTap" bindtap="skipPage" data-url="/pages/person/member/cheng/index" data-type="0">

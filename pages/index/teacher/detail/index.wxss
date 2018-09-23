@@ -85,7 +85,7 @@
   height: 28rpx;
 }
 .wxParse {
-  padding-bottom: 30rpx;
+  padding-bottom: 98rpx;
 }
 .wxParse .wxParse-blockquote {
   height: 30rpx;

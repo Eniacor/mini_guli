@@ -1,6 +1,6 @@
 .teachers {
   background: #f6f6f6;
-  margin-bottom: 60rpx;
+  padding-bottom: 100rpx;
 }
 .teachers .top {
   background: #fff;
@@ -161,6 +161,10 @@
   line-height: 30rpx;
   color: #d43c33;
 }
+.wxParse .wxParse-blockquote .wxParse-img {
+  margin: 0 auto;
+  text-align: center;
+}
 .wxParse .wxParse-p .wxParse-inline {
   padding: 0 30rpx;
   font-size: 26rpx;
@@ -266,6 +270,14 @@
   font-size: 32rpx;
   background: #d43c33;
 }
+.bottom .bottom_left .yao {
+  display: static;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background: #d43c33;
+  line-height: 98rpx;
+}
 .bottom .bottom_right {
   float: left;
   background: #fff;
@@ -275,7 +287,7 @@
   height: 98rpx;
   font-size: 32rpx;
 }
-.bottom .bottom_right button {
+.bottom .bottom_right .ma {
   background: #fff;
   width: 375rpx;
   text-align: center;

@@ -21,7 +21,7 @@
   bottom: 0rpx;
   right: 60rpx;
   font-size: 24rpx;
-  color: #aaa;
+  color: #222;
 }
 .discuzz .btn {
   width: 690rpx;

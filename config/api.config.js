@@ -42,6 +42,7 @@ module.exports = {
     PracticeMyCollect:`${xapp.api_host}/Practice/myCollect`,
     //高分
     HighScoreIndex:`${xapp.api_host}/HighScore/index`,
+    HighScoreIndexh:`${xapp.api_host}/HighScore/hindex`,
     HighScoreShow:`${xapp.api_host}/HighScore/show`,
     //老师
     FamousIndex:`${xapp.api_host}/FamousTeacher/index`,
@@ -76,5 +77,40 @@ module.exports = {
     CourseCollect:`${xapp.api_host}/OfflineCourse/collect`,
     CourseMyCollect:`${xapp.api_host}/OfflineCourse/mycollect`,
     ActivityCollect:`${xapp.api_host}/OfflineActivity/collect`,
-    ActivityMyCollect:`${xapp.api_host}/OfflineMyActivity/mycollect`,
+    ActivityMyCollect:`${xapp.api_host}/OfflineActivity/mycollect`,
+    //积分
+    IntegralOrder:`${xapp.api_host}/IntegralGoods/order`,
+    IntegralOwner:`${xapp.api_host}/IntegralGoods/owner`,
+    IntegralOshow:`${xapp.api_host}/IntegralGoods/oshow`,
+    GoodsOrder:`${xapp.api_host}/Goods/order`,
+    GoodsOrders:`${xapp.api_host}/Goods/orders`,
+    //vip
+    VipMember:`${xapp.api_host}/Vip/member`,
+    VipExport:`${xapp.api_host}/Vip/export`,
+    VipExchange:`${xapp.api_host}/Vip/exchange`,
+    VipHasMember:`${xapp.api_host}/Vip/hasmember`,
+    Banner:`${xapp.api_host}/Banner/banner`,
+    Fbanner:`${xapp.api_host}/Banner/fbanner`,
+    Apply:`${xapp.api_host}/ApplyMaterial/apply`,
+    //ddd
+    PHCollect:`${xapp.api_host}/Practice/has_pcollect`,
+
+    MHCollect:`${xapp.api_host}/Memory/has_collect`,
+    MHLike:`${xapp.api_host}/Memory/has_like`,
+
+    MSearch:`${xapp.api_host}/Memory/search`,
+    QHCollect:`${xapp.api_host}/Question/has_collect`,
+    QSearch:`${xapp.api_host}/Question/search`,
+    MQCollect:`${xapp.api_host}/Question/mycollect`,
+    HCArticle:`${xapp.api_host}/Article/has_article`,
+
+    HACollect:`${xapp.api_host}/OfflineActivity/has_collect`,
+    HCCollect:`${xapp.api_host}/OfflineCourse/has_collect`,
+    VipText:`${xapp.api_host}/Vip/mshow`,
+    //dd
+    NewWordD:`${xapp.api_host}/NewWord/destory`,
+    NewWordP:`${xapp.api_host}/NewWord/prev`,
+    NewWordN:`${xapp.api_host}/NewWord/next`,
+
+
 }  

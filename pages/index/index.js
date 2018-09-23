@@ -7,11 +7,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-        imgUrls: [
-            '../../images/static/banner1.png',
-            '../../images/static/banner1.png',
-            '../../images/static/banner1.png'
-        ],
+        imgUrls: [],
         indicatorDots:true,
         autoplay:true,
         interval: 5000,
@@ -22,11 +18,30 @@ Page({
      */
     onLoad: function (options) {
         this.handleData();
+        if (wx.canIUse('loadFontFace')) {
+            console.log("支持自定义字体");
+            wx.loadFontFace({
+              family: 'mini',
+              source: 'url("https://cdn.caomall.net/15355991221772607881.ttf")',
+              success: function(res) {
+                console.log("字体加载成功") //  loaded
+              },
+              fail: function(res) {
+                console.log("字体加载失败") //  error
+              },
+              complete: function(res) {
+                console.log("加载完成");
+              }
+            });
+          } else {
+            console.log('不支持自定义字体')
+          }
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
+       
     },
     /**
      * 生命周期函数--监听页面显示
@@ -97,14 +112,54 @@ Page({
     },
     handleData:function(){
         let _this=this;
-        Api.HighScoreIndex({}).then(({ data }) => {
+        Api.HighScoreIndexh({}).then(({ data }) => {
             for(let i=0;i<data.length;i++){
-                data[i]["title"]=data[i]["title"].slice(0,19)+'...';
+                if(_this.strLength(data[i].title)>19){
+                    data[i].title=data[i].title.slice(0,19)+'...';
+                }
             }
             _this.setData({
                 score:data
             });
             resolve();
         }).catch(err => reject(err));
+        Api.Banner({
+            type:1,
+        }).then(({ data }) => {
+            console.log(data);
+            _this.setData({
+                imgUrls:data
+            });
+            resolve();
+        }).catch(err => reject(err));
+
+        //   wx.loadFontFace({
+        //     family: 'jianxin',
+        //     source: 'url("https://a.squmo.com/wenbo")',
+        //     success: function(res) {
+        //       console.log(res.status) //  loaded
+        //     },
+        //     fail: function(res) {
+        //       console.log(res.status) //  error
+        //     },
+        //     complete: function(res) {
+        //       console.log(res.status);
+        //     }
+        //   });
+    },
+    strLength:function(str){
+        var len = 0;
+        for (var i=0; i<str.length; i++) { 
+         var c = str.charCodeAt(i); 
+        //单字节加1 
+         if ((c >= 0x0001 && c <= 0x007e) || (0xff60<=c && c<=0xff9f)) { 
+           len++; 
+         } 
+         else { 
+          len+=2; 
+         } 
+        } 
+        return len;
     }
+  
 });

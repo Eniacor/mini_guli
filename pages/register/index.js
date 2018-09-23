@@ -3,6 +3,7 @@ const tips = require('../../common/tips.js');
 const md5 = require('../../common/utils/md5.js');
 const Api = require("../../config/method.js");
 const Session = require('../../common/auth/session')
+const api = require('../../config/api.config');
 Page({
     /**
      * 页面的初始数据
@@ -29,22 +30,24 @@ Page({
             },
         ],
         date: '请选择您的考试时间',
-        score: ['请输入您的目标分数', 100, 200, 300, 400, 500, 600, 700],
+        score: ['请输入您的目标分数',36,50,65,79],
         index: 0,
         hasRead: true,
-
-        nickname: null,
+        nickname:'',
         sex: 1,
         // exam_date: null,
-        target_score: null,
+        target_score:'',
         has_experience: 1,
-        email: null,
-        city: null,
+        email:'',
+        city:'',
+        tel:'请绑定手机号'
     },
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function (options) {},
+    onLoad: function (options) {
+        
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
@@ -53,31 +56,6 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-        // let appKey = '3dab2396ab7ca4f9';
-        // let key = 'FSugZEbevvhW9cJux2qoD5ME8VFF7Bai';
-        // let salt = (new Date).getTime();
-        // let query = 'good';
-        // let from = '';
-        // let to = 'en';
-        // let str1 = appKey + query + salt + key;
-        // let sign = md5.hexMD5(str1);
-        // wx.request({
-        //     url: 'https://openapi.youdao.com/api', //仅为示例，并非真实的接口地址
-        //     data: {
-        //         q: query,
-        //         appKey: appKey,
-        //         salt: salt,
-        //         from: from,
-        //         to: to,
-        //         sign: sign
-        //     },
-        //     header: {
-        //         'content-type': 'application/json' // 默认值
-        //     },
-        //     success: function (res) {
-        //         console.log(res.data)
-        //     }
-        // })
     },
     /**
      * 生命周期函数--监听页面隐藏
@@ -181,22 +159,26 @@ Page({
     },
 
     getUserInfo: function (e) {
+        let _this=this;
         let session = Session.get();
-        console.log(e);
-        if (e.detail.errMsg == "getUserInfo:ok") {
-            let nickname = this.isEmptyValue(this.data.nickname, '用户昵称不能为空！', null);
-            let date = this.isEmptyValue(this.data.date, '请选择您的考试时间!', '请选择您的考试时间');
-            let score = this.isEmptyValue(this.data.score[this.data.index], '请输入您的目标分数！', '请输入您的目标分数');
-            let email = this.isEmptyValue(this.data.email, '请输入您的邮箱！', null);
-            let city = this.isEmptyValue(this.data.city, '请输入您所在的城市！', null);
-            if (nickname && date && score && email && city) {
+        let tel = this.isEmptyValue(this.data.tel, '请绑定手机号！', '请绑定手机号');
+        let nickname = this.isEmptyValue(this.data.nickname, '用户昵称不能为空！', '');
+        let date = this.isEmptyValue(this.data.date, '请选择您的考试时间!', '请选择您的考试时间');
+        let score = this.isEmptyValue(this.data.score[this.data.index], '请输入您的目标分数！', '请输入您的目标分数');
+        let email = this.isEmptyValue(this.data.email, '请输入您的邮箱！','');
+        let city = this.isEmptyValue(this.data.city, '请输入您所在的城市！','');
+        if(email){
+            var hasEmail = this.verifyEmail(this.data.email, '邮箱格式不正确!');
+        }
+        if (tel&&nickname && date && score && email && city&&hasEmail) {
+            if (e.detail.errMsg == "getUserInfo:ok") {
                 Api.UserRegister({
                     openid:session.openid,
                     tel:this.data.tel,
                     tel_prefix:this.data.tel_prefix,
                     tel_nation:e.detail.userInfo.country,
                     nickname: this.data.nickname,
-                    avatarurl:e.detail.avatarUrl,
+                    avatarurl:e.detail.userInfo.avatarUrl,
                     sex: this.data.sex,
                     exam_date: Math.round(new Date(this.data.date).getTime() / 1000),
                     target_score: this.data.score[this.data.index],
@@ -204,10 +186,60 @@ Page({
                     email: this.data.email,
                     city: this.data.city,
                 }).then(({data}) => {
+                    _this.handleLogin();
+                    tips.showSuccess("注册成功!");
+                    setTimeout(()=>{
+                        wx.switchTab({url: '/pages/index/index'});
+                    },1000);
                     resolve();
                 }).catch(err => reject(err));
             }
         }
+    },
+    handleMobile:function(e){
+        this.setData({
+            tel: e.detail.value
+        })
+    },
+    handleLogin:function(){
+        let _this=this;
+        let func_arr = [];
+        Session.clear();
+        wx.login({
+            success: function (res) {
+                let { code } = res;
+                let data ={code:code}
+                wx.request({
+                    url: api.XcxLogin,
+                    header: {
+                        'content-type': 'application/x-www-form-urlencoded'
+                    },
+                    data: data,
+                    method: 'POST',
+                    success: function (response) {
+                        let body = response.data
+                        Session.set(body.result);
+                        func_arr.forEach(d => {
+                            d();
+                        })
+                        func_arr = [];
+                        if(body.result.is_bind==1){
+                            wx.switchTab({url:'/pages/index/index'})
+                        }else{
+                            _this.handleData(); 
+                        }
+                    },
+                    fail: function (err) {
+                        tips.showModel('网络异常', err.errMsg || err)
+                    }
+                });
+            },
+            fail: function (error) {
+                // fail
+                console.error(error);
+                options.fail(new Error('获取微信用户信息失败，请检查网络状态'));
+            }
+        })
     },
     getPhoneNumber: function (e) {
         let session = Session.get();
@@ -229,7 +261,16 @@ Page({
     },
     isEmptyValue: function (value, errMsg, verified) {
         if (value == verified) {
-            tips.showWarning('错误', errMsg);
+            tips.showWarning('错误提示', errMsg);
+            return false;
+        } else {
+            return true;
+        }
+    },
+    verifyEmail: function (value, errMsg) {
+        let mailReg = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
+        if (!mailReg.test(value)){
+            tips.showWarning('错误提示', errMsg);
             return false;
         } else {
             return true;

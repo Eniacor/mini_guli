@@ -1,7 +1,6 @@
 .iamges {
   width: 750rpx;
   height: 560rpx;
-  background: red;
 }
 .img {
   width: 750rpx;
@@ -38,7 +37,6 @@
   float: left;
   width: 32rpx;
   height: 32rpx;
-  background: red;
   margin-left: 20rpx;
 }
 .info-text {

@@ -66,7 +66,7 @@ Page({
         }) => {
             if (data) {
                 for (let i = 0; i < data.length; i++) {
-                    data[i]['addtime'] = _this.timestampToTime(data[i]['addtime'].slice(0,10));
+                    data[i]['addtime'] = _this.timestampToTime(data[i]['addtime']).slice(0,10);
                 }
                 _this.setData({
                     score: data

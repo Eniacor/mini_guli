@@ -14,8 +14,10 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        console.log(options.month);
         this.setData({
-            id:options.id
+            id:options.id,
+            month:options.month
         });
         this.handleData();
     },
@@ -75,6 +77,14 @@ Page({
             WxParse.wxParse('article', 'html', article, _this, 5);
             _this.setData({
                 score:data
+            });
+            resolve();
+        }).catch(err => reject(err));
+        Api.Rgood({}).then(({
+            data
+        }) => {
+            _this.setData({
+                rgood:data
             });
             resolve();
         }).catch(err => reject(err));

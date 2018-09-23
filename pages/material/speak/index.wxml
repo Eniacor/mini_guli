@@ -18,7 +18,7 @@
                 Read aloud
             </view>
         </view>
-         <view class="content_item" bindtap="skipPage" data-url="/pages/material/list/index?id=6" data-type="0">
+         <view class="content_item"  bindtap="skipPage" data-url="/pages/material/list/index?id=6" data-type="0">
             <view class="item_title">
                 RS
             </view>
@@ -31,23 +31,23 @@
                 DI
             </view>
             <view class="item_sub">
-                Describe image
+               Describe image
             </view>
         </view>
-         <view class="content_item" bindtap="skipPage" data-url="/pages/material/list/index?id=8" data-type="0">
+         <view class="content_item"  bindtap="skipPage" data-url="/pages/material/list/index?id=8" data-type="0">
             <view class="item_title">
                 RL
             </view>
             <view class="item_sub">
-                Re-tell lecture
+                Re-tell  lecture
             </view>
         </view>
-         <view class="content_item" bindtap="skipPage" data-url="/pages/material/list/index?id=9" data-type="0">
-            <view class="item_title">
+         <view class="content_item"  bindtap="skipPage" data-url="/pages/material/list/index?id=9" data-type="0">
+            <view class="item_title" style="width:82rpx;">
                 ASQ
             </view>
             <view class="item_sub">
-                Answer short question
+               Answer short question
             </view>
         </view>
 

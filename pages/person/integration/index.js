@@ -68,6 +68,9 @@ Page({
         Api.Irgood({}).then(({
             data
         }) => {
+            for(let i=0;i<data.length;i++){
+                data[i]['title']=data[i]['title'].slice(0,10);
+            }
             _this.setData({
                 rgood:data
             });
@@ -78,7 +81,6 @@ Page({
         }).then(({
             data
         }) => {
-            console.log(data);
             _this.setData({
                 user: data
             });

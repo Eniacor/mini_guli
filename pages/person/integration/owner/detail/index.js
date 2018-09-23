@@ -1,24 +1,23 @@
+const tips = require('../../../../../common/tips.js');
+const Api = require("../../../../../config/method.js");
+const Session = require('../../../../../common/auth/session')
+const WxParse = require('../../../../../common/component/wxParse/wxParse.js');
 const app =getApp()
 Page({
     /**
      * 页面的初始数据
      */
     data: {
-        imgUrls: [
-            '../../images/static/banner1.png',
-            '../../images/static/banner1.png',
-            '../../images/static/banner1.png'
-        ],
-        indicatorDots:true,
-        autoplay:true,
-        interval: 5000,
-        duration: 1000
+        
     },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-    
+        this.setData({
+            id:options.id
+        });
+        this.handleData();
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
@@ -65,31 +64,32 @@ Page({
      */
     onPullDownRefresh: function () {
     },
-    changeIndicatorDots: function (e) {
-        this.setData({
-            indicatorDots: !this.data.indicatorDots
-        })
-    },
-    changeAutoplay: function (e) {
-        this.setData({
-            autoplay: !this.data.autoplay
-        })
-    },
-    intervalChange: function (e) {
-        this.setData({
-            interval: e.detail.value
-        })
-    },
-    durationChange: function (e) {
-        this.setData({
-            duration: e.detail.value
-        })
-    },
+   
     skipPage:app.skipPage,
-    search:function(e){
-        let word=e.target.dataset.word;
-        let index=e.target.dataset.index;
-        console.log(word);
-        console.log(index);
-    }
+    handleData:function(){
+        let session=Session.get();
+        let _this=this;
+        Api.IntegralOshow({
+            id:this.data.id
+        }).then(({
+            data
+        }) => {
+            data.expiration_days=_this.timestampToTime(data.expiration_time).slice(0,10);
+            data.start=_this.timestampToTime(data.start).slice(0,10);
+            _this.setData({
+                good:data
+            });
+            resolve();
+        }).catch(err => reject(err));
+    },
+    timestampToTime:function (timestamp) {
+        let date = new Date(timestamp * 1000);
+        let Y = date.getFullYear() + '-';
+        let M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+        let D = date.getDate() + ' ';
+        let h = date.getHours() + ':';
+        let m = date.getMinutes() + ':';
+        let s = date.getSeconds();
+        return Y+M+D+h+m+s;
+    },
 });

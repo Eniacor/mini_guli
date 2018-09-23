@@ -16,6 +16,10 @@ Page({
     onLoad: function (options) {
         let _this=this;
         let id = options.id;
+        this.setData({
+            id:id
+        });
+        this.handleStatus();
         Api.PracticeDetail({
             page:this.data.page,
             per_page:20,
@@ -28,6 +32,7 @@ Page({
             });
             resolve();
         }).catch(err => reject(err));
+        
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
@@ -79,12 +84,32 @@ Page({
     },
     handleCollect:function(e){
         let session=Session.get();
+        let _this=this;
         console.log(e);
         Api.PracticeCollect({
             pid:e.currentTarget.dataset.id,
             uid:session.uid
         }).then((res) => {
-             tips.showSuccess(data.errdesc);
+            _this.handleStatus();
+            tips.showSuccess(data.errdesc);
+            resolve();
+        }).catch(err => reject(err));
+      
+       
+    },
+    handleStatus:function(){
+        let session=Session.get();
+        let _this=this
+        Api.PHCollect({
+            pid:this.data.id,
+            uid:session.uid,
+        }).then((res) => { 
+            console.log("ddd");
+            let data=res.collect;
+            console.log(data);
+            _this.setData({
+               collect:data
+            });
             resolve();
         }).catch(err => reject(err));
     }

@@ -29,7 +29,7 @@ Page({
             },
         ],
         date: '请选择您的考试时间',
-        score: ['请输入您的目标分数', 100, 200, 300, 400, 500, 600, 700],
+        score: ['请输入您的目标分数', 36, 50, 65, 79],
         index: 0,
         hasRead: true,
 
@@ -45,41 +45,18 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        this.handleData();
+      
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function () {},
+    onReady: function () {
+        this.handleData();
+    },
     /**
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-        // let appKey = '3dab2396ab7ca4f9';
-        // let key = 'FSugZEbevvhW9cJux2qoD5ME8VFF7Bai';
-        // let salt = (new Date).getTime();
-        // let query = 'good';
-        // let from = '';
-        // let to = 'en';
-        // let str1 = appKey + query + salt + key;
-        // let sign = md5.hexMD5(str1);
-        // wx.request({
-        //     url: 'https://openapi.youdao.com/api', //仅为示例，并非真实的接口地址
-        //     data: {
-        //         q: query,
-        //         appKey: appKey,
-        //         salt: salt,
-        //         from: from,
-        //         to: to,
-        //         sign: sign
-        //     },
-        //     header: {
-        //         'content-type': 'application/json' // 默认值
-        //     },
-        //     success: function (res) {
-        //         console.log(res.data)
-        //     }
-        // })
     },
     /**
      * 生命周期函数--监听页面隐藏

@@ -69,10 +69,11 @@
 }
 .example-info{
     font-size: 30rpx;
-    color: #222;
+    color: #666;
     line-height: 60rpx;
     word-wrap:break-word; 
     word-break:normal; 
+    text-align: center;
 }
 .text-info{
     color: #d43c33;
@@ -89,4 +90,22 @@
 }
 .examples{
     margin-top:40rpx;
+}
+.bottom{
+    position: fixed;
+    bottom: 0;
+    height: 98rpx;
+    line-height: 98rpx;
+    text-align: center;
+    .item{
+        float: left;
+        width: 250rpx;
+        font-size: 32rpx;
+        background: #fff;
+        color: #d43c33;
+    }
+    .active{
+        background: #d43c33;
+        color: #fff;
+    }
 }

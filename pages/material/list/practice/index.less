@@ -94,7 +94,6 @@
         image{
             width: 60rpx;
             height: 60rpx;
-            background: #222;
         }
     }
     .audio_right{
@@ -131,6 +130,7 @@
     }
     .items{
         background: #f6f6f6;
+        padding-bottom:128rpx;
         .item{
             background: #fff;
             margin-top:30rpx;
@@ -171,9 +171,8 @@
                             float: left;
                             margin-top:17rpx;
                             margin-left:30rpx;
-                            width: 30rpx;
-                            height: 30rpx;
-                            background: #d43c33;
+                            width: 24rpx;
+                            height: 32rpx;
                         }
                         text{
                             float: right;
@@ -185,7 +184,7 @@
                         }
                     }
                     .citems{
-                        background: #f6f6f6;
+                        // background: #f6f6f6;
                         .citem{
                             background: #f6f6f6;
                             margin-top:30rpx;
@@ -227,9 +226,8 @@
                                             float: left;
                                             margin-top:17rpx;
                                             margin-left:30rpx;
-                                            width: 30rpx;
-                                            height: 30rpx;
-                                            background: #d43c33;
+                                            width: 24rpx;
+                                            height: 32rpx;
                                         }
                                         text{
                                             float: right;
@@ -246,9 +244,13 @@
                                 position: absolute;
                                 top:0;
                                 right: 0;
-                                width: 100rpx;
-                                height: 100rpx;
-                                background: #d43c33;
+                                width: 124rpx;
+                                height: 124rpx;
+                                .img{
+                                    width: 124rpx;
+                                    height: 124rpx;
+                                }
+                               
                             }
                         }
                         .item:first-child{
@@ -333,28 +335,24 @@
     margin-top:40rpx;
     padding:0 30rpx;
     height: 80rpx;
-    background: #d43c33;
+    // background: #d43c33;
     line-height: 80rpx;
     text-align: center;
+    position: relative;
     .img1{
-        float: left;
-        margin-top:25rpx;
-        width: 30rpx;
-        height: 30rpx;
-        background: #222
-    }
-    .img2{
-        float: right;
-        margin-top:25rpx;
-        width: 30rpx;
-        height: 30rpx;
-        background: #222
+        position: absolute;
+        top:0;
+        left:0;
+        width: 690rpx;
+        height: 48rpx;
     }
     text{
-        color:#fff;
+        position: absolute;
+        top:0;
+        left:0;
         font-size: 30rpx;
+        color:#fff;
     }
-
 }
 .tab{
     i-tabs{

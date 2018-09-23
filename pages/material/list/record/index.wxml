@@ -1,0 +1,34 @@
+<view class="list_contents">
+    <view wx:for="{{data}}" wx:key="unique">
+        <view class="content" bindtap="skipPage" data-url="/pages/material/list/dati/index?id={{item.id}}" data-type="0">
+            <view class="content_head">
+                <text class="head_left backcolor_yellow">#{{item.id}}</text>
+                <text class="head_middle">{{item.title}}</text>
+                <i-cell  class="star" wx:if="{{item.question_type_id==5||item.question_type_id==6||item.question_type_id==7||item.question_type_id==8||item.question_type_id==9}}">
+                    <i-rate disabled="{{true}}" value="{{item.sum}}"  color="color1"></i-rate>
+                </i-cell>
+                <i-cell title="禁用点击和手势选择星" class="star" wx:if="{{item.question_type_id==10||item.question_type_id==11||item.question_type_id==12||item.question_type_id==13||item.question_type_id==14||item.question_type_id==15||item.question_type_id==16||item.question_type_id==17}}">
+                    <i-rate disabled="{{true}}" value="{{item.snum}}" color="color3"></i-rate>
+                </i-cell>
+                <i-cell title="禁用点击和手势选择星" class="star" wx:if="{{item.question_type_id==18||item.question_type_id==19}}">
+                    <i-rate disabled="{{true}}" value="{{item.snum}}" color="color2"></i-rate>
+                </i-cell>
+                <i-cell title="禁用点击和手势选择星" class="star" wx:if="{{item.question_type_id==20||item.question_type_id==21||item.question_type_id==22||item.question_type_id==23||item.question_type_id==24}}">
+                    <i-rate disabled="{{true}}" value="{{item.snum}}" color="color4"></i-rate>
+                </i-cell>
+            </view>
+            <view class="content_middle">{{item.content}}</view>
+            <view class="content_bottom">
+                <view class="bottom_left">
+                    <image src="/images/static/index_score_time.png" />
+                    <text>{{item.addtime}}</text>
+                </view>
+                <view class="bottom_right">
+                    <image src="/images/static/index_recall_detailm.png" />
+                    <text>{{item.comment_num}}</text>
+                </view>
+                <view class="bottom_middle">{{item.confirm_num}}人确认考过</view>
+            </view>
+        </view>
+    </view>
+</view>

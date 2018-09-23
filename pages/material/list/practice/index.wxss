@@ -96,7 +96,6 @@
 .audio .audio_left image {
   width: 60rpx;
   height: 60rpx;
-  background: #222;
 }
 .audio .audio_right {
   width: 540rpx;
@@ -123,6 +122,7 @@
 }
 .discuz .items {
   background: #f6f6f6;
+  padding-bottom: 128rpx;
 }
 .discuz .items .item {
   background: #fff;
@@ -168,9 +168,8 @@
   float: left;
   margin-top: 17rpx;
   margin-left: 30rpx;
-  width: 30rpx;
-  height: 30rpx;
-  background: #d43c33;
+  width: 24rpx;
+  height: 32rpx;
 }
 .discuz .items .item .item_right .right_content .content_audio text {
   float: right;
@@ -179,9 +178,6 @@
   line-height: 24rpx;
   margin-top: 20rpx;
   margin-right: 30rpx;
-}
-.discuz .items .item .item_right .right_content .citems {
-  background: #f6f6f6;
 }
 .discuz .items .item .item_right .right_content .citems .citem {
   background: #f6f6f6;
@@ -228,9 +224,8 @@
   float: left;
   margin-top: 17rpx;
   margin-left: 30rpx;
-  width: 30rpx;
-  height: 30rpx;
-  background: #d43c33;
+  width: 24rpx;
+  height: 32rpx;
 }
 .discuz .items .item .item_right .right_content .citems .citem .citem_right .cright_content .content_audio text {
   float: right;
@@ -244,9 +239,12 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 100rpx;
-  height: 100rpx;
-  background: #d43c33;
+  width: 124rpx;
+  height: 124rpx;
+}
+.discuz .items .item .item_right .right_content .citems .citem .citem_middle .img {
+  width: 124rpx;
+  height: 124rpx;
 }
 .discuz .items .item .item_right .right_content .citems .item:first-child {
   margin-top: 0;
@@ -323,27 +321,23 @@
   margin-top: 40rpx;
   padding: 0 30rpx;
   height: 80rpx;
-  background: #d43c33;
   line-height: 80rpx;
   text-align: center;
+  position: relative;
 }
 .start .img1 {
-  float: left;
-  margin-top: 25rpx;
-  width: 30rpx;
-  height: 30rpx;
-  background: #222;
-}
-.start .img2 {
-  float: right;
-  margin-top: 25rpx;
-  width: 30rpx;
-  height: 30rpx;
-  background: #222;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 690rpx;
+  height: 48rpx;
 }
 .start text {
-  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
   font-size: 30rpx;
+  color: #fff;
 }
 .tab i-tabs {
   height: 49px;

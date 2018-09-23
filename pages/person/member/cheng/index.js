@@ -1,24 +1,35 @@
-const app =getApp()
+const tips = require('../../../../common/tips.js');
+const Api = require("../../../../config/method.js");
+const Session = require('../../../../common/auth/session')
+const app = getApp()
 Page({
     /**
      * 页面的初始数据
      */
     data: {
-        imgUrls: [
-            '../../images/static/banner1.png',
-            '../../images/static/banner1.png',
-            '../../images/static/banner1.png'
-        ],
-        indicatorDots:true,
-        autoplay:true,
-        interval: 5000,
-        duration: 1000
+        code:null
     },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-    
+        let _this = this;
+        let session = Session.get();
+        Api.UserInfo({
+            openid: session.openid
+        }).then(({
+            data
+        }) => {
+            if(data.vip_deadline*1000>=(new Date()).valueOf()){
+                data.vipstatus=1;
+            }else{
+                data.vipstatus=0;
+            }
+            _this.setData({
+                user: data
+            });
+            resolve();
+        }).catch(err => reject(err));
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
@@ -65,31 +76,29 @@ Page({
      */
     onPullDownRefresh: function () {
     },
-    changeIndicatorDots: function (e) {
-        this.setData({
-            indicatorDots: !this.data.indicatorDots
-        })
-    },
-    changeAutoplay: function (e) {
-        this.setData({
-            autoplay: !this.data.autoplay
-        })
-    },
-    intervalChange: function (e) {
-        this.setData({
-            interval: e.detail.value
-        })
-    },
-    durationChange: function (e) {
-        this.setData({
-            duration: e.detail.value
-        })
-    },
     skipPage:app.skipPage,
-    search:function(e){
-        let word=e.target.dataset.word;
-        let index=e.target.dataset.index;
-        console.log(word);
-        console.log(index);
+    handleData:function(e){
+        let _this = this;
+        if(this.data.code==null){
+            tips.showSuccess("请输入兑换码!");
+            return;
+        }
+        Api.VipExchange({
+            code:this.data.code
+        }).then((
+            data
+        ) => {
+            tips.showSuccess(data.errdesc);
+            setTimeout(()=>{
+                wx.navigateTo({url: '/pages/person/member/index'});
+            },1000);
+            resolve();
+        }).catch(err => reject(err));
+    },
+    handleCode:function(e){
+        this.setData({
+            code:e.detail.value
+        });
     }
+
 });

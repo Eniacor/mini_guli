@@ -71,8 +71,6 @@ Page({
         }).then(({
             data
         }) => {
-            console.log(data.detail);
-
             let article = data.detail;
             WxParse.wxParse('article', 'html', article, _this, 5);
             _this.setData({

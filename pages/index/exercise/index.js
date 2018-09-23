@@ -29,6 +29,14 @@ Page({
             }
             resolve();
         }).catch(err => reject(err));
+        Api.Banner({
+            type:2,
+        }).then(({ data }) => {
+            _this.setData({
+                imgUrls:data
+            });
+            resolve();
+        }).catch(err => reject(err));
     },
     /**
      * 生命周期函数--监听页面初次渲染完成

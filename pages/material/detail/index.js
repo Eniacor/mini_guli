@@ -9,7 +9,7 @@ Page({
      */
     data: {
         currentTime: '00:00',
-        totalTime:'00:59',
+        totalTime:'00:00',
         currentS: 0,
         totalS: 0,
         isPlay: 0,
@@ -23,6 +23,15 @@ Page({
             id:options.id
         });
         this.handleData();
+        this.handleCang();
+        innerAudioContext.onEnded(() => {
+            this.setData({
+                currentTime: '00:00',
+                currentS: 0,
+                totalS: 0,
+                isPlay: 0,
+            });
+        })
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
@@ -43,6 +52,7 @@ Page({
      * 生命周期函数--监听页面卸载
      */
     onUnload: function () {
+        innerAudioContext.stop();
     },
     /**
      * 页面相关事件处理函数--监听用户下拉动作
@@ -71,14 +81,38 @@ Page({
     },
     skipPage:app.skipPage,
     handleData:function(){
-        let _this=this;
+        let that=this;
         Api.ArticleShow({
             id:this.data.id
         }).then(({ data }) => {
-            data.addtime=_this.timestampToTime(data.addtime);
+            data.addtime=that.timestampToTime(data.addtime);
             innerAudioContext.src = data.audio_url;
-            _this.setData({
+            innerAudioContext.src ="https://cdn.caomall.net/15330894031165844388.mp3";
+            innerAudioContext.onError((res) => {
+            });
+            innerAudioContext.onTimeUpdate((res) => {
+                that.setData({
+                    currentS: innerAudioContext.currentTime,
+                    totalS: innerAudioContext.duration,
+                    totalTime: that.secondToDate(innerAudioContext.duration),
+                    currentTime: that.secondToDate(innerAudioContext.currentTime),
+                });
+            })
+            innerAudioContext.onCanplay((res) => {
+                console.log(res);
+                console.log(innerAudioContext.duration);
+            })
+            innerAudioContext.onPlay((res) => {})
+            that.setData({
                 score:data
+            });
+            resolve();
+        }).catch(err => reject(err));
+        Api.Rgood({}).then(({
+            data
+        }) => {
+            that.setData({
+                rgood:data
             });
             resolve();
         }).catch(err => reject(err));
@@ -105,5 +139,34 @@ Page({
             isPlay: 0
         })
     },
-
+    handleCollect:function(e){
+        let _this=this;
+        let session=Session.get();
+        Api.ArticleCollect({
+            uid:session.uid,
+            aid:e.currentTarget.dataset.id
+        }).then((data) => {
+            tips.showSuccess(data.errdesc);
+            _this.handleCang();
+            resolve();
+        }).catch(err => reject(err));
+    },
+    handleCang:function(e){
+        let session=Session.get();
+        let _this=this;
+        Api.HCArticle({
+            uid:session.uid,
+            aid:this.data.id
+        }).then((data) => {
+            _this.setData({
+                iscang:data.errdesc
+            });
+            resolve();
+        }).catch(err => reject(err));
+    },
+    secondToDate: function (s) {
+        let minute = parseInt(s / 60) > 0 ? parseInt(s / 60) > 9 ? parseInt(s / 60) : '0' + parseInt(s / 60) : '00';
+        let second = Math.floor(s % 60) > 9 ? Math.floor(s % 60) : '0' + Math.floor(s % 60);
+        return minute + ':' + second;
+    },
 });

@@ -79,7 +79,7 @@
 </view>
 <view class="bottom">
     <view class="bottom_left" bindtap="skipPage" data-url="/pages/index/exercise/detail/index?id={{id}}" data-type="0">
-        其他联系
+        其他练习
     </view>
     <view class="bottom_right">
         <button open-type="share">邀请好友</button>

@@ -1,7 +1,9 @@
 <swiper class="swiper swiper-box" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="rgb(238,238,238)" indicator-active-color="#333">
     <block class="swiper_item" wx:for="{{imgUrls}}" wx:key="unique">
         <swiper-item class="item">
-            <image src="{{item}}" class="slide-image" />
+            <navigator url="{{item.banner_link}}">
+                <image src="{{item.banner_img}}" class="slide-image" />
+            </navigator>
         </swiper-item>
     </block>
 </swiper>
@@ -23,32 +25,38 @@
             <text>名师简介</text>
         </view>
     </view>
-    <view class="nav_item" bindtap="skipPage" data-url="/pages/index/material/index" data-type="0">
-        <view class="item_img">
-            <image src="../../images/static/nav3.png"></image>
-        </view>
-        <view class="item_text">
-            <text>分享有礼</text>
-        </view>
+    <view class="nav_item">
+        <button class="contact" open-type="share">
+            <view class="item_img">
+                <image src="../../images/static/nav3.png"></image>
+            </view>
+            <view class="item_text">
+                <text>分享有礼</text>
+            </view>
+        </button>
     </view>
     <view class="nav_item">
-        <view class="item_img">
-            <image src="../../images/static/nav4.png"></image>
-        </view>
-        <view class="item_text">联系我们</view>
+        <button class="contact" open-type="contact">
+            <view class="item_img">
+                <image src="../../images/static/nav4.png"></image>
+            </view>
+            <view class="item_text">
+                联系我们
+            </view>
+        </button>
     </view>
 </view>
 <view class="content">
     <view class="content_item" bindtap="skipPage" data-url="/pages/index/jijing/index" data-type="0">
         <view class="item_img">
-            <image src="../../images/static/content1.png"></image>
+            <image src="../../images/static/content1.png" style="height:82rpx;"></image>
         </view>
         <view class="item_line"></view>
         <view class="item_text1">最新机经</view>
     </view>
     <view class="content_item" bindtap="skipPage" data-url="/pages/index/recall/index" data-type="0">
         <view class="item_img">
-            <image src="../../images/static/content2.png"></image>
+            <image src="../../images/static/content2.png" style="width:82rpx;"></image>
         </view>
         <view class="item_line"></view>
         <view class="item_text1">真题回忆</view>
@@ -60,7 +68,7 @@
         <view class="item_line"></view>
         <view class="item_text1">随堂练习</view>
     </view>
-    <view class="content_item">
+    <view class="content_item" bindtap="skipPage" data-url="/pages/course/activity/index" data-type="0">
         <view class="item_img">
             <image src="../../images/static/content4.png"></image>
         </view>
@@ -77,14 +85,12 @@
         <view class="header_des">最新高分学员成绩单分享，有图有真相</view>
     </view>
     <view class="score_contents">
-        <view wx:for="{{score}}" wx:key="unique" >
-            <view class="score_content" bindtap="skipPage" data-url="/pages/index/score/detail/index?id={{item.id}}" data-type="0">
-                <view class="content_left">
-                    <image src="/images/static/score2.png"></image>
-                </view>
-                <view class="content_middle">{{item.title}}</view>
-                <view class="content_right">{{item.number}}</view>
+        <view class="score_content"  wx:for="{{score}}" wx:key="unique" bindtap="skipPage" data-url="/pages/index/score/detail/index?id={{item.id}}" data-type="0">
+            <view class="content_left">
+                <image src="/images/static/score2.png"></image>
             </view>
+            <view class="content_middle">{{item.title}}</view>
+            <view class="content_right">{{item.number}}</view>
         </view>
     </view>
     <view class="score_bottom" bindtap="skipPage" data-url="/pages/index/score/index" data-type="0">

@@ -111,7 +111,7 @@
 }
 .course .course_contents .content .content_right .right_des .des {
   display: inline-block;
-  width: 66rpx;
+  padding: 0 10rpx;
   height: 35rpx;
   border-radius: 10rpx;
   line-height: 35rpx;

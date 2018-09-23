@@ -1,3 +1,7 @@
+.score .score_content {
+  background: #fff;
+  height: 1344rpx;
+}
 .score .score_content .items .item {
   margin: 0 30rpx;
   padding: 40rpx 0;
@@ -12,7 +16,6 @@
 .score .score_content .items .item .item_left image {
   width: 100%;
   height: 100%;
-  background: #d43c33;
 }
 .score .score_content .items .item .item_right {
   float: left;

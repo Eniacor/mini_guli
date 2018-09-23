@@ -50,15 +50,9 @@ module.exports = function (url, data, method,  options = {}) {
                             } else {
                                 let route = getCurrentPages()[0].__route__;
                                 let url = '/pages/bindPhone/bindPhone?from=' + encodeURIComponent(route);
-                                // if (route == 'pages/order/index') {
-                                //     // wx.navigateTo({ url });
-                                // } else {
-                                //     wx.redirectTo({ url })
-                                // }
                             }
                         } else {
-                            // tips.showModel('系统提示', url);
-                            tips.showModel('系统提示', body.errdesc);
+                            // tips.showModel('系统提示', body.errdesc);
                             reject(new Error(body.errdesc));
                         }
                     }

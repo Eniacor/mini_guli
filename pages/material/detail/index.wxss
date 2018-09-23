@@ -145,7 +145,6 @@
 .detail .detail_contents .content .audio .audio_left image {
   width: 60rpx;
   height: 60rpx;
-  background: #222;
 }
 .detail .detail_contents .content .audio .audio_right {
   width: 540rpx;
@@ -213,4 +212,15 @@
   width: 210rpx;
   font-size: 26rpx;
   color: #222;
+}
+.left {
+  position: fixed;
+  bottom: 160rpx;
+  right: 30rpx;
+  width: 110rpx;
+  height: 110rpx;
+}
+.left image {
+  width: 110rpx;
+  height: 110rpx;
 }

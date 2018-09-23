@@ -1,7 +1,7 @@
 <view class="speak">
     <view class="header">
         <view class="header_left">
-            <image  src="/images/static/index_jijingsr.png" />
+            <image  src="/images/static/index_jijingr.png" />
         </view>
         <view  class="header_middle"></view>
         <view class="header_right">

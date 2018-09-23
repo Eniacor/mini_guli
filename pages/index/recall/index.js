@@ -72,13 +72,19 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function () {
+        return {
+            title: '文波教育',
+            desc: '文波教育',   
+            imageUrl: "/images/static/p4c.png",
+            path: '/pages/index/index'
+        }
     },
     /**
      * 页面上拉触底事件的处理函数
      */
     onReachBottom: function () {
     },
-   
+    skipPage:app.skipPage,
     handleData:function(){
         let _this=this;
         let session=Session.get();
@@ -117,5 +123,20 @@ Page({
         let m = date.getMinutes() + ':';
         let s = date.getSeconds();
         return Y+M+D+h+m+s;
+    },
+    handleSearch:function(e){
+        let _this=this;
+        Api.MSearch({
+            search:e.detail.value
+        }).then(({ data }) => {
+            for(let i=0;i<data.length;i++){
+                let time=_this.timestampToTime(data[i].addtime);
+                data[i].addtime=time.slice(0,10);
+            }
+            _this.setData({
+                totalMemory:data
+            });
+            resolve();
+        }).catch(err => reject(err));
     }
 });

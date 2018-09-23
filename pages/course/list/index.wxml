@@ -1,12 +1,12 @@
 <view class="course">
     <view class="course_banner">
-        <image src="/images/static/course1.png" />
+        <image src="{{imgUrls[0].banner_img}}" />
     </view>
     <view class="course_contents">
         <view class="content" wx:for="{{list}}" wx:key="unique">
             <view class="content_left">
-                <image src="/images/static/course_i.png" />
-                <view class="left_biao">立减${{item.discount}}</view>
+                <image src="{{item.title_img}}" />
+                <!-- <view class="left_biao">立减${{item.discount}}</view> -->
             </view>
             <view class="content_right">
                 <view class="right_title">
@@ -34,5 +34,4 @@
             </view>
         </view>
     </view>
-    <view class="content_more">查看更多</view>
 </view>

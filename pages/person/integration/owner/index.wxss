@@ -96,6 +96,7 @@ page {
   background: red;
 }
 .commodity-border {
+  background: #fff;
   width: 720rpx;
 }
 .commodity {
@@ -109,7 +110,6 @@ page {
 .image-a {
   width: 330rpx;
   height: 246rpx;
-  background: red;
 }
 .image-as {
   width: 330rpx;
@@ -194,4 +194,22 @@ page {
   color: #666;
   margin-left: 30rpx;
   margin-top: 15rpx;
+}
+.infos .info-text {
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  line-height: 30rpx;
+}
+.detailss {
+  margin-top: 12rpx;
+  overflow: hidden;
+}
+.detailss .gold {
+  float: left;
+}
+.detailss .border-gold {
+  float: right;
+  background: #d43c33;
+  color: #fff;
+  font-size: 24rpx;
 }

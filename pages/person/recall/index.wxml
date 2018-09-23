@@ -6,7 +6,8 @@
                 <view class="item">
                     <view class="item_left">
                         <image src="{{item.user.avatarurl}}" style="border-radius:50%;" />
-                        <text>{{item.user.nickname}}</text>
+                        <!-- <text>{{item.user.nickname}}</text> -->
+                        <text>我的回忆</text>
                     </view>
                     <view class="item_right">
                         <image class="right_time" src="/images/static/index_score_detailt.png" />
@@ -17,4 +18,5 @@
             </navigator>
         </view>
     </view>
+    <view class="add"  bindtap="skipPage" data-url="/pages/index/recall/add/index" data-type="0">添加回忆</view>
 </view>

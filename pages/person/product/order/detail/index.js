@@ -1,29 +1,27 @@
+const tips = require('../../../../../common/tips.js');
+const Api = require("../../../../../config/method.js");
+const Session = require('../../../../../common/auth/session');
+const WxParse = require('../../../../../common/component/wxParse/wxParse.js');
 const app =getApp()
 Page({
     /**
      * 页面的初始数据
      */
-    data: {
-        imgUrls: [
-            '../../images/static/banner1.png',
-            '../../images/static/banner1.png',
-            '../../images/static/banner1.png'
-        ],
-        indicatorDots:true,
-        autoplay:true,
-        interval: 5000,
-        duration: 1000
-    },
+    data: {},
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-    
+        this.setData({
+            id:options.id
+        });
+        this.handleData();
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
+
     },
     /**
      * 生命周期函数--监听页面显示
@@ -65,31 +63,19 @@ Page({
      */
     onPullDownRefresh: function () {
     },
-    changeIndicatorDots: function (e) {
-        this.setData({
-            indicatorDots: !this.data.indicatorDots
-        })
-    },
-    changeAutoplay: function (e) {
-        this.setData({
-            autoplay: !this.data.autoplay
-        })
-    },
-    intervalChange: function (e) {
-        this.setData({
-            interval: e.detail.value
-        })
-    },
-    durationChange: function (e) {
-        this.setData({
-            duration: e.detail.value
-        })
-    },
+   
     skipPage:app.skipPage,
-    search:function(e){
-        let word=e.target.dataset.word;
-        let index=e.target.dataset.index;
-        console.log(word);
-        console.log(index);
-    }
+    handleData:function(){
+        let _this=this;
+        Api.GoodsOrders({
+            pid:this.data.id
+        }).then(({
+            data
+        }) => {
+            _this.setData({
+                good:data
+            });
+            resolve();
+        }).catch(err => reject(err));
+    },
 });

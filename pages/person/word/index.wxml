@@ -10,31 +10,21 @@
         </view>
     </view>
     <view class="words">
-        <view class="words-border-info"  bindtap="skipPage" data-url="/pages/person/word/detail/index" data-type="0">
-            <view class="words-bt">landscape</view>
-            <view class="words-bt-info">[landscape]</view>
-            <view class="images">
-                <image class="img" src="/images/static/p_bofang.png"></image>
-            </view>
-            <view class="both-explain">
-                <view class="explain">
-                    n. 风景;风景画;乡村风景画;地形风景;风景画;乡村风景画;地形风景;风景画;乡村风景画;地形风景;风景画;乡村风景画;地形
+        <view class="word" wx:for="{{words}}" wx:key="unique" bindtap="skipPage" data-url="/pages/person/word/detail/index?word={{item.query}}&id={{item.id}}" data-type="0">
+            <view class="head">
+                <view class="head_left">{{item.query}}</view>
+                <view class="head_middle">[{{item.cuk}}]</view>
+                <view class="head_right" bindtap="playSound" data-url="item.cuks">
+                    <image class="img" src="/images/static/p_bofang.png"></image>
                 </view>
             </view>
-            <view class="border-noe"></view>
-        </view>
-        <view class="words-border-info">
-            <view class="words-bt">landscape</view>
-            <view class="words-bt-info">[landscape]</view>
-            <view class="images">
-                <image class="img" src="/images/static/p_bofang.png"></image>
-            </view>
-            <view class="both-explain">
-                <view class="explain">
-                    n. 风景;风景画;乡村风景画;地形风景;风景画;乡村风景画;地形风景;风景画;乡村风景画;地形风景;风景画;乡村风景画;地形
+            <view class="content">
+                <view class="explain_c" wx:for="{{item.basic.explains}}" wx:key="unique" wx:for-item="items" style="">
+                    {{items}}
                 </view>
             </view>
-            <view class="border-noe"></view>
         </view>
     </view>
+    <view class="one_more"  wx:if="{{words.length==0}}" style="background:#fff;height:120rpx;line-height:120rpx;text-align:center;font-size:30rpx;color:#666;">暂无更多</view>
 </view>
+<audio hidden="true" src="{{url}}" id="myAudio" controls></audio>

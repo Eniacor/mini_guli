@@ -1,0 +1,150 @@
+<!-- <view class="head" wx:if="{{id==5}}">
+    <view class="head_left back_color1">RA</view>
+    <view class="head_middle">Read Aloud</view>
+    <view class="head_right title_color" bindtap="skipPage" data-url="/pages/material/list/record/index" data-type="0">答题记录</view>
+</view>
+<view class="head" wx:if="{{id==6}}">
+    <view class="head_left back_color1">RS</view>
+    <view class="head_middle">Repeat sentence</view>
+    <view class="head_right title_color" bindtap="skipPage" data-url="/pages/material/list/record/index" data-type="0">答题记录</view>
+</view>
+<view class="head" wx:if="{{id==7}}">
+    <view class="head_left back_color1">DI</view>
+    <view class="head_middle">Describe image</view>
+    <view class="head_right title_color" bindtap="skipPage" data-url="/pages/material/list/record/index" data-type="0">答题记录</view>
+</view>
+<view class="head" wx:if="{{id==8}}">
+    <view class="head_left back_color1">RL</view>
+    <view class="head_middle">Re-tell lecture</view>
+    <view class="head_right title_color" bindtap="skipPage" data-url="/pages/material/list/record/index" data-type="0">答题记录</view>
+</view>
+<view class="head" wx:if="{{id==9}}">
+    <view class="head_left back_color1">ASQ</view>
+    <view class="head_middle">Answer short question</view>
+    <view class="head_right title_color" bindtap="skipPage" data-url="/pages/material/list/record/index" data-type="0">答题记录</view>
+</view>
+<view class="head" wx:if="{{id==10}}">
+    <view class="head_left back_color3">SST</view>
+    <view class="head_middle">Summarize spoken text</view>
+    <view class="head_right title_color" bindtap="skipPage" data-url="/pages/material/list/record/index" data-type="0">答题记录</view>
+</view>
+<view class="head" wx:if="{{id==11}}">
+    <view class="head_left back_color3">MA_L</view>
+    <view class="head_middle">MC, Multiple answer</view>
+    <view class="head_right title_color" bindtap="skipPage" data-url="/pages/material/list/record/index" data-type="0">答题记录</view>
+</view>
+<view class="head" wx:if="{{id==12}}">
+    <view class="head_left back_color3">FIB_LW</view>
+    <view class="head_middle">Fill in the blanks</view>
+    <view class="head_right title_color" bindtap="skipPage" data-url="/pages/material/list/record/index" data-type="0">答题记录</view>
+</view>
+<view class="head" wx:if="{{id==13}}">
+    <view class="head_left back_color3">HCS</view>
+    <view class="head_middle">Highlight correct summary</view>
+    <view class="head_right title_color" bindtap="skipPage" data-url="/pages/material/list/record/index" data-type="0">答题记录</view>
+</view>
+<view class="head" wx:if="{{id==14}}">
+    <view class="head_left back_color3">SA_L</view>
+    <view class="head_middle">MC, Single answer</view>
+    <view class="head_right title_color" bindtap="skipPage" data-url="/pages/material/list/record/index" data-type="0">答题记录</view>
+</view>
+<view class="head" wx:if="{{id==15}}">
+    <view class="head_left back_color3">SMW</view>
+    <view class="head_middle">Select missing word</view>
+    <view class="head_right title_color" bindtap="skipPage" data-url="/pages/material/list/record/index" data-type="0">答题记录</view>
+</view>
+<view class="head" wx:if="{{id==16}}">
+    <view class="head_left back_color3">HIW</view>
+    <view class="head_middle">Highlight incorrect words</view>
+    <view class="head_right title_color" bindtap="skipPage" data-url="/pages/material/list/record/index" data-type="0">答题记录</view>
+</view>
+<view class="head" wx:if="{{id==17}}">
+    <view class="head_left back_color3">WFD</view>
+    <view class="head_middle">Write from dictation</view>
+    <view class="head_right title_color" bindtap="skipPage" data-url="/pages/material/list/record/index" data-type="0">答题记录</view>
+</view>
+<view class="head" wx:if="{{id==18}}">
+    <view class="head_left back_color2">SWT</view>
+    <view class="head_middle">Summarize written text</view>
+    <view class="head_right title_color" bindtap="skipPage" data-url="/pages/material/list/record/index" data-type="0">答题记录</view>
+</view>
+<view class="head" wx:if="{{id==19}}">
+    <view class="head_left back_color2">WE</view>
+    <view class="head_middle">Write essay</view>
+    <view class="head_right title_color" bindtap="skipPage" data-url="/pages/material/list/record/index" data-type="0">答题记录</view>
+</view>
+<view class="head" wx:if="{{id==20}}">
+    <view class="head_left back_color4">SA_R</view>
+    <view class="head_middle">MC, Single answer</view>
+    <view class="head_right title_color" bindtap="skipPage" data-url="/pages/material/list/record/index" data-type="0">答题记录</view>
+</view>
+<view class="head" wx:if="{{id==21}}">
+    <view class="head_left back_color4">MA_R</view>
+    <view class="head_middle">MC, Multiple answer</view>
+    <view class="head_right title_color" bindtap="skipPage" data-url="/pages/material/list/record/index" data-type="0">答题记录</view>
+</view>
+<view class="head" wx:if="{{id==22}}">
+    <view class="head_left back_color2">RP</view>
+    <view class="head_middle">Re-order paragraphs</view>
+    <view class="head_right title_color" bindtap="skipPage" data-url="/pages/material/list/record/index" data-type="0">答题记录</view>
+</view>
+<view class="head" wx:if="{{id==23}}">
+    <view class="head_left back_color4">FIB_R</view>
+    <view class="head_middle">Fill in the blanks</view>
+    <view class="head_right title_color" bindtap="skipPage" data-url="/pages/material/list/record/index" data-type="0">答题记录</view>
+</view>
+<view class="head" wx:if="{{id==24}}">
+    <view class="head_left back_color4">FIB_RW</view>
+    <view class="head_middle">Fill in the blanks</view>
+    <view class="head_right title_color" bindtap="skipPage" data-url="/pages/material/list/record/index" data-type="0">答题记录</view>
+</view>
+
+
+<view class="search">
+    <view class="search_left" bindtap="handleSort" data-sort="1">
+        <text class="text {{sort==1?'active':''}}">按更新时间</text>
+        <text class="triangle_bottom {{sort==1?'tactive':''}}"></text>
+    </view>
+    <view class="search_middle" bindtap="handleSort" data-sort="2">
+        <text class="text {{sort==2?'active':''}}">按确认考过</text>
+        <text class="triangle_bottom {{sort==2?'tactive':''}}"></text>
+    </view>
+    <view class="search_right">
+        <text class="btn" bindtap="handleSearchD">搜索</text>
+        <input class="input" placeholder="#" bindinput="handleSearch"/>
+    </view>
+</view> -->
+<view class="list_contents">
+    <view wx:for="{{data}}" wx:key="unique">
+        <view class="content" bindtap="skipPage" data-url="/pages/material/list/dati/index?id={{item.id}}" data-type="0">
+            <view class="content_head">
+                <text class="head_left backcolor_yellow">#{{item.id}}</text>
+                <text class="head_middle">{{item.title}}</text>
+                <i-cell  class="star" wx:if="{{id==5||id==6||id==7||id==8||id==9}}">
+                    <i-rate disabled="{{true}}" value="{{item.sum}}"  color="color1"></i-rate>
+                </i-cell>
+                <i-cell title="禁用点击和手势选择星" class="star" wx:if="{{id==10||id==11||id==12||id==13||id==14||id==15||id==16||id==17}}">
+                    <i-rate disabled="{{true}}" value="{{item.snum}}" color="color3"></i-rate>
+                </i-cell>
+                <i-cell title="禁用点击和手势选择星" class="star" wx:if="{{id==18||id==19}}">
+                    <i-rate disabled="{{true}}" value="{{item.snum}}" color="color2"></i-rate>
+                </i-cell>
+                <i-cell title="禁用点击和手势选择星" class="star" wx:if="{{id==20||id==21||id==22||id==23||id==24}}">
+                    <i-rate disabled="{{true}}" value="{{item.snum}}" color="color4"></i-rate>
+                </i-cell>
+            </view>
+            <view class="content_middle">{{item.content}}</view>
+            <view class="content_bottom">
+                <view class="bottom_left">
+                    <image src="/images/static/index_score_time.png" />
+                    <text>{{item.addtime}}</text>
+                </view>
+                <view class="bottom_right">
+                    <image src="/images/static/index_recall_detailm.png" />
+                    <text>{{item.comment_num}}</text>
+                </view>
+                <view class="bottom_middle">{{item.confirm_num}}人确认考过</view>
+            </view>
+        </view>
+    </view>
+</view>

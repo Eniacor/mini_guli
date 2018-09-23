@@ -37,7 +37,7 @@
   font-size: 28rpx;
   float: left;
   line-height: 1;
-  margin-top: 32rpx;
+  margin-top: 36rpx;
 }
 .text-state {
   font-size: 28rpx;
@@ -103,7 +103,7 @@
   float: left;
   line-height: 100rpx;
 }
-button {
+.btn {
   width: 300rpx;
   height: 100rpx;
   background: #d43c33;

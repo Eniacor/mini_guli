@@ -5,7 +5,8 @@
     <view class="item" wx:if="{{user.tel!=null}}">
         <view class="item_left">手机号</view>
         <view class="item_right" style="width:278rpx;">
-            <input value="{{user.tel}}"/>
+            <text class="right_txt">{{user.tel}}</text>
+            <!-- <input value="{{user.tel}}"/> -->
         </view>
     </view>
      <view class="item"  wx:if="{{user.tel==null}}">
@@ -20,24 +21,22 @@
     <view class="item">
         <view class="item_left">昵称</view>
         <view class="item_right">
-            <input value="{{user.nickname}}" />
+            <text class="right_txt">{{user.nickname}}</text>
+            <!-- <input value="{{user.nickname}}" /> -->
         </view>
     </view>
     <view class="item">
         <view class="item_left">性别</view>
         <view class="item_right">
-            <radio-group class="radio-group" bindchange="radioSexChange">
-                <label class="radio" wx:for="{{sexs}}" wx:key="unique">
-                    <radio class="dot" value="{{item.value}}" checked="{{item.checked}}" color="#c43c33" />
-                    <text>{{item.name}}</text>
-                </label>
-            </radio-group>
+            <text class="right_txt" wx:if="{{user.sex==1}}">男</text>
+            <text class="right_txt" wx:if="{{user.sex==2}}">女</text>
         </view>
     </view>
     <view class="item">
         <view class="item_left">考试时间</view>
         <view class="item_right">
-           <input value="{{user.exam_date}}"/>
+            <text class="right_txt">{{user.exam_date}}</text>
+           <!-- <input value="{{user.exam_date}}"/> -->
         </view>
         <view class="item_middle">
             <image src="/images/static/cright.png" />
@@ -46,7 +45,8 @@
     <view class="item">
         <view class="item_left">目标分数</view>
         <view class="item_right">
-             <input value="{{user.target_score}}"/>
+            <text class="right_txt">{{user.target_score}}</text>
+            <!-- <input value="{{user.target_score}}"/> -->
         </view>
         <view class="item_middle">
             <image src="/images/static/cright.png" />
@@ -55,29 +55,27 @@
     <view class="item">
         <view class="item_left">考过PTE</view>
         <view class="item_right">
-            <radio-group class="radio-group" bindchange="radioPteChange">
-                <label class="radio" wx:for="{{ptes}}" wx:key="unique">
-                    <radio class="dot" value="{{item.value}}" checked="{{item.checked}}" color="#c43c33" />
-                    <text>{{item.name}}</text>
-                </label>
-            </radio-group>
+            <text class="right_txt" wx:if="{{user.has_experience==1}}">是</text>
+            <text class="right_txt" wx:if="{{user.has_experience==2}}">否</text>
         </view>
     </view>
     <view class="item">
         <view class="item_left">邮箱</view>
         <view class="item_right">
-            <input value="{{user.email}}" />
+            <text class="right_txt">{{user.email}}</text>
+            <!-- <input value="{{user.email}}" /> -->
         </view>
     </view>
     <view class="item">
         <view class="item_left">城市</view>
         <view class="item_right">
-            <input value="{{user.city}}"/>
+            <text class="right_txt">{{user.city}}</text>
+            <!-- <input value="{{user.city}}"/> -->
         </view>
     </view>
 </view>
 <view class="btn_back">
-    <button bindtap="skipPage" data-url="/pages/person/info/modefied/index" data-type="0" class="btn" wx:if="{{hasRead}}" >
+    <button bindtap="skipPage" data-url="/pages/person/info/modefied/index" data-type="1" class="btn" wx:if="{{hasRead}}" >
         修改信息
     </button>
 </view>

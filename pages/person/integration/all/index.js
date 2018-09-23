@@ -1,24 +1,19 @@
+const tips = require('../../../../common/tips.js');
+const Api = require("../../../../config/method.js");
+const Session = require('../../../../common/auth/session')
 const app =getApp()
 Page({
     /**
      * 页面的初始数据
      */
     data: {
-        imgUrls: [
-            '../../images/static/banner1.png',
-            '../../images/static/banner1.png',
-            '../../images/static/banner1.png'
-        ],
-        indicatorDots:true,
-        autoplay:true,
-        interval: 5000,
-        duration: 1000
+    
     },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-    
+        this.handleData();
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
@@ -65,31 +60,31 @@ Page({
      */
     onPullDownRefresh: function () {
     },
-    changeIndicatorDots: function (e) {
-        this.setData({
-            indicatorDots: !this.data.indicatorDots
-        })
-    },
-    changeAutoplay: function (e) {
-        this.setData({
-            autoplay: !this.data.autoplay
-        })
-    },
-    intervalChange: function (e) {
-        this.setData({
-            interval: e.detail.value
-        })
-    },
-    durationChange: function (e) {
-        this.setData({
-            duration: e.detail.value
-        })
-    },
+   
     skipPage:app.skipPage,
-    search:function(e){
-        let word=e.target.dataset.word;
-        let index=e.target.dataset.index;
-        console.log(word);
-        console.log(index);
-    }
+    handleData:function(){
+        let session=Session.get();
+        let _this=this;
+        Api.Igood({}).then(({
+            data
+        }) => {
+            for(let i=0;i<data.length;i++){
+                data[i]['title']=data[i]['title'].slice(0,10);
+            }
+            _this.setData({
+                rgood:data
+            });
+            resolve();
+        }).catch(err => reject(err));
+        Api.UserInfo({
+            openid: session.openid
+        }).then(({
+            data
+        }) => {
+            _this.setData({
+                user: data
+            });
+            resolve();
+        }).catch(err => reject(err));
+    },
 });

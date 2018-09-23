@@ -57,7 +57,7 @@ Page({
     skipPage: app.skipPage,
     handleData: function () {
         let _this = this;
-
+        let session=Session.get();
         Api.CourseShow({
             id: this.data.id
         }).then(({
@@ -73,6 +73,16 @@ Page({
             });
             resolve();
         }).catch(err => reject(err));
+
+        Api.Rgood({}).then(({
+            data
+        }) => {
+            _this.setData({
+                rgood:data
+            });
+            resolve();
+        }).catch(err => reject(err));
+        _this.handleIs();
     },
     timestampToTime: function (timestamp) {
         let date = new Date(timestamp * 1000);
@@ -86,13 +96,28 @@ Page({
     },
     handleCollect:function(e){
         let session=Session.get();
+        let _this=this;
         Api.CourseCollect({
             aid:e.currentTarget.dataset.id,
             uid:session.uid
-        }).then(({
+        }).then((
             data
-        }) => {
-            tips.showSuccess("收藏成功!");
+        ) => {
+            tips.showSuccess(data.errdesc);
+            _this.handleIs();
+            resolve();
+        }).catch(err => reject(err));
+    },
+    handleIs:function(){
+        let session=Session.get();
+        let _this=this;
+        Api.HCCollect({
+            uid:session.uid,
+            aid:this.data.id
+        }).then((data) => {
+            _this.setData({
+                iscang:data.errdesc
+            });
             resolve();
         }).catch(err => reject(err));
     }

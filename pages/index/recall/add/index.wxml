@@ -1,4 +1,4 @@
-<view class="add">
+<view class="add" style="padding-bottom:40rpx;">
     <view class="item">
         <view class="item_head">
             <text class="title_line"></text>
@@ -8,7 +8,7 @@
             <view class="content_left">日期</view>
             <view class="content_middle" style="margin-top:0;">
                 <picker mode="date" value="{{date}}" start="2018-01-01" end="2028-09-01" bindchange="bindDateChange">
-                    <view class="picker" style="color:#888;">{{date}}</view>
+                    <view class="picker" style="color:#222;">{{date}}</view>
                 </picker>
             </view>
             <view class="content_right">
@@ -19,7 +19,7 @@
             <view class="content_left">国家</view>
             <view class="content_middle" style="margin-top:0;">
                 <picker bindchange="bindStateChange" value="{{sindex}}" range="{{state}}" range-key="name">
-                    <view class="picker" style="color:#888;">{{state[sindex].name}}</view>
+                    <view class="picker" style="color:#222;">{{state[sindex].name}}</view>
                 </picker>
             </view>
             <view class="content_right">
@@ -30,7 +30,7 @@
             <view class="content_left">城市</view>
             <view class="content_middle" style="margin-top:0;">
                 <picker bindchange="bindCityChange" value="{{yindex}}" range="{{city}}" range-key="name" disabled="{{sindex==0}}">
-                    <view class="picker" style="color:#888;">{{city[yindex].name}}</view>
+                    <view class="picker" style="color:#222;">{{city[yindex].name}}</view>
                 </picker>
             </view>
             <view class="content_right">
@@ -41,7 +41,7 @@
             <view class="content_left">考场</view>
             <view class="content_middle" style="margin-top:0;">
                 <picker bindchange="bindChangChange" value="{{dindex}}" range="{{chang}}" range-key="name" disabled="{{yindex==0}}">
-                    <view class="picker" style="color:#888;">{{chang[dindex].name}}</view>
+                    <view class="picker" style="color:#222;">{{chang[dindex].name}}</view>
                 </picker>
             </view>
             <view class="content_right">
@@ -57,7 +57,7 @@
         <view class="scond_content">
             <view class="content_left" style="margin-top:0;">
                 <picker bindchange="bindParentChange" value="{{pindex}}" range="{{parent}}" range-key="name">
-                    <view class="picker" style="color:#888;">{{parent[pindex].name}}</view>
+                    <view class="picker" style="color:#222;">{{parent[pindex].name}}</view>
                 </picker>
             </view>
             <view class="content_right">
@@ -67,7 +67,7 @@
         <view class="scond_content">
             <view class="content_left" style="margin-top:0;">
                 <picker bindchange="bindChildrenChange" bindcancel="bindChildrenCancel" value="{{cindex}}" range="{{children}}" range-key="name" disabled="{{pindex==0}}">
-                    <view class="picker" style="color:#888;">{{children[cindex].name}}</view>
+                    <view class="picker" style="color:#222;">{{children[cindex].name}}</view>
                 </picker>
             </view>
             <view class="content_right">
@@ -82,37 +82,37 @@
         </view>
         <view class="third_content">
             <view class="content_left">
-                <input placeholder="请输入回忆标题" bindblur="getTitle" />
+                <input placeholder="请输入回忆标题" bindblur="getTitle" placeholder-style="color:#222;"/>
             </view>
             <view class="content_right" style="top:44rpx;">0/20</view>
         </view>
         <view class="third_content" style="height:300rpx;padding:0;">
             <view class="content_left" style="height:300rpx;top:0;">
-                <textarea class="txt" placeholder="请输入回忆详情" focus="{{focus}}" bindblur="getContent"  maxlength="1000"/>
+                <textarea class="txt" placeholder="请输入回忆详情" focus="{{focus}}" bindblur="getContent"  maxlength="1000" placeholder-style="color:#222;"/>
             </view>
             <view class="content_right" style="bottom:30rpx;">0/1000</view>
         </view>
         <view class="third_content">
             <view class="content_left">
-                <input placeholder="回忆要点【非必填】" bindblur="getImport1" />
+                <input placeholder="回忆要点【非必填】" bindblur="getImport1" placeholder-style="color:#222;" />
             </view>
             <view class="content_right" style="top:44rpx;">0/200</view>
         </view>
         <view class="third_content" wx:if="{{import2}}">
             <view class="content_left">
-                <input placeholder="回忆要点【非必填】" bindblur="getImport2" />
+                <input placeholder="回忆要点【非必填】" bindblur="getImport2" placeholder-style="color:#222;" />
             </view>
             <view class="content_right"  style="top:44rpx;">0/200</view>
         </view>
         <view class="third_content" wx:if="{{import3}}">
             <view class="content_left">
-                <input placeholder="回忆要点【非必填】" bindblur="getImport3" />
+                <input placeholder="回忆要点【非必填】" bindblur="getImport3" placeholder-style="color:#222;"/>
             </view>
             <view class="content_right"  style="top:44rpx;">0/200</view>
         </view>
         <view class="third_content" wx:if="{{import4}}">
             <view class="content_left">
-                <input placeholder="回忆要点【非必填】" bindblur="getImport4" />
+                <input placeholder="回忆要点【非必填】" bindblur="getImport4" placeholder-style="color:#222;" />
             </view>
             <view class="content_right"  style="top:44rpx;">0/200</view>
         </view>

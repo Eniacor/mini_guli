@@ -1,7 +1,7 @@
 <view class="recall">
     <view class="recall_search">
         <image src="/images/static/index_recall_search.png" />
-        <input placeholder="搜索" />
+        <input placeholder="搜索" bindblur="handleSearch"/>
     </view>
     <view class="recall_my" wx:if="{{myMemory}}">
         <view class="my">我关注的</view>
@@ -25,8 +25,8 @@
         <view class="my">
             <view class="my_left">所有回忆</view>
             <view class="my_right">
-                <image class="right_time" src="/images/static/index_score_detailt.png" />
-                <text class="right_txt">2015-05-18</text>
+                <!-- <image class="right_time" src="/images/static/index_score_detailt.png" />
+                <text class="right_txt">2015-05-18</text> -->
                 <image class="right_arrow" src="/images/static/index_exercise_arrow.png" />
             </view>
         </view>
@@ -39,7 +39,7 @@
                     </view>
                     <view class="item_right">
                         <image class="right_time" src="/images/static/index_score_detailt.png" />
-                        <text class="right_txt">2015-05-18</text>
+                        <text class="right_txt">{{item.addtime}}</text>
                         <image class="right_arrow" src="/images/static/index_exercise_arrow.png" />
                     </view>
                 </view>

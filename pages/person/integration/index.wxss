@@ -164,11 +164,11 @@ page {
 }
 .buts-s {
   width: 130rpx;
-  height: 42rpx;
+  height: 50rpx;
   background: #d43c33;
   font-size: 22rpx;
   text-align: center;
-  line-height: 42rpx;
+  line-height: 50rpx;
   color: #fff;
   border-radius: 42rpx;
   margin-top: 34rpx;
@@ -192,4 +192,14 @@ page {
   color: #666;
   margin-left: 30rpx;
   margin-top: 15rpx;
+}
+.detailss {
+  margin-top: 12rpx;
+}
+.detailss .gold {
+  float: left;
+}
+.detailss .border-gold {
+  float: right;
+  font-size: 24rpx;
 }

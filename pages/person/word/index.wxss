@@ -4,18 +4,18 @@
   background: #f9f9f9;
   overflow: hidden;
 }
-.icong {
+.header .icong {
   width: 64rpx;
   height: 56rpx;
   margin-left: 50rpx;
   margin-top: 66rpx;
   float: left;
 }
-.icong image {
+.header .icong image {
   width: 64rpx;
   height: 56rpx;
 }
-.border-shu {
+.header .border-shu {
   float: left;
   margin-top: 76rpx;
   margin-left: 20rpx;
@@ -23,72 +23,69 @@
   height: 58rpx;
   border-left: #666 solid 1rpx;
 }
-.header-test {
+.header .header-test {
   float: left;
   overflow: hidden;
 }
-.words-a {
+.header .header-test .words-a {
   font-size: 30rpx;
   font-weight: bold;
   margin-top: 60rpx;
   line-height: 1;
 }
-.words-b {
+.header .header-test .words-b {
   font-size: 26rpx;
   line-height: 60rpx;
   color: #222;
 }
 .words {
-  width: 750rpx;
   background: #fff;
+  padding: 0rpx 30rpx;
 }
-.words-border-info {
-  width: 690rpx;
-  margin: auto;
+.words .word {
+  padding: 40rpx 0;
+  border-bottom: 1rpx solid #e0e0e0;
 }
-.words-bt {
+.words .word .head {
+  overflow: hidden;
+  height: 32rpx;
+}
+.words .word .head .head_left {
   float: left;
-  margin-top: 40rpx;
   font-size: 32rpx;
-  font-weight: bold;
-  margin-bottom: 10rpx;
+  font-weight: 600;
 }
-.words-bt-info {
+.words .word .head .head_middle {
   float: left;
-  margin-top: 40rpx;
   margin-left: 20rpx;
   font-size: 30rpx;
   color: #666;
 }
-.images {
+.words .word .head .head_right {
   float: left;
   width: 26rpx;
   height: 25rpx;
-  margin-top: 35rpx;
   margin-left: 20rpx;
+  margin-top: -5rpx;
 }
-.img {
+.words .word .head .head_right .img {
   width: 26rpx;
   height: 25rpx;
 }
-.explain {
+.words .word .content {
+  margin-top: 30rpx;
+  height: 86rpx;
+  overflow: hidden;
+}
+.words .word .content .explain_c {
+  display: inline;
   font-size: 28rpx;
   color: #666;
-  margin-top: 30rpx;
-  margin-bottom: 40rpx;
-  line-height: 50rpx;
-  clear: both;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  line-height: 30rpx;
 }
-.border-noe {
-  width: 690rpx;
-  border-bottom: 1rpx solid #e0e0e0;
-  margin: 30rpx 0 0 0;
+.words .word:last-child {
+  border-bottom: 0;
 }
-.words-border-info:last-child .border-noe {
-  border-bottom: 1rpx solid #fff;
+.words:last-child {
+  border-bottom: 0;
 }

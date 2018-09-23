@@ -2,7 +2,13 @@
     <view class="item">
         <view class="item_left">昵称</view>
         <view class="item_right">
-            <input placeholder="请输入您的昵称" bindblur="getNickname" />
+            <input placeholder="请输入您的昵称"  value="{{user.nickname}}" bindinput="getNickname" />
+        </view>
+    </view>
+    <view class="item">
+        <view class="item_left">手机号</view>
+        <view class="item_right">
+            <input placeholder="请输入您的手机号" value="{{user.tel}}" bindinput="getMobile" />
         </view>
     </view>
     <view class="item">
@@ -20,7 +26,7 @@
         <view class="item_left">考试时间</view>
         <view class="item_right">
             <picker mode="date" value="{{date}}" start="2017-09-01" end="2020-09-01" bindchange="bindDateChange">
-                <view class="picker">{{date}}</view>
+                <view class="picker" style="color:#222;">{{date}}</view>
             </picker>
         </view>
         <view class="item_middle">
@@ -31,7 +37,7 @@
         <view class="item_left">目标分数</view>
         <view class="item_right">
             <picker bindchange="bindScoreChange" value="{{index}}" range="{{score}}">
-                <view class="picker">{{score[index]}}</view>
+                <view class="picker" style="color:#222;">{{score[index]}}</view>
             </picker>
         </view>
         <view class="item_middle">
@@ -52,13 +58,13 @@
     <view class="item">
         <view class="item_left">邮箱</view>
         <view class="item_right">
-            <input placeholder="请输入您的邮箱" bindblur="getEmail" />
+            <input placeholder="请输入您的邮箱" value="{{user.email}}" bindinput="getEmail" />
         </view>
     </view>
     <view class="item">
         <view class="item_left">城市</view>
         <view class="item_right">
-            <input placeholder="请输入您所在的城市" bindblur="getCity" />
+            <input placeholder="请输入您所在的城市" value="{{user.city}}" bindinput="getCity" />
         </view>
     </view>
 </view>

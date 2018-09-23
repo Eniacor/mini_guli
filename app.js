@@ -1,24 +1,12 @@
 const auth = require('./common/auth/index.js');
 const api = require('./config/api.config');
 const Session = require('./common/auth/session');
-
 App({
     onLaunch: function () {
         Session.clear();
         auth.login({
             url: api.XcxLogin,
-            success() {
-                let is_bind=Session.get('xapp_session_84bed77e-2800-4ada-8a98-9630f5111099').is_bind;
-                // if(is_bind){
-                //     wx.reLaunch({
-                //         url: '/pages/index/index'
-                //     })
-                // }else{
-                //     wx.redirectTo({
-                //         url: '/pages/register/index'
-                //     })
-                // }
-            },
+            success() {},
             fail() {},
         });
     },
@@ -74,5 +62,4 @@ App({
         if (r != null) return unescape(r[2]);
         return null;
     },
-    
 })
