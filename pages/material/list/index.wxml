@@ -109,16 +109,16 @@
         <text class="text {{sort==2?'active':''}}">按确认考过</text>
         <text class="triangle_bottom {{sort==2?'tactive':''}}"></text>
     </view>
-    <view class="search_right">
+    <!-- <view class="search_right">
         <text class="btn" bindtap="handleSearchD">搜索</text>
         <input class="input" placeholder="#" bindinput="handleSearch"/>
-    </view>
+    </view> -->
 </view>
 <view class="list_contents">
     <view wx:for="{{data}}" wx:key="unique">
         <view class="content" bindtap="skipPage" data-url="/pages/material/list/dati/index?id={{item.id}}" data-type="0">
             <view class="content_head">
-                <text class="head_left backcolor_yellow">#{{item.id}}</text>
+                <!-- <text class="head_left backcolor_yellow">#{{item.id}}</text> -->
                 <text class="head_middle">{{item.title}}</text>
                 <i-cell  class="star" wx:if="{{id==5||id==6||id==7||id==8||id==9}}">
                     <i-rate disabled="{{true}}" value="{{item.sum}}"  color="color1"></i-rate>

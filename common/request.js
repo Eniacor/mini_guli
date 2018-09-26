@@ -38,7 +38,6 @@ module.exports = function (url, data, method,  options = {}) {
                 success: function (response) {
                     let body = response.data;
                     console.log(body)
-                    console.log();
                     if (body.errno == 0) {
                         resolve(body);
                     } else {

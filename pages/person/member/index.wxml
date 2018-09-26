@@ -11,17 +11,9 @@
             <text class="title_text">会员特权:</text>
         </view>
         <view class="middle_contents">
-            <view class="content">
+            <view class="content" wx:for="{{answer['nodes'][0]['nodes']}}" wx:key="unique">
                 <text class="content_dot"></text>
-                <text class="content_text">特权一:无限量导出PDF文件格式机经</text>
-            </view>
-            <view class="content">
-                <text class="content_dot"></text>
-                <text class="content_text">特权二:文波教育优秀教师点评纠正口语练习</text>
-            </view>
-            <view class="content ">
-                <text class="content_dot"></text>
-                <text class="content_text">特权三:文波教育优秀教师修改作文/外教范文下载</text>
+                <text class="content_text">{{item['nodes'][0]['text']}}</text>
             </view>
         </view>
     </view>
@@ -47,5 +39,9 @@
          <button class="btnd" type="" loading="{{loading}}" disabled="{{disabled}}" bindtap="onTap" bindtap="skipPage" data-url="/pages/person/member/cheng/index" data-type="0">
             使用兑换码
         </button>
+    </view>
+    <import src="../../../common/component/wxParse/wxParse.wxml" />
+    <view class="wxParse">
+        <template is="wxParsec" data="{{wxParseData:article.nodes}}" />
     </view>
 </view>

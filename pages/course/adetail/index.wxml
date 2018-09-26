@@ -27,7 +27,7 @@
     <view class="wxParse">
         <template is="wxParsec" data="{{wxParseData:article.nodes}}" />
     </view>
-    <view class="recom">
+    <view class="recom" wx:if="{{rgood!=null}}">
         <view class="recom_title">
             <text class="title_line"></text>
             <text class="title_txt">相关推荐</text>

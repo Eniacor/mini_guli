@@ -8,6 +8,8 @@ Page({
      */
     data: {
         sort:1,
+        page:1,
+        data:[],
     },
     /**
      * 生命周期函数--监听页面加载
@@ -37,7 +39,15 @@ Page({
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function () {},
+    onPullDownRefresh: function () {
+        let page=this.data.page;
+        page++;
+        this.setData({
+            page:page
+        });
+        this.handleData();
+        wx.stopPullDownRefresh()
+    },
     /**
      * 页面上拉触底事件的处理函数
      */
@@ -53,24 +63,30 @@ Page({
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function () {},
+   
     skipPage: app.skipPage,
     handleData: function () {
         let _this = this;
         let session = Session.get();
         Api.QuestionIndex({
+            page: _this.data.page,
+            per_page: 20,
             openid: session.openid,
             type: this.data.id
         }).then(({
             data
         }) => {
+            if(data==undefined){
+                tips.showModel('提示','暂无更多');
+                return;
+            }
             for (let i = 0; i < data.length; i++) {
-                if (_this.getStringLong(data[i]['title']) > 17) {
-                    data[i]['title'] = data[i]['title'].slice(0, 17) + '...';
+                if (_this.getStringLong(data[i]['title']) >25) {
+                    data[i]['title'] = data[i]['title'].slice(0, 25) + '...';
                 } else {
-                    data[i]['title'] = data[i]['title'].slice(0, 17);
+                    data[i]['title'] = data[i]['title'].slice(0, 25);
                 }
-                data[i]['content'] = data[i]['content'].slice(9, 100) + '...';
+                data[i]['content'] = data[i]['content'].slice(0, 80) + '...';
                 data[i]['addtime'] = _this.timestampToTime(data[i]['addtime']).slice(0, 10);
                 
                 data[i]['snum']=0
@@ -89,6 +105,7 @@ Page({
                     data[i]['snum']=5
                 }
             }
+            data = _this.data.data.concat(data);
             _this.setData({
                 data: data
             });
@@ -157,7 +174,6 @@ Page({
         })
     },
     handleSort:function(e){
-
         console.log(e.currentTarget.dataset.sort);
         if(e.currentTarget.dataset.sort==1){
             this.handleData();
@@ -180,5 +196,13 @@ Page({
             var value2 = b[property];
             return value2-value1;
         }
+    },
+    onReachBottom(){
+        let page=this.data.page;
+        page++;
+        this.setData({
+            page:page
+        });
+        this.handleData();
     }
 });

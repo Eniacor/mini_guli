@@ -82,9 +82,6 @@ Page({
             tips.showWarning('错误提示', "邮箱不能为空!");   
             return;
         }
-        console.log("dd");
-        console.log(session.openid);
-        console.log(this.data.email);
         Api.Apply({
             openid:session.openid,
             email:this.data.email

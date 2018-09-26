@@ -1,7 +1,8 @@
 const tips = require('../../../common/tips.js');
 const Api = require("../../../config/method.js");
-const Session = require('../../../common/auth/session')
-const app = getApp()
+const Session = require('../../../common/auth/session');
+const WxParse = require('../../../common/component/wxParse/wxParse');
+const app = getApp();
 Page({
     /**
      * 页面的初始数据
@@ -15,6 +16,7 @@ Page({
      */
     onLoad: function (options) {
         this.handleData();
+        this.handleIs();
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
@@ -128,5 +130,18 @@ Page({
             status:e.currentTarget.dataset.status,
             pid:e.currentTarget.dataset.pid
         })
+    },
+    handleIs:function(){
+        let _this=this;
+        Api.VipText({}).then(({ data }) => {
+            let content =data.content;
+            let answer =data.answer;
+            WxParse.wxParse('content', 'html', content, _this, 5);
+            WxParse.wxParse('answer', 'html', answer, _this, 5);
+            _this.setData({
+                score:data
+            });
+            resolve();
+        }).catch(err => reject(err));
     }
 });

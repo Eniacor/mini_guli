@@ -5,7 +5,7 @@
         <view class="head_right" bindtap="skipPage" data-url="/pages/material/list/record/index" data-type="0">答题记录</view>
     </view>
     <view class="title">
-        <text class="title_left backcolor_yellow">#{{data.id}}</text>
+        <!-- <text class="title_left backcolor_yellow">#{{data.id}}</text> -->
         <text class="title_middle backcolor_yellow">{{data.addtime}}</text>
         <i-cell  class="star" wx:if="{{data.question_type_id==5||data.question_type_id==6||data.question_type_id==7||data.question_type_id==8||data.question_type_id==9}}">
             <i-rate disabled="{{true}}" value="{{data.sum}}"  color="color1"></i-rate>

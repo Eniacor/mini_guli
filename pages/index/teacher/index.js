@@ -7,6 +7,8 @@ Page({
      * 页面的初始数据
      */
     data: {
+        page:1,
+        famous:[]
     },
     /**
      * 生命周期函数--监听页面加载
@@ -62,10 +64,14 @@ Page({
     skipPage:app.skipPage,
     handleData:function(){
         let _this=this;
-        Api.FamousIndex({}).then(({ data }) => {
+        Api.FamousIndex({
+            page: _this.data.page,
+            per_page: 20,
+        }).then(({ data }) => {
             for(let i=0;i<data.length;i++){
                 data[i]['desc']=data[i]['desc'].slice(0,66);
             }
+            data = _this.data.famous.concat(data);
             _this.setData({
                 famous:data
             });
@@ -81,5 +87,13 @@ Page({
         let m = date.getMinutes() + ':';
         let s = date.getSeconds();
         return Y+M+D+h+m+s;
+    },
+    onReachBottom(){
+        let page=this.data.page;
+        page++;
+        this.setData({
+            page:page
+        });
+        this.handleData();
     }
 });

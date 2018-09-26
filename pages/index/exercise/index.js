@@ -12,23 +12,8 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        let _this = this;
-        Api.PracticeList({
-            page:_this.data.page,
-            per_page:20
-        }).then((res) => {
-            let data = res.data;
-            if (data != null) {
-                for (let i = 0; i < data.length; i++) {
-                    data[i].title = data[i].title.slice(0, 15);
-                }
-                data=_this.data.practice.concat(data);
-                _this.setData({
-                    practice: data
-                });
-            }
-            resolve();
-        }).catch(err => reject(err));
+        let _this=this;
+        this.handleData();
         Api.Banner({
             type:2,
         }).then(({ data }) => {
@@ -46,7 +31,6 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
         console.log(app);
     },
     /**
@@ -60,11 +44,13 @@ Page({
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function () {
-        let page=this.data.page++;
+    onReachBottom(){
+        let page=this.data.page;
+        page++;
         this.setData({
             page:page
         });
+        this.handleData();
     },
     /**
      * 页面上拉触底事件的处理函数
@@ -84,4 +70,23 @@ Page({
     onPullDownRefresh: function () {},
     // skipPage:app.skipPage,
     skipPage: app.skipPage,
+    handleData:function(){
+        let _this = this;
+        Api.PracticeList({
+            page:_this.data.page,
+            per_page:20
+        }).then((res) => {
+            let data = res.data;
+            if (data != null) {
+                for (let i = 0; i < data.length; i++) {
+                    data[i].title = data[i].title.slice(0, 15);
+                }
+                data=_this.data.practice.concat(data);
+                _this.setData({
+                    practice: data
+                });
+            }
+            resolve();
+        }).catch(err => reject(err));
+    },
 });

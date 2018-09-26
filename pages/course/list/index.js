@@ -13,14 +13,13 @@ Page({
     onLoad: function () {
         this.handleData();
     },
-    onPullDownRefresh: function () {
+    onReachBottom: function () {
         let page=this.data.page;
         page++;
         this.setData({
             page:page
         });
         this.handleData();
-        wx.stopPullDownRefresh()
     },
     handleData: function () {
         let _this = this;
