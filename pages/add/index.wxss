@@ -1,0 +1,77 @@
+.add {
+  background: #f6f6f6;
+  height: 1200rpx;
+}
+.add .add_img {
+  position: relative;
+  width: 750rpx;
+  height: 400rpx;
+}
+.add .add_img .img {
+  width: 750rpx;
+  height: 400rpx;
+}
+.add .add_img .list-item {
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  font-size: 24rpx;
+  font-weight: normal;
+  width: 180rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  background: #fff;
+  color: #666;
+}
+.add .add_content {
+  background: #fff;
+}
+.add .add_type .type_top {
+  overflow: hidden;
+  padding: 30rpx 30rpx;
+}
+.add .add_type .type_top .top_left {
+  float: left;
+  font-size: 26rpx;
+}
+.add .add_type .type_top .top_right {
+  float: right;
+  font-size: 26rpx;
+  color: #045fbb;
+}
+.add .add_type .type_content1 {
+  background: #fff;
+  height: 88rpx;
+}
+.add .add_type .type_content1 .picker {
+  padding-left: 30rpx;
+  font-size: 26rpx;
+  line-height: 88rpx;
+}
+.add .pop_1 {
+  width: 750rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  border-bottom: 1rpx solid #ececec;
+  font-size: 26rpx;
+}
+.add .add_btn {
+  position: fixed;
+  bottom: 0;
+  height: 90rpx;
+  background: #fff;
+  width: 750rpx;
+  padding-top: 20rpx;
+  padding-left: 30rpx;
+}
+.add .add_btn .btn {
+  width: 690rpx;
+  height: 70rpx;
+  background: red;
+  font-size: 26rpx;
+  line-height: 70rpx;
+  color: #fff;
+  text-align: center;
+}

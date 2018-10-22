@@ -1,4 +1,4 @@
 let extConfig = wx.getExtConfigSync();
 module.exports = {
-    api_host: `https://a.squmo.com/wenbo`
+    api_host: `https://www.wyoumai.com/api.php`
 }

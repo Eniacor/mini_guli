@@ -1131,7 +1131,7 @@
 <!-- 自定义模板 -->
 <template name="wxParse12">
   <block wx:if="{{item.node == 'element'}}">
-    <view style="{{item.styleStr}}display:inline;" bindtap="search" data-word="{{item.nodes[0].text}}" hover-class="text_back_color">{{item.nodes[0].text}}<text>\t</text></view>
+    <view style="{{item.styleStr}}" class="displayline {{item.nodes[0].text}}" bindtap="search" data-word="{{item.nodes[0].text}}" hover-class="text_back_color">{{item.nodes[0].text}}<text>\t</text></view>
   </block>
   <block wx:elif="{{item.node == 'text'}}">
     <block wx:for="{{item.texta}}" wx:key="">

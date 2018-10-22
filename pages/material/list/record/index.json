@@ -1,6 +1,0 @@
-{
-    "usingComponents": {
-        "i-rate": "/components/rate/index"
-    },
-    "navigationBarTitleText": "答题记录"
-}

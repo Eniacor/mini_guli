@@ -1,9 +1,0 @@
-{
-    "usingComponents": {
-        "i-rate": "/components/rate/index",
-        "i-progress": "/components/progress/index",
-        "i-tabs": "/components/tabs/index",
-        "i-tab": "/components/tab/index"
-    },
-    "navigationBarTitleText": "题目练习"
-}

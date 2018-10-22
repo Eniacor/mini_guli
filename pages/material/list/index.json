@@ -1,7 +1,0 @@
-{
-    "usingComponents": {
-        "i-rate": "/components/rate/index"
-    },
-    "navigationBarTitleText": "题目列表",
-    "onReachBottomDistance": 50
-}

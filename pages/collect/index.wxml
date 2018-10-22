@@ -1,0 +1,36 @@
+<view class="collect">
+  <view class="collect_num">
+    35230 位参与者
+  </view>
+  <view class="collect_can">
+    <view class="item"></view>
+    <view class="item"></view>
+    <view class="item"></view>
+    <view class="item"></view>
+    <view class="item"></view>
+    <view class="item"></view>
+    <view class="item"></view>
+    <view class="item"></view>
+    <view class="item"></view>
+    <view class="item"></view>
+    <view class="item"></view>
+    <view class="item"></view>
+    <view class="item"></view>
+    <view class="item"></view>
+    <view class="item"></view>
+    <view class="item"></view>
+    <view class="item"></view>
+    <view class="item"></view>
+    <view class="item"></view>
+    <view class="item"></view>
+    <view class="item"></view>
+    <view class="item"></view>
+    <view class="item"></view>
+    <view class="item"></view>
+    <view class="item"></view>
+    <view class="item"></view>
+    <view class="item"></view>
+    <view class="item"></view>
+  </view>
+  <view class="collect_btn">查看更多</view>
+</view>
