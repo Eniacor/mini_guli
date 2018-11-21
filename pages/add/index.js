@@ -1,5 +1,5 @@
 const app = getApp()
-
+const Session = require('../../common/auth/session');
 Page({
   data: {
     type: 1,
@@ -11,7 +11,59 @@ Page({
     imageArr: 'https://cdn.wyoumai.com/1540200968769578433.png',
     wechat:'',
   },
+  /**
+   * 生命周期函数--监听页面加载
+   */
   onLoad: function () {},
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  },
+  
   bindDateChange: function (e) {
     this.setData({
       date: e.detail.value
@@ -50,6 +102,11 @@ Page({
       tnumber: e.detail
     });
   },
+  handleWechat(e) {
+    this.setData({
+      wechat: e.detail
+    });
+  },
   handleChoose: function () {
     let that = this;
     wx.chooseImage({
@@ -64,23 +121,25 @@ Page({
     })
   },
   handleData: function () {
+    let session=Session.get();
     let _this=this;
     let data={
       'name': _this.data.title,
       'num':_this.data.number,
       'way':_this.data.type,
       'wechat':_this.data.wechat,
+      'openid':session.openid,
     }
     if(_this.data.type==1){
       let date = new Date(_this.data.date);
       data['wayname']='自动开奖'
-      data['time']= date.getTime();
+      data['time']= date.getTime()/1000;
     }else if(_this.data.type==2){
       data['wayname']='人数开奖'
-      data['time']=0;
+      data['time']=this.data.tnumber;
     }else if(_this.data.type==3){
       data['wayname']='手动开奖'
-      data['time']=0;
+      data['time']=_this.data.tnumber;
     }else{
       data['wayname']='现场开奖'
       data['time']=0;
@@ -91,10 +150,16 @@ Page({
       name: 'img',
       formData:data,
       success: function (res) {
-        console.log(res);
+        wx.switchTab({
+          url: '/pages/index/index'
+        })
       },
       fail: function (res) {
-        tips.showModel('网络异常', "图片上传失败!");
+        wx.showToast({
+          title: '请选择照片!',
+          icon: 'none',
+          duration: 2000
+        })
       }
     })
   }

@@ -1,0 +1,36 @@
+<view class="address">
+    <view class="address_list">
+        <view class="list_item" wx:for="{{address}}" wx:key="index">
+            <view class="item_top">
+                <text class="top_name">{{item.name}}</text>
+                <text class="top_mobile">{{item.phone}}</text>
+                <!--
+                <text class="top_default">默认</text>
+                -->
+            </view>
+            <view class="item_middle">
+                {{item.province}}{{item.city}}{{item.area}}{{item.detail}} 
+            </view>
+            <view class="item_bottom">
+                <view class="bottom_left">
+                    <van-checkbox value="{{checked==index}}" bind:change="onChange" data-index="{{index}}" data-id="item.id">默认地址</van-checkbox>
+                </view>
+                <view class="bottom_right">
+                    <view class="right_item">
+                        <van-icon name="delete" color="#999" size="14px"/>
+                        <text class="item_txt">删除</text>
+                    </view>
+                    <view class="right_item">
+                        <!--
+                        <van-icon name="records" color="#999" size="14px" />
+                        <text class="item_txt">编辑</text>
+                        -->
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <navigator hover-class="none" url="/pages/address/item/index">
+        <van-button class="btn" sizetype="default">新增地址</van-button>
+    </navigator>
+</view>

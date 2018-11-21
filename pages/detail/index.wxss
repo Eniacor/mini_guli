@@ -69,6 +69,42 @@
   color: #fff;
   margin: 0 auto;
 }
+.detail .zhong .background {
+  background: #fff;
+  padding: 30rpx 0;
+}
+.detail .zhong .background .detail_focus {
+  margin: 30rpx;
+  padding: 30rpx;
+  border: 4rpx solid #d8d5ca;
+}
+.detail .zhong .background .detail_focus .focus_title {
+  font-size: 24rpx;
+  font-weight: 600;
+  color: #666;
+  width: 540rpx;
+  height: 80rpx;
+  margin: 0 auto;
+  text-align: center;
+}
+.detail .zhong .background .detail_focus .focus_des {
+  width: 80rpx;
+  height: 80rpx;
+  margin: 0 auto;
+}
+.detail .zhong .background .detail_focus .focus_des .img {
+  width: 80rpx;
+  height: 80rpx;
+}
+.detail .zhong .background .detail_focus .focus_zhii {
+  width: 240rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #666;
+  margin: 0 auto;
+}
 .detail .detail_chou {
   width: 140rpx;
   height: 140rpx;
@@ -82,13 +118,20 @@
   margin-top: 60rpx;
   margin-bottom: 30rpx;
 }
+.detail .chou_back {
+  background: #e62e2e;
+}
 .detail .detail_num {
   font-size: 24rpx;
   text-align: center;
   color: #999;
+  margin-top: 30rpx;
 }
 .detail .detail_num text {
   color: #045fbb;
+}
+.detail .detail_num navigator {
+  display: inline;
 }
 .detail .detail_can {
   padding-left: 200rpx;
@@ -96,14 +139,16 @@
 }
 .detail .detail_can .item {
   display: inline-block;
-  width: 318rpx;
   width: 46rpx;
   height: 46rpx;
-  background: #045fbb;
   margin-right: 6rpx;
 }
 .detail .detail_can .item:last-child {
   margin-right: 0;
+}
+.detail .detail_can .item .img {
+  width: 46rpx;
+  height: 46rpx;
 }
 .detail .detail_bottom {
   position: fixed;

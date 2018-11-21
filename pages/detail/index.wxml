@@ -10,29 +10,59 @@
     <view class="owner_left">赞助商</view>
     <view class="owner_right">Readhub</view>
   </view> -->
-  <view class="detail_des">科技新闻阅读，每天三分钟啦啦啦啦啦</view>
- <view class="background">
+  <!--
+    <view class="detail_des">科技新闻阅读，每天三分钟啦</view>
+  -->
+ <view class="background" wx:if="{{detail.wechat}}">
    <view class="detail_focus">
-    <view class="focus_title">搜索 包多多 公众号，回复[福利]关注后续更多抽奖，本期抽奖奖品</view>
-    <view class="focus_des">包多多</view>
+    <view class="focus_title">搜索{{detail.wechat}}公众号，回复[福利]关注后续更多抽奖，本期抽奖奖品</view>
+    <view class="focus_des">{{detail.wechat}}</view>
     <view class="focus_zhi">点此一键复制</view>
   </view>
  </view>
-
-  <view class="detail_chou">参与抽奖</view>
-  <view class="detail_num">已有35230人参与，<text>查看全部</text><van-icon name="arrow" color="#045fbb" size="22rpx"/></view>
+  <view class="zhong" wx:if="{{detail.status==1}}">
+    <view class="background">
+      <view class="detail_focus">
+        <view class="focus_title">中奖名单</view>
+        <view class="focus_des">
+          <image mode="scaleToFill" class="img" src="{{detail.avatarurl}}" />
+        </view>
+        <view class="focus_zhii">{{detail.nickname}}</view>
+      </view>
+    </view>
+  </view>
+  <view wx:else>
+    <button class="detail_chou chou_back" open-type="getUserInfo" data-id="{{detail.id}}" wx:if="{{!isTrue}}" lang="zh_CN" bindgetuserinfo="handleDo">抽奖</button>
+    <view class="detail_chou" wx:else>已抽奖</view>
+  </view>
+  <view class="detail_num" wx:if="{{join==null}}">已有0人参与，<text>查看全部</text><van-icon name="arrow" color="#045fbb" size="22rpx"/></view>
+  <view class="detail_num"  wx:else>已有{{join.length}}人参与，<navigator url="/pages/collect/index?id={{detail.id}}s" open-type="redirect"><text>查看全部</text><van-icon name="arrow" color="#045fbb" size="22rpx"/></navigator></view>
   <view class="detail_can">
-    <view class="item"></view>
-    <view class="item"></view>
-    <view class="item"></view>
-    <view class="item"></view>
-    <view class="item"></view>
-    <view class="item"></view>
-    <view class="item"></view>
+    <view class="item">
+      <image mode="scaleToFill" class="img" src="{{join[0].avatar_url}}" />
+    </view>
+    <view class="item">
+      <image mode="scaleToFill" class="img" src="{{join[1].avatar_url}}" />
+    </view>
+    <view class="item">
+      <image mode="scaleToFill" class="img" src="{{join[2].avatar_url}}" />
+    </view>
+    <view class="item">
+      <image mode="scaleToFill" class="img" src="{{join[3].avatar_url}}" />
+    </view>
+    <view class="item">
+      <image mode="scaleToFill" class="img" src="{{join[4].avatar_url}}" />
+    </view>
+    <view class="item">
+      <image mode="scaleToFill" class="img" src="{{join[5].avatar_url}}" />
+    </view>
+    <view class="item">
+      <image mode="scaleToFill" class="img" src="{{join[6].avatar_url}}" />
+    </view>
   </view>
   <view class="detail_bottom">
-    <view class="bottom_left">分享给朋友</view>
-    <view class="bottom_right">我也要发起抽奖</view>
+    <button class="bottom_left" open-type="share">分享给朋友</button>
+    <view class="bottom_right" bindtap="handleToPage">我也要发起抽奖</view>
   </view>
   
 </view>

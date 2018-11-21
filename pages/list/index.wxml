@@ -1,0 +1,12 @@
+<van-cell-group>
+  <van-cell 
+    wx:for="{{list}}"
+    wx:key="{{key}}"
+    title="{{item.name}}"
+    is-link
+    arrow-direction="down"
+    value="{{item.addtime}}"
+    border="{{ false }}"
+    url="/pages/detail/index?id={{item.id}}"
+  />
+</van-cell-group>

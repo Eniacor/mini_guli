@@ -12,11 +12,14 @@
   width: 318rpx;
   width: 46rpx;
   height: 46rpx;
-  background: #045fbb;
   margin-right: 6rpx;
 }
 .collect .collect_can .item:last-child {
   margin-right: 0;
+}
+.collect .collect_can .item .img {
+  width: 46rpx;
+  height: 46rpx;
 }
 .collect .collect_btn {
   text-align: center;
