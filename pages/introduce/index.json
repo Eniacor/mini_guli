@@ -6,5 +6,5 @@
         "van-checkbox": "/dist/checkbox/index",
         "van-button": "/dist/button/index"
     },
-    "navigationBarTitleText": "收获地址"
+    "navigationBarTitleText": "使用规则"
 }

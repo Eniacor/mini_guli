@@ -1,0 +1,10 @@
+page {
+  background: #fff;
+}
+.introduce {
+  font-size: 26rpx;
+  padding: 30rpx;
+}
+.introduce .introduce_text {
+  padding: 20rpx;
+}

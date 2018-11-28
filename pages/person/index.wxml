@@ -50,7 +50,7 @@
             </view>
         </van-cell>
     </navigator>
-    <navigator hover-class="none" url="/pages/address/index">
+    <navigator hover-class="none" url="/pages/introduce/index">
        <van-cell icon="info-o" is-link>
             <view slot="title">
                 <span class="van-cell-text">使用规则</span>
@@ -58,7 +58,7 @@
             </view>
         </van-cell>
     </navigator>
-    <navigator hover-class="none" url="/pages/address/index">
+    <navigator hover-class="none" url="#">
        <van-cell icon="contact" is-link>
             <view slot="title">
                 <span class="van-cell-text">联系我们</span>
@@ -66,12 +66,12 @@
             </view>
         </van-cell>
     </navigator>
-    <navigator hover-class="none" url="/pages/address/index">
+    <!-- <navigator hover-class="none" url="/pages/address/index">
        <van-cell icon="question" is-link>
             <view slot="title">
                 <span class="van-cell-text">常见问题</span>
                 <van-tag type="danger"></van-tag>
             </view>
         </van-cell>
-    </navigator>
+    </navigator> -->
 </view>
