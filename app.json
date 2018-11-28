@@ -11,8 +11,8 @@
   ],
   "window": {
     "navigationBarBackgroundColor": "#d43c33",
-    "navigationBarTitleText": "文波教育",
-    "enablePullDownRefresh": false
+    "navigationBarTitleText": "活动推手",
+    "enablePullDownRefresh": true
   },
   "tabBar": {
     "color": "#313131",

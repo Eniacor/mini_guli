@@ -6,7 +6,9 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    page:1,
+    list:[],
   },
   /**
    * 生命周期函数--监听页面加载
@@ -46,14 +48,19 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    wx.stopPullDownRefresh()
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    let newPage=this.data.page;
+    newPage=newPage+1;
+    this.setData({
+      page:newPage,
+    });
+    this.handleDate();
   },
 
   /**
@@ -62,11 +69,16 @@ Page({
   onShareAppMessage: function () {
 
   },
-  handleDate: function(e) {
+  handleDate: function() {
     let _this=this;
-    Api.list({}).then(({ data }) => {
+    Api.list({
+      page:_this.data.page,
+      per_page:4,
+    }).then(({ data }) => {
+        let newList=_this.data.list;
+        newList=newList.concat(data);
         _this.setData({
-          list: data
+          list:newList
         });
         resolve();
     }).catch(err => reject(err));
