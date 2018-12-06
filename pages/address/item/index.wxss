@@ -12,7 +12,7 @@
 .address .address_list .list_item .item_top .top_name {
   font-size: 16px;
   line-height: 16px;
-  color: #333;
+  color: #666;
   margin-right: 15px;
 }
 .address .address_list .list_item .item_top .top_mobile {

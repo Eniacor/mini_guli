@@ -5,9 +5,9 @@
   </view>
   <view class="add_content">
     <van-cell-group>
-      <van-field value="{{title}}" label="奖品名称" placeholder="请输入奖品名称" bind:input="handleATitle" />
-      <van-field value="{{number}}" label="奖品数量" placeholder="数量（个）"  bind:input="handleANuber" />
-       <van-field value="{{wechat}}" label="关注账号" placeholder="请输入关注账号" border="{{ false }}" bind:input="handleWechat" />
+      <van-field  value="{{title}}" label="奖品名称" placeholder="请输入奖品名称" bind:input="handleATitle" />
+      <van-field  type="number" value="{{number}}" label="奖品数量" placeholder="数量（个）"  bind:input="handleANuber" />
+      <van-field  value="{{wechat}}" label="关注账号" placeholder="请输入关注账号" border="{{ false }}" bind:input="handleWechat" />
     </van-cell-group>
   </view>
   <view class="add_type">

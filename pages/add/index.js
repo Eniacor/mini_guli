@@ -150,9 +150,21 @@ Page({
       name: 'img',
       formData:data,
       success: function (res) {
-        wx.switchTab({
-          url: '/pages/index/index'
+        wx.showToast({
+          title: '添加成功!',
+          icon: 'none',
+          duration: 2000,
         })
+        _this.setData({
+          title: '',
+          number: '',
+          tnumber: '',
+          imageArr: 'https://cdn.wyoumai.com/1540200968769578433.png',
+          wechat:'',
+        });
+        setTimeout(function(){
+          wx.switchTab({url: '/pages/index/index'})
+        },2000)
       },
       fail: function (res) {
         wx.showToast({
