@@ -179,3 +179,9 @@
   line-height: 70rpx;
   text-align: center;
 }
+.detail .zhongimg {
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 10rpx;
+}

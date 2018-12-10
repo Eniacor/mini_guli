@@ -27,7 +27,7 @@
       </picker>
     </view>
     <view class="type_content2" wx:if="{{type==2}}">
-      <van-field value="{{ username }}" label="开奖人数" placeholder="人数（人）" border="{{ false }}" bind:input="handleTNumber" />
+      <van-field type="number" value="{{ username }}" label="开奖人数" placeholder="人数（人）" border="{{ false }}" bind:input="handleTNumber" />
     </view>
     <view class="type_content3" wx:if="{{type==3}}">
       <van-cell title="由发起人手动开奖" />

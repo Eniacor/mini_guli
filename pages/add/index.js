@@ -161,6 +161,7 @@ Page({
           tnumber: '',
           imageArr: 'https://cdn.wyoumai.com/1540200968769578433.png',
           wechat:'',
+          date:''
         });
         setTimeout(function(){
           wx.switchTab({url: '/pages/index/index'})

@@ -3,6 +3,9 @@
     <view class="top_left">每日福利</view>
     <button class="top_right" open-type="share">分享给朋友</button>
   </view>
+  <form name='pushMsgFm' report-submit bindsubmit='form'>
+    <button form-type="submit">submit</button>
+  </form>
   <view class="list">
     <view class="item" wx:for="{{list}}" wx:for-index="index" wx:for-item="item" wx:key="index">
       <navigator url="/pages/detail/index?id={{item.id}}">
