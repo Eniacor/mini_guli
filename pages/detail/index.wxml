@@ -33,7 +33,7 @@
   </view>
   <view wx:else>
     <button class="detail_chou chou_back" open-type="share" open-type="getUserInfo" data-id="{{detail.id}}" wx:if="{{!isTrue}}" lang="zh_CN" bindgetuserinfo="handleDo">抽奖</button>
-    <view class="detail_chou" wx:else>已抽奖</view>
+    <view class="detail_chou" wx:else>待开奖</view>
   </view>
   <view class="detail_num" wx:if="{{join==null}}">已有0人参与，<text>查看全部</text><van-icon name="arrow" color="#045fbb" size="22rpx"/></view>
   <view class="detail_num"  wx:else>已有{{join.length}}人参与，<navigator url="/pages/collect/index?id={{detail.id}}s" open-type="redirect"><text>查看全部</text><van-icon name="arrow" color="#045fbb" size="22rpx"/></navigator></view>
