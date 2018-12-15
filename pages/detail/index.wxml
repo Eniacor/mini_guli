@@ -15,7 +15,7 @@
   -->
  <view class="background" wx:if="{{detail.wechat}}">
    <view class="detail_focus">
-    <view class="focus_title">搜索{{detail.wechat}}公众号，回复[福利]关注后续更多抽奖，本期抽奖奖品</view>
+    <view class="focus_title">搜索{{detail.wechat}}微信号，了解更多本次活动规则与领取活动奖品</view>
     <view class="focus_des ">{{detail.wechat}}</view>
     <view class="focus_zhi" bindtap="copyTBL" data-content="{{detail.wechat}}">点此一键复制</view>
   </view>
@@ -23,7 +23,7 @@
   <view class="zhong" wx:if="{{detail.status==1}}">
     <view class="background">
       <view class="detail_focus">
-        <view class="focus_title">中奖名单</view>
+        <view class="focus_title">中奖者名单</view>
         <view class="focus_des " style="width:160px; background:#fff;">
           <image mode="scaleToFill" class="zhongimg" src="{{item.avatar_url}}" wx:for="{{detail.zhong}}" wx:key="index"/>
         </view>
