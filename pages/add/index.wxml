@@ -37,7 +37,7 @@
     </view>
   </view>
   <view class="add_btn">
-    <view class="btn" bindtap="handleData">发起新抽奖</view>
+    <view class="btn" bindtap="handleData">发起抽奖</view>
   </view>
   <van-popup show="{{ show }}" bindtap="handleClose" position="bottom">
     <view class="pop_1" bindtap="handleType" data-type="1">按时间自动开奖</view>

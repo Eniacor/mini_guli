@@ -61,7 +61,7 @@
     </view>
   </view>
   <view class="detail_bottom">
-    <button class="bottom_left" open-type="share">分享给朋友</button>
+    <button class="bottom_left" open-type="share">分享群增加获奖机率</button>
     <view class="bottom_right" bindtap="handleToPage">我也要发起抽奖</view>
   </view>
   

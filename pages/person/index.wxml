@@ -58,14 +58,14 @@
             </view>
         </van-cell>
     </navigator>
-    <navigator hover-class="none" url="#">
+    <!-- <navigator hover-class="none" url="#">
        <van-cell icon="contact" is-link>
             <view slot="title">
                 <span class="van-cell-text">联系我们</span>
                 <van-tag type="danger"></van-tag>
             </view>
         </van-cell>
-    </navigator>
+    </navigator> -->
     <!-- <navigator hover-class="none" url="/pages/address/index">
        <van-cell icon="question" is-link>
             <view slot="title">
