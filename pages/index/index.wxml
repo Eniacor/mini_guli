@@ -15,7 +15,7 @@
         </view>
         <view class="item_content">
           <view class="content_title">奖品：{{item.name}}x{{item.num}}</view>
-          <view class="content_start">{{item.way_name}}</view>
+          <view class="content_start">{{item.way_name}} 到达3000人自动开奖</view>
         </view>
       </navigator>
     </view>
