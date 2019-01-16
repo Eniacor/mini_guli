@@ -23,6 +23,12 @@
 .index .list .item {
   margin-bottom: 20rpx;
 }
+.index .list .item .default {
+  width: 100%;
+  padding: 0;
+  text-align: left;
+  border: none;
+}
 .index .list .item .item_img {
   width: 750rpx;
   height: 400rpx;
@@ -33,14 +39,18 @@
   height: 100%;
 }
 .index .list .item .item_content {
-  padding: 20rpx 30rpx;
+  padding: 30rpx 30rpx;
+  padding-top: 14rpx;
   background: #fff;
 }
 .index .list .item .item_content .content_title {
   font-size: 30rpx;
+  line-height: 30rpx;
   margin-bottom: 16rpx;
+  padding: 10rpx 0;
 }
 .index .list .item .item_content .content_start {
   font-size: 24rpx;
+  line-height: 24rpx;
   color: #999;
 }

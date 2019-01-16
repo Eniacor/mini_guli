@@ -13,6 +13,14 @@ Page({
    */
   onLoad: function (options) {
     let _this = this;
+    console.log(options);
+    let nickName=options.nickName;
+    let avatarUrl=options.avatarUrl;
+    let {nickname,avatar_url}=options;
+    _this.setData({
+      nickname:nickname,
+      avatar_url:avatar_url,
+    });
     _this.handleData(options.id);
     _this.handleHas(options.id);
     _this.handleList(options.id);
@@ -128,12 +136,17 @@ Page({
     let id = e.target.dataset.id;
     Api.joinAdd({
       openid: session.openid,
-      nickname: e.detail.userInfo.nickName,
-      avatar_url: e.detail.userInfo.avatarUrl,
-      award_id: id
+      nickname:_this.data.nickname,
+      avatar_url: _this.data.avatar_url,
+      award_id: _this.data.id,
+      formid:e.detail.formId,
     }).then((data) => {
       if (data.errno == 0) {
-        _this.handleHas(id);
+        // // _this.handleHas(id);
+        // _this.onLoad()
+        _this.setData({
+          isTrue: true
+        });
       }
       resolve();
     }).catch(err => reject(err));
@@ -156,7 +169,7 @@ Page({
       url: '/pages/index/index'
     })
   },
-  copyTBL: function (e) {
+  copyTBL: function (e) { 
     var self = this;
     wx.setClipboardData({
       data: self.data.detail.wechat,

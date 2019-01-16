@@ -133,25 +133,9 @@ Page({
       resolve();
     }).catch(err => reject(err));
   },
-  // 点击执行方法
-  form: function (e) {
-    var that = this
-    let session=Session.get();
-    wx.request({
-      url: "https://www.wyoumai.com/api.php/Weicall/access_token",
-      data: {
-        "form_id": e.detail.formId,
-        "openid":session.openid,
-      },
-      method: 'POST',
-      header: {
-        'content-type': 'application/x-www-form-urlencoded' 
-      },
-      success: function (res) {
-        console.log(res.data)
-      },
-      fail: function(e){
-      }
+  handlePage:function(e){
+    wx.navigateTo({
+      url: '/pages/detail/index?id='+e.target.dataset.id+'&nickname='+e.detail.userInfo.nickName+'&avatar_url='+e.detail.userInfo.avatarUrl,
     })
-  },
+  }
 })

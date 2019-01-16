@@ -3,13 +3,10 @@
     <view class="top_left">每日福利</view>
     <button class="top_right" open-type="share">分享给朋友</button>
   </view>
-  <!--<form report-submit="true" bindsubmit='form'>
-    <button form-type="submit">submit</button>
-  </form>-->
   <official-account></official-account>
   <view class="list">
     <view class="item" wx:for="{{list}}" wx:for-index="index" wx:for-item="item" wx:key="index">
-      <navigator url="/pages/detail/index?id={{item.id}}">
+      <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="handlePage" data-id="{{item.id}}" class="default">
         <view class="item_img">
           <image mode="scaleToFill" class="img" src="{{item.img}}" />
         </view>
@@ -17,7 +14,7 @@
           <view class="content_title">奖品：{{item.name}}x{{item.num}}</view>
           <view class="content_start">{{item.way_name}}</view>
         </view>
-      </navigator>
+      </button>
     </view>
   </view>
 </view>

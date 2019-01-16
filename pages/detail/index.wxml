@@ -32,7 +32,9 @@
     </view>
   </view>
   <view wx:else>
-    <button class="detail_chou chou_back" open-type="share" open-type="getUserInfo" data-id="{{detail.id}}" wx:if="{{!isTrue}}" lang="zh_CN" bindgetuserinfo="handleDo">抽奖</button>
+    <form bindsubmit="handleDo" report-submit='true' wx:if="{{!isTrue}}">
+      <button class="detail_chou chou_back"  formType="submit">抽奖</button>
+    </form>
     <view class="detail_chou" wx:else>待开奖</view>
   </view>
   <view class="detail_num" wx:if="{{join==null}}">已有0人参与，<text>查看全部</text><van-icon name="arrow" color="#045fbb" size="22rpx"/></view>

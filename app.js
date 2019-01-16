@@ -20,7 +20,6 @@ App({
     },
     skipPage: function (e) {
         let{url,type}=e.currentTarget.dataset;
-        console.log("klkk");
         switch (Number(type)) {
             case 0:
                 wx.navigateTo({
