@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.4.2",
 	"appid": "wx26946b1461143c61",
-	"projectname": "tuiguang",
+	"projectname": "wechat_mini",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
@@ -31,20 +31,7 @@
 		},
 		"miniprogram": {
 			"current": -1,
-			"list": [
-				{
-					"id": 0,
-					"name": "ss",
-					"pathName": "pages/search/search_hot",
-					"query": ""
-				},
-				{
-					"id": 1,
-					"name": "商品",
-					"pathName": "pages/shop/index",
-					"query": ""
-				}
-			]
+			"list": []
 		}
 	}
 }

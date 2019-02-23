@@ -1,0 +1,24 @@
+<view class="discuss">
+    <view class="top">
+        <image class="top_img"></image>
+        <view class="top_txt">BEELY彼丽四味组汤 足浴包 脚药包 一盒10袋 共40袋...</view>
+    </view>
+    <view class="content">
+        <view class="content_txt">
+            <textarea
+                placeholder="分享购买心得给想买的他们吧～"
+                class="custom_textarea"/>
+        </view>
+        <view class="content_img">
+            <view class="img_item">
+                <view class="item_circle"></view>
+                <view class="item_txt">2/5</view>
+            </view>
+            <view class="video_item">
+                <view class="item_circle"></view>
+                <view class="item_txt">添加视屏</view>
+            </view>
+        </view>
+    </view>
+    <van-button class="btn" sizetype="default"  bind:click="handleData">发表</van-button>
+</view>

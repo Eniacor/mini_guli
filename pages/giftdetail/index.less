@@ -1,0 +1,577 @@
+.index{
+    .container{
+        .van-tabs__wrap{
+            position: fixed;
+        }
+        .content{
+            .slide_swiper{
+                width: 750rpx;
+                height: 734rpx; 
+                .slide_image{
+                    width: 750rpx;
+                    height: 734rpx;
+                    background: #333;
+                } 
+            }
+            .des{
+                padding:40rpx 22rpx 30rpx 22rpx;
+                background: #fff;
+                .price{
+                   font-size: 30rpx;
+                   line-height: 30rpx;
+                    .current{
+                        color:rgb(255, 0, 13);
+                    }
+                    .origin{
+                        text-decoration: line-through;
+                        color:rgb(152,152,152);
+                        margin-left:12rpx;
+                    }
+                }
+                .post{
+                    width:122rpx; 
+                    height: 26rpx;
+                    font-size: 18rpx;
+                    line-height: 26rpx;
+                    text-align: center;
+                    border:3rpx solid rgb(255, 0, 13);
+                    color:rgb(255, 0, 13);
+                    border-radius: 4rpx;
+                    margin-top:36rpx;
+                }
+                .title{
+                    font-size: 36rpx;
+                    line-height: 36rpx;
+                    margin-top:26rpx;
+                    color:rgb(40, 40, 40);
+                }
+            }
+            .send{
+                overflow: hidden;
+                padding:30rpx 22rpx;
+                background: #fff;
+                border-top: 1rpx solid #f2f2f2;
+                border-bottom: 1rpx solid #f2f2f2;
+                .send_img{
+                    float: left;
+                    width: 34rpx;
+                    height: 34rpx;
+                    border-radius: 50%;
+                }
+                .send_txt{
+                    float: left;
+                    font-size: 30rpx;
+                    line-height: 30rpx;
+                    color: rgb(152,152,152);
+                    margin-left:20rpx;
+                    margin-top:4rpx;
+                }
+            }
+            .shop{
+                overflow: hidden;
+                background:#fff;
+                padding:35rpx 22rpx;
+                margin-bottom:16rpx;
+                .shop_label{
+                    float: left;
+                    width: 58rpx;
+                    height: 58rpx;
+                    border-radius: 50%;
+                    background: #333;
+               } 
+               .shop_value{
+                    float: left;
+                    font-size: 30rpx;
+                    line-height: 30rpx;
+                    color:rgb(51, 51, 51);
+                    margin-left: 25rpx;
+                    margin-top:18rpx;
+               }
+               .shop_icon{
+                    float: right;
+                    width: 16rpx;
+                    height: 27rpx;
+                    margin-left: 20rpx;
+                    margin-top:18rpx;
+               }
+            }
+            .gui{
+                overflow: hidden;
+                background:#fff;
+                padding:30rpx 22rpx;
+                border-bottom: 1rpx solid #f2f2f2;
+               .gui_label{
+                    float: left;
+                    font-size: 30rpx;
+                    line-height: 30rpx;
+                    color:#666;
+               } 
+               .gui_value{
+                    float: left;
+                    font-size: 30rpx;
+                    line-height: 30rpx;
+                    color:rgb(51, 51, 51);
+                    margin-left: 45rpx;
+               }
+               .gui_icon{
+                    float: right;
+                    width: 16rpx;
+                    height: 27rpx;
+                    margin-left: 20rpx;
+               }
+            }
+            .address{
+                overflow: hidden;
+                background:#fff;
+                padding:30rpx 22rpx;
+                margin-bottom: 16rpx;
+                .address_label{
+                    float: left;
+                    font-size: 30rpx;
+                    line-height: 30rpx;
+                    color:#666;
+                } 
+                .address_value{
+                    float: left;
+                    font-size: 30rpx;
+                    line-height: 30rpx;
+                    color:rgb(51, 51, 51);
+                    margin-left: 45rpx;
+                }
+                .address_icon{
+                    float: right;
+                    width: 16rpx;
+                    height: 27rpx;
+                    margin-left: 20rpx;
+                }
+            }
+            .discuss{
+                .header{
+                    overflow: hidden;
+                    background:#fff;
+                    padding:30rpx 22rpx;
+                   .header_label{
+                        float: left;
+                        font-size: 30rpx;
+                        line-height: 30rpx;
+                        color:rgb(40, 40, 40);
+                   } 
+                   .header_value{
+                        float: right;
+                        font-size: 30rpx;
+                        line-height: 30rpx;
+                        color:rgb(102, 102, 102);
+                   }
+                   .header_icon{
+                        float: right;
+                        width: 16rpx;
+                        height: 27rpx;
+                        margin-left: 20rpx;
+                   }
+                }
+                .item{
+                    .item_header{
+                        margin-top:16rpx;
+                        overflow: hidden;
+                        height: 80rpx;
+                        background: #fff;
+                        .header_avatar{
+                            float: left;
+                            width: 58rpx;
+                            height: 58rpx;
+                            background: #333;
+                            border-radius: 50%;
+                            margin-left:26rpx;
+                            margin-top:22rpx;
+                        }
+                        .header_txt{
+                            float: left;
+                            font-size: 30rpx;
+                            line-height: 30rpx;
+                            color:rgb(51, 51, 51);
+                            margin-top:40rpx;
+                            margin-left:20rpx;
+                        }
+                        .header_time{
+                            float: left;
+                            font-size: 24rpx;
+                            line-height:24rpx;
+                            color:rgb(102, 102, 102);
+                            margin-top:42rpx;
+                            margin-left:30rpx;
+                        }
+                    }
+                    .item_des{
+                        font-size: 30rpx;
+                        line-height: 46rpx;
+                        color:rgb(51, 51, 51);
+                        padding:16rpx 26rpx;
+                        background: #fff;
+                    }
+                    .item_imgs{
+                        padding:0 11rpx 0 19rpx;
+                        overflow: hidden;
+                        background: #fff;
+                        .img{
+                            float: left;
+                            width: 232rpx;
+                            height: 232rpx;
+                            margin-right: 8rpx;
+                            margin-bottom: 8rpx;
+                            background: #333;
+                        }
+                    }
+                    .item_date{
+                        background: #fff;
+                        padding:18rpx 19rpx 26rpx 19rpx;
+                        font-size: 24rpx;
+                        line-height: 24rpx;
+                        color: rgb(51, 51, 51);
+                    }
+                }
+            }
+            .goods{
+                margin-top: 16rpx;
+                .goods_title{
+                    background: #fff;
+                    height: 66rpx;
+                    font-size: 30rpx;
+                    line-height:66rpx;
+                    padding-left:20rpx;
+                }    
+                .goods_img{
+                    width: 750rpx;
+                    height: 500rpx;
+                    background: #333;
+                    vertical-align: bottom;
+                }
+            }
+            .bottom_bar{
+                .van-info {
+                    right:3rpx;
+                    top:-6px;
+                }   
+            }
+        }
+        .discuss_content{
+            .van-tabs{
+                margin:0!important;
+                padding:0!important;
+                height: auto!important;
+                .van-tabs__wrap{
+                    position: static!important;
+                    height: auto!important;
+                    .van-tabs__scroll--card{
+                        border:none;
+                    }
+                    .van-tabs__nav--card{
+                        overflow: hidden;
+                        display:inline-block;
+                        position: static!important;
+                        height: auto!important; 
+                        flex: none;
+                        -webkit-flex:none;
+                        padding-top:24rpx;
+                        padding-left:29rpx;
+                        .van-tab{
+                            float: left;
+                            flex: none;
+                            background-color:#FBF0EF;
+                            -webkit-flex:none;
+                            margin: 0 !important;
+                            padding:0!important;
+                            padding-top:20rpx!important;
+                            padding-right:20rpx!important;
+                            padding-bottom:20rpx!important;
+                            padding-left:20rpx!important;
+                            line-height:auto!important;
+                            border-right:none!important;
+                            margin-right:24rpx!important;
+                            margin-bottom:21rpx!important;
+                            border-radius: 8rpx;
+                            .van-tab__title{
+                                font-size: 26rpx!important;
+                                line-height: 26rpx!important;
+                                overflow:hidden;
+                                white-space:normal;
+                                text-overflow:ellipsis;
+                            }
+                        }
+                        .van-tab.van-tab--active {
+                            background-color:#CE4031;
+                            color:#fff!important;
+                        }
+                      
+                    }
+                }
+            }
+            .discuss{
+                .header{
+                    overflow: hidden;
+                    background:#fff;
+                    padding:30rpx 22rpx;
+                   .header_label{
+                        float: left;
+                        font-size: 30rpx;
+                        line-height: 30rpx;
+                        color:rgb(40, 40, 40);
+                   } 
+                   .header_value{
+                        float: right;
+                        font-size: 30rpx;
+                        line-height: 30rpx;
+                        color:rgb(102, 102, 102);
+                   }
+                   .header_icon{
+                        float: right;
+                        width: 16rpx;
+                        height: 27rpx;
+                        margin-left: 20rpx;
+                   }
+                }
+                .item{
+                    .item_header{
+                        margin-top:16rpx;
+                        overflow: hidden;
+                        height: 80rpx;
+                        background: #fff;
+                        .header_avatar{
+                            float: left;
+                            width: 58rpx;
+                            height: 58rpx;
+                            background: #333;
+                            border-radius: 50%;
+                            margin-left:26rpx;
+                            margin-top:22rpx;
+                        }
+                        .header_txt{
+                            float: left;
+                            font-size: 30rpx;
+                            line-height: 30rpx;
+                            color:rgb(51, 51, 51);
+                            margin-top:40rpx;
+                            margin-left:20rpx;
+                        }
+                        .header_time{
+                            float: left;
+                            font-size: 24rpx;
+                            line-height:24rpx;
+                            color:rgb(102, 102, 102);
+                            margin-top:42rpx;
+                            margin-left:30rpx;
+                        }
+                    }
+                    .item_des{
+                        font-size: 30rpx;
+                        line-height: 46rpx;
+                        color:rgb(51, 51, 51);
+                        padding:16rpx 26rpx;
+                        background: #fff;
+                    }
+                    .item_imgs{
+                        padding:0 11rpx 0 19rpx;
+                        overflow: hidden;
+                        background: #fff;
+                        .img{
+                            float: left;
+                            width: 232rpx;
+                            height: 232rpx;
+                            margin-right: 8rpx;
+                            margin-bottom: 8rpx;
+                            background: #333;
+                        }
+                    }
+                    .item_date{
+                        background: #fff;
+                        padding:18rpx 19rpx 26rpx 19rpx;
+                        font-size: 24rpx;
+                        line-height: 24rpx;
+                        color: rgb(51, 51, 51);
+                    }
+                }
+            }
+        }
+    }
+}
+.van-tab{
+    padding:0;
+    font-size: 32rpx!important;
+    color:#333!important;
+}
+.van-tabs__line{
+    width:76rpx!important;
+    top:72rpx;
+    left:26rpx!important;
+    background-color:#FFD944!important;
+}
+
+.attr_content{
+    .van-popup {
+        background: transparent!important;
+    }
+    .popup_attr{
+        height: 1006rpx;
+       
+        .back{
+            position: relative;
+            height: 268rpx;
+            .img{
+                z-index: 100;
+                position: absolute;
+                top:0rpx;
+                left:16rpx;
+                width: 240rpx;
+                height: 240rpx;
+                background: red;
+                border-radius: 10rpx;
+            }
+            .attr_top{
+                z-index: 1;
+                position: absolute;
+                top:80rpx;
+                left:0rpx;
+                padding-top:40rpx;
+                padding-bottom:42rpx;
+                background: #fff;
+                width: 750rpx;
+                height: 106rpx;
+                .top_middle{
+                    float:left;
+                    margin-left:290rpx;
+                    .des_price{
+                        font-size: 30rpx;
+                        line-height: 30rpx;
+                        color: #FF000D;
+                    }
+                    .des_count{
+                        font-size: 24rpx;
+                        line-height: 24rpx;
+                        color:#666;
+                        margin-top:18rpx;
+                        margin-bottom:16rpx;
+                    }
+                    .des_select{
+                        font-size: 22rpx;
+                        line-height: 22rpx;
+                        color:#33;
+                    }
+                }
+                .top_right{
+                    float: right;
+                    margin-right: 36rpx;
+                }
+            }
+        }
+        .attr_gui{
+            background: #fff;
+            padding:22rpx 34rpx 18rpx 34rpx;
+            border-top: 1rpx solid #f2f2f2;
+            .gui_title{
+                font-size: 24rpx;
+                line-height: 24rpx;
+                margin-bottom: 20rpx;
+            }
+            .gui_list{
+                overflow: hidden;
+                .gui_item{
+                    float: left;
+                    width:164rpx;
+                    height: 58rpx;
+                    line-height: 58rpx;
+                    text-align: center;
+                    color:#333;
+                    font-size: 20rpx;
+                    background: #F2F2F2;
+                    border-radius: 6rpx;
+                    margin-left:20rpx;
+                }
+                .gactive{
+                    border:1rpx solid #FF000D;
+                    color:#FF000D;
+                    background: transparent;
+                }
+            }
+        }
+        .attr_color{
+            background: #fff;
+            padding:22rpx 34rpx 18rpx 34rpx;
+            border-top: 1rpx solid #f2f2f2;
+            .color_title{
+                font-size: 24rpx;
+                line-height: 24rpx;
+                margin-bottom: 20rpx;
+            }
+            .color_list{
+                overflow: hidden;
+                .color_item{
+                    float: left;
+                    width:164rpx;
+                    height: 58rpx;
+                    line-height: 58rpx;
+                    text-align: center;
+                    color:#333;
+                    font-size: 20rpx;
+                    background: #F2F2F2;
+                    border-radius: 6rpx;
+                    margin-left:20rpx;
+                    overflow: hidden;
+                    .item_img{
+                        margin-top:6rpx;
+                        margin-left: 8rpx;
+                        float: left;
+                        width: 66rpx;
+                        height: 46rpx;
+                        background: #666;
+                    }
+                    .item_txt{
+                        float: left;
+                        font-size: 24rpx;
+                        line-height: 24rpx;
+                        margin-left: 12rpx;
+                        margin-top:18rpx;
+                    }
+                }
+                .cactive{
+                    border:1rpx solid #FF000D;
+                    color:#FF000D;
+                    background: transparent;
+                }
+            }
+        }
+        .num{
+            padding:60rpx 20rpx 228rpx 34rpx;
+            background: #fff;
+            border-top: 1rpx solid #f2f2f2;
+            height:60rpx;
+            .num_left{
+                float: left;
+                font-size: 24rpx;
+                line-height: 24rpx;
+                margin-top:20rpx;
+            }
+            .num_right{
+                float: right;
+            }
+        }
+        .bottoms{
+            width: 750rpx;
+            height: 100rpx;
+            font-size: 24rpx;
+            line-height: 100rpx;
+            text-align: center;
+            overflow: hidden;
+            border-top: 1rpx solid #f2f2f2;
+            .bottoms_cart{
+                float: left;
+                width: 375rpx;
+                background: #fff;
+            }
+            .bottoms_buy{
+                float: left;
+                width: 375rpx;
+                background: #D41C1C;
+                color:#fff;
+            }
+        }
+    }
+}

@@ -1,9 +1,7 @@
 {
     "usingComponents": {
-        "van-field": "/dist/field/index",
-        "van-area": "/dist/area/index",
-        "van-popup": "/dist/popup/index",
-        "van-checkbox": "/dist/checkbox/index",
+        "van-radio": "/dist/radio/index",
+        "van-radio-group": "/dist/radio-group/index",
         "van-button": "/dist/button/index"
     },
     "navigationBarTitleText": "收获地址"

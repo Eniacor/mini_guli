@@ -4,11 +4,11 @@ const Session = require('./common/auth/session');
 App({
     onLaunch: function () {
         Session.clear();
-        auth.login({
-            url: api.XcxLogin,
-            success() {},
-            fail() {},
-        });
+        // auth.login({
+        //     url: api.XcxLogin,
+        //     success() {},
+        //     fail() {},
+        // });
     },
     onShow: function (options) {
         console.log(options);

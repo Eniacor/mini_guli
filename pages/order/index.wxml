@@ -1,0 +1,263 @@
+<view class="index">
+  <view class="container">
+    <van-tabs active="{{ active }}" bind:change="onChange">
+      <van-tab title="全部">
+        <view class="null">
+          <image class="null_img" src="/images/static/empty.png"></image>
+        </view>
+      </van-tab> 
+      <van-tab title="待付款">
+         <view class="content">
+          <view class="item">
+            <view class="header">
+              <view class="header_left">2019-01-21 10:45</view>
+              <view class="header_right">已完成</view>
+            </view>
+            <view class="center">
+              <view class="center_left">
+                <image class="left_img" src=""></image>
+              </view>
+              <view class="center_middle">
+                <view class="middle_title">BEELY彼丽四味足汤 足浴包 泡脚药包 一盒10袋 共40袋</view>
+                <view class="middle_des">规格：一盒10袋（共40袋）</view>
+                <view class="middle_post">包邮</view>
+              </view>
+              <view class="center_right">
+                <view class="right_price">￥99.00</view>
+                <view class="right_num">x1</view>
+              </view>
+            </view>
+            <view class="bottom">
+              <view class="bottom_top">
+                应付款：<text class="price">￥99.00</text>（含运费：￥0.00）
+              </view>
+              <view class="bottom_btn">
+                <view class="btn circle">删除</view>
+                <view class="btn entry">再次购买</view>
+              </view>
+            </view>
+          </view>
+          <view class="item margin24">
+            <view class="header">
+              <view class="header_left">2019-01-21 10:45</view>
+              <view class="header_right">已完成</view>
+            </view>
+            <view class="center">
+              <view class="center_left">
+                <image class="left_img" src=""></image>
+              </view>
+              <view class="center_middle">
+                <view class="middle_title">BEELY彼丽四味足汤 足浴包 泡脚药包 一盒10袋 共40袋</view>
+                <view class="middle_des">规格：一盒10袋（共40袋）</view>
+                <view class="middle_post">包邮</view>
+              </view>
+              <view class="center_right">
+                <view class="right_price">￥99.00</view>
+                <view class="right_num">x1</view>
+              </view>
+            </view>
+            <view class="bottom">
+              <view class="bottom_top">
+                应付款：<text class="price">￥99.00</text>（含运费：￥0.00）
+              </view>
+              <view class="bottom_btn">
+                <view class="btn circle">删除</view>
+                <view class="btn entry">再次购买</view>
+              </view>
+            </view>
+          </view>
+          <view class="empty">没有更多了~</view>
+        </view>
+      </van-tab>
+      <van-tab title="待发货">
+         <view class="content">
+          <view class="item">
+            <view class="header">
+              <view class="header_left">2019-01-21 10:45</view>
+              <view class="header_right">已完成</view>
+            </view>
+            <view class="center">
+              <view class="center_left">
+                <image class="left_img" src=""></image>
+              </view>
+              <view class="center_middle">
+                <view class="middle_title">BEELY彼丽四味足汤 足浴包 泡脚药包 一盒10袋 共40袋</view>
+                <view class="middle_des">规格：一盒10袋（共40袋）</view>
+                <view class="middle_post">包邮</view>
+              </view>
+              <view class="center_right">
+                <view class="right_price">￥99.00</view>
+                <view class="right_num">x1</view>
+              </view>
+            </view>
+            <view class="bottom">
+              <view class="bottom_top">
+                应付款：<text class="price">￥99.00</text>（含运费：￥0.00）
+              </view>
+              <view class="bottom_btn">
+                <view class="btn circle">删除</view>
+                <view class="btn entry">再次购买</view>
+              </view>
+            </view>
+          </view>
+          <view class="item margin24">
+            <view class="header">
+              <view class="header_left">2019-01-21 10:45</view>
+              <view class="header_right">已完成</view>
+            </view>
+            <view class="center">
+              <view class="center_left">
+                <image class="left_img" src=""></image>
+              </view>
+              <view class="center_middle">
+                <view class="middle_title">BEELY彼丽四味足汤 足浴包 泡脚药包 一盒10袋 共40袋</view>
+                <view class="middle_des">规格：一盒10袋（共40袋）</view>
+                <view class="middle_post">包邮</view>
+              </view>
+              <view class="center_right">
+                <view class="right_price">￥99.00</view>
+                <view class="right_num">x1</view>
+              </view>
+            </view>
+            <view class="bottom">
+              <view class="bottom_top">
+                应付款：<text class="price">￥99.00</text>（含运费：￥0.00）
+              </view>
+              <view class="bottom_btn">
+                <view class="btn circle">删除</view>
+                <view class="btn entry">再次购买</view>
+              </view>
+            </view>
+          </view>
+          <view class="empty">没有更多了~</view>
+        </view>
+      </van-tab>
+      <van-tab title="待收货">
+         <view class="content">
+          <view class="item">
+            <view class="header">
+              <view class="header_left">2019-01-21 10:45</view>
+              <view class="header_right">已完成</view>
+            </view>
+            <view class="center">
+              <view class="center_left">
+                <image class="left_img" src=""></image>
+              </view>
+              <view class="center_middle">
+                <view class="middle_title">BEELY彼丽四味足汤 足浴包 泡脚药包 一盒10袋 共40袋</view>
+                <view class="middle_des">规格：一盒10袋（共40袋）</view>
+                <view class="middle_post">包邮</view>
+              </view>
+              <view class="center_right">
+                <view class="right_price">￥99.00</view>
+                <view class="right_num">x1</view>
+              </view>
+            </view>
+            <view class="bottom">
+              <view class="bottom_top">
+                应付款：<text class="price">￥99.00</text>（含运费：￥0.00）
+              </view>
+              <view class="bottom_btn">
+                <view class="btn circle">删除</view>
+                <view class="btn entry">再次购买</view>
+              </view>
+            </view>
+          </view>
+          <view class="item margin24">
+            <view class="header">
+              <view class="header_left">2019-01-21 10:45</view>
+              <view class="header_right">已完成</view>
+            </view>
+            <view class="center">
+              <view class="center_left">
+                <image class="left_img" src=""></image>
+              </view>
+              <view class="center_middle">
+                <view class="middle_title">BEELY彼丽四味足汤 足浴包 泡脚药包 一盒10袋 共40袋</view>
+                <view class="middle_des">规格：一盒10袋（共40袋）</view>
+                <view class="middle_post">包邮</view>
+              </view>
+              <view class="center_right">
+                <view class="right_price">￥99.00</view>
+                <view class="right_num">x1</view>
+              </view>
+            </view>
+            <view class="bottom">
+              <view class="bottom_top">
+                应付款：<text class="price">￥99.00</text>（含运费：￥0.00）
+              </view>
+              <view class="bottom_btn">
+                <view class="btn circle">删除</view>
+                <view class="btn entry">再次购买</view>
+              </view>
+            </view>
+          </view>
+          <view class="empty">没有更多了~</view>
+        </view>
+      </van-tab>
+      <van-tab title="待评价">
+         <view class="content">
+          <view class="item">
+            <view class="header">
+              <view class="header_left">2019-01-21 10:45</view>
+              <view class="header_right">已完成</view>
+            </view>
+            <view class="center">
+              <view class="center_left">
+                <image class="left_img" src=""></image>
+              </view>
+              <view class="center_middle">
+                <view class="middle_title">BEELY彼丽四味足汤 足浴包 泡脚药包 一盒10袋 共40袋</view>
+                <view class="middle_des">规格：一盒10袋（共40袋）</view>
+                <view class="middle_post">包邮</view>
+              </view>
+              <view class="center_right">
+                <view class="right_price">￥99.00</view>
+                <view class="right_num">x1</view>
+              </view>
+            </view>
+            <view class="bottom">
+              <view class="bottom_top">
+                应付款：<text class="price">￥99.00</text>（含运费：￥0.00）
+              </view>
+              <view class="bottom_btn">
+                <view class="btn circle">删除</view>
+                <view class="btn entry">再次购买</view>
+              </view>
+            </view>
+          </view>
+          <view class="item margin24">
+            <view class="header">
+              <view class="header_left">2019-01-21 10:45</view>
+              <view class="header_right">已完成</view>
+            </view>
+            <view class="center">
+              <view class="center_left">
+                <image class="left_img" src=""></image>
+              </view>
+              <view class="center_middle">
+                <view class="middle_title">BEELY彼丽四味足汤 足浴包 泡脚药包 一盒10袋 共40袋</view>
+                <view class="middle_des">规格：一盒10袋（共40袋）</view>
+                <view class="middle_post">包邮</view>
+              </view>
+              <view class="center_right">
+                <view class="right_price">￥99.00</view>
+                <view class="right_num">x1</view>
+              </view>
+            </view>
+            <view class="bottom">
+              <view class="bottom_top">
+                应付款：<text class="price">￥99.00</text>（含运费：￥0.00）
+              </view>
+              <view class="bottom_btn">
+                <view class="btn circle">删除</view>
+                <view class="btn entry">再次购买</view>
+              </view>
+            </view>
+          </view>
+          <view class="empty">没有更多了~</view>
+        </view>
+      </van-tab>
+    </van-tabs>
+  </view>
+</view>

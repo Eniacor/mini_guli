@@ -1,32 +1,73 @@
 .collect{
-    .collect_num{
-        font-size: 24rpx;
-        text-align: center;
-        color:#999;
-        margin-top:20rpx;
-    }
-    .collect_can{
-        padding: 0 36rpx;
-        padding-top:30rpx;
+    .list{
         .item{
-            display: inline-block;
-            width: 318rpx;
-            width: 46rpx;
-            height: 46rpx;
-            margin-right: 6rpx;
-            &:last-child{
-                margin-right: 0;
+            overflow: hidden;
+            border:1rpx solid #f2f2f2;
+            padding:26rpx 40rpx 39rpx 82rpx;
+            .item_left{
+                float: left;
+                .left_img{
+                    width: 180rpx;
+                    height: 180rpx;
+                    background:#8E8E93;
+                }     
             }
-            .img{
-                width: 46rpx;
-                height: 46rpx;
+            .item_right{
+                float: left;
+                width: 426rpx;
+                margin-left:12rpx;
+                position: relative;
+                .right_title{
+                    font-size: 26rpx;
+                    line-height: 26rpx;
+                    color: rgb(51, 51, 51);
+                }
+                .right_des{
+                    font-size: 24rpx;
+                    line-height: 24rpx;
+                    color: rgb(153, 153, 153);  
+                    margin-top:20rpx;
+                    margin-bottom:32rpx;
+                }
+                .right_count{
+                    font-size: 24rpx;
+                    line-height: 24rpx;
+                    color:rgb(255, 0, 13);
+                    margin-bottom:26rpx;
+                }
+                .right_price{
+                    font-size: 30rpx;
+                    line-height: 30rpx;
+                    color:rgb(255, 0, 13);
+                }
+                .right_delete{
+
+                    position: absolute;
+                    bottom:6rpx;
+                    right:0;
+                    width:34rpx;
+                    height: 36rpx;
+                }
             }
-        }
+        }     
     }
-    .collect_btn{
-      text-align: center;
-      margin-top:20rpx;
-      font-size: 24rpx;
-      color:#999;
+    .empty{
+        position: relative;
+        .empty_img{
+            position: absolute;
+            top:322rpx;
+            left:51rpx;
+            width:648rpx;
+            height: 468rpx;
+        }    
+        .empty_txt{
+            position: absolute;
+            top:796rpx;
+            left:0;
+            width:750rpx;
+            text-align: center;
+            font-size: 26rpx;
+            color:rgb(153, 153, 153);
+        }
     }
 }

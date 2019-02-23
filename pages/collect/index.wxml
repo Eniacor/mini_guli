@@ -1,11 +1,32 @@
 <view class="collect">
-  <view class="collect_num">
-    {{join.length}}位参与者
-  </view>
-  <view class="collect_can">
-    <view class="item" wx:for="{{join}}" wx:key="index">
-      <image mode="scaleToFill" class="img" src="{{item.avatar_url}}" />
+  <view class="list">
+    <view class="item">
+      <view class="item_left">
+        <image class="left_img" src=""></image>
+      </view>
+      <view class="item_right">
+        <view class="right_title">小米 红米6 Pro 全网通手机 双卡双...</view>
+        <view class="right_des">规格4+32G 颜色：巴黎蓝</view>
+        <view class="right_count">库存紧张</view>
+        <view class="right_price">￥118</view>
+        <image class="right_delete" src="/images/static/delete.png" ></image>
+      </view>
+    </view>
+    <view class="item">
+      <view class="item_left">
+        <image class="left_img" src=""></image>
+      </view>
+      <view class="item_right">
+        <view class="right_title">小米 红米6 Pro 全网通手机 双卡双...</view>
+        <view class="right_des">规格4+32G 颜色：巴黎蓝</view>
+        <view class="right_count">库存紧张</view>
+        <view class="right_price">￥118</view>
+        <image class="right_delete" src="/images/static/delete.png" ></image>
+      </view>
     </view>
   </view>
-  <view class="collect_btn">查看更多</view>
+  <view class="empty">
+    <image class="empty_img" src="/images/static/person_empty.png" ></image>
+    <view class="empty_txt">暂无收藏哦，快去逛逛吧～</view>
+  </view>
 </view>

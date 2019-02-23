@@ -1,0 +1,227 @@
+page {
+  font-family: -apple-system-font, Arial, Helvetica, sans-serif;
+}
+.container {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.good {
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+  background-color: #fff;
+}
+.good_content {
+  z-index: 1;
+  width: 100%;
+  height: 257rpx;
+  background-color: #fff;
+}
+.good_content .checkbox {
+  float: left;
+  width: 38rpx;
+  height: 38rpx;
+  margin-left: 30rpx;
+  margin-right: 14rpx;
+  margin-top: 110rpx;
+}
+.good_content .good_img {
+  float: left;
+  margin-top: 39rpx;
+  width: 179rpx;
+  height: 179rpx;
+  background: #8E8E93;
+}
+.good_content .right {
+  position: relative;
+  float: left;
+  margin-left: 12rpx;
+}
+.good_content .right .right_title {
+  width: 426rpx;
+  margin-top: 26rpx;
+  font-size: 26rpx;
+  line-height: 26rpx;
+  color: #333;
+}
+.good_content .right .right_des {
+  width: 426rpx;
+  margin-top: 25rpx;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color: #A7A7A7;
+}
+.good_content .right .right_account {
+  width: 426rpx;
+  margin-top: 36rpx;
+  font-size: 26rpx;
+  line-height: 26rpx;
+  color: #FF000D;
+}
+.good_content .right .right_price {
+  width: 426rpx;
+  margin-top: 26rpx;
+  font-size: 26rpx;
+  line-height: 26rpx;
+  color: #FF000D;
+}
+.good_content .right .stepper {
+  position: absolute;
+  top: 144rpx;
+  right: 32rpx;
+  overflow: hidden;
+  margin-top: 10rpx;
+  width: 50%;
+  margin-left: 70rpx;
+}
+.good_content .right .stepper .add,
+.good_content .right .stepper .subtract {
+  float: left;
+  width: 64rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  text-align: center;
+  font-size: 30rpx;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  color: #333;
+}
+.good_content .right .stepper .count {
+  float: left;
+  width: 64rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  box-sizing: border-box;
+  min-height: 1rem;
+  font-size: 28rpx;
+}
+.good_content .right .stepper .disabled {
+  float: left;
+  color: #eee;
+}
+.good_content .right .delete {
+  position: absolute;
+  top: 168rpx;
+  right: -11rpx;
+  width: 34rpx;
+  height: 34rpx;
+}
+/*******底部********************************************  */
+.section-bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 100rpx;
+  margin-bottom: 0;
+  background-color: #fff;
+  box-sizing: border-box;
+  z-index: 99;
+}
+.section-bottom .btn {
+  width: 160rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: #fdfffd;
+  background-color: #fbb304;
+}
+.section-bottom .btn-default {
+  color: #363636;
+  background-color: #eee;
+}
+.section-bottom .btn-primary {
+  color: #fdfffd;
+  background-color: #e83632;
+}
+.section-bottom .checkbox-allcheck {
+  display: inline-block;
+  margin-left: 30rpx;
+  vertical-align: top;
+  font-size: 0px;
+}
+.section-bottom .check-all-text {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10rpx;
+  height: 23px;
+  line-height: 23px;
+  font-size: 28rpx;
+}
+.section-bottom .total {
+  flex: 1;
+  text-align: center;
+  font-size: 26rpx;
+}
+.total .totalCount {
+  font-size: 26rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+.total .totalPrice {
+  display: inline-block;
+  font-size: 26rpx;
+  margin-left: 20rpx;
+  vertical-align: middle;
+}
+.total .totalCount text {
+  color: #e4452a;
+  vertical-align: middle;
+}
+.total .totalPrice text {
+  color: #e4452a;
+  font-size: 36rpx;
+  vertical-align: middle;
+}
+/*   空购物车  */
+.cartList {
+  padding: 100px 0 0 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: #999;
+}
+.cartList image {
+  width: 66px;
+  height: 66px;
+  margin-bottom: 20px;
+}
+.bottom {
+  position: fixed;
+  bottom: 0;
+  width: 750rpx;
+  line-height: 100rpx;
+  background: #fff;
+  border-top: 1rpx solid #f2f2f2;
+  font-size: 30rpx;
+  color: #333;
+  z-index: 100;
+}
+.bottom .total {
+  float: left;
+  text-align: center;
+  width: 249rpx;
+  height: 100rpx;
+  border-right: 1rpx solid #f2f2f2;
+}
+.bottom .go {
+  float: left;
+  text-align: center;
+  width: 249rpx;
+  height: 100rpx;
+  border-right: 1rpx solid #f2f2f2;
+}
+.bottom .btn {
+  float: left;
+  text-align: center;
+  width: 250rpx;
+  height: 100rpx;
+  background: #FF000D;
+  color: #fff;
+}

@@ -1,0 +1,179 @@
+<view class="index">
+  <view class="container">
+    <van-tabs active="{{ active }}" bind:change="onChange">
+      <van-tab title="商品">
+        <view class="content">
+          <swiper
+            class="slide_swiper"
+            indicator-dots="{{indicatorDots}}"
+            autoplay="{{autoplay}}"
+            interval="{{interval}}"
+            duration="{{duration}}">
+            <block wx:for="{{imgUrls}}">
+              <swiper-item>
+                <image src="{{item}}" class="slide_image" width="355" height="150" />
+              </swiper-item>
+            </block>
+          </swiper>
+          <view class="des">
+            <view class="price">
+              <text class="current">￥118</text>
+              <text class="origin">￥118</text>
+            </view>
+            <view class="post">满100免邮费</view>
+            <view class="title">网红便携式手持电熨斗</view>
+          </view>
+          <view class="send">
+            <image class="send_img" src="/images/static/post_cart.png"></image>
+            <text class="send_txt">48小时发货</text>
+          </view>
+          <view class="shop">
+            <image class="shop_label"></image>
+            <view class="shop_value">中微直供官方旗舰店</view>
+            <image class="shop_icon" src="/images/static/my.png"></image>
+          </view>
+          <view class="gui">
+            <view class="gui_label">规格</view>
+            <view class="gui_value">选择 颜色分类 款式</view>
+            <image class="gui_icon" src="/images/static/my.png"></image>
+          </view>
+          <view class="address">
+            <view class="address_label">规格</view>
+            <view class="address_value">选择 颜色分类 款式</view>
+            <image class="address_icon" src="/images/static/my.png"></image>
+          </view>
+          <view class="discuss">
+            <view class="header">
+              <view class="header_label">商品评价(257)</view>
+              <image class="header_icon" src="/images/static/my.png"></image>
+              <view class="header_value">查看全部</view>
+            </view>
+            <view class="item">
+              <view class="item_header">
+                <image class="header_avatar"></image>
+                <view class="header_txt">环球小荐人</view>
+                <view class="header_time">4小时前发布</view>
+              </view>
+              <view class="item_des">
+                普通的眼罩你肯定见过，那蒸汽眼罩你见过？
+                普通的眼罩你肯定见过，那蒸汽眼罩你见过？
+                普通的眼罩你肯定见过，那蒸汽眼罩你见过？
+                普通的眼罩你肯定见过，那蒸汽眼罩你见过？
+              </view>
+              <view class="item_imgs">
+                <image class="img"></image>
+                <image class="img"></image>
+                <image class="img"></image>
+                <image class="img"></image>
+                <image class="img"></image>
+              </view>
+              <view class="item_date">2019.01.27 颜色：蓝色 500ml</view>
+            </view>
+          </view>
+          <view class="goods">
+            <view class="goods_title">商品详情</view>
+            <image class="goods_img"></image>
+            <image class="goods_img"></image>
+          </view>
+          <view class="bottom_bar">
+            <van-goods-action>
+              <van-goods-action-icon icon="shop-o" text="店铺" />
+              <van-goods-action-icon icon="cart-o" text="购物车" info="5" />
+              <van-goods-action-button text="加入购物车" type="warning" />
+              <van-goods-action-button text="立即购买" />
+            </van-goods-action>
+          </view>
+        </view>
+      </van-tab>
+      <van-tab title="评价">
+        <view class="discuss_content">
+           <van-tabs type="card">
+            <van-tab title="全部（1044）">
+                <view class="discuss">
+                  <view class="header">
+                    <view class="header_label">商品评价(257)</view>
+                    <image class="header_icon" src="/images/static/my.png"></image>
+                    <view class="header_value">查看全部</view>
+                  </view>
+                  <view class="item">
+                    <view class="item_header">
+                      <image class="header_avatar"></image>
+                      <view class="header_txt">环球小荐人</view>
+                      <view class="header_time">4小时前发布</view>
+                    </view>
+                    <view class="item_des">
+                      普通的眼罩你肯定见过，那蒸汽眼罩你见过？
+                      普通的眼罩你肯定见过，那蒸汽眼罩你见过？
+                      普通的眼罩你肯定见过，那蒸汽眼罩你见过？
+                      普通的眼罩你肯定见过，那蒸汽眼罩你见过？
+                    </view>
+                    <view class="item_imgs">
+                      <image class="img"></image>
+                      <image class="img"></image>
+                      <image class="img"></image>
+                      <image class="img"></image>
+                      <image class="img"></image>
+                    </view>
+                    <view class="item_date">2019.01.27 颜色：蓝色 500ml</view>
+                  </view>
+                </view>
+            </van-tab>
+            <van-tab title="追加（441）">内容 2</van-tab>
+            <van-tab title="有图（2357）">内容 3</van-tab>
+            <van-tab title="质量很好（105344）">内容 3</van-tab>
+          </van-tabs>
+        </view>
+      </van-tab>
+      <van-tab title="详情">内容 3</van-tab>
+    </van-tabs>
+  </view>
+</view>
+<view class="attr_content">
+  <van-popup show="{{true}}"  position="bottom" bind:close="onClose">
+    <view class="popup_attr">
+      <view class="back">
+        <image class="img"></image>
+        <view class="attr_top">
+          <view class="top_right">
+            <van-icon name="cross" />
+          </view>
+          <view class="top_middle">
+            <view class="des_price">￥118</view>
+            <view class="des_count">库存9971</view>
+            <view class="des_select">已选择："150ml"</view>
+          </view>
+        </view>
+      </view>
+      <view class="attr_gui">
+        <view class="gui_title">规格</view>
+        <view class="gui_list">
+          <view class="gui_item gactive">100ml</view>
+          <view class="gui_item">150ml</view>
+        </view>
+      </view>
+      <view class="attr_color">
+        <view class="color_title">颜色分类</view>
+        <view class="color_list">
+          <view class="color_item cactive">
+            <image class="item_img" src=""></image>
+            <text class="item_txt">100ml</text>
+          </view>
+          <view class="color_item">
+            <image class="item_img" src=""></image>
+            <text class="item_txt">100ml</text>
+          </view>
+        </view>
+      </view>
+      <view class="num">
+        <view class="num_left">购买数量</view>
+        <view class="num_right">
+          <van-stepper value="{{ 1 }}" bind:change="onChange" />
+        </view>
+      </view>
+      <view class="bottoms">
+        <view class="bottoms_cart">加入购物车</view>
+        <view class="bottoms_buy">确定</view>
+      </view> 
+    </view>
+  </van-popup>
+</view>

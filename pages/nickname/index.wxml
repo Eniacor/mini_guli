@@ -1,0 +1,7 @@
+<view class="nickname">
+    <textarea
+        placeholder="给自己取一个郎朗上口的昵称吧～"
+        class="custom_textarea"/>
+    <view class="tip">最多10个字符</view>
+</view>
+<view class="btn">保存</view>

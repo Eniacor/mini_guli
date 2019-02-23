@@ -1,0 +1,14 @@
+{
+    "navigationBarTitleText": "商品详情",
+    "usingComponents": {
+        "van-tab": "/dist/tab/index",
+        "van-tabs": "/dist/tabs/index",
+        "van-goods-action": "/dist/goods-action/index",
+        "van-goods-action-icon": "/dist/goods-action-icon/index",
+        "van-goods-action-button": "/dist/goods-action-button/index",
+        "van-popup": "/dist/popup/index",
+        "van-icon": "/dist/icon/index",
+        "van-stepper": "/dist/stepper/index"
+    }
+    
+}

@@ -1,0 +1,148 @@
+.header {
+  width: 750rpx;
+  height: 235rpx;
+  background: #ffd944;
+  overflow: hidden;
+}
+.header .user_img {
+  float: left;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 22rpx 22rpx 0 32rpx;
+}
+.header .user_nick {
+  float: left;
+  margin-top: 72rpx;
+  font-size: 40rpx;
+  font-weight: normal;
+  line-height: 40rpx;
+  color: #282828;
+}
+.header .user_info {
+  float: right;
+  margin: 64rpx 36rpx 0 0;
+  width: 166rpx;
+  height: 50rpx;
+  border-radius: 20rpx;
+  background: #FFFFFF;
+}
+.header .user_info .txt {
+  font-size: 26rpx;
+  color: #282828;
+  margin: 0 18rpx 0 18rpx;
+}
+.header .user_info .img {
+  width: 12rpx;
+  height: 20rpx;
+}
+.orders {
+  background: #fff;
+  padding-top: 51rpx;
+}
+.orders .orders_top {
+  overflow: hidden;
+}
+.orders .orders_top .top_left {
+  float: left;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  color: #333333;
+  margin: 0 0 0 32rpx;
+}
+.orders .orders_top .top_right {
+  float: right;
+  line-height: 26rpx;
+}
+.orders .orders_top .top_right .txt {
+  font-size: 26rpx;
+  color: #989898;
+}
+.orders .orders_top .top_right .img {
+  width: 12rpx;
+  height: 20rpx;
+  margin: 0 36rpx 0 9rpx;
+}
+.orders .orders_items {
+  overflow: hidden;
+  padding-top: 64rpx;
+  padding-bottom: 36rpx;
+}
+.orders .orders_items .item {
+  float: left;
+  width: 150rpx;
+  text-align: center;
+}
+.orders .orders_items .item .img {
+  margin-bottom: 30rpx;
+  width: 58rpx;
+  height: 62rpx;
+  margin: 0 auto;
+}
+.orders .orders_items .item .txt {
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color: #282828;
+}
+.info {
+  padding: 26rpx 54rpx 34rpx 58rpx;
+  margin-top: 16rpx;
+  overflow: hidden;
+  background: #FFFFFF;
+}
+.info .info_left {
+  float: left;
+}
+.info .info_left .left_top {
+  font-size: 30rpx;
+  line-height: 30rpx;
+  font-weight: bold;
+  color: #282828;
+}
+.info .info_left .left_bottom {
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  font-weight: bold;
+  color: #666666;
+}
+.info .info_right {
+  float: right;
+  margin-top: 16rpx;
+  width: 152rpx;
+  height: 52rpx;
+  background: #FFD944;
+  font-size: 24rpx;
+  color: #282828;
+  line-height: 52rpx;
+  text-align: center;
+  border-radius: 10rpx;
+}
+.lists {
+  margin-top: 16rpx;
+}
+.lists .item {
+  padding: 32rpx 35rpx;
+  background: #fff;
+  overflow: hidden;
+}
+.lists .item .left_img {
+  float: left;
+  width: 36rpx;
+  height: 36rpx;
+  vertical-align: bottom;
+}
+.lists .item .left_txt {
+  float: left;
+  margin-top: 4rpx;
+  font-size: 32rpx;
+  line-height: 32rpx;
+  color: #333333;
+  margin-left: 23rpx;
+}
+.lists .item .right_img {
+  float: right;
+  margin-top: 5rpx;
+  width: 16rpx;
+  height: 27rpx;
+  vertical-align: bottom;
+}

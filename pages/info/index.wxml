@@ -1,0 +1,96 @@
+<view class="person">
+    <view class="header">
+        <view class="user_img">
+            <open-data type="userAvatarUrl"></open-data>
+        </view>
+        <view class="user_nick">
+            <open-data type="userNickName"></open-data>
+        </view>
+        <view class="user_info">
+            <text class="txt">个人主页</text>
+            <image class="img" src="/images/static/person_info.png"></image>
+        </view>
+    </view>
+    <view class="orders">
+        <navigator url="/pages/order/index"  hover-class="none">
+            <view class="orders_top">
+                <view class="top_left">我的订单</view>
+                <view class="top_right">
+                    <text class="txt">全部订单</text>
+                    <image class="img" src="/images/static/order.png"></image>
+                </view>
+            </view>
+        </navigator>
+        <view class="orders_items">
+            <navigator url="/pages/order/index"  hover-class="none">
+                <view class="item">
+                    <image class="img" src="/images/static/order1.png"></image>
+                    <view class="txt">待付款</view>
+                </view>
+            </navigator>
+            <navigator url="/pages/order/index"  hover-class="none">
+                <view class="item">
+                    <image class="img" src="/images/static/order2.png"></image>
+                    <view class="txt">待发货</view>
+                </view>
+            </navigator>
+            <navigator url="/pages/order/index"  hover-class="none">
+                <view class="item">
+                    <image class="img" src="/images/static/order3.png"></image>
+                    <view class="txt">待收货</view>
+                </view>
+            </navigator>
+            <navigator url="/pages/order/index"  hover-class="none">
+                <view class="item">
+                    <image class="img" src="/images/static/order4.png"></image>
+                    <view class="txt">待评价</view>
+                </view>
+            </navigator>
+            <navigator url="/pages/order/index"  hover-class="none">
+                <view class="item">
+                    <image class="img" src="/images/static/order5.png"></image>
+                    <view class="txt">售后</view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+    <navigator url="/pages/person/index"  hover-class="none">
+        <view class="info">
+            <view class="info_left">
+                <view class="left_top">完善个人资料</view>
+                <view class="left_bottom">完善个人资料,可以获取更好的用户体验呦！</view>
+            </view>
+            <view class="info_right">完善</view>
+        </view>
+    </navigator>
+</view>
+<view class="lists">
+    <navigator url="/pages/collect/index"  hover-class="none">
+        <view class="item">
+            <image class="left_img" src="/images/static/collect.png"></image>
+            <text class="left_txt">我的收藏</text>
+            <image class="right_img" src="/images/static/my.png"></image>
+        </view>     
+    </navigator>
+    <navigator url="/pages/discount/index"  hover-class="none">
+        <view class="item">
+            <image class="left_img" src="/images/static/discount.png"></image>
+            <text class="left_txt">优惠券</text>
+            <image class="right_img" src="/images/static/my.png"></image>
+        </view>    
+    </navigator>
+    <navigator url="/pages/address/index"  hover-class="none">
+        <view class="item">
+            <image class="left_img" src="/images/static/address.png"></image>
+            <text class="left_txt">收货地址</text>
+            <image class="right_img" src="/images/static/my.png"></image>
+        </view>   
+    </navigator>
+    <navigator url="/pages/order/index"  hover-class="none">
+        <view class="item">
+            <image class="left_img" src="/images/static/about.png"></image>
+            <text class="left_txt">关于我们</text>
+            <image class="right_img" src="/images/static/my.png"></image>
+        </view>  
+    </navigator>
+</view>

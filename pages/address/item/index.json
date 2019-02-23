@@ -1,4 +1,5 @@
 {
+    "navigationBarTitleText": "添加地址",
     "usingComponents": {
         "van-field": "/dist/field/index",
         "van-area": "/dist/area/index",

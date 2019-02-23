@@ -1,0 +1,153 @@
+.post .van-cell {
+  font-size: 30rpx;
+  line-height: 30rpx;
+  padding: 30rpx 32rpx;
+  color: #333333;
+}
+.goods {
+  overflow: hidden;
+  height: 260rpx;
+  background: #fff;
+  border-top: 1rpx solid #f2f2f2;
+}
+.goods .goods_left {
+  float: left;
+  margin: 40rpx 10rpx 40rpx 82rpx;
+}
+.goods .goods_left .goods_img {
+  width: 180rpx;
+  height: 180rpx;
+  background: #8E8E93;
+}
+.goods .goods_right {
+  position: relative;
+  float: left;
+}
+.goods .goods_right .right_title {
+  width: 426rpx;
+  margin-top: 26rpx;
+  font-size: 26rpx;
+  line-height: 26rpx;
+  color: #333;
+}
+.goods .goods_right .right_des {
+  width: 426rpx;
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color: #999;
+}
+.goods .goods_right .right_res {
+  width: 426rpx;
+  margin-top: 40rpx;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color: #282828;
+}
+.goods .goods_right .right_price {
+  width: 426rpx;
+  margin-top: 26rpx;
+  font-size: 26rpx;
+  line-height: 26rpx;
+  color: #FF000D;
+}
+.goods .goods_right .right_count {
+  position: absolute;
+  top: 166rpx;
+  right: 60rpx;
+}
+.goods .goods_right .right_count .van-stepper__minus,
+.goods .goods_right .right_count .van-stepper__plus {
+  width: 32px;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+}
+.address {
+  background: #fff;
+  width: 750rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 28rpx;
+  text-align: center;
+  color: #333333;
+  border-top: 1rpx solid #f2f2f2;
+}
+.middle {
+  margin-top: 20rpx;
+}
+.middle .middle_message .van-cell {
+  padding: 30rpx 32rpx 50rpx 32rpx;
+}
+.middle .middle_message .van-field__body--textarea {
+  padding-top: 6rpx;
+}
+.money {
+  margin-top: 20rpx;
+}
+.money .item {
+  overflow: hidden;
+  padding: 30rpx 32rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #f2f2f2;
+}
+.money .item .item_left {
+  float: left;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  color: #333333;
+}
+.money .item .item_right {
+  float: right;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  color: #333333;
+}
+.money .total {
+  overflow: hidden;
+  padding: 30rpx 32rpx;
+  background: #fff;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  color: #333333;
+}
+.money .total .total_count {
+  float: right;
+}
+.money .total .total_count .num {
+  color: #FF000D;
+}
+.money .total .total_right {
+  float: right;
+}
+.money .total .total_right .num {
+  color: #FF000D;
+}
+.bottom {
+  position: fixed;
+  bottom: 0;
+  overflow: hidden;
+}
+.bottom .bottom_left {
+  float: left;
+  width: 320rpx;
+  padding-left: 55rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #fff;
+  font-size: 24rpx;
+}
+.bottom .bottom_left .num {
+  color: #FF000D;
+}
+.bottom .bottom_right {
+  float: left;
+  width: 375rpx;
+  height: 100rpx;
+  font-size: 24rpx;
+  line-height: 100rpx;
+  background: #D41C1C;
+  color: #fff;
+  text-align: center;
+}

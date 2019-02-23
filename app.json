@@ -1,25 +1,38 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/add/index",
-    "pages/person/index",
+    "pages/cart/index",
+    "pages/jingdetail/index",
+    "pages/giftdetail/index",
+    "pages/pindetail/index",
+    "pages/post/index",
     "pages/address/index",
-    "pages/introduce/index",
     "pages/address/item/index",
-    "pages/detail/index",
-    "pages/list/index",
-    "pages/collect/index"
+    "pages/school/index",
+    "pages/discuss/index",
+    "pages/birthday/index",
+    "pages/address/edit/index",
+    "pages/profession/index",
+    "pages/email/index",
+    "pages/sex/index",
+    "pages/nickname/index",
+    "pages/discount/index",
+    "pages/collect/index",
+    "pages/order/index",
+    "pages/info/index",
+    "pages/person/index",
+    "pages/list/index"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#d43c33",
-    "navigationBarTitleText": "活动推手",
+    "navigationBarBackgroundColor": "#FFD944",
+    "navigationBarTitleText": "益客产品",
     "enablePullDownRefresh": true
   },
   "tabBar": {
     "color": "#313131",
     "selectedColor": "##d43c33",
-    "borderStyle": "#ddd",
-    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "backgroundColor": "#f2f2f2",
     "position": "bottom",
     "list": [
       {
@@ -29,16 +42,16 @@
         "selectedIconPath": "images/tabBar/tab1a.png"
       },
       {
-        "text": "发布活动",
-        "pagePath": "pages/add/index",
-        "iconPath": "images/tabBar/tab2.png",
-        "selectedIconPath": "images/tabBar/tab2a.png"
+        "text": "购物车",
+        "pagePath": "pages/cart/index",
+        "iconPath": "images/tabBar/tab3.png",
+        "selectedIconPath": "images/tabBar/tab3a.png"
       },
       {
         "text": "我的",
-        "pagePath": "pages/person/index",
-        "iconPath": "images/tabBar/tab4.png",
-        "selectedIconPath": "images/tabBar/tab4a.png"
+        "pagePath": "pages/info/index",
+        "iconPath": "images/tabBar/tab2.png",
+        "selectedIconPath": "images/tabBar/tab2a.png"
       }
     ]
   },

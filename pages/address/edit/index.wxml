@@ -1,0 +1,44 @@
+<view class="address">
+    <van-cell-group>
+        <van-field
+            value="{{ username }}"
+            clearable
+            placeholder="收货人"
+            bind:change="onChangeName"
+        />
+        <van-field
+            value="{{phone}}"
+            clearable
+            placeholder="手机号码"
+            bind:change="onChangPhone"
+        />
+        <van-field wx:if="{{province!=''}}"
+            value="{{province}}、{{city}}、{{area}}"
+            clearable
+            placeholder="配送地址"
+            icon="arrow"
+            bind:click-icon="onClickIconL"
+        />
+        <van-field wx:else
+            value="{{province}}"
+            clearable
+            placeholder="配送地址"
+            icon="arrow"
+            bind:click-icon="onPopupOpen"
+        />
+        <van-field
+            value="{{address }}"
+            clearable
+            placeholder="详细地址：如宿舍楼栋号、单元室等"
+            bind:change="onChangAddress"
+        />
+    </van-cell-group>
+    <view class="bottom">
+        <van-checkbox value="{{ checked }}" bind:change="onDefaultChange">设置为默认地址</van-checkbox>
+        <view class="delete">删除收货地址</view>
+    </view>
+    <van-popup  position="bottom" show="{{show}}" bind:close="onClose">
+        <van-area area-list="{{areaList}}"  bind:confirm="onAreaConfirm" bind:cancel="onAreaCancel"/>
+    </van-popup>
+    <van-button class="btn" sizetype="default"  bind:click="handleData">添加地址</van-button>
+</view>

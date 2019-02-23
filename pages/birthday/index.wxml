@@ -1,0 +1,21 @@
+<view class="birthday">
+    <view class="birday_time" bindtap="onPopupOpen">
+        <view class="time_left">年龄</view>
+        <view class="time_right">23岁</view>
+    </view>
+    <view class="birday_star" bindtap="onPopupOpen1">
+        <view class="time_left">星座</view>
+        <view class="time_right">金牛座</view>
+    </view>
+    <van-popup  position="bottom" show="{{show}}" bind:close="onClose">
+        <van-datetime-picker
+            type="date"
+            value="{{currentDate}}"
+            min-date="{{minDate}}"
+            bind:change="onChange"/>
+    </van-popup>
+    <!--van-popup  position="bottom" show="{{show}}" bind:close="onClose">
+       <van-picker columns="{{ columns }}" bind:change="onStarChange" />
+    </van-popup-->
+    <van-button class="btn" sizetype="default"  bind:click="handleData">保存</van-button>
+</view>

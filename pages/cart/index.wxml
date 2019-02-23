@@ -1,0 +1,62 @@
+<!--pages/shopcart/shopcart.wxml-->
+
+<view class='container' hidden="{{iscart}}">
+  <view class='section section-good'>
+    <view class='section-bottom'>
+      <checkbox-group bindchange="selectalltap">
+        <label class='checkbox-allcheck'>
+          <checkbox value="{{!checkAll}}" checked="{{checkAll}}" hidden='hidden' />
+            <icon type="circle" size="22" wx:if="{{!checkAll}}"></icon>
+            <icon type="success" color="#D41C1C" size="22" wx:if="{{checkAll}}"></icon>
+            <text class='check-all-text'>中微直供</text>
+        </label>
+      </checkbox-group>
+    </view>
+
+
+
+
+    <checkbox-group bindchange="checkboxChange">
+      <view class='good' wx:for='{{goodList}}' wx:for-item="good" wx:key="good.name">
+        <view class='good_content'>
+            <view class='good_checkbox'>
+              <label class="checkbox">
+                <checkbox value="{{good.isbn}}" checked="{{good.checked}}" hidden='hidden' />
+                <icon type="circle" size="22" wx:if="{{!good.checked}}"></icon>
+                <icon type="success" color="#D41C1C" size="22" wx:if="{{good.checked}}"></icon>
+              </label>
+            </view>
+              <image class='good_img'  src='{{good.cover}}'></image>
+              <view class='right'>
+                <view class='right_title'>小米 红色6 Pro 全网通手机 双卡双...</view>
+                <view class='right_des'>规格4+32 颜色：巴黎蓝</view>
+                <view class='right_account'>库存紧张</view>
+                <view class='right_price'>￥118</view>
+                <view class='stepper'>
+                  <view class='subtract {{good.count == 1 ? "disabled": ""}}' data-index='{{index}}' catchtap='subtracttap'>-</view>
+                  <input class='count' type='number' value='{{good.count}}'></input>
+                  <view class='add' data-index="{{index}}" catchtap='addtap'>+</view>
+                </view> 
+                <image  class="delete" src='/images/static/delete.png' bindtap="deleteList"></image>
+              </view>
+        </view>
+      </view>
+    </checkbox-group>
+  </view>
+</view>
+<view class='bottom'>
+  <view class='total'>总计：
+    <text>¥{{totalPrice}}</text>
+  </view>
+  <navigator url='../checkout/index'>
+    <view class='go'>继续选购</view>
+  </navigator>
+  <navigator url='../checkout/index'>
+    <view class='btn {{totalCount > 0 ? "btn-primary" : "btn-default"}}'>去结算({{totalCount}})</view>
+  </navigator>
+</view>
+<!--如果购物车内没有数据，就显示没有数据-->  
+<view class="cartList" hidden="{{!iscart}}">  
+    <image src="/assets/images/iconfont-cart-empty.png"/>  
+    <view>购物车什么都没有，赶快去购物吧</view>  
+</view>

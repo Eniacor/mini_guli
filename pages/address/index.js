@@ -1,21 +1,40 @@
 const Api = require('../../config/method');
 const app = getApp();
 const Session = require('../../common/auth/session');
-
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    address:null,
+    address:[
+      {
+        id:1,
+        name:"刘三毛",
+        phone:"18360172424",
+        province:"江苏省",
+        city:"宿迁市",
+        area:"宿豫区",
+        detail:"花果山水帘洞花果山水帘洞花果山水帘洞花果山水帘洞花果山水帘洞",
+      },
+      {
+        id:2,
+        name:"刘三毛",
+        phone:"18360172424",
+        province:"江苏省",
+        city:"宿迁市",
+        area:"宿豫区",
+        detail:"花果山水帘洞花果山水帘洞花果山水帘洞花果山水帘洞花果山水帘洞",
+      }
+    ],
+    default:1,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.initDate();
+    // this.initDate();
   },
 
   /**
@@ -81,9 +100,12 @@ Page({
         resolve();
     }).catch(err => reject(err));
   },
-  onChange:function(e){
-    this.setData({
-      checked: e.target.dataset.index
+  onSexClick:function(e){
+    let _this=this;
+
+    console.log(e.target.dataset.id);
+    _this.setData({
+      default:e.target.dataset.id
     });
   }
 })

@@ -1,0 +1,83 @@
+<view class="type">
+  <van-cell 
+  class="custom_post"
+  title="配送方式"
+  is-link
+  border="{{ false }}"/>
+</view>
+<view class="goods">
+  <view class="goods_left"> 
+    <image class="goods_img"></image>
+  </view>
+  <view class="goods_right">
+    <view class="right_title">小米 红色6 Pro 全网通手机 双卡双...</view>
+    <view class="right_des">规格4+32G 颜色：巴黎蓝</view>
+    <view class="right_res">库存322件</view>
+    <view class="right_price">￥118</view>
+    <view class="right_count">
+      <van-stepper
+        value="{{ value }}"
+        integer
+        min="5"
+        max="40"
+        step="2"
+        bind:change="onChange"
+      />
+    </view>
+  </view>
+</view>
+<view class="address">添加收货地址</view>
+<view class="middle">
+  <van-cell-group>
+    <view class="middle_message">
+      <van-field
+      value="{{ message }}"
+      label="买家留言"
+      type="textarea"
+      placeholder="选填：填写内容已和卖家协商确认"
+      autosize/>
+    </view>
+   
+    <van-field
+      value="{{ password }}"
+      type="password"
+      label="我的优惠券"
+      placeholder="暂无可用优惠券"
+      border="{{ false }}"/>
+  </van-cell-group>
+</view>
+
+<view class="money">
+  <view class="item">
+    <view class="item_left">
+      商品金额
+    </view>
+    <view class="item_right">
+      ￥118.00
+    </view>
+  </view>
+  <view class="item">
+    <view class="item_left">
+      运费
+    </view>
+    <view class="item_right">
+      +￥0.00
+    </view>
+  </view>
+  <view class="total">
+    <view class="total_right">
+      合计：<text class="num">￥118.00</text>
+    </view>
+    <view class="total_count">
+      共<text class="num">1</text>件，
+    </view>
+  </view>
+  <view class="bottom">
+    <view class="bottom_left">
+      实付款：<text class="num">￥118</text>
+    </view>
+    <view class="bottom_right">
+      立即支付
+    </view>
+  </view>
+</view>

@@ -3,91 +3,84 @@
         background: #f9f9f9;
         .list_item{
             background: #fff;
-            padding:20px 0 0 0;
-            margin-bottom: 20px;
-            .item_top{
-                padding:0 15px;
-                .top_name{
-                    font-size: 16px;
-                    line-height:16px;
-                    color:#333;
-                    margin-right:15px;
+            overflow: hidden;
+            border-bottom:1rpx solid #f2f2f2;
+            .item_left{
+                float: left;
+                width: 580rpx;
+                padding:40rpx 32rpx;
+                .left_top{
+                    overflow: hidden;
+                    .top_name{
+                        float: left;
+                        font-size: 32rpx;
+                        line-height:32rpx;
+                        color:rgb(51, 51, 51);
+                    }
+                    .top_mobile{
+                        float: right;
+                        font-size: 32rpx;
+                        line-height:32rpx;
+                        color:rgb(51, 51, 51);
+                    }
                 }
-                .top_mobile{
-                    font-size: 16px;
-                    margin-right:15px;
-                }
-                .top_default{
-                    display:inline-block;
-                    font-size:12px;
-                    width: 42px;
-                    height: 20px;
-                    text-align: center;
-                    line-height:20px;
-                    color: #F19736;
-                    border: 1px solid #F19736; 
-                    border-radius: 6px;
+                .left_middle{
+                    margin-top:24rpx;
+                    font-size: 24rpx;
+                    line-height:30rpx;
+                    color:#737373;
+                    height: 54rpx;
                 }
             }
             .item_middle{
-                padding:15px 15px 20px 15px;
-                font-size: 14px;
-                line-height: 14px;
-                color:#999;
+                float: left;
+                width: 1rpx;
+                height: 88rpx;
+                background:#CBCBCB; 
+                margin-top:46rpx;
             }
-            .item_bottom{
-                overflow: hidden;
-                padding:6px 15px 6px 15px;
-                border-top:1px solid rgba(242, 242, 242, 1);
-                .bottom_left{
-                    float: left;
-                    .van-checkbox {
-                        .van-checkbox__icon-wrap{
-                            .van-checkbox__icon{
-                                width: 14px;
-                                height: 13px; 
-                            }
-                        }
-                        .van-checkbox__label{
-                            margin-left:6px;
-                            font-size: 12px;
-                            line-height: 12px;
-                            color:#999;
-                        }
-                    }
-                }
-                .bottom_right{
-                    float: right;
-                    .right_item{
-                        float: right;
-                        margin-right:16px;
-                       .item_txt{
-                            font-size: 12px;
-                            color:#999;
-                            margin-left:6px;
-                       }
-                        &:first-child{
-                            margin-right: 0;
-                        }
-                    }
+            .item_right{
+                float: left;
+                padding-top:74rpx!important;
+                padding-left:34rpx!important;
+                width: 68rpx;
+                height: 114rpx;
+                .van-radio__input {
+                   
                 }
             }
             &:last-child{
-                margin-bottom: 0;
             }
+        }
+    }
+    .empty{
+        .empty_img{
+            width: 632rpx;
+            height: 464rpx;        
+            margin: 0 auto;
+            margin-left:53rpx;
+            margin-top: 356rpx;
+        }
+        .empty_txt{
+            font-size: 30rpx;
+            line-height: 30rpx;
+            text-align: center;
+            color:#707070;
         }
     }
     .btn{
         button{
-            margin-left:40rpx;
-            margin-top:40rpx;
-            width:670rpx;
+            position: fixed;
+            bottom:0;
+            width: 750rpx;
             height:86rpx;
             line-height: 86rpx;
-            background:red;
-            color:#fff;
-            border-radius: 16rpx;
+            background:#FFD944;
+            color:rgb(51, 51, 51);
             outline: none;
+            font-size: 30rpx;
         } 
     }
+  
+        
 }

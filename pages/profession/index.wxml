@@ -1,0 +1,7 @@
+<view class="nickname">
+    <textarea
+        placeholder="请填写您的专业名称～"
+        class="custom_textarea"/>
+    <view class="tip">最多10个字符</view>
+</view>
+<view class="btn">保存</view>

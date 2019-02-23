@@ -1,0 +1,11 @@
+.btn {
+  width: 684rpx;
+  height: 82rpx;
+  background: #FFD944;
+  color: #333333;
+  line-height: 82rpx;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 10rpx;
+  margin-top: 148rpx;
+}

@@ -1,0 +1,10 @@
+{
+    "navigationBarTitleText": "编辑地址",
+    "usingComponents": {
+        "van-field": "/dist/field/index",
+        "van-area": "/dist/area/index",
+        "van-popup": "/dist/popup/index",
+        "van-checkbox": "/dist/checkbox/index",
+        "van-button": "/dist/button/index"
+    }
+}

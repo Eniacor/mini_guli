@@ -1,20 +1,206 @@
 <view class="index">
-  <view class="top">
-    <view class="top_left">每日福利</view>
-    <button class="top_right" open-type="share">分享给朋友</button>
-  </view>
-  <official-account></official-account>
-  <view class="list">
-    <view class="item" wx:for="{{list}}" wx:for-index="index" wx:for-item="item" wx:key="index">
-      <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="handlePage" data-id="{{item.id}}" class="default">
-        <view class="item_img">
-          <image mode="scaleToFill" class="img" src="{{item.img}}" />
+  <view class="back">
+    <view class="banner">
+      <swiper
+        class="slide_swiper"
+        indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}"
+        interval="{{interval}}"
+        duration="{{duration}}">
+        <block wx:for="{{imgUrls}}">
+          <swiper-item>
+            <image src="{{item}}" class="slide_image" width="355" height="150" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="location">
+      <image class="location_left"></image>
+      <view class="location_right" wx:if="{{search}}">
+        <view class="right_school">
+          <view class="school_title">南京艺术学院</view>
+          <view class="school_des">Alex为您推荐</view>
         </view>
-        <view class="item_content">
-          <view class="content_title">奖品：{{item.name}}x{{item.num}}</view>
-          <view class="content_start">{{item.way_name}} 到达3000人自动开奖</view>
+        <view class="right_search" bindtap="onPopupSearch">
+          <image class="search_img" src="/images/static/search.png"></image>
+          <text class="search_txt">商品</text>
         </view>
-      </button>
+        <image class="right_intro" src="/images/static/intro.png"  bindtap="onPopupIntro"></image>
+        <image class="right_msg" src="/images/static/icode.png"    bindtap="onPopupCode"></image>
+      </view>
+      <view class="location_right_search" wx:if="{{!search}}">
+        <view class="search_btn">
+          <image class="btn_img" src="/images/static/search.png"></image>
+        </view>
+        <view class="search_input" >
+          <input class="input" placeholder="搜索你感兴趣的商品" auto-focus />
+          <view class="img" bindtap="onPopupSearch">
+            <van-icon name="clear" color="#999999" />
+          </view>
+        </view>
+      </view>
     </view>
   </view>
+  <view class="container">
+    <van-tabs active="{{ active }}" bind:change="onChange">
+      <van-tab title="推荐">
+        <view class="content">
+          <view class="first">
+            <view class="header">
+              <image class="top_img" src="/images/static/ping.png"></image>
+              <text class="top_txt1">同校拼单</text>
+              <text class="top_txt2">(暂未开通跨校区拼单业务哦～)</text>
+            </view>
+            <navigator hover-class="none" url="/pages/pindetail/index">
+              <view class="item">
+                <view class="item_left">
+                  <image class="left_img" src=""></image>
+                </view>
+                <view class="item_right">
+                  <view class="right_top">[宿舍必备神器] 大功率电器转换插排</view>
+                  <view class="right_middle">包邮</view>
+                  <view class="right_tuan1">
+                    <text class="tuan1_num">2人团</text>
+                    <text class="tuan1_price">￥29.9</text>
+                    <text class="tuan1_origin">69.9</text>
+                  </view>
+                  <view class="right_tuan2">
+                    <text class="tuan2_txt">开团倒计时：</text>
+                    <text class="tuan2_time">2天 23:14:10</text>
+                  </view>
+                  <view class="right_btn">立即拼单</view>
+                </view>
+              </view>
+            </navigator>
+         
+            <view class="item margin16">
+               <view class="item_left">
+                <image class="left_img" src=""></image>
+              </view>
+              <view class="item_right">
+                <view class="right_top">[宿舍必备神器] 大功率电器转换插排</view>
+                <view class="right_middle">包邮</view>
+                <view class="right_tuan1">
+                  <text class="tuan1_num">2人团</text>
+                  <text class="tuan1_price">￥29.9</text>
+                  <text class="tuan1_origin">69.9</text>
+                </view>
+                <view class="right_tuan2">
+                  <text class="tuan2_txt">开团倒计时：</text>
+                  <text class="tuan2_time">2天 23:14:10</text>
+                </view>
+                <view class="right_btn">立即拼单</view>
+              </view>
+            </view>
+          </view>
+          <view class="second">
+            <view class="header">
+              <image class="top_img" src="/images/static/gift.png"></image>
+              <text class="top_txt1">开学大礼包</text>
+              <text class="top_txt2">感恩开学季，优惠大放送</text>
+            </view>
+            <navigator hover-class="none" url="/pages/giftdetail/index">
+              <view class="item">
+                <view class="item_top">
+                  <image class="left_img" src=""></image>
+                </view>
+                <view class="item_bottom">
+                  <view class="bottom_title">良品铺子坚果大礼包1339g年货礼盒</view>
+                  <view class="bottom_des">良品铺子坚果大礼包1339g年货礼盒</view>
+                  <view class="bottom_price">
+                    <text class="price_account">￥118</text>
+                    <text class="price_orign">￥158</text>
+                  </view>
+                  <view class="bottom_btn">查看详情</view>
+                </view>
+              </view>
+            </navigator>
+            <view class="item margin16">
+               <view class="item_top">
+                <image class="left_img" src=""></image>
+              </view>
+              <view class="item_bottom">
+                <view class="bottom_title">良品铺子坚果大礼包1339g年货礼盒</view>
+                <view class="bottom_des">良品铺子坚果大礼包1339g年货礼盒</view>
+                <view class="bottom_price">
+                  <text class="price_account">￥118</text>
+                  <text class="price_orign">￥158</text>
+                </view>
+                <view class="bottom_btn">查看详情</view>
+              </view>
+            </view>
+          </view>
+          <view class="three">
+            <view class="header">
+              <image class="top_img" src="/images/static/get.png"></image>
+              <text class="top_txt1">精选好物</text>
+              <text class="top_txt2">感恩开学季，优惠大放送</text>
+            </view>
+            <navigator hover-class="none" url="/pages/jingdetail/index">
+              <view class="item">
+                <view class="item_left">
+                  <image class="left_img" src=""></image>
+                </view>
+                <view class="item_right">
+                  <view class="right_top">Semir 拼接链条单肩包</view>
+                  <view class="right_des">糖果配色 十足少女心</view>
+                  <view class="right_middle">包邮</view>
+                  <view class="right_price">￥118.9</view>
+                  <view class="right_account">已售395件</view>
+                  <view class="right_btn">立即购买</view>
+                </view>
+              </view>
+            </navigator>
+            <view class="item margin16">
+               <view class="item_left">
+                <image class="left_img" src=""></image>
+              </view>
+              <view class="item_right">
+                <view class="right_top">Semir 拼接链条单肩包</view>
+                <view class="right_des">糖果配色 十足少女心</view>
+                <view class="right_middle">包邮</view>
+                <view class="right_price">￥118.9</view>
+                <view class="right_account">已售395件</view>
+                <view class="right_btn">立即购买</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </van-tab>
+      <van-tab title="电器">内容 2</van-tab>
+      <van-tab title="宿舍">内容 3</van-tab>
+      <van-tab title="数码3C">内容 4</van-tab>
+      <van-tab title="美妆">内容 4</van-tab>
+    </van-tabs>
+  </view>
 </view>
+
+<van-popup show="{{intro}}" bind:close="onPopupIntro">
+  <view class="popup_content">
+    <view class="content_header" >
+      <van-icon name="cross"  bindtap="onPopupIntro" />
+    </view>
+    <view class="content_title">
+      <image class="title_right"></image>
+      <view class="title_left">Alex</view>
+      
+    </view>
+    <view class="content_des">
+      本店带来了的肯定打开快点快点
+      本店带来了的肯定打开快点快
+      开快点快点看看看看多看看打开看看端口打开看到看到
+    </view>
+    <view class="content_address">
+      <view class="address_name">店铺名称：南京艺术学院</view>
+      <view class="address_tel">联系方式：18360172424</view>
+      <view class="address_area">销售区域：江苏省南京事鼓楼区</view>
+    </view>
+  </view>
+</van-popup>
+<van-popup show="{{code}}" bind:close="onPopupCode" > 
+  <view class="popup_code">
+    <image class="code_ma"></image>
+    <view class="code_title">长按保存二维码，使用微信</view>
+    <view class="code_title">添加代理商</view>
+  </view>
+</van-popup>

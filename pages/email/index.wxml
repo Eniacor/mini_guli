@@ -1,0 +1,5 @@
+<view class="top">
+  <view class="top_title">填写邮箱地址</view>
+  <input class="top_input"/>
+</view>
+<view class="btn">保存</view>

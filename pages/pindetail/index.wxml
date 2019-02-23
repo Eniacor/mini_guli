@@ -1,0 +1,183 @@
+<view class="index">
+  <view class="container">
+    <van-tabs active="{{ active }}" bind:change="onChange">
+      <van-tab title="商品">
+        <view class="content">
+          <swiper
+            class="slide_swiper"
+            indicator-dots="{{indicatorDots}}"
+            autoplay="{{autoplay}}"
+            interval="{{interval}}"
+            duration="{{duration}}">
+            <block wx:for="{{imgUrls}}">
+              <swiper-item>
+                <image src="{{item}}" class="slide_image" width="355" height="150" />
+              </swiper-item>
+            </block>
+          </swiper>
+          <view class="des">
+            <view class="price">
+              <text class="ping">两人团：</text>
+              <text class="current">￥118</text>
+              <text class="origin">￥118</text>
+              <text class="ping_time">距离结束1天21时26分36秒</text>
+            </view>
+            <view class="post">满100免邮费</view>
+            <view class="title">网红便携式手持电熨斗</view>
+          </view>
+          <view class="send">
+            <image class="send_img" src="/images/static/post_cart.png"></image>
+            <text class="send_txt">48小时发货</text>
+          </view>
+          <view class="tuan">
+            <view class="tuan_title">
+              <view class="title_label">17人在拼单，可直接参与</view>
+              <image class="title_icon" src="/images/static/my.png"></image>
+              <view class="title_value">查看全部</view>
+            </view>
+            <view class="tuan_item">
+              <image class="item_avatar" src=""></image>
+              <view class="item_label">快乐每一天</view>
+              <view class="item_btn">去拼单</view>
+              <view class="item_value">
+                <view class="value_top">还差1人拼成</view>
+                <view class="value_bottom">剩余23:53:35</view>
+              </view>
+            </view>
+          </view>
+          <view class="address">
+            <view class="address_label">规格</view>
+            <view class="address_value">选择 颜色分类 款式</view>
+            <image class="address_icon" src="/images/static/my.png"></image>
+          </view>
+          <view class="discuss">
+            <view class="header">
+              <view class="header_label">商品评价(257)</view>
+              <image class="header_icon" src="/images/static/my.png"></image>
+              <view class="header_value">查看全部</view>
+            </view>
+            <view class="item">
+              <view class="item_header">
+                <image class="header_avatar"></image>
+                <view class="header_txt">环球小荐人</view>
+                <view class="header_time">4小时前发布</view>
+              </view>
+              <view class="item_des">
+                普通的眼罩你肯定见过，那蒸汽眼罩你见过？
+                普通的眼罩你肯定见过，那蒸汽眼罩你见过？
+                普通的眼罩你肯定见过，那蒸汽眼罩你见过？
+                普通的眼罩你肯定见过，那蒸汽眼罩你见过？
+              </view>
+              <view class="item_imgs">
+                <image class="img"></image>
+                <image class="img"></image>
+                <image class="img"></image>
+                <image class="img"></image>
+                <image class="img"></image>
+              </view>
+              <view class="item_date">2019.01.27 颜色：蓝色 500ml</view>
+            </view>
+          </view>
+          <view class="goods">
+            <view class="goods_title">商品详情</view>
+            <image class="goods_img"></image>
+            <image class="goods_img"></image>
+          </view>
+          <view class="bottom_bar">
+            <van-goods-action>
+              <van-goods-action-icon icon="shop-o" text="店铺" />
+              <van-goods-action-icon icon="cart-o" text="购物车" info="5" />
+              <van-goods-action-button text="加入购物车" type="warning" />
+              <van-goods-action-button text="立即购买" />
+            </van-goods-action>
+          </view>
+        </view>
+      </van-tab>
+      <van-tab title="评价">
+        <view class="discuss_content">
+           <van-tabs type="card">
+            <van-tab title="全部（1044）">
+                <view class="discuss">
+                  <view class="header">
+                    <view class="header_label">商品评价(257)</view>
+                    <image class="header_icon" src="/images/static/my.png"></image>
+                    <view class="header_value">查看全部</view>
+                  </view>
+                  <view class="item">
+                    <view class="item_header">
+                      <image class="header_avatar"></image>
+                      <view class="header_txt">环球小荐人</view>
+                      <view class="header_time">4小时前发布</view>
+                    </view>
+                    <view class="item_des">
+                      普通的眼罩你肯定见过，那蒸汽眼罩你见过？
+                      普通的眼罩你肯定见过，那蒸汽眼罩你见过？
+                      普通的眼罩你肯定见过，那蒸汽眼罩你见过？
+                      普通的眼罩你肯定见过，那蒸汽眼罩你见过？
+                    </view>
+                    <view class="item_imgs">
+                      <image class="img"></image>
+                      <image class="img"></image>
+                      <image class="img"></image>
+                      <image class="img"></image>
+                      <image class="img"></image>
+                    </view>
+                    <view class="item_date">2019.01.27 颜色：蓝色 500ml</view>
+                  </view>
+                </view>
+            </van-tab>
+            <van-tab title="追加（441）">内容 2</van-tab>
+            <van-tab title="有图（2357）">内容 3</van-tab>
+            <van-tab title="质量很好（105344）">内容 3</van-tab>
+          </van-tabs>
+        </view>
+      </van-tab>
+      <van-tab title="详情">内容 3</van-tab>
+    </van-tabs>
+  </view>
+</view>
+<view class="pin_content">
+  <van-popup show="{{false}}" bind:close="onClose">
+    <view class="popup_ping">
+      <view class="ping_delete">
+        <van-icon name="cross" />
+      </view>
+      <view class="ping_title">参与xxx的拼单</view>
+      <view class="ping_des">晋升1个名额，23:58:37后结束</view>
+      <view class="ping_img">
+        <image class="img1" src="/images/static/ping_avatar.png"></image>
+        <image class="img2" src="/images/static/ping_avatar.png"></image>
+      </view>
+      <view class="ping_btn">参与拼单</view>
+    </view>
+  </van-popup>
+</view>
+<view class="can_content">
+  <van-popup show="{{false}}" bind:close="onClose">
+    <view class="popup_can">
+      <view class="can_delete">
+        <van-icon name="cross" />
+      </view>
+      <view class="can_title">正在拼单</view>
+      <view class="can_item">
+        <view class="item_left">
+          <image class="left_img" src="/images/static/ping_avatar.png"></image>
+        </view>
+        <view class="item_middle">
+          <view class="middle_top">
+            <text class="top_name">林舒</text>
+            <text class="top_num">还差1个人</text>
+          </view>
+          <view class="middle_bottom">
+            剩余23:53:35
+          </view>
+        </view>
+        <view class="item_right">去拼单</view>
+      </view>
+    </view>
+  </van-popup>
+</view>
+
+ 
+     
+        

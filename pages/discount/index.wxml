@@ -1,0 +1,85 @@
+<view class="index">
+  <view class="container">
+    <van-tabs active="{{ active }}" bind:change="onChange">
+      <van-tab title="未使用(4)">
+        <view class="null">
+          <image class="null_img" src="/images/static/empty.png"></image>
+        </view>
+      </van-tab> 
+      <van-tab title="已使用(9)">
+         <view class="content">
+          <view class="item">
+            <view class="item_left">
+              <image class="left_img"></image>
+              <view class="left_right">
+                <view class="right_title">软壳vivo苹果oppp手机壳</view>
+                <view class="right_des">单价 ￥6.9</view>
+                <view class="right_discount">
+                  <text class="txt">领券后 ￥</text>
+                  <text class="price">6.9</text>
+                </view>
+              </view>
+            </view>
+            <view class="item_middle"></view>
+            <view class="item_right">
+              <view class="right_price">
+                <text class="price_dot">￥</text>
+                <text class="price_num">2</text>
+              </view>
+              <view class="right_des">无门槛券</view>
+              <view class="right_btn">立即使用</view>
+              <view class="right_intro">仅剩2天</view>
+            </view>
+          </view>
+          <view class="item">
+            <view class="item_left">
+              <image class="left_img"></image>
+              <view class="left_right">
+                <view class="right_title">软壳vivo苹果oppp手机壳</view>
+                <view class="right_des">单价 ￥6.9</view>
+                <view class="right_discount">
+                  <text class="txt">领券后 ￥</text>
+                  <text class="price">6.9</text>
+                </view>
+              </view>
+            </view>
+            <view class="item_middle"></view>
+            <view class="item_right">
+              <view class="right_price">
+                <text class="price_dot">￥</text>
+                <text class="price_num">2</text>
+              </view>
+              <view class="right_des">无门槛券</view>
+              <view class="right_btn get">已使用</view>
+            </view>
+          </view>
+          <view class="item">
+            <view class="item_left">
+              <image class="left_img"></image>
+              <view class="left_right">
+                <view class="right_title">软壳vivo苹果oppp手机壳</view>
+                <view class="right_des">单价 ￥6.9</view>
+                <view class="right_discount">
+                  <text class="txt">领券后 ￥</text>
+                  <text class="price">6.9</text>
+                </view>
+              </view>
+            </view>
+            <view class="item_middle"></view>
+            <view class="item_right">
+              <view class="right_price">
+                <text class="price_dot">￥</text>
+                <text class="price_num">2</text>
+              </view>
+              <view class="right_des">无门槛券</view>
+              <view class="right_btn used">已失效</view>
+            </view>
+          </view>
+        </view>
+      </van-tab>
+      <van-tab title="已失效(0)">
+      
+      </van-tab>
+    </van-tabs>
+  </view>
+</view>

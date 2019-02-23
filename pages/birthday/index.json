@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "编辑地址",
+    "usingComponents": {
+        "van-popup": "/dist/popup/index",
+        "van-button": "/dist/button/index",
+        "van-datetime-picker": "/dist/datetime-picker/index",
+        "van-picker": "/dist/picker/index"
+    }
+}
